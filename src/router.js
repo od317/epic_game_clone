@@ -10,6 +10,11 @@ const routes = [
         path:'/browse',
         name:'browse',
         component:()=> import('./views/browse.vue')
+    },
+    {
+        path:'/game/:id',
+        component:()=> import('./views/game.vue'),
+        props: true
     }
 
 ]

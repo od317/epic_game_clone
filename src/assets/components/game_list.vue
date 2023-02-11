@@ -61,10 +61,13 @@ const props = defineProps({
                                     <ion-icon class="bg-black text-white  rounded-full z-100 " name="add-circle-outline"></ion-icon>
                               </button>
                               </div>
+                              <router-link :to="`game/`+game.name"> 
                               <div class=" cursor-pointer  absolute flex items-start justify-end h-[20rem] p-3  w-full bg-gray-200 opacity-0 hover:opacity-10 transition-all duration-200">
                               </div>
                       
-                      <img :src="game.img" alt=""  :class="`${ game.last ? 'w-0 h-0':'w-full h-[20rem]'} rounded-md`">
+                              <img :src="game.img" alt=""  :class="`${ game.last ? 'w-0 h-0':'w-full h-[20rem]'} rounded-md`">
+                              </router-link>
+                   
                       <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-2'}`">
                        <label for="" class="w-full text-sm text-gray-600">Base game </label>
                         <label for="" class="w-full text-xl text-white">{{ game.name }} </label>
