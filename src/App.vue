@@ -11,7 +11,7 @@ import nav_search from './assets/components/nav.vue'
      <nav_search/>
        
      
-     <div class=" h-fit bg-dark1 overflow-x-hidden  "> 
+     <div class=" h-fit bg-dark1   "> 
      <router-view></router-view>
      </div>
      

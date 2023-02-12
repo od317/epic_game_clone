@@ -335,7 +335,7 @@ let footer_cont1 = [{
 
 
 
-<div class="">
+<div class=" overflow-x-hidden">
 
 
 
