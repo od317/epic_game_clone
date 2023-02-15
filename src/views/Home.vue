@@ -50,7 +50,7 @@ let games = [
 
 let games_list1=[
 [
-  {name:'daying light 2',
+  {name:'daying light2',
    img:'https://render.fineartamerica.com/images/rendered/default/print/6/8/break/images/artworkimages/medium/3/2-dying-light-2-poster-dat-khong-chin-luong.jpg'
   },
   {name:'spiderman',
@@ -327,6 +327,12 @@ let footer_cont1 = [{
   },10);
  
   change_hln()
+
+
+  window.scrollTo({
+        top:0   ,
+        behavior: 'smooth'
+      })
 
 </script>
 
