@@ -12,6 +12,11 @@ const routes = [
         component:()=> import('./views/browse.vue')
     },
     {
+        path:'/news',
+        component:()=> import('./views/new.vue'),
+        props: true
+    },
+    {
         path:'/game/:id',
         component:()=> import('./views/game.vue'),
         props: true

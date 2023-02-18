@@ -5,9 +5,8 @@ import nav_search from './assets/components/nav.vue'
 
 </script>
 
-<template>
+<template >
       
- 
      <nav_search/>
        
      

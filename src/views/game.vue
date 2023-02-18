@@ -126,11 +126,22 @@ let sm = ref(true)
 
 let nav = ref('over')
 
+let change_nav = (v)=>{
+
+        nav.value = v
+        window.scrollTo({
+        top:0   ,
+      })
+
+}
 
 window.scrollTo({
         top:0   ,
         behavior: 'smooth'
       })
+
+     
+       
 
 </script>
 
@@ -171,8 +182,8 @@ window.scrollTo({
 
                         <div :class="`flex mt-[2.4rem] text-[1.4rem] text-white sticky top-[6.5rem] bg-dark1 z-50 p-[1.2rem] pb-[1rem]`">
 
-                            <button @click="nav = 'over'" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='over'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">over</button>
-                               <button @click="nav = 'ach'" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='ach'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">ach</button>
+                            <button @click="change_nav('over')" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='over'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">over</button>
+                               <button @click="change_nav('ach')" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='ach'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">ach</button>
                                 
                         </div>
 
@@ -438,7 +449,7 @@ window.scrollTo({
 
 
                                     </div>
-                                    <button class="w-[100%] bg-dark2 p-[1rem]">view all ach</button>
+                                    <button @click="change_nav('ach')" class="w-[100%] bg-dark2 p-[1rem] hover:bg-dark3 transition-all duration-200">view all ach</button>
 
                                 </div>
 
