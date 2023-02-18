@@ -4,7 +4,12 @@
   let page = ref('discover')
 
   let george = ref(false)
-
+  let george2 = ref(false)
+  
+  let search_click = ()=>{
+    george.value = false
+    george2.value = true
+  }
 
 </script>
 
@@ -66,11 +71,13 @@
         
 
             <div class="text-white px-[6%] py-[2rem]  flex  justify-between items-center  w-[100%] bg-dark1  ">
-              <button class=" w-[20%] text-start ">
-                  <ion-icon name="search" class="text-gray-400 text-[1.5rem]  "></ion-icon> 
-                </button>
+              <div class=" w-[20%] text-start ">
+                 <button @click="search_click()">
+                    <ion-icon name="search" class="text-gray-400 text-[1.5rem]  "></ion-icon> 
+                 </button>
+               </div>
 
-              <button class="flex items-center" @click="george=!george">
+              <button class="flex items-center text-[1.2rem]" @click="george=!george">
               
                 {{ page }}
                 <label :class="` cursor-pointer flex items-center text-center ml-[.1rem] translate-y-[10%] ${george ? ' rotate-180':''} transition-all duration-300`" for="">
@@ -98,7 +105,38 @@
                   <div @click="george=false" class=" w-full h-screen"></div>
 
              </div>
-    
+             
+
+             <div v-if="george2" class=" absolute flex flex-col items-center   w-full h-screen  ">
+                
+              <div class=" flex flex-row items-center px-[6%] py-[2.1rem] bg-dark4 w-full translate-y-[-100%]"> 
+
+                  <div class="flex items-center mr-[1rem] "> 
+                        <button class="flex items-center">
+                            <ion-icon name="search" class="text-gray-400 text-[1.5rem]  "></ion-icon> 
+                        </button>
+                  </div>
+
+                  <div class=" flex items-center grow">
+                    <input class=" bg-transparent w-[100%] outline-none " placeholder="search store" type="text">
+                  </div>
+                  
+                  <div class=" text-center w-[10%]">
+                    <button class="text-lg" @click="george2=false">
+                      <ion-icon name="close"></ion-icon>
+                    </button>
+                  </div>
+
+                </div>
+              
+              
+
+               <div @click="george2=false" class="w-full h-screen bg-black bg-opacity-50 translate-y-[-6rem]"></div>
+
+
+
+            </div>
+  
   </div>
 
   
