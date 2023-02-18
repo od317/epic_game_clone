@@ -3,6 +3,12 @@
 
 import { defineProps, reactive, toRef,ref } from "vue";
 
+import games from '../games'
+import ach from '../assets/components/game.vue/ach.vue' 
+
+
+
+
 const props = defineProps({
       id : String
 });
@@ -11,140 +17,16 @@ let id = props.id
 console.log(id)
 
 
-let games = new Map()
-
-    games.set('daying light2',{
-            name:'daying light2',
-            img:'https://cdn2.unrealengine.com/egs-dyinglight2stayhuman-techland-ic5-400x166-55b2799d56f3.png?h=270&resize=1&w=480',
-            bottom_img:'https://cdn2.unrealengine.com/dl2-1st-anniversary-roadmap-1920x1080-eng-1920x1080-bb5b3ec5de61.jpg',
-            imgs:[
-                [
-                    {img:"https://cdn2.unrealengine.com/dl2-1920x1080-66d335afff6e.jpg",
-                    num:1},
-                    {img:"https://cdn2.unrealengine.com/dl2-screenshot-egs-1-1920x1080-832ed0ed2d6d.jpg",
-                    num:2},                   
-                    {img:"https://cdn2.unrealengine.com/dl2-screenshot-egs-2-1920x1080-c8156088020f.jpg",
-                    num:3},                    
-                    {img:"https://cdn2.unrealengine.com/dl2-screenshot-egs-3-3840x2160-7794fc192b56.jpg",
-                    num:4},
-                ],
-                [
-                    {img:"https://cdn2.unrealengine.com/dl2-screenshot-egs-4-3840x2160-67048bc9e130.jpg",
-                    num:5},
-                    {img:"https://cdn2.unrealengine.com/dl2-screenshot-egs-6-3840x2160-dcee025fa971.jpg",
-                    num:6},                   
-                    {img:"https://cdn2.unrealengine.com/dl2-screenshot-egs-7-3840x2160-cac49f07324b.jpg",
-                    num:7},                    
-                    {img:"https://cdn2.unrealengine.com/dl2-screenshot-egs-8-3840x2160-5a858ef4c0c3.jpg",
-                    num:8},
-                ],
-                [
-                    {img:"https://cdn2.unrealengine.com/dl2-screenshot-egs-9-3840x2160-079aa005c741.jpg",
-                    num:9},
-                    {img:"https://cdn2.unrealengine.com/dl2-screenshot-egs-10-3840x2160-551c6400c1fa.jpg",
-                    num:10},                   
-                    {img:"https://cdn2.unrealengine.com/dl2-screenshot-egs-11-1920x1080-77f6b3d15132.jpg",
-                    num:11},                    
-                    {img:"https://cdn2.unrealengine.com/dl2-screenshot-egs-12-1920x1080-f54276ec765e.jpg",
-                    num:12},
-                    
-                ],
-            ],
-            achievements:[
-                {
-                    name:'Into the Unknown',
-                    img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
-                    xp:'5 XP'
-                },
-                {
-                    name:'Into the Unknown',
-                    img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
-                    xp:'5 XP'
-                },
-                {
-                    name:'Into the Unknown',
-                    img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
-                    xp:'5 XP'
-                },
-                {
-                    name:'Into the Unknown',
-                    img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
-                    xp:'5 XP'
-                },
-                {
-                    name:'Into the Unknown',
-                    img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
-                    xp:'5 XP'
-                }
-            ],
-            editions:[
-                {
-                    img:'https://cdn2.unrealengine.com/egs-dyinglight2stayhuman-techland-s3-2560x1440-89aebf7caf01.jpg?h=270&resize=1&w=480',
-                    name:'Dying Light 2 Stay Human',
-                    text:'The virus won and civilization has fallen back to the Dark Ages. The City, one of the last human settlements, is on the brink of collapse. Use your agility and combat skills to survive, and reshape the world. Your choices matter.',
-                    type:'BASE GAME',
-                    dis:'50%',
-                    price:'39.99',
-                    oldprice:'59.99',
-                    date:'Sale ends 2/16/2023 at 7:00 PM'
-                },
-                {
-                    img:'https://cdn2.unrealengine.com/egs-dyinglight2stayhuman-techland-s3-2560x1440-89aebf7caf01.jpg?h=270&resize=1&w=480',
-                    name:'Dying Light 2 Stay Human',
-                    text:'The virus won and civilization has fallen back to the Dark Ages. The City, one of the last human settlements, is on the brink of collapse. Use your agility and combat skills to survive, and reshape the world. Your choices matter.',
-                    type:'BASE GAME',
-                    dis:'50%',
-                    price:'39.99',
-                    oldprice:'59.99',
-                    date:'Sale ends 2/16/2023 at 7:00 PM'
-                },                {
-                    img:'https://cdn2.unrealengine.com/egs-dyinglight2stayhuman-techland-s3-2560x1440-89aebf7caf01.jpg?h=270&resize=1&w=480',
-                    name:'Dying Light 2 Stay Human',
-                    text:'The virus won and civilization has fallen back to the Dark Ages. The City, one of the last human settlements, is on the brink of collapse. Use your agility and combat skills to survive, and reshape the world. Your choices matter.',
-                    type:'BASE GAME',
-                    dis:'50%',
-                    price:'39.99',
-                    oldprice:'59.99',
-                    date:'Sale ends 2/16/2023 at 7:00 PM'
-                },
-            ],
-            adds:[
-                {
-                    img:'https://cdn1.epicgames.com/offer/87b7846d2eba4bc49eead0854323aba8/EGS_DyingLight2StayHumanRaisBundle_Techland_DLC_S1_2560x1440-9fe212588008f5a1380fe4bd9ad11a2c?h=270&resize=1&w=480',
-                    name:'Dying Light 2 Stay Human: Rais Bundle',
-                    text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
-                    type:'ADD-ON',
-                    dis:null,
-                    price:'2.39',
-                    oldprice:null,
-                    date:null
-                },
-                {
-                    img:'https://cdn1.epicgames.com/offer/87b7846d2eba4bc49eead0854323aba8/EGS_DyingLight2StayHumanRaisBundle_Techland_DLC_S1_2560x1440-9fe212588008f5a1380fe4bd9ad11a2c?h=270&resize=1&w=480',
-                    name:'Dying Light 2 Stay Human: Rais Bundle',
-                    text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
-                    type:'ADD-ON',
-                    dis:null,
-                    price:'2.39',
-                    oldprice:null,
-                    date:null
-                },
-                {
-                    img:'https://cdn1.epicgames.com/offer/87b7846d2eba4bc49eead0854323aba8/EGS_DyingLight2StayHumanRaisBundle_Techland_DLC_S1_2560x1440-9fe212588008f5a1380fe4bd9ad11a2c?h=270&resize=1&w=480',
-                    name:'Dying Light 2 Stay Human: Rais Bundle',
-                    text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
-                    type:'ADD-ON',
-                    dis:null,
-                    price:'2.39',
-                    oldprice:null,
-                    date:null
-                },
-                
-            ]
-        })
-
 
 let game = games.get(id)
+
+let v_ach = ref(game.achievements.slice(0,4))
+
+let s = []
+
+
+
+console.log(game)
 
 let slide_on = ref(false)
 let slide_val = ref('0')
@@ -242,6 +124,8 @@ let slide_bottom_up = (new_pos)=>{
 let sm = ref(true)
 
 
+let nav = ref('over')
+
 
 window.scrollTo({
         top:0   ,
@@ -255,11 +139,11 @@ window.scrollTo({
 
       <div class="flex justify-center">
 
-               <div class="w-[78%]   text-white pt-[2rem]">
+               <div class="w-[78%]   text-white ">
 
-                         <div>
+                         <div class='px-[1.2rem]'>
                             <label class=" text-[2rem] ">{{ game.name }}</label>
-                            <div class="flex items-center ">
+                            <div v-if=" nav=='over' " class="flex items-center ">
                                   
                                   <div class="mt-[1rem] flex items-center text-lg">
                                             <ion-icon name="star"></ion-icon>
@@ -285,16 +169,23 @@ window.scrollTo({
 
 
 
-                        <div class="flex mt-[2.4rem] text-[1.4rem] text-white sticky top-[6.5rem] bg-dark1 z-50 pb-[1rem] ">
+                        <div :class="`flex mt-[2.4rem] text-[1.4rem] text-white sticky top-[6.5rem] bg-dark1 z-50 p-[1.2rem] pb-[1rem]`">
 
-                               <button class="mr-[2rem]">over</button>
-                               <button class="mx-[2rem]">add</button>
-                               <button class="mx-[2rem]">ach</button>
+                            <button @click="nav = 'over'" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='over'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">over</button>
+                               <button @click="nav = 'ach'" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='ach'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">ach</button>
                                 
                         </div>
 
 
-                         <div class="grid grid-cols-3">
+
+
+
+
+
+
+
+
+                         <div v-if="nav=='over'" class="grid grid-cols-3">
                
                            <div class=" col-span-2 p-[1.2rem] flex flex-col">
 
@@ -322,7 +213,7 @@ window.scrollTo({
                                     flex items-center 
                                     ">
                                        <button @click="forward_1()"
-                                        class="opacity-0 group-hover:opacity-100  bg-opacity-0 transition-all duration-300 ">></button>   
+                                        class="opacity-0 group-hover:opacity-100   bg-opacity-0 transition-all duration-300 ">></button>   
                                 </div>
                             
 
@@ -346,7 +237,7 @@ window.scrollTo({
 
                           <div class="flex justify-between items-center">
                             
-                           <button @click="backward()" class="z-50">></button>
+                           <button @click="backward()" class="z-40">></button>
 
                                         
                            <div class="w-[78%] overflow-x-hidden">
@@ -366,7 +257,7 @@ window.scrollTo({
                   </div>
 
 
-                           <button @click="forward()" class="z-50">></button>
+                           <button @click="forward()" class="z-40">></button>
 
 
                           </div>
@@ -409,7 +300,7 @@ window.scrollTo({
                            </div>
 
 
-                           <div class=" relative my-[1rem] overflow-y-hidden">
+                           <div class=" relative mt-[1rem] overflow-y-hidden">
                                     <div :class="` ${sm ?'absolute z-0 opacity-10':''}`">
                                     Over twenty years ago in Harran, we fought the virus—and lost. Now, we’re losing again. The City, one of the last large human settlements, is torn by conflict. Civilization has fallen back into the Dark Ages. And yet, we still have hope.
                                     You are a wanderer with the power to change the fate of The City. But your exceptional abilities come at a price. Haunted by memories you cannot decipher, you set out to learn the truth… and find yourself in a combat zone. Hone your skills, as to defeat your enemies and make allies, you’ll need both fists and wits. Unravel the dark secrets behind the wielders of power, choose sides and decide your destiny. But wherever your actions take you, there's one thing you can never forget—stay human.
@@ -423,145 +314,10 @@ window.scrollTo({
                                     Shape the future of The City with your actions and watch how it changes. Determine the balance of power by making choices in a growing conflict and forge your own experience.
                                     2-4 PLAYER CO-OP GAMEPLAY
                                     Play in up to four-player co-op. Host your own games or join others and see how their choices have played out differently than yours.</div>
-                                   <button v-if="sm" @click="sm = !sm" class="w-full bg-dark3 mt-[1.5rem] p-[1rem] relative z-50">show more^</button>
+                                   <button v-if="sm" @click="sm = !sm" class="w-full bg-dark3 mt-[1.5rem] p-[1rem] relative z-0">show more^</button>
                                    <button v-else @click="sm = !sm" class="w-full bg-dark3 mt-[1.5rem] p-[1rem] relative z-50">show less^</button>
 
                            </div>
-
-
-
-                           <div class="flex flex-col">
-                            <label for="">Available Achievements</label>
-
-                            <div class="flex flex-row  justify-between my-[1rem]">
-                                
-                                       <div v-for="ach in game.achievements" class="flex flex-col w-[15%] my-[1rem]">
-
-                                                  <img :src="ach.img" alt="" class="mb-[.5rem]">
-                                                  <label for="" class="">{{ach.name.length >= 10 ? ach.name.substring(0,10)+'...':ach.name}}</label>
-                                                  <label for="">{{ach.xp}}</label>
-
-                                       </div>
-
-
-                            </div>
-                            <button class="w-[100%] bg-dark2 p-[1rem]">view all ach</button>
-
-                           </div>
-
-
-                           
-
-
-                           <div class="flex flex-col mt-[4rem] mb-[3rem]">
-                             
-                                        <label for="">Editions</label>
-
-                                        <div v-for="ed in game.editions" class="flex rounded-md mt-[1rem] flex-col bg-dark2">
-                                                  <div class="flex flex-row border-b-2">
-                                                    <img :src="ed.img" class="w-[50%] rounded-tl-md" alt="">
-                                                    <div class="flex flex-col ">
-
-                                                            <div class="flex flex-row p-[1rem]">
-                                                                <label for="" class="bg-dark1 rounded-md p-[.2rem] text-sm mr-[1rem]">{{ ed.type }}</label>
-                                                                <label for="">{{ ed.name }}</label>
-                                                            </div>
-
-                                                            <label for="" class="p-[1rem]">{{ ed.text }}</label>
-
-                                                    </div>
-
-
-                                                
-                                                </div>
-
-                                                <div class="flex justify-end items-center py-[1rem]">
-                                                             
-                                                             <div class="flex flex-col">
-
-                                                                    <div class="flex flex-row items-center justify-end">
-
-                                                                              <label for="" class="bg-red-800 rounded-md text-small
-                                                                              p-1 mx-[.5rem]">{{ ed.dis }}</label>
-                                                                              <label for="" class="mx-[.5rem]">{{ ed.oldprice }}</label>
-                                                                              <label for="" class="mx-[.5rem]">{{ ed.price }}</label>
-
-
-                                                                    </div>
-
-                                                                    <label for="" class="text-sm">{{ ed.date }}</label>
-                                                             </div>
-                                                     
-                                                            <button class="py-[1.1rem] px-[1rem] border w-[30%] mx-[1rem]">add to cart</button>
-                                                            <button class="py-[1.1rem] border w-[30%] mx-[1rem]">add to wishlist</button>
-
-                                                </div>
-                                                  
-                                        </div>
-
-
-                           </div>
-
-
-
-
-
-
-
-
-
-                           <div class="flex flex-col mt-[4rem] mb-[3rem]">
-                             
-                             <label for="">Add ons</label>
-
-                             <div v-for="ed in game.adds" class="flex rounded-md mt-[1rem] flex-col bg-dark2">
-                                       <div class="flex flex-row border-b-2">
-                                         <img :src="ed.img" class="w-[50%] rounded-tl-md" alt="">
-                                         <div class="flex flex-col ">
-
-                                                 <div class="flex flex-row p-[1rem]">
-                                                     <label for="" class="bg-dark1 rounded-md p-[.2rem] text-sm mr-[1rem]">{{ ed.type }}</label>
-                                                     <label for="">{{ ed.name }}</label>
-                                                 </div>
-
-                                                 <label for="" class="p-[1rem]">{{ ed.text }}</label>
-
-                                         </div>
-
-
-                                     
-                                     </div>
-
-                                     <div class="flex justify-end items-center py-[1rem]">
-                                                  
-                                                  <div class="flex flex-col">
-
-                                                         <div class="flex flex-row items-center justify-end">
-
-                                                                   <label v-if="ed.dis" for="" class="bg-red-800 rounded-md text-small
-                                                                   p-1 mx-[.5rem]">{{ ed.dis }}</label>
-                                                                   <label v-if="ed.oldprice" for="" class="mx-[.5rem]">{{ ed.oldprice }}</label>
-                                                                   <label for="" class="mx-[.5rem]">{{ ed.price }}</label>
-
-
-                                                         </div>
-
-                                                         <label for="" class="text-sm">{{ ed.date }}</label>
-                                                  </div>
-                                          
-                                                 <button class="py-[1.1rem] px-[1rem] border w-[30%] mx-[1rem]">add to cart</button>
-                                                 <button class="py-[1.1rem] border w-[30%] mx-[1rem]">add to wishlist</button>
-
-                                     </div>
-                                       
-                             </div>
-
-
-                </div>
-
-
-
-
 
 
 
@@ -574,49 +330,49 @@ window.scrollTo({
 
 
                            <div class="">
-                                <div class="sticky top-[9.5rem] h-[50%]  p-[3rem]">
+                                <div class="sticky top-[9.5rem] h-[50%]  px-[3rem] py-[1rem]">
                                     <div class="mb-[2rem]"><img src="https://cdn2.unrealengine.com/egs-dyinglight2stayhuman-techland-ic5-400x166-55b2799d56f3.png?h=270&resize=1&w=480" alt=""></div>
                                     
                                     <div class="felx flex-col">
                                         <label for="" class="bg-dark2 rounded-md px-[1rem] py-[.3rem]">basegame</label>
                                         
                                         <div class="felx mt-[2rem] mb-[1rem]">
-                                             <label for="" class="bg-red-700 rounded-md px-[1rem] py-[.3rem] text-sm">50%</label>
+                                             <label for="" :class="`bg-[${game.theme_color}] rounded-md px-[1rem] py-[.3rem] text-sm`">50%</label>
                                              <label for="" class="text-gray-400 mx-3">59.99$</label>
                                              <label for="" class="text-white mx-2">59.99$</label>
                                         </div>
 
                                         <label class=" " for="">sales end in d2314</label>
 
-                                        <button class="bg-red-800 w-full mt-[1rem] px-[1rem] py-[.6rem] rounded-md">ok</button>
+                                        <button :class="`bg-[${game.theme_color}] w-full mt-[1rem] px-[1rem] py-[.6rem] rounded-md`">ok</button>
                                         <button class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem]">ok</button>
                                         <button class=" border border-white rounded-md px-[1rem] py-[.2rem] w-full mt-[1rem] mb-[1rem]">ok</button>
                                         
-                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[1rem] border-b-2 border-gray-400">
+                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[.5rem] border-b-2 border-gray-400">
                                             <label for="">osa</label>
                                             <label for="">ma</label>
                                         </div>                                        
 
 
-                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[1rem] border-b-2 border-gray-400">
+                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[.5rem] border-b-2 border-gray-400">
                                             <label for="">osa</label>
                                             <label for="">ma</label>
                                         </div>  
 
 
-                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[1rem] border-b-2 border-gray-400">
+                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[.5rem] border-b-2 border-gray-400">
                                             <label for="">osa</label>
                                             <label for="">ma</label>
                                         </div>  
 
 
-                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[1rem] border-b-2 border-gray-400">
+                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[.5rem] border-b-2 border-gray-400">
                                             <label for="">osa</label>
                                             <label for="">ma</label>
                                         </div>  
 
 
-                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[1rem] border-b-2 border-gray-400">
+                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[.5rem] border-b-2 border-gray-400">
                                             <label for="">osa</label>
                                             <label for="">ma</label>
                                         </div>  
@@ -640,10 +396,240 @@ window.scrollTo({
 
 
 
-       
 
 
-               </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                         <div v-if="nav=='over'" class=" grid grid-cols-3">
+
+
+                            <div class=" col-span-2 p-[1.2rem]">        
+                                             
+                                <div class="flex flex-col">
+                                    <label for="">Available Achievements</label>
+
+                                    <div class="flex flex-row  justify-between my-[1rem]">
+                                        
+                                            <div v-for="ach in v_ach" class="flex flex-col w-[15%] my-[1rem]">
+
+                                                        <img :src="ach.img" alt="" class="mb-[.5rem]">
+                                                        <label for="" class="">{{ach.name.length >= 10 ? ach.name.substring(0,10)+'...':ach.name}}</label>
+                                                        <label for="" class="flex items-start"><span class=" text-amber-800 mr-[.1rem] translate-y-[5%]"><ion-icon name="trophy"></ion-icon></span>{{ach.xp}}</label> 
+
+                                            </div>
+
+
+                                    </div>
+                                    <button class="w-[100%] bg-dark2 p-[1rem]">view all ach</button>
+
+                                </div>
+
+
+                                
+
+
+                                <div class="flex flex-col mt-[4rem] mb-[3rem]">
+                                    
+                                                <label v-if="game.editions" for="">Editions</label>
+
+                                                <div v-if="game.editions" v-for="ed in game.editions" class="flex rounded-md mt-[1rem] flex-col bg-dark2">
+                                                        <div class="flex flex-row border-b-2">
+                                                            <img :src="ed.img" class="w-[50%] rounded-tl-md" alt="">
+                                                            <div class="flex flex-col ">
+
+                                                                    <div class="flex flex-row p-[1rem]">
+                                                                        <label for="" class="bg-dark1 rounded-md p-[.2rem] text-sm mr-[1rem]">{{ ed.type }}</label>
+                                                                        <label for="">{{ ed.name }}</label>
+                                                                    </div>
+
+                                                                    <label for="" class="p-[1rem]">{{ ed.text }}</label>
+
+                                                            </div>
+
+
+                                                        
+                                                        </div>
+
+                                                        <div class="flex justify-end items-center py-[1rem]">
+                                                                    
+                                                                    <div class="flex flex-col">
+
+                                                                            <div class="flex flex-row items-center justify-end">
+
+                                                                                    <label for="" class="bg-red-800 rounded-md text-small
+                                                                                    p-1 mx-[.5rem]">{{ ed.dis }}</label>
+                                                                                    <label for="" class="mx-[.5rem]">{{ ed.oldprice }}</label>
+                                                                                    <label for="" class="mx-[.5rem]">{{ ed.price }}</label>
+
+
+                                                                            </div>
+
+                                                                            <label for="" class="text-sm">{{ ed.date }}</label>
+                                                                    </div>
+                                                            
+                                                                    <button class="py-[1.1rem] px-[1rem] border w-[30%] mx-[1rem]">add to cart</button>
+                                                                    <button class="py-[1.1rem] border w-[30%] mx-[1rem]">add to wishlist</button>
+
+                                                        </div>
+                                                        
+                                                </div>
+
+
+                                </div>
+
+
+
+
+
+
+
+
+
+                                <div class="flex flex-col mt-[4rem] mb-[3rem]">
+                                    
+                                    <label v-if="game.adds" for="">Add ons</label>
+
+                                    <div v-if="game.adds" v-for="ed in game.adds" class="flex rounded-md mt-[1rem] flex-col bg-dark2">
+                                            <div class="flex flex-row border-b-2">
+                                                <img :src="ed.img" class="w-[50%] rounded-tl-md" alt="">
+                                                <div class="flex flex-col ">
+
+                                                        <div class="flex flex-row p-[1rem]">
+                                                            <label for="" class="bg-dark1 rounded-md p-[.2rem] text-sm mr-[1rem]">{{ ed.type }}</label>
+                                                            <label for="">{{ ed.name }}</label>
+                                                        </div>
+
+                                                        <label for="" class="p-[1rem]">{{ ed.text }}</label>
+
+                                                </div>
+
+
+                                            
+                                            </div>
+
+                                            <div class="flex justify-end items-center py-[1rem]">
+                                                        
+                                                        <div class="flex flex-col">
+
+                                                                <div class="flex flex-row items-center justify-end">
+
+                                                                        <label v-if="ed.dis" for="" class="bg-red-800 rounded-md text-small
+                                                                        p-1 mx-[.5rem]">{{ ed.dis }}</label>
+                                                                        <label v-if="ed.oldprice" for="" class="mx-[.5rem]">{{ ed.oldprice }}</label>
+                                                                        <label for="" class="mx-[.5rem]">{{ ed.price }}</label>
+
+
+                                                                </div>
+
+                                                                <label for="" class="text-sm">{{ ed.date }}</label>
+                                                        </div>
+                                                
+                                                        <button class="py-[1.1rem] px-[1rem] border w-[30%] mx-[1rem]">add to cart</button>
+                                                        <button class="py-[1.1rem] border w-[30%] mx-[1rem]">add to wishlist</button>
+
+                                            </div>
+                                            
+                                    </div>
+
+
+                        </div>
+
+
+
+
+
+
+                                    <div class="flex flex-col">
+
+                                            <label for="" class="text-[1.5rem]">Follow us</label>
+                                            <div class="flex rounded-md bg-dark2 items-center justify-center py-[2rem] mt-[2rem]">
+
+                                                        <button class="text-[2.3rem] mx-[1rem] text-gray-400 hover:text-white hover:translate-y-[-2%] transition-all duration-200"><ion-icon name="logo-youtube"></ion-icon></button>
+                                                        <button class="text-[2.3rem] mx-[1rem] text-gray-400 hover:text-white hover:translate-y-[-2%] transition-all duration-200"><ion-icon name="logo-twitter"></ion-icon></button>
+                                                        <button class="text-[2.3rem] mx-[1rem] text-gray-400 hover:text-white hover:translate-y-[-2%] transition-all duration-200"><ion-icon name="logo-facebook"></ion-icon></button>
+                                                        <button class="text-[2.3rem] mx-[1rem] text-gray-400 hover:text-white hover:translate-y-[-2%] transition-all duration-200"><ion-icon name="logo-instagram"></ion-icon></button>
+
+                                                        
+                                            </div>
+                                    </div>
+
+
+
+
+
+
+
+
+                                <div class="flex flex-col mt-[4rem]">
+
+                                            <label for="" class="text-lg">Epic Player Ratings</label>
+                                            <label for="" class="text-md text-gray-400 mt-4">Captured from players in the Epic Games ecosystem.</label>
+                                                
+                                            <div class="text-[3rem] mt-[2rem] flex flex-row items-center justify-center">
+                                                        <label for="" class="">{{ game.rate }}</label>
+                                                        
+                                                        <label for="">
+                                                            stars
+                                                        </label>
+                                                    
+                                            </div>
+
+
+                                            <div class="flex flex-wrap justify-between mt-[2rem] ">
+                                                    <div v-for="disc in game.game_disc" class="rounded-md py-[1rem] mb-[2rem] bg-dark2 w-[45%] flex flex-col items-center justify-center">
+                                                        <img :src="disc.img" alt="">
+                                                        <label for="" class="text-center text-gray-400 mt-[1rem]">{{ disc.title }}</label>
+                                                        <label for="" class="text-white text-xl font-bold">{{disc.text}}</label>
+                                                    </div>
+                                            </div>
+                                        
+
+                                </div>
+
+
+
+
+
+
+
+                         </div>
+
+                       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       <ach v-if="nav=='ach'" :game="game"/>
+
+
+                  </div>
 
       </div>
 
