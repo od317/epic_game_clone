@@ -1,10 +1,10 @@
 <template>
-    <Carousel class="bg-green-400 px-[1rem] md:hidden" >
-        <slide class=" w-full h-full" v-for="game in games" :key="slide">
-        
-         <div :class="`h-[25rem] w-[90%]  bg-center bg-no-repeat bg-cover mb-[1rem]
-                       flex  items-end text-white`">
-                       <img class=" absolute" :src="game.srcm" alt="">
+    <Carousel class=" pt-[1rem]  md:hidden" :items-to-show="1.2" >
+     
+        <slide class="  h-full overflow-hidden" v-for="game in games" :key="game">
+         <div :class="`h-[23rem] w-[90%]  mb-[1rem]
+                       flex  items-end text-white bg-red-600`">
+                     <img class=" absolute w-full" src="https://images.hdqwalls.com/download/emily-dishonored-2-4k-a5-480x854.jpg" alt="">
                         <div class="flex flex-col pl-[1rem] z-40">
                                 <img class="w-[40%] mb-[1rem]" :src="game.slide_img" alt="">
                                 <label class="text-[.9rem] text-start pl-[1rem] font-bold" for="">Now on epic</label>
@@ -13,7 +13,6 @@
                                 <label class="text-start w-[90%] pl-[1rem] mb-[1rem] text-[1.1rem] font-bold " for="">Starting at 59.99$</label>
                        </div>
         </div>
-
         </slide>
 
         <template #addons>
@@ -40,3 +39,5 @@
    
 
   </script>
+
+
