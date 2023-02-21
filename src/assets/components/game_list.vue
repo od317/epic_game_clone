@@ -1,7 +1,7 @@
 <script setup>
 
 import { defineProps, reactive, toRef,ref } from "vue";
-
+import flic from './flic_game_list.vue'
 
 const props = defineProps({
   gamelist: Array,
@@ -31,7 +31,9 @@ const props = defineProps({
 <template>
 
 
-<div  class="flex flex-col  w-full h-fit items-center mt-[6rem] mb-[4.5rem]">
+<flic :games="gamelist"/>
+
+<div  class="hidden md:flex flex-col  w-full h-fit items-center mt-[6rem] mb-[4.5rem]">
   
      <div class="flex justify-between w-[78%] px-2 mb-4 
        lg:w-[78%]
