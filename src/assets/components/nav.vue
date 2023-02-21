@@ -44,9 +44,10 @@
 
 <!-- search-bar --> 
 
-<div class="flex justify-center max-w-screen  sticky top-0  z-50 lg:bg-dark1 ">
+<div class="flex justify-center max-w-screen  sticky top-0  z-50 lg:bg-dark1 
+ ">
    <!-- large screen --> 
-  <div class="text-white lg:flex items-center  py-[2rem] w-[78%] sticky top-0 z-50 bg-dark1 hidden ">
+  <div class="text-white lg:flex   items-center  py-[2rem] w-[78%] sticky top-0 z-50 bg-dark1 hidden ">
       
       <div class=" h-[2.7rem] p-3 rounded-3xl outline-none bg-[#1c1c1c] flex  items-center   ">
           <ion-icon name="search" class="text-gray-400 mr-1 "></ion-icon> 
@@ -67,7 +68,7 @@
 
 
   <!--small screen -->
-  <div class="text-white lg:hidden    static  items-center  w-[100%]  z-50 bg-dark1   ">
+  <div class="text-white lg:hidden md:pb-[1.5rem]   static  items-center  w-[100%]  z-50 bg-dark1   ">
         
 
             <div class="text-white px-[6%] py-[2rem]  flex  justify-between items-center  w-[100%] bg-dark1  ">

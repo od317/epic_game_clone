@@ -4,4 +4,6 @@ import router from './router'
 
 import './assets/style/style.css'
 
-createApp(App).use(router).mount('#app')
+import flickity from "@toneflix-code/flickity-vue";
+
+createApp(App).use(flickity).use(router).mount('#app')

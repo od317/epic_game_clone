@@ -33,7 +33,10 @@ const props = defineProps({
 
 <div  class="flex flex-col  w-full h-fit items-center mt-[6rem] mb-[4.5rem]">
   
-     <div class="flex justify-between w-[78%] px-2 mb-4 ">
+     <div class="flex justify-between w-[78%] px-2 mb-4 
+       lg:w-[78%]
+       md:w-[100%]
+     ">
 
         <label for="" class="text-xl text-white">Fabruary Saving Spotlight</label>
         <div>
@@ -42,9 +45,11 @@ const props = defineProps({
         </div>
         
      </div>
-    <div class="w-[78%] overflow-x-hidden">
+    <div class="w-[78%] overflow-x-hidden
+       lg:w-[78%]
+       md:w-[100%]">
         
-        <div class="flex w-[400%]  flex-row">
+        <div class="flex   flex-row w-[400%]">
                 
 
 
@@ -52,20 +57,28 @@ const props = defineProps({
                   <div v-for="gl in gamelist" :class="`flex  justify-between w-full  h-fit translate-x-[-${slide_perecent}%] transition-all duration-500`">
             
                       
-                      <div class="group w-1/5 h-fit ml-2 mr-2 relative"  v-for="game in gl">
-                             <div class="absolute flex w-full justify-end items-start p-3"> 
+                      <div class="group  h-fit ml-2 mr-2 relative
+                      lg:w-1/5
+                      "  v-for="game in gl">
+                            
+                        <div class="absolute flex w-full justify-end items-start p-3"> 
+
                              <button @click="console.log('oksss')" class=" 
                               relative rounded-full z-50 text-3xl   
                               opacity-0 group-hover:opacity-100 after: transition-all duration-100 
                               after_wish">
                                     <ion-icon class="bg-black text-white  rounded-full z-100 " name="add-circle-outline"></ion-icon>
                               </button>
+
                               </div>
+                              
+
                               <router-link :to="`game/`+game.name"> 
-                              <div class=" cursor-pointer  absolute flex items-start justify-end h-[20rem] p-3  w-full bg-gray-200 opacity-0 hover:opacity-10 transition-all duration-200">
+                           
+                                <div class=" cursor-pointer  absolute flex items-start justify-end h-[20rem] p-3  w-full bg-gray-200 opacity-0 hover:opacity-10 transition-all duration-200">
                               </div>
                       
-                              <img :src="game.img" alt=""  :class="`${ game.last ? 'w-0 h-0':'w-full h-[20rem]'} rounded-md`">
+                              <img :src="game.img" alt=""  :class="`${ game.last ? 'w-0 h-0':'w-full lg:h-[20rem] md:h-[18rem]'} rounded-md`">
                               </router-link>
                    
                       <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-2'}`">
