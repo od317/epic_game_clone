@@ -363,18 +363,18 @@ let footer_cont1 = [{
 
 <!-- lg screen-->
 <div class="md:flex w-full   justify-center mt-3 hidden
-            lg:h-[36rem]
+            lg:h-[26rem]
             md:h-[30%]">
 
-<div class="grid grid-cols-1 grid-rows-8 grid-flow-col gap-4 lg:w-[78%] lg:p-[0] px-[1rem]
+<div class="grid grid-cols-1 grid-rows-6 grid-flow-col gap-4 lg:w-[78%] lg:p-[0] px-[1rem]
 ">
 
 
   
-  <div class="text-white row-span-7 grid  grid-cols-5">
+  <div class="text-white row-span-5 grid  grid-cols-5">
                
                  <div class=" group col-span-4   relative rounded-xl w-[99%] overflow-hidden 
-                    lg:h-[30rem]
+                    lg:h-[26rem]
                     md:h-fit">
                                       
                                       <div class="flex   w-[200%]
@@ -385,7 +385,7 @@ let footer_cont1 = [{
                                                 h-full rounded-xl w-[99%] overflow-hidden`">
                                                     
                                                       <img :src="`${ slider_img[0] }`" class="w-full  rounded-xl
-                                                       lg:h-[30rem]
+                                                       lg:h-[26rem]
                                                        md:" alt="">
                                                       <div class="absolute opacity-40 bg-black h-full rounded-xl   text-white bottom-0 
                                                       left-0 right-0">
@@ -416,7 +416,7 @@ let footer_cont1 = [{
                                             <div  :class="`${ slide_on === true ? 'translate-x-[-100%] transition-all duration-500':''} relative  h-full rounded-xl w-[99%] overflow-hidden`">
                                                       
                                               <img :src="`${ slider_img[1] }`" class="w-full  rounded-xl
-                                               lg:h-[30rem]
+                                               lg:h-[26rem]
                                                md:" alt="">
                                                         <div class="absolute opacity-40 bg-black h-full rounded-xl   text-white bottom-0 left-0 right-0">
                                                         </div>
@@ -443,7 +443,7 @@ let footer_cont1 = [{
 
 
                     <div class=" pl-4 flex flex-col justify-between
-                    lg:h-[30rem]
+                    lg:h-[26rem]
                     md:h-full
                     ">
 
@@ -453,7 +453,7 @@ let footer_cont1 = [{
                         
                         <div :class="`   relative flex items-center  w-full h-full ${game.last !== true ? '':''} hover:cursor-pointer p-1`">
                           <img :src="game.src" :class="` rounded-md z-10 
-                          lg:h-[4.1rem] lg:w-[3.2rem]
+                          lg:h-[3.1rem] lg:w-[2.2rem]
                           md:h-[75%] md:w-[30%]`" alt=""> 
                           <div class=" ml-5  grid content-center w-full ">
                             <p class="text-white z-10">{{ game.name }}</p>
