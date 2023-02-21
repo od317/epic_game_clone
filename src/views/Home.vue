@@ -12,7 +12,7 @@ let games = [
     {
        name:"dis2",
        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
-       srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+       srcm:"https://s2.best-wallpaper.net/wallpaper/iphone/1806/Dishonored-2-PC-games_iphone_828x1792.jpg",
        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
        num:1
     },

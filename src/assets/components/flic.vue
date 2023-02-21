@@ -2,9 +2,10 @@
     <Carousel class="bg-green-400 px-[1rem] md:hidden" >
         <slide class=" w-full h-full" v-for="game in games" :key="slide">
         
-         <div :class="`h-[25rem] w-[90%] bg-[url('https://images8.alphacoders.com/710/thumb-1920-710284.png')] bg-center bg-no-repeat bg-cover mb-[1rem]
+         <div :class="`h-[25rem] w-[90%]  bg-center bg-no-repeat bg-cover mb-[1rem]
                        flex  items-end text-white`">
-                        <div class="flex flex-col pl-[1rem]">
+                       <img class=" absolute" :src="game.srcm" alt="">
+                        <div class="flex flex-col pl-[1rem] z-40">
                                 <img class="w-[40%] mb-[1rem]" :src="game.slide_img" alt="">
                                 <label class="text-[.9rem] text-start pl-[1rem] font-bold" for="">Now on epic</label>
                                 <label class="text-start w-[90%] pl-[1rem] mt-[.4rem] text-[1.1rem] font-bold mb-[1rem]" for="">Break the cycle. Fight to survive as this 
