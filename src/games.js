@@ -7,6 +7,7 @@ let games_list =[
     ach_img:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_DyingLight2StayHuman_Techland_S3_2560x1440-f1dcd15207f091674615ccb4bd9dc3c7',
     bottom_img:'https://cdn2.unrealengine.com/dl2-1st-anniversary-roadmap-1920x1080-eng-1920x1080-bb5b3ec5de61.jpg',
     theme_color:'#ed0000',
+    price:'59.99',
     rate:4.6,
     imgs:[
         [
@@ -412,6 +413,7 @@ let games_list =[
 for(let game of games_list){
     games.set(game.name,{
         name:game.name,
+        price:game.price,
         img:game.img,
         ach_img:game.ach_img,
         bottom_img:game.bottom_img,

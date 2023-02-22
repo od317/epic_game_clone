@@ -14,7 +14,7 @@ const props = defineProps({
 <template>
 
         <div class="md:flex w-full justify-center mb-[4rem]">
-               <div class="md:flex p-[1rem] md:w-[78%]  ">
+               <div class="md:flex p-[1rem] md:w-[78%]  ">  
                       <div class=" group relative cursor-pointer  ">
                         <div class="absolute w-full h-full bg-gray-400  opacity-0 group-hover:opacity-10 rounded-2xl transition-all duration-200"></div> 
                         <img class="w-[100%] rounded-2xl" src="https://cdn2.unrealengine.com/egs-featured-titles-blade-16x9-1920x1080-aaf6937d52da.jpg?h=1080&resize=1&w=1920" alt="">

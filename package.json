@@ -23,7 +23,7 @@
     "vue-chartjs": "^4.1.1",
     "vue-flickity": "^1.2.1",
     "vue-router": "^4.0.11",
-    "vue3-carousel": "^0.2.9",
+    "vue3-carousel": "^0.2.11",
     "vuedraggable": "^4.1.0"
   },
   "devDependencies": {

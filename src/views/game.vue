@@ -5,7 +5,7 @@ import { defineProps, reactive, toRef,ref } from "vue";
 
 import games from '../games'
 import ach from '../assets/components/game.vue/ach.vue' 
-
+import flic from '../assets/components/game.vue/flic_game.vue'
 
 
 
@@ -147,8 +147,8 @@ window.scrollTo({
 
 
 <template>
-
-      <div class="flex justify-center">
+      <!--large screen-->
+      <div class="hidden md:flex justify-center">
 
                <div class="w-[78%]   text-white ">
 
@@ -648,6 +648,89 @@ window.scrollTo({
 
 
 
+
+    <!--small screen -->
+
+    <div class="md:hidden">
+
+             <div class="flex flex-col text-white text-[1.8rem] px-[1rem]">
+                
+                <label for="">{{ game.name }}</label>
+
+                <div class="flex">
+                    <label class="bg-dark2 text-[1rem] px-[.2rem] py-[.1rem] rounded-md" for="">{{ game.rate }}</label>
+                </div>
+
+             </div>
+
+             <div class=" sticky top-[10%] pt-[.5rem] pb-[.3rem] flex px-[1rem] mt-[1.5rem] text-white text-[1.5rem] bg-dark1">
+                               <button @click="change_nav('over')" :class="` border-b-2 border-opacity-0 ${nav=='over'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">overview</button>
+                               <button @click="change_nav('ach')" :class="`ml-[2rem] border-b-2 border-opacity-0 ${nav=='ach'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">achievements</button>
+
+
+             </div>
+                                                                        
+ 
+      
+             <div class="px-[1rem] mt-[2rem]" v-if="nav=='over'">
+
+
+                    <div class="flex flex-col items-center text-white">
+                        <img class="rounded-md mb-[1rem]" :src="game.ach_img" alt="">
+                        <label class="text-white bg-dark2 rounded-md text-[.9rem] px-[.8rem] py-[.4rem] mb-[.6rem]" for="">base game</label>
+                        <label class="text-white mb-[.6rem]" for="">{{game.price}}$</label>
+
+                        <button :class="`bg-[${game.theme_color}] w-full py-[.8rem] text-[1.1rem] rounded-md mb-[.8rem]`">Buy now</button>
+                        <button :class="` w-full py-[.8rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500`">Add To Cart</button>
+                        <button :class="` w-full py-[.3rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]`">add to wishlist</button>
+
+
+                        <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] pb-[.4rem] mb-[.5rem]">
+                            <label class="text-gray-300" for="">Refund type</label>
+                            <label for="">sefl refundable</label>
+                        </div>
+                        
+                        <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] pb-[.4rem] mb-[.5rem]">
+                            <label class="text-gray-300" for="">Refund type</label>
+                            <label for="">sefl refundable</label>
+                        </div>
+
+                        <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] pb-[.4rem] mb-[.5rem]">
+                            <label class="text-gray-300" for="">Refund type</label>
+                            <label for="">sefl refundable</label>
+                        </div>
+
+                        <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] pb-[.4rem] mb-[.5rem]">
+                            <label class="text-gray-300" for="">Refund type</label>
+                            <label for="">sefl refundable</label>
+                        </div>
+
+                        <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] pb-[.4rem] mb-[.5rem]">
+                            <label class="text-gray-300" for="">Refund type</label>
+                            <label for="">sefl refundable</label>
+                        </div>
+
+
+                        <div class="flex justify-between w-full my-[1rem]">
+                            <button class="w-[48%] border-[.1rem] border-gray-200 py-[.4rem] rounded-md">Share</button>
+                            <button class="w-[48%] border-[.1rem] border-gray-200 py-[.4rem] rounded-md">Report</button>
+                        </div>
+
+
+                    </div>
+
+
+             </div>
+
+
+
+
+
+             <div v-else></div>
+
+             <flic/>
+
+    </div>
 
 
 
