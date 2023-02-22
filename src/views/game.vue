@@ -663,7 +663,7 @@ window.scrollTo({
 
              </div>
 
-             <div class=" sticky top-[10%] pt-[.5rem] pb-[.3rem] flex px-[1rem] mt-[1.5rem] text-white text-[1.5rem] bg-dark1">
+             <div class=" sticky top-[10%] pt-[.5rem] pb-[.3rem] flex px-[1rem] mt-[1.5rem] text-white text-[1.5rem] bg-dark1 z-30">
                                <button @click="change_nav('over')" :class="` border-b-2 border-opacity-0 ${nav=='over'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">overview</button>
                                <button @click="change_nav('ach')" :class="`ml-[2rem] border-b-2 border-opacity-0 ${nav=='ach'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">achievements</button>
 
@@ -680,7 +680,7 @@ window.scrollTo({
                         <label class="text-white bg-dark2 rounded-md text-[.9rem] px-[.8rem] py-[.4rem] mb-[.6rem]" for="">base game</label>
                         <label class="text-white mb-[.6rem]" for="">{{game.price}}$</label>
 
-                        <button :class="`bg-[${game.theme_color}] w-full py-[.8rem] text-[1.1rem] rounded-md mb-[.8rem]`">Buy now</button>
+                        <button :class="`bg-[#ed0000] w-full py-[.8rem] text-[1.1rem] rounded-md mb-[.8rem]`">Buy now</button>
                         <button :class="` w-full py-[.8rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500`">Add To Cart</button>
                         <button :class="` w-full py-[.3rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]`">add to wishlist</button>
 
@@ -719,16 +719,147 @@ window.scrollTo({
 
                     </div>
 
+             <flic :game="game"/>
+
+             <div class="my-[3rem] text-white text-[1.1rem]">
+                The virus won and civilization has fallen back to the Dark Ages. The City, 
+                one of the last human settlements,
+                 is on the brink of collapse. Use your agility and combat skills 
+                 to survive, and reshape the world. Your choices matter.
+             </div>
+
+
+             <div class="flex flex-row ">
+
+                       <div class=" flex flex-wrap items-start w-[49%]  border-l-[.1rem] broder-gray-500 text-white">
+                        <label class="w-[100%] text-gray-500 ml-[1rem]" for="">Generes</label>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+
+
+                       </div>
+
+
+                        <div class=" flex flex-wrap w-[49%] border-l-[.1rem]  broder-gray-500 text-white">
+                        <label class="w-[100%] text-gray-500 ml-[1rem]" for="">Generes</label>
+
+                        <button class="ml-[1.2rem]">cloud saves</button>
+                        <button class="ml-[1.2rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+                        <button class="ml-[1rem]">action</button>
+
+
+                       </div>
+
+             </div>
+          
+
+
+
+             <div class="mt-[2rem] flex flex-col items-center bg-dark2 text-white rounded-md p-[1rem] text-[1.1rem]">
+                New update is live! We made some of the most requested 
+                features a reality and introduced various improvements. 
+                Click here for more information
+                <button class="w-[100%] rounded-md mt-[1rem] py-[.5rem] border-[.1rem] border-gray-500">view patch notes</button>
+             </div>
+
+             <img class="my-[1rem]" :src="game.bottom_img" alt="">
+
+             <div class=" relative mt-[1rem] overflow-y-hidden text-white">
+                                    Over twenty years ago in Harran, we fought the virus—and lost. Now, we’re losing again. The City, one of the last large human settlements, is torn by conflict. Civilization has fallen back into the Dark Ages. And yet, we still have hope.
+                                    You are a wanderer with the power
+                                    <div :class="` ${sm ?'absolute z-0 opacity-20':''}`">
+                                   to change the fate of The City. But your exceptional abilities come at a price. Haunted by memories you cannot decipher, you set out to learn the truth… and find yourself in a combat zone. Hone your skills, as to defeat your enemies and make allies, you’ll need both fists and wits. Unravel the dark secrets behind the wielders of power, choose sides and decide your destiny. But wherever your actions take you, there's one thing you can never forget—stay human.
+                                    VAST OPEN WORLD
+                                    Participate in the life of a city engulfed in a new dark era. Discover different paths and hidden passages, as you explore its multiple levels and locations.
+                                    CREATIVE & BRUTAL COMBAT
+                                    Take advantage of your parkour skills to tip the scales of even the most brutal encounter. Clever thinking, traps and creative weapons will be your best friends.
+                                    DAY AND NIGHT CYCLE
+                                    Wait for night to venture into dark hideouts of the Infected. Sunlight keeps them at bay, but once it’s gone, monsters begin the hunt, leaving their lairs free to explore.
+                                    CHOICES & CONSEQUENCES
+                                    Shape the future of The City with your actions and watch how it changes. Determine the balance of power by making choices in a growing conflict and forge your own experience.
+                                    2-4 PLAYER CO-OP GAMEPLAY
+                                    Play in up to four-player co-op. Host your own games or join others and see how their choices have played out differently than yours.</div>
+                                   <button v-if="sm" @click="sm = !sm" class="rounded-md w-full bg-dark3 mt-[1.5rem] py-[.5rem] relative z-0">show more^</button>
+                                   <button v-else @click="sm = !sm" class="rounded-md w-full bg-dark3 mt-[1.5rem] py-[.5rem] relative z-50">show less^</button>
+
+                           </div>
+
+
+                        <div class="mt-[2rem] text-white text-[1.1rem]">
+                            
+                            <label class="mb-[1rem]" for="">Availabel acheviments</label>
+                            
+                            <div class="flex justify-between flex-wrap">
+                                 <div class=" flex flex-col w-[35%] p-[.4rem]" v-for="ach in v_ach">
+                                       <img class="w-[100%]" :src="ach.img" alt="">
+                                       <label class="w-[100%] text-[.8rem]" for="">{{ ach.name }}</label>
+                                       <label class="text-[.8rem]" for=""><span class=" text-amber-800 mr-[.1rem] translate-y-[5%]"><ion-icon name="trophy"></ion-icon></span>{{ach.xp}}</label>
+                                 </div>
+                                 <button @click="change_nav('ach')" class="w-[100%] bg-dark2 py-[.5rem] rounded-md mt-[2rem] mb-[2rem] hover:bg-dark3 transition-all duration-200">view all ach</button>
+
+                            </div>
+                            
+                        </div>   
+
+
+                        <div class="text-white">
+                            <label class="text-[1.1rem] mb-[.5rem]" for="">Editions</label>
+                            
+                            <div class="flex flex-col mb-[1rem]" v-for="ed in game.editions">
+                            
+                                <img class="rounded-md" :src="ed.img" alt="">
+                            
+                                <div class="flex flex-col items-center justify-center bg-dark2 ">
+                                   
+                                    <div class="flex flex-col items-center border-b-[.1rem] border-b-gray-400">
+                                        <div class="mt-[1rem] flex items-center w-[100%] justify-center">
+                                                <label class="mr-[.2rem] bg-dark3 py-[.2rem] px-[.4rem]" for="">base game</label>
+                                                <label for="">Dying Light 2 Stay Human</label>
+                                        </div>
+
+                                        <label class=" flex items-center w-[75%] mt-[.5rem] mb-[2rem] justify-center" for="">The virus won and civilization has fallen back to the Dark Ages.</label>
+                                   
+                                    </div>
+                                
+
+                                                                     
+                                        <div class="flex flex-col w-full items-center mt-[1.5rem]">
+                                            <label class="text-[1.1rem] mb-[.5rem]" for="">{{ ed.price }}$</label> 
+                                            <button :class="` w-[90%] py-[.6rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500`">Add To Cart</button>
+                                            <button :class="` w-[90%] py-[.2rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]`">add to wishlist</button>
+                                        </div>
+
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
 
              </div>
 
 
-
+              
 
 
              <div v-else></div>
 
-             <flic/>
 
     </div>
 
