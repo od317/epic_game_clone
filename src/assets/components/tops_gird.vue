@@ -2,7 +2,7 @@
 
 
 import { defineProps, reactive, toRef,ref } from "vue";
-
+import flict from './tops_flict.vue'
 const props = defineProps({
       games_grid : Array
 });
@@ -16,7 +16,7 @@ const props = defineProps({
 <template>
 
 
-     <div class="w-full flex items-center justify-center">
+     <div class="hidden w-full md:flex items-center justify-center">
         
             <div class="grid grid-cols-3 grid-rows-1  text-white w-[78%]  ">
  
@@ -60,7 +60,7 @@ const props = defineProps({
 
      </div>
 
-
+     <flict :games="games_grid"/>
    
 
 

@@ -1,6 +1,8 @@
 <script setup>
 
 import { defineProps, reactive, toRef,ref } from "vue";
+import flict from './flic_game_an.vue'
+
 
 const props = defineProps({
   game_an: Array,
@@ -11,7 +13,7 @@ const props = defineProps({
 </script>
 
 <template>
-   <div class="w-screen flex items-center justify-center mb-[3rem] mt-[5rem]">
+   <div class="hidden w-screen md:flex items-center justify-center mb-[3rem] mt-[5rem]">
 
     <div :class="`grid w-[78%]  grid-cols-${String(game_an.length)} grid-rows-1 gap-[2rem]`">
 
@@ -27,5 +29,8 @@ const props = defineProps({
         </div>
 
     </div>
+
+    <flict :games="game_an"/>
+  
 
 </template>

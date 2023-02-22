@@ -1,9 +1,17 @@
 <template>
+    
+    <div class="md:hidden mt-[4rem]">
+ 
+          <button class="pl-[1.5rem] text-white">Games on sale ></button>
+
+    </div>
+    
     <Carousel class=" pt-[1rem]  md:hidden" :items-to-show="1.5" >
      
         <slide class="  h-full overflow-hidden" v-for="game in games" :key="game">
          <div :class="` w-[90%]  mb-[1rem]
                        flex flex-col center text-white  p-[.5rem]`">
+                        
                      <img class="  w-full h-[19rem] rounded-md" :src="game.img" alt="">
                         <div class="flex flex-col  z-40">
                                     <div :class="`flex flex-col items-start text-start w-full mt-2`">
@@ -19,9 +27,7 @@
         </div>
         </slide>
 
-        <template #addons>
-        <Pagination />
-        </template>
+        
     </Carousel>
   
   </template>

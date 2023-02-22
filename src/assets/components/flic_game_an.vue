@@ -4,11 +4,8 @@
         <slide class="  h-full overflow-hidden rounded-[1rem]" v-for="game in games" :key="game">
          <div :class="`h-[26rem] w-[90%]   rounded-[1rem]
                        flex  items-end text-white `">
-                    <div class="absolute opacity-40 w-full bg-black h-full rounded-[1rem]   text-white  z-30">
-                    </div>
-                     <img class=" absolute  h-full rounded-[1rem]" src="https://s1.1zoom.me/b4854/375/Dishonored_Warriors_2_Emily_Kaldwin_Head_533170_600x800.jpg" alt="">
                         <div class="flex flex-col  z-40">
-                                <img class="w-[50%] mb-[1rem] ml-[1rem]" :src="game.slide_img" alt="">
+                                <img class="w-[100%] mb-[1rem] ml-[1rem] rounded-lg" :src="game.img" alt="">
                                 <label class="text-[.7rem] text-start pl-[1rem] font-bold" for="">Now on epic</label>
                                 <label class="text-start w-[90%] pl-[1rem] mt-[.4rem] text-[.9rem] font-bold mb-[1rem]" for="">Break the cycle. Fight to survive as this 
                                 award-winning third-person shooter brings Selene's story to PC.</label>
