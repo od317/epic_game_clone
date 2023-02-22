@@ -11,9 +11,10 @@
         <slide class="  h-full overflow-hidden" v-for="game in games" :key="game">
          <div :class="` w-[90%]  mb-[1rem]
                        flex flex-col center text-white  p-[.5rem]`">
-                        
+                    <router-link :to="`game/`+game.name"> 
                      <img class="  w-full h-[19rem] rounded-md" :src="game.img" alt="">
-                        <div class="flex flex-col  z-40">
+                    </router-link>
+                     <div class="flex flex-col  z-40">
                                     <div :class="`flex flex-col items-start text-start w-full mt-2`">
                                             <label for="" class="w-full text-sm text-gray-600">Base game </label>
                                             <label for="" class="w-full text-xl text-white">{{ game.name }} </label>
