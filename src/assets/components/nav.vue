@@ -97,9 +97,9 @@
 
                   <div :class="`w-full flex flex-col items-start px-[6%] py-[2rem] bg-dark1   `">
                           
-                                 <router-link  class="w-full text-start " to="/"><button @click="page='discover'" :class="` ${page=='discover' ? 'text-white font-bold':'text-gray-400 hover:text-white'} w-full text-start py-[.7rem]`">Discover</button></router-link> 
-                                 <router-link class="w-full text-start" to="/browse"><button @click="page='browse'" :class="` ${page=='browse' ? 'text-white font-bold':'text-gray-400 hover:text-white'} w-full text-start py-[.7rem] border-t-2 border-b-2 border-gray-400`">Browse</button></router-link> 
-                                 <router-link class="w-full text-start " to="/news"><button @click="page='news'" :class="` ${page=='news' ? 'text-white font-bold':'text-gray-400 hover:text-white'} w-full text-start py-[.7rem]`" >News</button></router-link> 
+                                 <router-link @click="george=false" class="w-full text-start " to="/"><button @click="page='discover'" :class="` ${page=='discover' ? 'text-white font-bold':'text-gray-400 hover:text-white'} w-full text-start py-[.7rem]`">Discover</button></router-link> 
+                                 <router-link @click="george=false" class="w-full text-start" to="/browse"><button @click="page='browse'" :class="` ${page=='browse' ? 'text-white font-bold':'text-gray-400 hover:text-white'} w-full text-start py-[.7rem] border-t-2 border-b-2 border-gray-400`">Browse</button></router-link> 
+                                 <router-link @click="george=false" class="w-full text-start " to="/news"><button @click="page='news'" :class="` ${page=='news' ? 'text-white font-bold':'text-gray-400 hover:text-white'} w-full text-start py-[.7rem]`" >News</button></router-link> 
 
                   </div>
                   

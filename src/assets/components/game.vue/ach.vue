@@ -139,9 +139,9 @@ const props = defineProps({
 
 
     <div  class="md:hidden  px-[1rem]">
-        <div class="flex flex-col  bg-dark3">
+        <div class="flex flex-col  bg-dark3 rounded-md">
 
-               <img :src="game.ach_img" class=" rounded-md" alt="">
+               <img :src="game.ach_img" class=" rounded-t-md" alt="">
   
                <div class="flex flex-row">
 
