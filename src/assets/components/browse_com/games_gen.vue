@@ -2,7 +2,7 @@
 
 
 import { defineProps, reactive, toRef,ref } from "vue";
-
+import flic from './flic_gen.vue'
 
 const props = defineProps({
   genlist: Array,
@@ -50,7 +50,12 @@ const props = defineProps({
 
 <template>
 
-<div  class="flex flex-col  w-full h-fit items-center  mb-[4.5rem]">
+
+
+<flic :gen_list="genlist"/>
+
+
+<div  class="hidden md:flex flex-col  w-full h-fit items-center  mb-[4.5rem]">
   
   <div class="flex justify-between w-[78%] px-2 mb-4 ">
 

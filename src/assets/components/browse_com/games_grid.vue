@@ -25,7 +25,6 @@
             gener:geners[Math.floor(Math.random() * (3 - 0 + 1)) + 0],
             new:new_old[Math.floor(Math.random() * (1 - 0 + 1)) + 0]    
         })
-        console.log(gamesgrid[gamesgrid.length-1])
        }
 
 
