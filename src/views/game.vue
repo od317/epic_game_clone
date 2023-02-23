@@ -132,6 +132,10 @@ let change_nav = (v)=>{
         window.scrollTo({
         top:0   ,
       })
+      window.scrollTo({
+        top:0   ,
+        behavior: 'smooth'
+      })
 
 }
 
@@ -663,7 +667,7 @@ window.scrollTo({
 
              </div>
 
-             <div class=" sticky top-[10%] pt-[.5rem] pb-[.3rem] flex px-[1rem] mt-[1.5rem] text-white text-[1.5rem] bg-dark1 z-30">
+             <div class=" sticky top-[10%] pt-[.5rem] pb-[.7rem] flex px-[1rem] mt-[1.5rem] text-white text-[1.5rem] bg-dark1 z-30">
                                <button @click="change_nav('over')" :class="` border-b-2 border-opacity-0 ${nav=='over'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">overview</button>
                                <button @click="change_nav('ach')" :class="`ml-[2rem] border-b-2 border-opacity-0 ${nav=='ach'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">achievements</button>
 
@@ -852,13 +856,58 @@ window.scrollTo({
 
                         </div>
 
+
+                        
+                                    <div class="flex flex-col text-white mb-[2rem]">
+
+                                            <label for="" class="text-[1.1rem]">Follow us</label>
+                                            <div class="flex rounded-md bg-dark2 items-center justify-center py-[1rem] mt-[1rem]">
+
+                                                        <button class="text-[1.5rem] mx-[1rem] text-gray-400 hover:text-white hover:translate-y-[0%] transition-all duration-200"><ion-icon name="logo-youtube"></ion-icon></button>
+                                                        <button class="text-[1.5rem] mx-[1rem] text-gray-400 hover:text-white hover:translate-y-[0%] transition-all duration-200"><ion-icon name="logo-twitter"></ion-icon></button>
+                                                        <button class="text-[1.5rem] mx-[1rem] text-gray-400 hover:text-white hover:translate-y-[0%] transition-all duration-200"><ion-icon name="logo-facebook"></ion-icon></button>
+                                                        <button class="text-[1.5rem] mx-[1rem] text-gray-400 hover:text-white hover:translate-y-[0%] transition-all duration-200"><ion-icon name="logo-instagram"></ion-icon></button>
+
+                                                        
+                                            </div>
+                                    </div>
+
+
+                                            <div class="flex flex-col text-white mt-[1rem]">
+
+                                            <label for="" class="text-lg">Epic Player Ratings</label>
+                                            <label for="" class="text-md text-gray-400 mt-1">Captured from players in the Epic Games ecosystem.</label>
+                                                
+                                            <div class="text-[2.5rem] mt-[1rem] flex flex-row items-center justify-center">
+                                                        <label for="" class="">{{ game.rate }}</label>
+                                                        
+                                                        <label for="">
+                                                            stars
+                                                        </label>
+                                                    
+                                            </div>
+
+
+                                            <div class="flex flex-wrap justify-between mt-[1rem] ">
+                                                    <div v-for="disc in game.game_disc" class="rounded-md py-[1rem] px-[1rem] mb-[1rem] bg-dark2 w-[100%] flex flex-row items-center justify-start">
+                                                        <img class="w-[12%] mr-[1rem]" :src="disc.img" alt="">
+                                                        <div class="flex flex-col items-start justify-center">
+                                                                <label for="" class="text-center text-gray-400 ">{{ disc.title }}</label>
+                                                                <label for="" class="text-white text-lg font-bold">{{disc.text}}</label>
+                                                        </div>        
+                                                    </div>
+                                            </div>
+                                        
+
+                                </div>
+
              </div>
 
 
               
 
+             <ach v-else :game="game"/>
 
-             <div v-else></div>
 
 
     </div>
