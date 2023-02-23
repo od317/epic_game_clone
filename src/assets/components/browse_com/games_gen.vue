@@ -51,8 +51,9 @@ const props = defineProps({
 <template>
 
 
-
-<flic :gen_list="genlist"/>
+<div class="md:hidden">
+  <flic class="" :gen_list="genlist"/>
+</div>
 
 
 <div  class="hidden md:flex flex-col  w-full h-fit items-center  mb-[4.5rem]">
