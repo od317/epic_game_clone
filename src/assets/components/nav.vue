@@ -21,7 +21,9 @@
 
 <div class="flex h-[3.7rem] overflow-x-hidden max-w-screen ">
 <div class=" bg-dark2   w-full flex justify-between">
-  <div class="  pl-8 pt-3  flex-grow flex">     
+
+
+  <div class=" hidden pl-8 pt-3  flex-grow md:flex">     
         <div class="min-w-[30px] w-[2rem] mr-8 "><img src="../img/logo.png" class="" alt=""></div>
          <div class="grid  px-5 pt-2 text-zinc-400  text-sm border-b-[6px] border-blue1 font-medium  cursor-pointer">STORE</div>
          <div class="grid  px-5 pt-2 text-zinc-400   text-sm border-b-[0px] border-blue1 font-medium hover:border-b-[6px] transition-all duration-100 cursor-pointer">Support</div>
@@ -31,10 +33,20 @@
 
 
     </div>
-    <div class="ml-3 w-1/4   flex  ">
+    <div class="ml-3 w-1/4  hidden md:flex  ">
      <div class="mr-1 w-[30%] flex items-center text-white text-xl pl-5"><ion-icon name="globe"></ion-icon></div>
      <div class="mr-5 w-[30%] flex items-center text-white"><ion-icon name="person" class="mr-2"></ion-icon><p>SIGN IN</p></div>
      <div class="w-[50%]"><button class="bg-blue1 w-full h-full text-white p-3 text-sm">Download</button></div>
+
+    </div>
+
+    <div class="md:hidden  h-full w-full flex justify-between">
+
+      <div class="md:hidden ml-6 mt-3 min-w-[30px] w-[2rem] "><img src="../img/logo.png" class="" alt=""></div>
+    
+       <button class="bg-blue1 text-white text-[2rem] h-full px-[.7rem] flex items-center text-center">
+        <ion-icon name="menu"></ion-icon>
+       </button>
 
     </div>
 </div>

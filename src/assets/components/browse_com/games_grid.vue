@@ -37,15 +37,18 @@
         content:[
             {
                 name:'2k pub',
-                set:'2kpub'
+                set:'2kpub',
+                num:0
             },
             {
                 name:'febs',
-                set:'febs'
+                set:'febs',
+                num:1
             },
             {
                 name:'thq',
-                set:'thq'
+                set:'thq',
+                num:2
             }
         ]
     },
@@ -56,28 +59,34 @@
         content:[
             {
                 name:'free',
-                set:'free'
+                set:'free',
+                num:3
             },
             {
                 name:'under_10',
-                set:'un-10'
+                set:'un-10',
+                num:4
             },
             {
                 name:'under_20',
-                set:'un-20'
+                set:'un-20',
+                num:5
             },
             {
                 name:'under_30',
-                set:'un-30'
+                set:'un-30',
+                num:6
             },
             {
                 name:'14.99 and above',
-                set:'up-14'
+                set:'up-14',
+                num:7
             }
             ,
             {
                 name:'disconted',
-                set:'dis'
+                set:'dis',
+                num:8
             }
         ]
     },
@@ -88,19 +97,23 @@
         content:[
             {
                 name:'fps',
-                set:'fps'
+                set:'fps',
+                num:9
             },
             {
                 name:'adv',
-                set:'adv'
+                set:'adv',
+                num:10
             },
             {
                 name:'ac',
-                set:'ac'
+                set:'ac',
+                num:11
             },
             {
                 name:'ac/adv',
-                set:'ac/adv'
+                set:'ac/adv',
+                num:12
             }
         ]
     }
@@ -109,6 +122,8 @@
     
 
    let filters = ref(['all','all','all','all','all','all'])
+   let geo = ref([])
+       
    let filter_num = ref(0)
    let drop_events = ref(false)
    let drop_price = ref(false)
@@ -448,7 +463,8 @@
                         <div :class="`flex flex-col items-start ${ drop.on ?'block pt-[1rem]':'hidden'}`">
 
                                   <button v-for="type in drop.content" 
-                                  @click="filter(type.set,drop.num)" class=" mt-[1rem] cursor-pointer">
+                                  @click="filter(type.set,drop.num)"
+                                   :class="` mt-[1rem] cursor-pointer ${geo[type.num]? '': '' } `">
                                         {{ type.name }}
                                   </button>
 
