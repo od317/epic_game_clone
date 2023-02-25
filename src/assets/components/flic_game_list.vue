@@ -2,7 +2,7 @@
     
     <div class="md:hidden mt-[4rem]">
  
-          <button class="pl-[1.5rem] text-white">Games on sale ></button>
+         <router-link :to="`games/${type}`"><button class="pl-[1.5rem] text-white">Games on sale ></button></router-link> 
 
     </div>
     
@@ -40,9 +40,11 @@
   
   const props = defineProps({
   games: Array,
+  type: String
   });
 
    let games_list = props.games
+   let type = props.type
    console.log(games_list)
    let games = []
    for(let gl of games_list){

@@ -8,8 +8,8 @@
                 </div>
     </div>
     <Carousel ref="carousel" :itemsToShow="2" :settings="{snapAlign: 'start',}" :wrapAround="true" v-model="currentSlide">
-      <Slide class="pl-[1.2rem]" v-for="game in genlist" :key="game">
-
+      <Slide class="" v-for="game in genlist" :key="game">
+        <router-link :to="game.type" >
          <div class="group w-[100%]  h-fit ml-4 first:ml-0 px-[1rem] pt-[1rem] pb-[1rem] mr-2 relative bg-dark2 flex flex-col rounded-sm"  >
                  
                  <div class="flex justify-between ">
@@ -21,7 +21,7 @@
                 <div class="text-center text-white text-xl mt-[1rem]">{{ game.type }}</div>                 
 
         </div>
-
+</router-link>
       </Slide>
   
       ...
@@ -32,12 +32,21 @@
   import 'vue3-carousel/dist/carousel.css'
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
   import { defineProps, reactive, toRef,ref } from "vue";
+  import { useRouter } from 'vue-router';
+  let router = useRouter();
 
   const props = defineProps({
   gen_list: Array,
   });
 
    let genlist = []
+
+
+   let w= ()=>{
+   
+        router.push('/browse')
+
+   }
 
    for(let gl of props.gen_list){
         for(let gen of gl){

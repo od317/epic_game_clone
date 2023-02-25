@@ -7,8 +7,9 @@ const routes = [
         component:()=> import('./views/Home.vue')
     },
     {
-        path:'/browse',
+        path:'/browse/:id?',
         name:'browse',
+        props: true,
         component:()=> import('./views/browse.vue')
     },
     {
@@ -19,6 +20,11 @@ const routes = [
     {
         path:'/game/:id',
         component:()=> import('./views/game.vue'),
+        props: true
+    },
+    {
+        path:'/games/:id',
+        component:()=> import('./views/games_type.vue'),
         props: true
     }
 

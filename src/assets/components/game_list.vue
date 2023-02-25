@@ -5,9 +5,11 @@ import flic from './flic_game_list.vue'
 
 const props = defineProps({
   gamelist: Array,
+  type: String
 });
 
  let gamelist = props.gamelist
+ let type = props.type
  
  let slide = ref(false)
  let slide_perecent = ref("0")
@@ -31,7 +33,7 @@ const props = defineProps({
 <template>
 
 
-<flic :games="gamelist"/>
+<flic :games="gamelist" :type="type"/>
 
 <div  class="hidden md:flex flex-col  w-full h-fit items-center mt-[6rem] mb-[4.5rem]">
   

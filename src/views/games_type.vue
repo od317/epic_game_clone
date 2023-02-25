@@ -1,19 +1,31 @@
 <script setup>
 
    import { defineProps, reactive, toRef,ref } from "vue";
-
+   import gamesgrid from "../games_grid";
 
         const props = defineProps({
-        gamegrid: Array,
-        type: String
+            id:String       
         });
 
-        let gamesgrid = props.gamegrid 
 
-       let type = props.type
+       let id = props.id
+       let type = id
+       let title = ''
 
-       console.log("rwerwkcwqoe"+type)
-
+       switch(type){
+         case 'ac':
+            title="Action"
+            break
+         case 'adv':
+            title="Adventuer"
+            break
+        case 'ac/adv':
+            title="Action-Adventuer"
+            break
+        case 'fps':
+            title='fps'
+            break           
+       }
 
        
 
@@ -91,33 +103,6 @@
             }
         ]
     },
-    {
-        type:'gener',
-        num:2,
-        on:false,
-        content:[
-            {
-                name:'fps',
-                set:'fps',
-                num:9
-            },
-            {
-                name:'adv',
-                set:'adv',
-                num:10
-            },
-            {
-                name:'ac',
-                set:'ac',
-                num:11
-            },
-            {
-                name:'ac/adv',
-                set:'ac/adv',
-                num:12
-            }
-        ]
-    }
    ])
 
     
@@ -291,9 +276,12 @@
 
     let reset_filt = ()=>{
         filters.value = (['all','all','all','all','all','all'])
+        filters.value[count] = type
         filter_helper()
         filter_num.value=0
         show_c(show_val.value)
+        
+
     }
 
     let george = ref(false)
@@ -303,11 +291,12 @@
        let filters_style = new ref(new Array(all_filters[0].length+all_filters[1].length+all_filters[2].length))
        filters_style.value.fill(false)
 
-
-       for(let list of all_filters){
+       let start_filt = ()=>{
+     
+        for(let list of all_filters){
         for(let filt of list){
             if(type === filt){
-                console.log("found"+type+" "+filt+" "+count)
+                console.log("foundssssssssssssqwe "+type+" "+filt+" "+count)
                  filter(type,count)
                  br = true
                  break
@@ -316,12 +305,8 @@
         if(br)break
         count++
        }
-       type=''
-       console.log(filters.value)
-       console.log(filters_style.value)
-    
-      
-    
+    }
+    start_filt()
        window.scrollTo({
         top: document.body.scrollHeight,
       })
@@ -336,13 +321,19 @@
 
 
 
-
+<div class="hidden md:flex flex-col items-start text-white text-[1.7rem] px-[11%] pt-[1rem] bg-dark1">
+            <label>{{ title }} Games</label>
+            <label class="text-[1rem] lowercase w-[40%] mt-[.5rem]">
+                Epic Games Store offers some of the best {{ title }} Games. 
+                Download today and start playing fun and exciting {{title}} Games.    
+            </label>
+        </div>
 
        <div class=" hidden md:flex w-full justify-center md:pt-[2rem]">
            <div class="md:grid md:w-[78%] md:row-start-1 md:row-end-1   md:grid-cols-4">
 
                        
-            <div class="md:text-lg md:row-span-1  md:col-span-3 md:w-[95%]">
+            <div class="md:text-lg md:row-span-1  md:col-span-3 md:w-[95%] ">
                     
                 <button @click="dis_show = !dis_show" class="text-white relative">
 
@@ -405,8 +396,8 @@
                        <div class="hidden md:inline-block col-span-1  text-lg text-white w-[80%] ">
             
                         <div>filters
-                             <div v-if="filter_num !=0" class="inline-block">
-                                {{ filter_num }}
+                             <div v-if="filter_num-1 >0" class="inline-block">
+                                {{ filter_num -1 }}
                                 <button @click="reset_filt()">reset</button>
                             </div>
                         </div>
@@ -495,8 +486,8 @@
                 
             <div class="w-full mb-[.8rem] px-[1.5rem]">
                 <label for="">Filters</label>
-                 <div v-if="filter_num !=0" class="ml-[.5rem] inline-block">
-                    ({{ filter_num }})
+                 <div v-if="filter_num-1 > 0" class="ml-[.5rem] inline-block">
+                    ({{ filter_num-1 }})
                 </div>
             </div>
 
@@ -535,7 +526,16 @@
 
       </div>
 
-       <div v-if="!george" class="md:hidden flex flex-col px-[1.5rem] mt-[4rem]">
+
+       <div class="md:hidden flex flex-col text-white text-[1.7rem] px-[1.5rem] pt-[1rem] bg-dark1">
+            <label>{{ title }} Games</label>
+            <label class="text-[1rem] lowercase mt-[.5rem]">
+                Epic Games Store offers some of the best {{ title }} Games. 
+                Download today and start playing fun and exciting {{title}} Games.    
+            </label>
+        </div>
+
+       <div v-if="!george" class="md:hidden flex flex-col px-[1.5rem] mt-[3rem]">
 
 
             <div class="flex flex-row justify-between items-center">
@@ -560,8 +560,8 @@
                 </button>
 
                 <button @click="george= !george" class="text-[1.1rem] flex items-center text-center text-white">Filters 
-                    <div v-if="filter_num !=0" class="mx-[.5rem] inline-block">
-                    ({{ filter_num }})
+                    <div v-if="filter_num-1 >0" class="mx-[.5rem] inline-block">
+                    ({{ filter_num -1}})
                     </div>
                     <ion-icon class="ml-[.2rem]" name="funnel"></ion-icon></button>
             </div>
@@ -587,6 +587,8 @@
                                                    <label for="" class="text-gray-500 mr-[.2rem] line-through">$59.99</label>
                                                    <label for="" class="text-white">${{ game.price }}</label>
                                                    <label for="" class="text-white">{{ game.event }}</label>
+                                                   <label for="" class="text-white">{{ game.gener }}</label>
+
                                                    <br>
 
                                                </div>

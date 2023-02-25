@@ -1,11 +1,21 @@
 <script setup>
 
   import {ref} from 'vue'
-  let page = ref('discover')
+  let currentUrl = window.location.pathname;
+  let cp = currentUrl.split('/')[1]
+  if(cp !== 'browse' && cp!== 'news'){
+    cp=null
+  }
+  let page = ref(cp||'discover')
 
   let george = ref(false)
   let george2 = ref(false)
   
+  let w= ()=>{
+   window.location.reload()
+
+   }
+
   let search_click = ()=>{
     george.value = false
     george2.value = true

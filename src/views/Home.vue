@@ -56,7 +56,7 @@ let games = [
 
 
 let games_list1=[
-[
+[ 
   {name:'daying light2',
    img:'https://render.fineartamerica.com/images/rendered/default/print/6/8/break/images/artworkimages/medium/3/2-dying-light-2-poster-dat-khong-chin-luong.jpg'
   },
@@ -493,7 +493,7 @@ let footer_cont1 = [{
 
 <!-- gamelist_1 -->
 
-<list_game :gamelist="games_list1"/>
+<list_game :gamelist="games_list1" type="ac"/>
 
 <!-- game_an 1-->
 
@@ -510,7 +510,7 @@ let footer_cont1 = [{
 
 <!--gamelist2-->
 
-<list_game :gamelist="games_list1"/>
+<list_game :gamelist="games_list1" type="adv"/>
 
 
 
@@ -529,7 +529,7 @@ let footer_cont1 = [{
 
 <!--gamelist3-->
 
-<list_game :gamelist="games_list1"/>
+<list_game :gamelist="games_list1" type="fps"/>
 
 
 
