@@ -26,6 +26,11 @@ const routes = [
         path:'/games/:id',
         component:()=> import('./views/games_type.vue'),
         props: true
+    },
+    {
+        path:'/wishlist',
+        component:()=> import('./views/wishList.vue'),
+        props: true
     }
 
 ]

@@ -3,7 +3,7 @@
   import {ref} from 'vue'
   let currentUrl = window.location.pathname;
   let cp = currentUrl.split('/')[1]
-  if(cp !== 'browse' && cp!== 'news'){
+  if(cp !== 'browse' && cp!== 'news' && cp!=='wishlist' && cp!=='cart'){
     cp=null
   }
   let page = ref(cp||'discover')
@@ -80,8 +80,8 @@
         <router-link class="grow" to="/news"><button @click="page='news'" :class="`ml-6 flex p-2 ${page!=='news'?'text-gray-400 hover:text-white':'text-lg border-[1px] rounded-md'}   transition-all duration-200`">News</button></router-link> 
      
       <div class="flex items-center justify-center px-[2.5rem]">
-      <button class="ml-6 text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200 ">wishlist</button>
-      <button class="ml-6 text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200">cart</button>
+      <button @click="page='wishlist'" :class="`ml-6 p-2 rounded-md ${page!=='wishlist'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200 `"><router-link to="/wishlist">wishList</router-link></button>
+      <button :class="`ml-6 p-2 rounded-md ${page!=='cart'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200 `"><router-link to="/cart">cart</router-link></button>
       </div>
       
   </div>
@@ -110,7 +110,7 @@
               </button>
                 
               <div class="flex items-center justify-end w-[20%]">
-              <button class="flex items-center text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200 "><ion-icon name="checkmark-circle"></ion-icon></button>
+              <button class="flex items-center text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200 "> <router-link  to="wishlist"><ion-icon name="checkmark-circle"></ion-icon></router-link></button>
               <button class="flex items-center text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200"><ion-icon name="cart"></ion-icon></button>
               </div>
             </div>

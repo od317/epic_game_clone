@@ -126,6 +126,10 @@ let games_list1=[
 ]
 ]
 
+for(let g1 of games_list1){
+  for(let g of g1)
+  g.price= Math.floor(Math.random() * (60 - 0 + 1)) + 0
+}
 
 let game_an1 = [
     {
@@ -452,7 +456,7 @@ let footer_cont1 = [{
                         
                         <div :class="`   relative flex items-center  w-full h-full ${game.last !== true ? '':''} hover:cursor-pointer p-1`">
                           <img :src="game.src" :class="` rounded-md z-10 
-                          lg:h-[3.1rem] lg:w-[2.2rem]
+                          lg:h-[3.1rem] lg:w-[2.5rem]
                           md:h-[75%] md:w-[30%]`" alt=""> 
                           <div class=" ml-5  grid content-center w-full ">
                             <p class="text-white z-10">{{ game.name }}</p>

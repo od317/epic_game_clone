@@ -26,6 +26,21 @@ const props = defineProps({
   slide_perecent.value= new String(tmp)
 }
 
+
+ let add_wish= (game)=>{
+
+     let wlist = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : []
+     
+     for(let g of wlist){
+      if(g.name === game.name)
+      return
+     }
+
+     wlist.push(game)
+     localStorage.setItem('wish_list',JSON.stringify(wlist))
+
+ }
+
 </script>
 
 <template>
@@ -49,7 +64,8 @@ const props = defineProps({
         </div>
         
      </div>
-    <div class="w-[78%] overflow-x-hidden
+    <div class="w-[78%]
+       overflow-x-hidden
        lg:w-[78%]
        md:w-[100%]">
         
@@ -61,18 +77,25 @@ const props = defineProps({
                   <div v-for="gl in gamelist" :class="`flex  justify-between w-full  h-fit translate-x-[-${slide_perecent== 100 ? '100':(slide_perecent== 200 ? '200':(slide_perecent== 300 ? '300':'0'))}%] transition-all duration-500`">
             
                       
-                      <div class="group  h-fit ml-2 mr-2 relative
-                      lg:w-1/5
+                      <div class="group   ml-2 mr-2 relative
+                      md:w-1/5
                       "  v-for="game in gl">
                             
                         <div class="absolute flex w-full justify-end items-start p-3"> 
-
-                             <button @click="console.log('oksss')" class=" 
-                              relative rounded-full z-40 text-3xl   
-                              opacity-0 group-hover:opacity-100 after: transition-all duration-100 
-                              after_wish ">
-                                    <ion-icon class="bg-black text-white  rounded-full z-50 " name="add-circle-outline"></ion-icon>
-                              </button>
+                            
+                             <div  class=" 
+                              relative rounded-full z-40 text-3xl 
+                              opacity-0 group-hover:opacity-100  transition-all duration-100 
+                              after_wish">
+                                  <button class="  group " @click="add_wish(game)">
+                                    <ion-icon class="bg-black  text-white  rounded-full z-50 " name="add-circle-outline">
+                                    </ion-icon>
+                                    <div class=" absolute text-[1rem] 
+                                    translate-y-[-100%] translate-x-[-50%]  white opacity-0
+                                     ">ss</div>
+                                  </button>
+                                  
+                                  </div>
 
                               </div>
                               
