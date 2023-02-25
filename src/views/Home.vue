@@ -120,9 +120,8 @@ let games_list1=[
   {name:'goat 3',
    img:'https://www.igroshop.com/images/detailed/11/goatsimulator3_box_art.jpg'
   },  
-  {name:'spiderman',
-   img:'https://cdn.europosters.eu/image/750/posters/guardins-of-the-galaxy-video-game-i122525.jpg',
-   last:true
+  {name:'goat 3',
+   img:'https://www.igroshop.com/images/detailed/11/goatsimulator3_box_art.jpg'
   },
 ]
 ]

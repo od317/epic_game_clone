@@ -14,18 +14,16 @@ const props = defineProps({
  let slide = ref(false)
  let slide_perecent = ref("0")
  
+ 
  let backward  = ()=>{
   let tmp = parseInt(slide_perecent.value)
   tmp-=100
-  console.log(tmp) 
   slide_perecent.value= new String(tmp)
-  console.log(slide_perecent.value) }
+ }
  let forward = ()=>{
   let tmp = parseInt(slide_perecent.value)
   tmp+=100
-  console.log(tmp) 
   slide_perecent.value= new String(tmp)
-  console.log(slide_perecent.value) 
 }
 
 </script>
@@ -42,7 +40,9 @@ const props = defineProps({
        md:w-[100%]
      ">
 
-        <label for="" class="text-xl text-white">Fabruary Saving Spotlight</label>
+     <router-link class=" cursor-pointer" :to="`games/`+type"> 
+     <label for="" class="text-xl text-white cursor-pointer">games on sale</label>
+     </router-link>
         <div>
           <button @click="backward" :disabled="parseInt(slide_perecent)<=0" :class="`disabled:bg-[#0f0f0f] text-white bg-[#212121] mx-2 rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropleft" ></ion-icon></button>
           <button @click="forward" :disabled="parseInt(slide_perecent)>=300" :class="` disabled:bg-[#0f0f0f] text-white bg-[#212121] rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropright"></ion-icon></button>   
@@ -58,7 +58,7 @@ const props = defineProps({
 
 
                 
-                  <div v-for="gl in gamelist" :class="`flex  justify-between w-full  h-fit translate-x-[-${slide_perecent}%] transition-all duration-500`">
+                  <div v-for="gl in gamelist" :class="`flex  justify-between w-full  h-fit translate-x-[-${slide_perecent== 100 ? '100':(slide_perecent== 200 ? '200':(slide_perecent== 300 ? '300':'0'))}%] transition-all duration-500`">
             
                       
                       <div class="group  h-fit ml-2 mr-2 relative
@@ -68,10 +68,10 @@ const props = defineProps({
                         <div class="absolute flex w-full justify-end items-start p-3"> 
 
                              <button @click="console.log('oksss')" class=" 
-                              relative rounded-full z-50 text-3xl   
+                              relative rounded-full z-40 text-3xl   
                               opacity-0 group-hover:opacity-100 after: transition-all duration-100 
-                              after_wish">
-                                    <ion-icon class="bg-black text-white  rounded-full z-100 " name="add-circle-outline"></ion-icon>
+                              after_wish ">
+                                    <ion-icon class="bg-black text-white  rounded-full z-50 " name="add-circle-outline"></ion-icon>
                               </button>
 
                               </div>
@@ -79,10 +79,10 @@ const props = defineProps({
 
                               <router-link :to="`game/`+game.name"> 
                            
-                                <div class=" cursor-pointer  absolute flex items-start justify-end h-[20rem] p-3  w-full bg-gray-200 opacity-0 hover:opacity-10 transition-all duration-200">
+                                <div class=" cursor-pointer rounded-md absolute flex items-start justify-end h-[17rem] p-3  w-full bg-gray-200 opacity-0 hover:opacity-10 transition-all duration-200">
                               </div>
                       
-                              <img :src="game.img" alt=""  :class="`${ game.last ? 'w-0 h-0':'w-full lg:h-[20rem] md:h-[18rem]'} rounded-md`">
+                              <img :src="game.img" alt=""  :class="`${ game.last ? 'w-0 h-0':'w-full lg:h-[17rem] md:h-[17rem]'} rounded-md`">
                               </router-link>
                    
                       <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-2'}`">

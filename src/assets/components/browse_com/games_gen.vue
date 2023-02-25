@@ -79,9 +79,11 @@ const props = defineProps({
                 slide? 'translate-x-[-'+slide_perecent+'%] duration-500':'translate-x-[-100%]  duration-0'
                 
                 } flex  justify-between w-full  h-fit  transition-all`">
+           
+      
          
                    
-                   <div class="group w-1/4  h-fit ml-4 first:ml-0 px-[1rem] pt-[2rem] pb-[1rem] mr-2 relative bg-dark2 flex flex-col rounded-md"  v-for="game in genl">
+                   <router-link :to="'games/'+game.set" class="group w-1/4  h-fit ml-4 first:ml-0 px-[1rem] pt-[2rem] pb-[1rem] mr-2 relative bg-dark2 flex flex-col rounded-md"  v-for="game in genl">
                  
                     <div class="flex justify-between ">
                     <img :src="game.imgs[1]" alt=""  :class="`  w-[40%] h-[10rem]   rounded-lg`">
@@ -91,8 +93,7 @@ const props = defineProps({
                    </div>       
                    <div class="text-center text-white text-xl mt-[1rem]">{{ game.type }}</div>                 
  
-                   </div>
-
+            </router-link>
                </div>
 
 

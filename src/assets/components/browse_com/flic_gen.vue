@@ -9,7 +9,7 @@
     </div>
     <Carousel ref="carousel" :itemsToShow="2" :settings="{snapAlign: 'start',}" :wrapAround="true" v-model="currentSlide">
       <Slide class="" v-for="game in genlist" :key="game">
-        <router-link :to="game.type" >
+        <router-link :to="'games/'+game.set" >
          <div class="group w-[100%]  h-fit ml-4 first:ml-0 px-[1rem] pt-[1rem] pb-[1rem] mr-2 relative bg-dark2 flex flex-col rounded-sm"  >
                  
                  <div class="flex justify-between ">
@@ -40,17 +40,14 @@
   });
 
    let genlist = []
-
-
-   let w= ()=>{
    
-        router.push('/browse')
 
-   }
+
 
    for(let gl of props.gen_list){
         for(let gen of gl){
             genlist.push(gen)
+            console.log(gen)
         }
    }
 
