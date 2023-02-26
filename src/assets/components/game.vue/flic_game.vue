@@ -14,7 +14,7 @@
       v-model="currentSlide"
       ref="carousel"
     >
-      <Slide class=" " v-for="slide in 12 " :key="slide">
+      <Slide class=" " v-for="slide in imgs.length " :key="slide">
         <div :class="`w-[90%] rounded-md ${currentSlide+1 == slide? 'border-[.1rem]  border-white':''}`" @click="slideTo(slide - 1)">
             <div :class="` ${currentSlide+1 == slide? 'hidden':''} absolute w-[90%] rounded-md h-full bg-black opacity-50 z-30`"></div>
             <img class="rounded-md" :src="imgs[slide-1].img" alt="">
@@ -34,10 +34,9 @@
     });
   
   let imgs = []
-
   for(let imgs1 of props.game.imgs){
     for(let img of imgs1){
-        imgs.push(img)
+      imgs.push(img)
     }
   }
   

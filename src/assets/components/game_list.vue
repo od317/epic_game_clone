@@ -41,6 +41,10 @@ const props = defineProps({
 
  }
 
+ window.scrollTo({
+        top:0,
+      })
+
 </script>
 
 <template>

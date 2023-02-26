@@ -49,7 +49,7 @@ let backward = ()=>{
 let forward = ()=>{
     if(slide_val_bot.value<= - (game.imgs.length-1)){
      slide_val_bot.value = 0
-   }
+   }  
    else{
     slide_val_bot.value -= 1
    }
@@ -87,7 +87,7 @@ let forward_1 = ()=>{
     slide_val.value=(-Math.floor(top_bot_pos.value/4))+'00%'
     }
     slide_top_img_per.value = slide_top_val.value+'00%'
-
+    console.log(slide_top_img_per.value)
 }
 
 
@@ -140,7 +140,6 @@ let change_nav = (v)=>{
 
 window.scrollTo({
         top:0   ,
-        behavior: 'smooth'
       })
 
      
@@ -234,7 +233,8 @@ window.scrollTo({
                             </div>
 
                             <div class="flex flex-row overflow-x-hidden">
-                               <img  v-for="img in slide_imgs" :class="` translate-x-[${slide_top_img_per}] transition-all duration-200`" :src="img.img" alt="">
+                               <img  v-for="img in slide_imgs" :class="`  transition-all duration-200 
+                                translate-x-[${slide_top_img_per === '-100%' ? '-100%' : (slide_top_img_per === '-200%' ? '-200%' : ((slide_top_img_per === '-300%' ? '-300%' : ((slide_top_img_per === '-400%' ? '-400%' : ((slide_top_img_per === '-500%' ? '-500%' : ((slide_top_img_per === '-600%' ? '-600%' : ((slide_top_img_per === '-700%' ? '-700%' : ((slide_top_img_per === '-800%' ? '-800%' :(slide_top_img_per === '-900%' ? '-900%' :(slide_top_img_per === '-1000%' ? '-1000%' :(slide_top_img_per === '-1100%' ? '-1100%' :'0%')))))))))))))))) }]`" :src="img.img" alt="">
                                <!-- 
                                 <img  :src="`${slide_imgs[pos_top[0]]}`" alt="" 
                                 :class="` ${slide_top_on ? ' translate-x-['+slide_top_val+'%] transition-all duration-300':''} translate-x-[-100%]  rounded-md`">

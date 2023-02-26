@@ -44,7 +44,9 @@ const props = defineProps({
         slide.value=false
        },520)
  }
-
+ window.scrollTo({
+        top:0,
+      })
 </script>
 
 
