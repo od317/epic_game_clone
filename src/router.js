@@ -31,6 +31,11 @@ const routes = [
         path:'/wishlist',
         component:()=> import('./views/wishList.vue'),
         props: true
+    },
+    {
+        path:'/cart',
+        component:()=> import('./views/cart.vue'),
+        props: true
     }
 
 ]

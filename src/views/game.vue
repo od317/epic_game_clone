@@ -138,6 +138,23 @@ let change_nav = (v)=>{
 
 }
 
+
+
+let addcart = (game)=>{
+
+let cart = localStorage.getItem('cart')? JSON.parse(localStorage.getItem('cart')) : []
+
+for(let g of cart){
+ if(g.name === game.name)
+ return
+}
+
+cart.push(game)
+localStorage.setItem('cart',JSON.stringify(cart))
+
+}
+
+
 window.scrollTo({
         top:0   ,
       })
@@ -359,7 +376,7 @@ window.scrollTo({
                                         <label class=" " for="">sales end in d2314</label>
 
                                         <button :class="`bg-[${game.theme_color}] w-full mt-[1rem] px-[1rem] py-[.6rem] rounded-md`">ok</button>
-                                        <button class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem]">ok</button>
+                                        <button @click=" addcart(game)" class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem]">Add to cart</button>
                                         <button class=" border border-white rounded-md px-[1rem] py-[.2rem] w-full mt-[1rem] mb-[1rem]">ok</button>
                                         
                                         <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[.5rem] border-b-2 border-gray-400">
@@ -684,7 +701,7 @@ window.scrollTo({
                         <label class="text-white mb-[.6rem]" for="">{{game.price}}$</label>
 
                         <button :class="`bg-[#ed0000] w-full py-[.8rem] text-[1.1rem] rounded-md mb-[.8rem]`">Buy now</button>
-                        <button :class="` w-full py-[.8rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500`">Add To Cart</button>
+                        <button @click=" addcart(game)" :class="` w-full py-[.8rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500`">Add To Cart</button>
                         <button :class="` w-full py-[.3rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]`">add to wishlist</button>
 
 
