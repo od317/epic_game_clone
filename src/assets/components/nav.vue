@@ -111,7 +111,7 @@
                 
               <div class="flex items-center justify-end w-[20%]">
               <button class="flex items-center text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200 "> <router-link  to="wishlist"><ion-icon name="checkmark-circle"></ion-icon></router-link></button>
-              <button class="flex items-center text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200"><ion-icon name="cart"></ion-icon></button>
+              <button class="flex items-center text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200"><router-link  to="cart"><ion-icon name="cart"></ion-icon></router-link></button>
               </div>
             </div>
     

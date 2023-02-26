@@ -4,6 +4,31 @@ import {ref} from 'vue'
 
  let wlist = ref( localStorage.getItem('wish_list') != undefined ? JSON.parse(localStorage.getItem('wish_list')) : [])
 
+ let cart = ref( localStorage.getItem('cart') != undefined ? JSON.parse(localStorage.getItem('cart')) : [])
+
+
+ let addcart = (game)=>{
+
+
+for(let g of cart.value){
+ if(g.name === game.name)
+ return
+}
+
+cart.value.push(game)
+localStorage.setItem('cart',JSON.stringify(cart.value))
+
+}
+
+ let check_in_cart = (game)=>{
+        for(let g of cart.value){
+            if(game.name == g.name)
+            return true
+        }
+        return false
+ }
+ 
+
  console.log(wlist)
  let gamesgrid2 = ref(wlist.value)
 
@@ -521,8 +546,11 @@ import {ref} from 'vue'
                            
                     <label class="text-white mt-[.5rem]">sales end at 43/12/21 31:13</label>
 
-                    <button class="w-full border-[.1rem] border-gray-400 
-                    text-center text-white text-[1.1rem] py-[.8rem] mt-[2rem] rounded-md">Add to cart</button>
+                    <button @click="addcart(game)" :class="`w-full ${check_in_cart(game)? 'hidden':''} border-[.1rem] border-gray-400 
+                    text-center text-white text-[1.1rem] py-[.8rem] mt-[2rem] rounded-md`">Add to cart</button>
+
+                    <router-link  to="cart"><button :class="`w-full ${!check_in_cart(game)? 'hidden':''} border-[.1rem] border-gray-400 
+                    text-center text-white text-[1.1rem] py-[.8rem] mt-[2rem] rounded-md`">view in cart</button></router-link>
 
 
                     <button @click="remove(game)" class="border-b-[.1rem] text-gray-400 text-start w-fit mt-[1.2rem]">Remove</button>
