@@ -86,9 +86,11 @@
 
       <div class="md:hidden ml-6 mt-3 min-w-[30px] w-[2rem] "><img src="../img/logo.png" class="" alt=""></div>
     
-       <button @click="change_canv" class="bg-blue1 text-white text-[2rem] h-full px-[.7rem] flex items-center text-center">
+       <button @click="change_canv" :class="`${offcanv ? 'bg-dark1':'bg-blue1'} transiton-all duration-200 text-white text-[2rem] h-full px-[.7rem] flex items-center text-center`">
 
-        <ion-icon name="menu"></ion-icon>
+        <ion-icon v-if="!offcanv" name="menu"></ion-icon>
+        <ion-icon v-if="offcanv" name="close"></ion-icon>
+
        </button>
 
 
@@ -101,9 +103,18 @@
 
 </div>
 
-<div :class="`text-white md:hidden  h-full z-50 pb-[3.7rem]  w-[70%] absolute  bg-dark2 flex flex-col justify-between
-                     transiton-all duration-200 pt-[2rem] ${!offcanv? 'translate-x-[-101%]':''}`">
-                     
+
+<div :class="`text-white md:hidden  h-full z-50 pb-[3.7rem]  w-[100%] absolute   flex flex-row 
+                     bg-dark1 opacity-0  ${!offcanv? 'hidden':'opacity-60'}`">
+
+
+</div>
+
+<div :class="`text-white md:hidden  h-full z-50 pb-[3.7rem]  w-[100%] absolute   flex flex-row 
+                     transiton-all duration-200  ${!offcanv? 'translate-x-[-101%]':''}`">
+
+                    <div class="bg-dark2 flex flex-col justify-between
+                     transiton-all duration-200 pt-[2rem] text-white w-[70%]  h-full z-50 "> 
                      <div class=" flex grow flex-col">
                           <button class="text-start pl-[1rem] mb-[1rem] py-[.5rem] border-b-[.1rem] border-gray-400">Store</button>
                           <button class="text-start pl-[1rem] mb-[1rem] py-[.5rem] border-b-[.1rem] border-gray-400">Support</button> 
@@ -120,6 +131,13 @@
                      </div>
                      
                 </div>
+
+
+              </div>
+
+
+
+
 <!-- search-bar --> 
 
 <div :class="`flex justify-center max-w-screen  sticky top-0  ${ !offcanv ? 'z-40':'z-40'} lg:bg-dark1 
