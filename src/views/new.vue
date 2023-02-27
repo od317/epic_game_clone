@@ -112,8 +112,8 @@
 
                    <div class="flex flex-row justify-between pt-[1rem] bg-dark1">
 
-                              <div class="flex justify-between flex-col ">
-                                <img class="w-[35rem] h-[22rem]  rounded-md mb-[1rem]" :src="img1"  alt="">
+                              <div class="flex w-[49%] justify-between flex-col ">
+                                <img class="w-[35rem] h-[18rem]  rounded-md mb-[1rem]" :src="img1"  alt="">
                                 <label class=" text-gray-400 text-sm"  for="">5 days ago</label>
                                 <label class="text-white font-bold text-[1rem] mt-[.5rem]" for="">
                                     Inside the Spring Traps and Vine Lines of Wild Hearts’ 50-hour <br> Campaign
@@ -123,8 +123,8 @@
                                 </label>
                             </div>
                             
-                              <div class="flex flex-col ">
-                                <img class="w-[35rem] h-[22rem] rounded-md mb-[1rem]" :src="img2" alt="">
+                              <div class="flex w-[49%] flex-col ">
+                                <img class="w-[35rem] h-[18rem] rounded-md mb-[1rem]" :src="img2" alt="">
                                 <label class=" text-gray-400 text-sm"  for="">5 days ago</label>
                                 <label class="text-white font-bold text-[1rem] mt-[.5rem]" for="">
                                     Inside the Spring Traps and Vine Lines of Wild Hearts’ 50-hour Campaign
