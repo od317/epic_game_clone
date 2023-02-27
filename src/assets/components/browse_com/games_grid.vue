@@ -338,7 +338,7 @@
 
 
 
-       <div class=" hidden md:flex w-full justify-center md:pt-[2rem]">
+       <div class=" hidden md:flex w-full justify-center mb-[4rem] md:pt-[2rem]">
            <div class="md:grid md:w-[78%] md:row-start-1 md:row-end-1   md:grid-cols-4">
 
                        

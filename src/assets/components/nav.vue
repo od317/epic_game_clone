@@ -3,9 +3,23 @@
   import {ref} from 'vue'
   let currentUrl = window.location.pathname;
   let cp = currentUrl.split('/')[1]
+  let cart = ref( localStorage.getItem('cart') != undefined ? JSON.parse(localStorage.getItem('cart')) : [])
+  let i = ref(cart.value ? cart.value.length : '0')
+
+  let offcanv = ref(false)
+
+  addEventListener('storage', (event) => {
+     cart = ref( localStorage.getItem('cart') != undefined ? JSON.parse(localStorage.getItem('cart')) : [])
+     i.value = cart.value ? cart.value.length : '0'  
+   });
+
+
+
+
   if(cp !== 'browse' && cp!== 'news' && cp!=='wishlist' && cp!=='cart'){
     cp=null
   }
+
   let page = ref(cp||'discover')
 
   let george = ref(false)
@@ -20,6 +34,24 @@
     george.value = false
     george2.value = true
   }
+
+
+  let change_canv = ()=>{
+    offcanv.value = !offcanv.value
+    if(offcanv.value)
+    document.documentElement.style.overflow = 'hidden'
+    else
+    document.documentElement.style.overflow = 'visible'
+
+  }
+
+  window.addEventListener("resize",()=>{
+    if(window.innerWidth>=768){
+      document.documentElement.style.overflow = 'visible'
+      offcanv.value = false
+    }
+  });
+
 
 </script>
 
@@ -54,20 +86,44 @@
 
       <div class="md:hidden ml-6 mt-3 min-w-[30px] w-[2rem] "><img src="../img/logo.png" class="" alt=""></div>
     
-       <button class="bg-blue1 text-white text-[2rem] h-full px-[.7rem] flex items-center text-center">
+       <button @click="change_canv" class="bg-blue1 text-white text-[2rem] h-full px-[.7rem] flex items-center text-center">
+
         <ion-icon name="menu"></ion-icon>
        </button>
+
+
 
     </div>
 </div>
 
+
+
+
 </div>
 
+<div :class="`text-white md:hidden  h-full z-50 pb-[3.7rem]  w-[70%] absolute  bg-dark2 flex flex-col justify-between
+                     transiton-all duration-200 pt-[2rem] ${!offcanv? 'translate-x-[-101%]':''}`">
+                     
+                     <div class=" flex grow flex-col">
+                          <button class="text-start pl-[1rem] mb-[1rem] py-[.5rem] border-b-[.1rem] border-gray-400">Store</button>
+                          <button class="text-start pl-[1rem] mb-[1rem] py-[.5rem] border-b-[.1rem] border-gray-400">Support</button> 
+                          <button class="text-start pl-[1rem] mb-[1rem] py-[.5rem] border-b-[.1rem] border-gray-400">unrealengine</button> 
+                     </div>
 
+                     <div class=" flex flex-col ">
+                           <div class="flex pl-[.5rem] flex-row shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]" for="">
+
+                                <label class="grow  py-[.5rem] text-center border-r-[.1rem] border-gray-400" for="">sign-in</label>
+                                <label class=" py-[.5rem] text-[1.5rem] text-center w-[20%]" for=""><ion-icon name="globe"></ion-icon></label>
+                           </div>
+                          <button class="text-center py-[1rem]  bg-blue1">download</button> 
+                     </div>
+                     
+                </div>
 <!-- search-bar --> 
 
-<div class="flex justify-center max-w-screen  sticky top-0  z-50 lg:bg-dark1 
- ">
+<div :class="`flex justify-center max-w-screen  sticky top-0  ${ !offcanv ? 'z-40':'z-40'} lg:bg-dark1 
+ `">
    <!-- large screen --> 
   <div class="text-white lg:flex   items-center  py-[2rem] w-[78%] sticky top-0 z-50 bg-dark1 hidden ">
       
@@ -81,7 +137,7 @@
      
       <div class="flex items-center justify-center px-[2.5rem]">
       <button @click="page='wishlist'" :class="`ml-6 p-2 rounded-md ${page!=='wishlist'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200 `"><router-link to="/wishlist">wishList</router-link></button>
-      <button :class="`ml-6 p-2 rounded-md ${page!=='cart'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200 `"><router-link to="/cart">cart</router-link></button>
+      <button :class="`ml-6 flex flex-row p-2 rounded-md ${page!=='cart'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200 `"><router-link to="/cart">cart <label :class="` ${ i>0 ? 'bg-white text-black  py-[.1rem] px-[.5rem] rounded-full':'hidden'} `" for="">{{ i }}</label></router-link></button>
       </div>
       
   </div>
@@ -90,7 +146,7 @@
 
 
   <!--small screen -->
-  <div class="text-white lg:hidden md:pb-[1.5rem]   static  items-center  w-[100%]  z-50 bg-dark1   ">
+  <div :class="`text-white lg:hidden md:pb-[1.5rem]   static  items-center  w-[100%]  ${ !offcanv ? 'z-50':'z-40'} bg-dark1   `">
         
 
             <div class="text-white px-[6%] py-[2rem]  flex  justify-between items-center  w-[100%] bg-dark1  ">
@@ -102,7 +158,7 @@
 
               <button class="flex items-center text-[1.2rem]" @click="george=!george">
               
-                {{ page }}
+                {{ (page == 'cart' || page == 'wishlist') ? 'discover':page }}
                 <label :class="` cursor-pointer flex items-center text-center ml-[.1rem] translate-y-[10%] ${george ? ' rotate-180':''} transition-all duration-300`" for="">
                 <ion-icon :class="``" name="arrow-dropdown">
                 </ion-icon>
@@ -111,7 +167,7 @@
                 
               <div class="flex items-center justify-end w-[20%]">
               <button class="flex items-center text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200 "> <router-link  to="wishlist"><ion-icon name="checkmark-circle"></ion-icon></router-link></button>
-              <button class="flex items-center text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200"><router-link  to="cart"><ion-icon name="cart"></ion-icon></router-link></button>
+              <button class="flex items-center text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200"><router-link  to="cart"><ion-icon name="cart"></ion-icon><label :class="` ${ i>0 ? ' absolute  bg-white text-black text-[.9rem] translate-y-[-50%] translate-x-[-30%] h-[25%] py-[0%] px-[.7rem] rounded-lg':'hidden'} `" for="">{{ i }}</label></router-link></button>
               </div>
             </div>
     
@@ -119,7 +175,7 @@
 
                   <div :class="`w-full flex flex-col items-start px-[6%] py-[2rem] bg-dark1   `">
                           
-                                 <router-link @click="george=false" class="w-full text-start " to="/"><button @click="page='discover'" :class="` ${page=='discover' ? 'text-white font-bold':'text-gray-400 hover:text-white'} w-full text-start py-[.7rem]`">Discover</button></router-link> 
+                                 <router-link @click="george=false" class="w-full text-start " to="/"><button @click="page='discover'" :class="` ${(page=='discover'||page=='cart'||page=='wishlist') ? 'text-white font-bold':'text-gray-400 hover:text-white'} w-full text-start py-[.7rem]`">Discover</button></router-link> 
                                  <router-link @click="george=false" class="w-full text-start" to="/browse"><button @click="page='browse'" :class="` ${page=='browse' ? 'text-white font-bold':'text-gray-400 hover:text-white'} w-full text-start py-[.7rem] border-t-2 border-b-2 border-gray-400`">Browse</button></router-link> 
                                  <router-link @click="george=false" class="w-full text-start " to="/news"><button @click="page='news'" :class="` ${page=='news' ? 'text-white font-bold':'text-gray-400 hover:text-white'} w-full text-start py-[.7rem]`" >News</button></router-link> 
 
