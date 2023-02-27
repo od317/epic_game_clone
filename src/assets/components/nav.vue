@@ -104,7 +104,7 @@
 </div>
 
 
-<div :class="`text-white md:hidden  h-full z-50 pb-[3.7rem]  w-[100%] absolute   flex flex-row 
+<div @click="change_canv" :class="`text-white md:hidden  h-full z-50 pb-[3.7rem]  w-[100%] absolute   flex flex-row 
                      bg-dark1 opacity-0  ${!offcanv? 'hidden':'opacity-60'}`">
 
 
@@ -132,6 +132,7 @@
                      
                 </div>
 
+                <div @click="change_canv" class="w-[30%] h-full"></div>
 
               </div>
 
@@ -140,7 +141,7 @@
 
 <!-- search-bar --> 
 
-<div :class="`flex justify-center max-w-screen  sticky top-0  ${ !offcanv ? 'z-40':'z-40'} lg:bg-dark1 
+<div  :class="`flex justify-center max-w-screen  sticky top-0  ${ !offcanv ? 'z-40':'z-40'} lg:bg-dark1 
  `">
    <!-- large screen --> 
   <div class="text-white lg:flex   items-center  py-[2rem] w-[78%] sticky top-0 z-50 bg-dark1 hidden ">
@@ -184,8 +185,8 @@
               </button>
                 
               <div class="flex items-center justify-end w-[20%]">
-              <button class="flex items-center text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200 "> <router-link  to="wishlist"><ion-icon name="checkmark-circle"></ion-icon></router-link></button>
-              <button class="flex items-center text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200"><router-link  to="cart"><ion-icon name="cart"></ion-icon><label :class="` ${ i>0 ? ' absolute  bg-white text-black text-[.9rem] translate-y-[-50%] translate-x-[-30%] h-[25%] py-[0%] px-[.7rem] rounded-lg':'hidden'} `" for="">{{ i }}</label></router-link></button>
+              <button class="flex items-center text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200 "> <router-link  to="/wishlist"><ion-icon name="checkmark-circle"></ion-icon></router-link></button>
+              <button class="flex items-center text-gray-400 text-xl mx-2 hover:text-white transition-all duration-200"><router-link  to="/cart"><ion-icon name="cart"></ion-icon><label :class="` ${ i>0 ? ' absolute  bg-white text-black text-[.9rem] translate-y-[-50%] translate-x-[-30%] h-[25%] py-[0%] px-[.7rem] rounded-lg':'hidden'} `" for="">{{ i }}</label></router-link></button>
               </div>
             </div>
     

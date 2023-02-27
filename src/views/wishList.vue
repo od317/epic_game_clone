@@ -348,7 +348,7 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
 
                 </button>
                 
-                <div class="flex flex-col">
+                <div :class="` ${wlist.length>0 ? 'flex' : 'hidden'}  flex-col  `">
 
                   <div v-for="game in gamesgrid2" :key="game" class="bg-dark2 p-[1rem] mt-[1.2rem]
                     flex flex-col">
@@ -390,8 +390,15 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
                     
                     </div>
 
-                </div>
 
+
+
+                </div>
+                <div :class="`${wlist.length>0 ? 'hidden' : ''} text-white flex flex-row items-center`">
+                    
+                    <label class="text-center mt-[3rem]" for=""> You haven't added anything to your wishlist yet.</label>
+
+                    </div>
             </div>
 
 

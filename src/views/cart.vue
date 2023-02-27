@@ -8,10 +8,10 @@ import {ref} from 'vue'
  
  let total_price = ref(0)
  let total_dis = ref(0)
-
-
+let cal_p_d = ()=>{
+    total_price.value = 0
+    total_dis.value = 0
  for(let g of cart.value){
-
     if(g.oldprice){
     total_dis.value+=parseInt(g.oldprice) - parseInt(g.price)
     total_price.value+= parseInt(g.oldprice)
@@ -19,8 +19,9 @@ import {ref} from 'vue'
     else
     total_price.value+= parseInt(g.price)
  }
+}
 
-
+cal_p_d()
 
 
  let remove = (game)=>{
@@ -33,7 +34,7 @@ import {ref} from 'vue'
        })
        
        localStorage.setItem('cart',JSON.stringify(cart.value))
-
+       cal_p_d()
  }
 
 
@@ -72,7 +73,7 @@ md:flex-col  md:items-center">
     
     <div class="flex flex-row justify-between items-center">
 
-        <label class="text-white text-[2rem]">cart</label>
+        <label class="text-white text-[2rem]">my cart</label>
 
 
      </div>
@@ -124,7 +125,7 @@ md:flex-col  md:items-center">
 
 
 
- <div class="flex w-[35%] flex-col mt-[2rem] text-white pb-[1.5rem] ">
+ <div :class="`${cart.length > 0 ? 'flex': 'hidden'} w-[35%] flex-col mt-[2rem] text-white pb-[1.5rem] `">
 
       <label class="text-[1.4rem] mb-[2rem]" for="">Games and apps summary</label>
 
@@ -153,17 +154,33 @@ md:flex-col  md:items-center">
  </div>
 
 
- <div class="flex flex-row justify-between text-white mt-[.8rem]" for="">
+ <div :class="`${cart.length > 0 ? 'flex': 'hidden'} flex-row justify-between text-white mt-[.8rem]`" for="">
     <label for="">subtotal</label>
     <label for="">{{ total_price - total_dis }}$</label>
 
 </div>
 
-<button class="bg-blue1 py-[.8rem] text-[1rem] text-white mt-[1.5rem] rounded-md">
+<button :class="`bg-blue1 py-[.8rem] text-[1rem] text-white mt-[1.5rem] rounded-md ${cart.length > 0 ? '': 'hidden'}`">
     check out 
 </button>
 
 
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+</div>
+<div :class="`${ cart.length > 0 ? 'hidden': ''} text-white flex flex-col items-center text-[1.4rem] mt-[1.5rem]`">
+       <label for="">your cart is empty </label>
+
+</div>
 </div>
 
 
@@ -171,29 +188,18 @@ md:flex-col  md:items-center">
 
 
 
-</div>
-
-</div>
-
-</div>
 
 
 
 
 
-
-
-
-
-
-
-<div  class="md:hidden mb-[4rem] flex flex-col  px-[1.5rem] 
-md:flex-row md:w-[78%] md:items-center">
+<div  :class="`md:hidden mb-[4rem]   flex-col  px-[1.5rem] 
+md:flex-row md:w-[78%] md:items-center `">
     
     
     <div class="flex flex-row justify-between items-center">
 
-         <label class="text-white text-[2rem]">cart</label>
+         <label class="text-white text-[2rem]">my cart</label>
 
       
     </div>
@@ -236,7 +242,7 @@ md:flex-row md:w-[78%] md:items-center">
 
 
 
- <div class="flex mt-[2rem] text-white pb-[1.5rem] border-b-[.1rem] border-b-gray-400  flex-col">
+ <div :class="`${cart.length > 0 ? 'flex': 'hidden'}  mt-[2rem] text-white pb-[1.5rem] border-b-[.1rem] border-b-gray-400  flex-col`">
 
       <label class="text-[1.4rem] mb-[1rem]" for="">Games and apps summary</label>
 
@@ -267,15 +273,24 @@ md:flex-row md:w-[78%] md:items-center">
 </div>
 
 
-<div class="flex flex-row justify-between text-white mt-[1rem]" for="">
+<div :class="`${cart.length > 0 ? 'flex': 'hidden'} flex-row justify-between text-white mt-[1rem]`" for="">
     <label for="">subtotal</label>
     <label for="">{{ total_price - total_dis }}$</label>
 
 </div>
 
-<button class="bg-blue1 py-[.8rem] text-[1.2rem] text-white mt-[1.5rem] rounded-md">
+<button :class="`${cart.length > 0 ? '': 'hidden'} bg-blue1 py-[.8rem] w-full text-[1.2rem] text-white mt-[1.5rem] rounded-md`">
     check out 
 </button>
+
+
+<div :class="`${ cart.length > 0 ? 'hidden': ''} text-white flex flex-col items-center text-[1.4rem] mt-[1.5rem]`">
+       <label for="">your cart is empty </label>
+
+</div>
+
+
+
 
 </div>
 
