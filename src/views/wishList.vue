@@ -2,6 +2,8 @@
 
 import {ref} from 'vue'
 
+import game_lists from '../gamelist'
+
  let wlist = ref( localStorage.getItem('wish_list') != undefined ? JSON.parse(localStorage.getItem('wish_list')) : [])
 
  let cart = ref( localStorage.getItem('cart') != undefined ? JSON.parse(localStorage.getItem('cart')) : [])
@@ -29,7 +31,6 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
  }
  
 
- console.log(wlist)
  let gamesgrid2 = ref(wlist.value)
 
  let george= ref(false)
@@ -190,7 +191,6 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
         for(let i of filters.value){
             if(i!=='all'){
                filter_num.value+=1
-               console.log("ssdass"+i)
             }
         }
         show_c(show_val.value)
@@ -242,19 +242,16 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
          show.value=c
          switch(c){
             case 'new':
-                console.log('new')
                 gamesgrid2.value = gamesgrid2.value.filter(i=>{
                     return i.new
                 })
                 break
             case 'cs':
-                console.log('cs')
                 gamesgrid2.value = gamesgrid2.value.filter(i=>{
                     return i.cs
                 })
                 break
             case 'alpha':
-                console.log('alpha')
                 gamesgrid2.value.sort((a,b)=>{
                     return a.name - b.name
                 })
@@ -301,6 +298,18 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
        gamesgrid2.value = gamesgrid2.value.filter(i=>{
         return i !== game
        })
+       
+
+       for(let gl of game_lists){
+        for(let gl2 of gl){
+            for(let g of gl){
+                for(let g2 of g){
+                    if(g2.name == game.name)
+                       g2.inw = false
+                }
+            }
+        }
+       }
        
        localStorage.setItem('wish_list',JSON.stringify(wlist.value))
 
@@ -356,7 +365,7 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
                     <div class="flex flex-row justify-between text-white">   
                         
                         <div class="flex flex-row">
-                               <img  class="w-[20%] mr-[1rem] rounded-md" :src="game.img"/>
+                               <img  class="w-[20%] mr-[1rem] rounded-md" :src="game.logoimg"/>
                                 <div class="flex flex-col h-full">
                                     <label class="py-[.3rem] px-[.5rem] w-fit bg-dark4 rounded-md text-center text-[.8rem]"> Base game </label>
                                     <label class="text-start text-[1.2rem]">{{ game.name }}</label>
@@ -536,7 +545,7 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
                     flex flex-col">
                           
                     <div class="flex flex-row text-white">   
-                               <img  class="w-[20%] mr-[1rem] rounded-md" :src="game.img"/>
+                               <img  class="w-[20%] mr-[1rem] rounded-md" :src="game.logoimg"/>
                                 <div class="flex flex-col h-full">
                                     <label class="py-[.3rem] px-[.5rem] w-fit bg-dark4 rounded-md text-center text-[.8rem]"> Base game </label>
                                     <label class="text-start text-[1.2rem]">{{ game.name }}</label>

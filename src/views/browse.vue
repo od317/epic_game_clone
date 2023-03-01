@@ -10,7 +10,6 @@ const props = defineProps({
 });
 
 let id = props.id
-console.log("id"+id)
 
 let genlist = [
     [   

@@ -7,10 +7,16 @@
  import tops_gird from '../assets/components/tops_gird.vue' 
  import footer_cont from '../assets/components/footer1.vue'
  import flickity from '../assets/components/flic.vue'
+ import { useRouter } from 'vue-router';
+
+ import games_lists from '../gamelist'
+
+ let router = useRouter(); 
+
  /* for slider and sidebar  */
 let games = [
     {
-       name:"dis2",
+       name:"dishonored2",
        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
@@ -55,76 +61,7 @@ let games = [
    ]
 
 
-let games_list1=[
-[ 
-  {name:'daying light2',
-   img:'https://render.fineartamerica.com/images/rendered/default/print/6/8/break/images/artworkimages/medium/3/2-dying-light-2-poster-dat-khong-chin-luong.jpg'
-  },
-  {name:'spiderman',
-   img:'https://m.media-amazon.com/images/M/MV5BNGQ5YjE0NWYtNDRmNS00MzEyLTgzOWUtZTdiMDk5ZThiZmZkXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg'
-  },  
-  {name:'god',
-   img:'https://m.media-amazon.com/images/I/71DRhS9jOeL._AC_SY741_.jpg'
-  },  
-  {name:'goat 3',
-   img:'https://www.igroshop.com/images/detailed/11/goatsimulator3_box_art.jpg'
-  },  
-  {name:'spiderman',
-   img:'https://m.media-amazon.com/images/M/MV5BMjM3MzUzYzYtODA1Zi00YzI5LWFhNTAtOWFkNzEzYmMwOTVmXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg'
-  },
-],
-[
-  {name:'daying light 2',
-   img:'https://cdn11.bigcommerce.com/s-yzgoj/images/stencil/1280x1280/products/1517016/4645929/TIARP14317__33265.1654739931.jpg?c=2'
-  },
-  {name:'spiderman',
-   img:'https://m.media-amazon.com/images/M/MV5BNGQ5YjE0NWYtNDRmNS00MzEyLTgzOWUtZTdiMDk5ZThiZmZkXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg'
-  },  
-  {name:'god',
-   img:'https://m.media-amazon.com/images/I/71DRhS9jOeL._AC_SY741_.jpg'
-  },  
-  {name:'goat 3',
-   img:'https://www.igroshop.com/images/detailed/11/goatsimulator3_box_art.jpg'
-  },  
-  {name:'spiderman',
-   img:'https://m.media-amazon.com/images/M/MV5BMjM3MzUzYzYtODA1Zi00YzI5LWFhNTAtOWFkNzEzYmMwOTVmXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg'
-  },
-],
-[
-  {name:'daying light 2',
-   img:'https://render.fineartamerica.com/images/rendered/default/print/6/8/break/images/artworkimages/medium/3/2-dying-light-2-poster-dat-khong-chin-luong.jpg'
-  },
-  {name:'spiderman',
-   img:'https://m.media-amazon.com/images/M/MV5BNGQ5YjE0NWYtNDRmNS00MzEyLTgzOWUtZTdiMDk5ZThiZmZkXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg'
-  },  
-  {name:'god',
-   img:'https://m.media-amazon.com/images/I/71DRhS9jOeL._AC_SY741_.jpg'
-  },  
-  {name:'goat 3',
-   img:'https://www.igroshop.com/images/detailed/11/goatsimulator3_box_art.jpg'
-  },  
-  {name:'spiderman',
-   img:'https://m.media-amazon.com/images/M/MV5BMjM3MzUzYzYtODA1Zi00YzI5LWFhNTAtOWFkNzEzYmMwOTVmXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg'
-  },
-],
-[
-  {name:'daying light 2',
-   img:'https://render.fineartamerica.com/images/rendered/default/print/6/8/break/images/artworkimages/medium/3/2-dying-light-2-poster-dat-khong-chin-luong.jpg'
-  },
-  {name:'spiderman',
-   img:'https://m.media-amazon.com/images/M/MV5BNGQ5YjE0NWYtNDRmNS00MzEyLTgzOWUtZTdiMDk5ZThiZmZkXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg'
-  },  
-  {name:'god',
-   img:'https://m.media-amazon.com/images/I/71DRhS9jOeL._AC_SY741_.jpg'
-  },  
-  {name:'goat 3',
-   img:'https://www.igroshop.com/images/detailed/11/goatsimulator3_box_art.jpg'
-  },  
-  {name:'goat 3',
-   img:'https://www.igroshop.com/images/detailed/11/goatsimulator3_box_art.jpg'
-  },
-]
-]
+let games_list1= games_lists[0]
 
 for(let g1 of games_list1){
   for(let g of g1)
@@ -317,8 +254,33 @@ let footer_cont1 = [{
    let start = ref(true)
    let start_a = ref(true)
 
-   let change_hln = ()=>{
-   let s = setInterval(()=>{
+
+   let s;
+
+    s = setInterval(()=>{
+       header_list_num.value === 5 ? header_list_num.value=0 : header_list_num.value+=1
+       slide_on.value = true
+       trans_slide.value=false
+       start.value=false
+       const myTimeout = setTimeout(()=>{
+        slider_img.value[0] = slider_img.value[1]
+        slider_img.value[1] = header_list_num.value+1<=5 ? games[header_list_num.value+1].src:games[0].src
+        slide_on.value=false 
+        trans_slide.value=true         
+       
+      },499);
+  },9000)
+  const myTimeout = setTimeout(()=>{
+      start_a.value=false   
+  },10);
+ 
+
+  let click_change_pos = (place)=>{
+    clearInterval(s)
+    header_list_num.value = place
+    slider_img.value[0] =  games[header_list_num.value].src
+    slider_img.value[1] =  place+1 <=5 ? games[header_list_num.value+1].src : games[0].src
+    s = setInterval(()=>{
        header_list_num.value === 5 ? header_list_num.value=0 : header_list_num.value+=1
        slide_on.value = true
        trans_slide.value=false
@@ -332,11 +294,16 @@ let footer_cont1 = [{
       },499);
   },9000)
   }
-  const myTimeout = setTimeout(()=>{
-      start_a.value=false   
-  },10);
- 
-  change_hln()
+
+
+
+  
+
+
+  let router_push_header = (name)=>{
+
+    router.push('/game/'+name)
+  }
 
 
   window.scrollTo({
@@ -451,13 +418,14 @@ let footer_cont1 = [{
                     ">
 
 
-                      <div :class="` group relative flex items-center h-1/5  w-full ${game.last !== true ? 'mb-2':''} hover:cursor-pointer 
+                      <div @click=" header_list_num !== game.num-1 ? click_change_pos(game.num-1) : router_push_header(game.name)" :class="` group relative flex items-center h-1/5  w-full ${game.last !== true ? 'mb-2':''} hover:cursor-pointer 
                        rounded-lg`" v-for="game in games" :key="game">
                         
                         <div :class="`   relative flex items-center  w-full h-full ${game.last !== true ? '':''} hover:cursor-pointer p-1`">
+                         
                           <img :src="game.src" :class="` rounded-md z-10 
-                          lg:h-[3.1rem] lg:w-[2.5rem]
-                          md:h-[75%] md:w-[30%]`" alt=""> 
+                            lg:h-full lg:w-[2.5rem]
+                            md:h-[75%] md:w-[30%]`" alt="">  
                           <div class=" ml-5  grid content-center w-full ">
                             <p class="text-white z-10">{{ game.name }}</p>
                             </div>

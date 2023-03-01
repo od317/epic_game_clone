@@ -94,7 +94,7 @@ const props = defineProps({
         <label class="text-lg mb-[.5rem]" for="">Achievements <label for="" class="lg text-gray-400">({{ ach.length }})</label></label>
 
 
-        <div class="flex  w-fit text-gray-400 relative z-40 focus-within:overflow-visible overflow-hidden">Sort 
+        <div class="flex  w-fit text-gray-400 relative z-30 focus-within:overflow-visible overflow-hidden">Sort 
             <button @click="view_sort = !view_sort"  for="" class="ml-[1rem] text-white flex  items-center cursor-pointer">{{sort_op}}<ion-icon name="arrow-dropdown" class="text-lg ml-[.4rem]"></ion-icon></button>
             <div :class="`  absolute w-[13rem] bg-dark2 translate-y-[15%] py-[1rem] z-30 ${view_sort?'flex flex-col':'flex flex-col'} `">
              

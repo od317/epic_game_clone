@@ -3,14 +3,30 @@
 import { defineProps, reactive, toRef,ref } from "vue";
 import flic from './flic_game_list.vue'
 
+import games from '../../games'
+
+
+
 const props = defineProps({
   gamelist: Array,
   type: String
 });
 
- let gamelist = props.gamelist
+ let gamelist = ref(props.gamelist)
  let type = props.type
  
+ for(let gl of gamelist.value)
+      for(let g of  gl){
+       let wlist2 = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : [] 
+        for(let g2 of wlist2){
+              if(g.name == g2.name){
+                  g.inw = true
+                  break
+              }
+          }
+        }
+
+
  let slide = ref(false)
  let slide_perecent = ref("0")
  
@@ -27,19 +43,47 @@ const props = defineProps({
 }
 
 
- let add_wish= (game)=>{
+ let add_wish = (game2)=>{
 
      let wlist = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : []
      
+     
+     
      for(let g of wlist){
-      if(g.name === game.name)
+      if(g.name === game2.name)
       return
      }
-
+     let game = games.get(game2.name)
+     if(game)
      wlist.push(game)
+
+     game2.ro=true
+     let s = setTimeout(()=>{
+         game2.ro=false
+         game2.inw=true
+       },1000)
+
      localStorage.setItem('wish_list',JSON.stringify(wlist))
 
  }
+
+
+
+let remove_wish = (game)=>{
+
+       let wlist = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : []
+       wlist = wlist.filter(i=>{
+        return i.name !== game.name
+       })
+       console.log(game)
+       game.ro=true
+       let s = setTimeout(()=>{
+        game.inw=false
+        game.ro=false
+       },1000)
+       localStorage.setItem('wish_list',JSON.stringify(wlist))
+
+}
 
  window.scrollTo({
         top:0,
@@ -85,21 +129,39 @@ const props = defineProps({
                       md:w-1/5
                       "  v-for="game in gl">
                             
+
+                        
+
+
                         <div class="absolute flex w-full justify-end items-start p-3"> 
                             
-                             <div  class=" 
-                              relative rounded-full z-40 text-3xl 
+                             <div v-if="!game.inw"  class=" 
+                              relative rounded-full z-30 text-2xl 
                               opacity-0 group-hover:opacity-100  transition-all duration-100 
                               after_wish">
-                                  <button class="  group " @click="add_wish(game)">
-                                    <ion-icon class="bg-black  text-white  rounded-full z-50 " name="add-circle-outline">
+                                  <button class="group relative " @click="add_wish(game)">
+                                    <ion-icon  :class="` ${game.ro ? ' rotate-[360deg] transition-all duration-1000':''} bg-white   text-black rounded-full z-30 `" name="add-circle">
                                     </ion-icon>
-                                    <div class=" absolute text-[1rem] 
-                                    translate-y-[-100%] translate-x-[-50%]  white opacity-0
-                                     ">ss</div>
+                            
+
                                   </button>
                                   
                                   </div>
+
+
+
+                                  <div v-if="game.inw"  class=" 
+                              relative rounded-full z-30 text-2xl 
+                              opacity-0 group-hover:opacity-100  transition-all duration-100 
+                              after_wish">
+                                  <button class="  group " @click="remove_wish(game)">
+                                    <ion-icon :class="`${game.ro ? ' rotate-[-360deg] transition-all duration-1000':''} bg-white  text-black  rounded-full z-30` " name="checkmark-circle">
+                                    </ion-icon>
+                            
+                                  </button>
+                                  
+                                  </div>
+
 
                               </div>
                               
@@ -109,7 +171,7 @@ const props = defineProps({
                                 <div class=" cursor-pointer rounded-md absolute flex items-start justify-end h-[17rem] p-3  w-full bg-gray-200 opacity-0 hover:opacity-10 transition-all duration-200">
                               </div>
                       
-                              <img :src="game.img" alt=""  :class="`${ game.last ? 'w-0 h-0':'w-full lg:h-[17rem] md:h-[17rem]'} rounded-md`">
+                              <img :src="game.game_list_img" alt=""  :class="`${ game.last ? 'w-0 h-0':'w-full lg:h-[17rem] md:h-[17rem]'} rounded-md`">
                               </router-link>
                    
                       <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-2'}`">
@@ -123,7 +185,7 @@ const props = defineProps({
                         </div>
                       </div>
                       <div :class="`${game.last? 'w-full h-full':'hidden '} relative flex justify-center items-center`">
-                        <img :src="game.img" src="../img/ac-valhalla.webp" alt="">
+                        <img :src="game.game_list_img"  alt="">
                        <button :class="`${game.last? 'bg-blue1 text-white p-2 text-xl rounded-lg absolute z-10':''}`">see more</button>
                        <div class="absolute h-full w-full bg-black opacity-50"></div>
                       </div>

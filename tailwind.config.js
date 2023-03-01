@@ -12,6 +12,9 @@ module.exports = {
     './src/**/*.{vue,js}'
   ],
   theme: {
+    fontFamily: {
+      'ss': ['"Kumbh Sans","sans"'],
+    },
     extend: { 
       gridTemplateRows: {
       // Simple 8 row grid

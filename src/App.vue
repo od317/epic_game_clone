@@ -19,7 +19,7 @@ window.scrollTo({
      <nav_search/>
        
      
-     <div class=" h-fit bg-dark1   "> 
+     <div class=" h-fit font-ss bg-dark1   "> 
      <router-view></router-view>
 
      

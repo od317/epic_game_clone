@@ -25,7 +25,6 @@ let s = []
 
 
 
-console.log(game)
 
 let slide_on = ref(false)
 let slide_val = ref('0')
@@ -68,7 +67,6 @@ for(let i =0 ; i<game.imgs.length;i++){
     slide_imgs = slide_imgs.concat(game.imgs[i])
 }
     let slide_top_img_per = ref(slide_top_val.value+'00%');
-    console.log(slide_top_img_per)
   
     let pos_top = ref([0,1,2])
 
@@ -87,7 +85,6 @@ let forward_1 = ()=>{
     slide_val.value=(-Math.floor(top_bot_pos.value/4))+'00%'
     }
     slide_top_img_per.value = slide_top_val.value+'00%'
-    console.log(slide_top_img_per.value)
 }
 
 
@@ -151,6 +148,22 @@ for(let g of cart){
 
 cart.push(game)
 localStorage.setItem('cart',JSON.stringify(cart))
+
+}
+
+
+
+let add_wish= (game)=>{
+
+let wlist = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : []
+
+for(let g of wlist){
+ if(g.name === game.name)
+ return
+}
+
+wlist.push(game)
+localStorage.setItem('wish_list',JSON.stringify(wlist))
 
 }
 
@@ -362,7 +375,7 @@ window.scrollTo({
 
                            <div class="">
                                 <div class="sticky top-[9.5rem] h-[50%]  px-[3rem] py-[1rem]">
-                                    <div class="mb-[2rem]"><img src="https://cdn2.unrealengine.com/egs-dyinglight2stayhuman-techland-ic5-400x166-55b2799d56f3.png?h=270&resize=1&w=480" alt=""></div>
+                                    <div class="mb-[2rem]"><img :src="game.img" alt=""></div>
                                     
                                     <div class="felx flex-col">
                                         <label for="" class="bg-dark2 rounded-md px-[1rem] py-[.3rem]">basegame</label>
@@ -517,7 +530,7 @@ window.scrollTo({
                                                                     </div>
                                                             
                                                                     <button class="py-[1.1rem] px-[1rem] border w-[30%] mx-[1rem]">add to cart</button>
-                                                                    <button class="py-[1.1rem] border w-[30%] mx-[1rem]">add to wishlist</button>
+                                                                    <button @click=" add_wish(game) " class="py-[1.1rem] border w-[30%] mx-[1rem]">add to wishlist</button>
 
                                                         </div>
                                                         
@@ -702,7 +715,7 @@ window.scrollTo({
 
                         <button :class="`bg-[#ed0000] w-full py-[.8rem] text-[1.1rem] rounded-md mb-[.8rem]`">Buy now</button>
                         <button @click=" addcart(game)" :class="` w-full py-[.8rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500`">Add To Cart</button>
-                        <button :class="` w-full py-[.3rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]`">add to wishlist</button>
+                        <button @click=" add_wish(game) " :class="` w-full py-[.3rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]`">add to wishlist</button>
 
 
                         <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] pb-[.4rem] mb-[.5rem]">

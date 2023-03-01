@@ -134,9 +134,7 @@
             start.value = end.value - 12 > 0 ?  end.value - 12 : 0
             pos.value = new_pos
             view_grid.value = gamesgrid2.value.slice(start.value,end.value)
-            console.log(start.value+"  "+end.value+" "+pos.value+" ")
             for(let i in view_grid.value){
-                console.log(i)
             }
         window.scrollTo({ top: 0, behavior:'smooth'})
 
@@ -177,7 +175,6 @@
         for(let i of filters.value){
             if(i!=='all'){
                filter_num.value+=1
-               console.log("ssdass"+i)
             }
         }
         show_c(show_val.value)
@@ -233,19 +230,16 @@
          show.value=c
          switch(c){
             case 'new':
-                console.log('new')
                 gamesgrid2.value = gamesgrid2.value.filter(i=>{
                     return i.new
                 })
                 break
             case 'cs':
-                console.log('cs')
                 gamesgrid2.value = gamesgrid2.value.filter(i=>{
                     return i.cs
                 })
                 break
             case 'alpha':
-                console.log('alpha')
                 gamesgrid2.value.sort((a,b)=>{
                     return a.name - b.name
                 })
@@ -296,7 +290,6 @@
         for(let list of all_filters){
         for(let filt of list){
             if(type === filt){
-                console.log("foundssssssssssssqwe "+type+" "+filt+" "+count)
                  filter(type,count)
                  br = true
                  break

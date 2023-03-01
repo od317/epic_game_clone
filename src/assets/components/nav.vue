@@ -1,6 +1,12 @@
 <script setup>
 
   import {ref} from 'vue'
+  import {useRouter} from 'vue-router'
+
+  let router = useRouter()
+
+
+
   let currentUrl = window.location.pathname;
   let cp = currentUrl.split('/')[1]
   let cart = ref( localStorage.getItem('cart') != undefined ? JSON.parse(localStorage.getItem('cart')) : [])
@@ -53,6 +59,11 @@
   });
 
 
+  let logopush = ()=>{
+    router.push('/')
+    page.value='discover'
+  }
+
 </script>
 
 
@@ -66,7 +77,7 @@
 
 
   <div class=" hidden pl-8 pt-3  flex-grow md:flex">     
-        <div class="min-w-[30px] w-[2rem] mr-8 "><img src="../img/logo.png" class="" alt=""></div>
+        <div @Click="logopush()" class="min-w-[30px] w-[2rem] mr-8 cursor-pointer "><img src="../img/logo.png" class="" alt=""></div>
          <div class="grid  px-5 pt-2 text-zinc-400  text-sm border-b-[6px] border-blue1 font-medium  cursor-pointer">STORE</div>
          <div class="grid  px-5 pt-2 text-zinc-400   text-sm border-b-[0px] border-blue1 font-medium hover:border-b-[6px] transition-all duration-100 cursor-pointer">Support</div>
          <div class="grid   pt-2 border-l-2 border-l-white h-[70%]"></div>
@@ -84,7 +95,7 @@
 
     <div class="md:hidden  h-full w-full flex justify-between">
 
-      <div class="md:hidden ml-6 mt-3 min-w-[30px] w-[2rem] "><img src="../img/logo.png" class="" alt=""></div>
+      <div @click="logopush()" class="md:hidden ml-6 mt-3 min-w-[30px] w-[2rem] "><img src="../img/logo.png" class="" alt=""></div>
     
        <button @click="change_canv" :class="`${offcanv ? 'bg-dark1':'bg-blue1'} transiton-all duration-200 text-white text-[2rem] h-full px-[.7rem] flex items-center text-center`">
 
@@ -155,8 +166,8 @@
         <router-link class="grow" to="/news"><button @click="page='news'" :class="`ml-6 flex p-2 ${page!=='news'?'text-gray-400 hover:text-white':'text-lg border-[1px] rounded-md'}   transition-all duration-200`">News</button></router-link> 
      
       <div class="flex items-center justify-center px-[2.5rem]">
-      <button @click="page='wishlist'" :class="`ml-6 p-2 rounded-md ${page!=='wishlist'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200 `"><router-link to="/wishlist">wishList</router-link></button>
-      <button :class="`ml-6 flex flex-row p-2 rounded-md ${page!=='cart'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200 `"><router-link to="/cart">cart <label :class="` ${ i>0 ? 'bg-white text-black  py-[.1rem] px-[.5rem] rounded-full':'hidden'} `" for="">{{ i }}</label></router-link></button>
+      <router-link  to="/wishlist"><button @click="page='wishlist'" :class="`ml-6 p-2 rounded-md ${page!=='wishlist'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200 `">wishList</button></router-link>
+      <router-link  to="/cart">  <button @click="page='cart'" :class="`ml-6 flex flex-row p-2 rounded-md ${page!=='cart'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200 `">cart <label :class="` ${ i>0 ? 'bg-white text-black  py-[.1rem] px-[.5rem] rounded-full':'hidden'} `" for="">{{ i }}</label></button></router-link>
       </div>
       
   </div>
