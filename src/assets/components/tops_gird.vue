@@ -3,12 +3,75 @@
 
 import { defineProps, reactive, toRef,ref } from "vue";
 import flict from './tops_flict.vue'
+import gamesc from '../../games'
+
 const props = defineProps({
       games_grid : Array
 });
 
-    let games_grid = props.games_grid 
-    console.log(games_grid)
+    let games_grid1 = ref(props.games_grid) 
+    
+    let games_grid = ref([])
+
+    for(let gg of games_grid1.value){
+        let games = []
+        for(let gog of gg.games){
+                console.log(gamesc.get(gog))
+                games.push(gamesc.get(gog))
+        }
+        games_grid.value.push({
+                title:gg.title,
+                games:games
+        })
+    }
+
+let add_wish = (game2)=>{
+
+let wlist = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : []
+
+
+
+for(let g of wlist){
+ if(g.name === game2.name)
+ return
+}
+let game = gamesc.get(game2.name)
+if(game)
+wlist.push(game)
+
+game2.ro=true
+let s = setTimeout(()=>{
+    game2.ro=false
+    gamesc.get(game2.name).inw=true
+  },1000)
+
+localStorage.setItem('wish_list',JSON.stringify(wlist))
+
+}
+
+
+
+
+
+
+
+
+let remove_wish = (game)=>{
+
+  let wlist = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : []
+  wlist = wlist.filter(i=>{
+   return i.name !== game.name
+  })
+  console.log(game)
+  game.ro=true
+  let s = setTimeout(()=>{
+   gamesc.get(game.name).inw=false
+   game.ro=false
+  },1000)
+  localStorage.setItem('wish_list',JSON.stringify(wlist))
+
+}
+
 
 </script>
 
@@ -32,9 +95,34 @@ const props = defineProps({
                                   <div v-for="game in game_list.games" class=" group flex items-top rounded-2xl  px-[1rem] py-[.5rem] hover:bg-dark2 cursor-pointer transition-all duration-200">
                                             <div  class="w-[19%] h-[5.2rem] p-1 relative ">
                                                 <div class="absolute flex justify-end   py-1  w-[80%]">
-                                                    <button @click="console.log('ok')" class="rounded-full text-xl hidden opacity-0 group-hover:opacity-[100%] group-hover:inline-block transition-all duration-100"><ion-icon class="bg-black rounded-full" name="add-circle-outline"></ion-icon></button>
-                                                </div>
-                                                <img class=" w-full h-full rounded-[5px]" :src="game.img" alt="">
+                                                        <div v-if="!game.inw"  class=" 
+                              relative rounded-full z-30 text-2xl 
+                              opacity-0 group-hover:opacity-100  transition-all duration-100 
+                              after_wish">
+                                  <button class="group relative " @click="add_wish(game)">
+                                    <ion-icon  :class="` ${game.ro ? ' rotate-[360deg] transition-all duration-1000':''} bg-white   text-black rounded-full z-30 `" name="add-circle">
+                                    </ion-icon>
+                            
+
+                                  </button>
+                                  
+                                  </div>
+
+
+
+                                  <div v-if="game.inw"  class=" 
+                              relative rounded-full z-30 text-2xl 
+                              opacity-0 group-hover:opacity-100  transition-all duration-100 
+                              after_wish">
+                                  <button class="  group " @click="remove_wish(game)">
+                                    <ion-icon :class="`${game.ro ? ' rotate-[-360deg] transition-all duration-1000':''} bg-white  text-black  rounded-full z-30` " name="checkmark-circle">
+                                    </ion-icon>
+                            
+                                  </button>
+                                  
+                                  </div>          
+                                </div>
+                                                <img class=" w-full h-full rounded-[5px]" :src="game.logoimg" alt="">
                                             </div>
                                             <div :class='`flex flex-col  h-[5.2rem] ml-[1rem]`'> 
                                                     <div>

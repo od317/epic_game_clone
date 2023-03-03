@@ -1,4 +1,6 @@
 
+import games from './games'
+
 let gamesgrid =[
   
 ]
@@ -14,16 +16,13 @@ let all_filters = [event,price_filt,geners]
 
 
 
-for(let i=1;i<=240;i++){
- gamesgrid.push({
-     name:i,
-     price: Math.floor(Math.random() * (60 - 0 + 1)) + 0,
-     dis:new_old[Math.floor(Math.random() * (1 - 0 + 1)) + 0],
-     img:'https://render.fineartamerica.com/images/rendered/default/print/6/8/break/images/artworkimages/medium/3/2-dying-light-2-poster-dat-khong-chin-luong.jpg',
-     event:event[Math.floor(Math.random() * (3 - 0 + 1)) + 0],
-     gener:geners[Math.floor(Math.random() * (3 - 0 + 1)) + 0],
-     new:new_old[Math.floor(Math.random() * (1 - 0 + 1)) + 0]    
- })
+for(let i=1;i<=144;){
+    for(let g of games){
+        gamesgrid.push(games.get(g[0]))       
+        i++;
+       
+    }
+
 }
 
 export default gamesgrid

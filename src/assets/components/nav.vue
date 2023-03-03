@@ -1,7 +1,10 @@
 <script setup>
 
-  import {ref} from 'vue'
+  import {ref,watch} from 'vue'
   import {useRouter} from 'vue-router'
+
+  import games from '../../games'
+
 
   let router = useRouter()
 
@@ -62,6 +65,56 @@
   let logopush = ()=>{
     router.push('/')
     page.value='discover'
+  }
+
+
+
+  let search_input = ref("")
+
+  let search_res = ref([])
+
+  watch(search_input,()=>{
+    search_res.value=[]
+    if(search_input.value == "")
+       return
+    for(let game of games){
+      if(game[0].substring(0,search_input.value.length) === search_input.value)
+         search_res.value.push(games.get(game[0]))
+      if(search_res.value.length == 4)
+      break   
+    }
+    
+  })
+
+  let res_game_push = (name)=>{
+        search_res.value=[]
+        let currentUrl = window.location.pathname;
+        let cp = currentUrl.split('/')[1]
+        if(cp=='game'){
+          router.push({ path: `/game/${name}` })
+          setTimeout(()=>{
+            location.reload();
+          },1)
+      }
+        else
+        router.push('game/'+name)
+  } 
+
+
+  let view_more = ()=>{
+    page.value = "browse"
+
+    if(window.location.pathname.split('/').indexOf('browse')!==-1){
+      router.push("/browse?q="+search_input.value)
+      setTimeout(()=>{
+            location.reload();
+          },1)
+        }
+
+    else
+    router.push("/browse?q="+search_input.value)
+    search_res.value=[]
+    search_input.value = ""
   }
 
 </script>
@@ -157,13 +210,27 @@
    <!-- large screen --> 
   <div class="text-white lg:flex   items-center  py-[2rem] w-[78%] sticky top-0 z-50 bg-dark1 hidden ">
       
-      <div class=" h-[2.7rem] p-3 rounded-3xl outline-none bg-[#1c1c1c] flex  items-center   ">
+      <div class=" h-[2.7rem] p-3 rounded-3xl outline-none bg-[#1c1c1c] flex    ">
           <ion-icon name="search" class="text-gray-400 mr-1 "></ion-icon> 
-          <input type="text" placeholder="search store" class=" rounded-3xl text-lg flex items-center outline-none bg-[#1c1c1c] ">
+          <input type="text" placeholder="search store" class=" rounded-3xl text-lg flex items-center outline-none bg-[#1c1c1c] " v-model="search_input">
+          
+          <div v-if=" search_res.length >0 " class="flex flex-col absolute translate-y-[2.1rem] w-[50%] rounded-sm p-[1rem] bg-dark2">
+            <div @click="res_game_push(game_res.name)" class="flex items-center group flex-row mb-[1rem] cursor-pointer" v-for=" game_res of search_res">
+               <img class="w-[2rem] h-[3rem] mr-[1rem]" :src="game_res.logoimg" alt="">
+               <label class="text-center group-hover:border-b-[.1rem]" for="">{{game_res.name}}</label>
+            </div>
+
+          <router-link class="group" @click="view_more()" :to="'browse?q='+search_input">
+          <label class="border-b-[.1rem] group-hover:border-b-0 cursor-pointer" for="">view more</label>  
+          </router-link>
+
+          </div>
+
+
         </div>
-        <router-link to="/"> <button @click="page='discover'" :class="`ml-6 p-2 rounded-md ${page!=='discover'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200 `">Discover</button></router-link>
-        <router-link to="/browse">  <button @click="page='browse'" :class="`ml-6 p-2 rounded-md ${page!=='browse'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200`">Browse</button></router-link>
-        <router-link class="grow" to="/news"><button @click="page='news'" :class="`ml-6 flex p-2 ${page!=='news'?'text-gray-400 hover:text-white':'text-lg border-[1px] rounded-md'}   transition-all duration-200`">News</button></router-link> 
+        <router-link to="/"> <button @click="page='discover'" :class="`ml-6 p-2 rounded-md ${page!=='discover'?'text-gray-400 hover:text-white':''} transition-all duration-200 `">Discover</button></router-link>
+        <router-link to="/browse">  <button @click="page='browse'" :class="`ml-6 p-2 rounded-md ${page!=='browse'?'text-gray-400 hover:text-white':''} transition-all duration-200`">Browse</button></router-link>
+        <router-link class="grow" to="/news"><button @click="page='news'" :class="`ml-6 flex p-2 ${page!=='news'?'text-gray-400 hover:text-white':' rounded-md'}   transition-all duration-200`">News</button></router-link> 
      
       <div class="flex items-center justify-center px-[2.5rem]">
       <router-link  to="/wishlist"><button @click="page='wishlist'" :class="`ml-6 p-2 rounded-md ${page!=='wishlist'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200 `">wishList</button></router-link>
@@ -217,19 +284,24 @@
              
 
              <div v-if="george2" class=" absolute flex flex-col items-center   w-full h-screen  ">
-                
-              <div class=" flex flex-row items-center px-[6%] py-[2.1rem] bg-dark4 w-full translate-y-[-100%]"> 
 
+              <div class=" flex flex-col items-center px-[6%] py-[2.1rem] shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] bg-dark4 w-full translate-y-[-100%]"> 
+
+                <div class="flex flex-row w-full">
                   <div class="flex items-center mr-[1rem] "> 
                         <button class="flex items-center">
                             <ion-icon name="search" class="text-gray-400 text-[1.5rem]  "></ion-icon> 
                         </button>
                   </div>
 
-                  <div class=" flex items-center grow">
-                    <input class=" bg-transparent w-[100%] outline-none " placeholder="search store" type="text">
+                  <div class=" flex  items-center grow">
+                   
+                    <input class=" bg-transparent w-[100%] outline-none " placeholder="search store" type="text" v-model="search_input">
+                  
                   </div>
                   
+                  
+
                   <div class=" text-center w-[10%]">
                     <button class="text-lg" @click="george2=false">
                       <ion-icon name="close"></ion-icon>
@@ -238,9 +310,20 @@
 
                 </div>
               
-              
 
-               <div @click="george2=false" class="w-full h-screen bg-black bg-opacity-50 translate-y-[-6rem]"></div>
+                
+
+              </div>
+
+               <div @click="george2=false" class="w-full h-screen flex flex-col bg-black bg-opacity-50 translate-y-[-6rem]">
+                <div class="bg-dark4 z-50 ">
+                <div @click="res_game_push(g.name)"  class=" pl-[6%] mt-[1rem] flex flex-row" v-for=" g in search_res ">
+                   <img class="w-[10%]" :src="g.logoimg" alt="">
+                   <label class="text-white text-center flex items-center ml-[1rem]" for="">{{g.name}}</label>
+                  </div>
+                  <div class="px-[6%] my-[1rem]" v-if="search_res.length>0" @click="view_more()" :to="'browse?q='+search_input">view more</div>
+              </div>
+              </div>
 
 
 

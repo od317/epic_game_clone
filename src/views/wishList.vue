@@ -3,6 +3,8 @@
 import {ref} from 'vue'
 
 import game_lists from '../gamelist'
+import gamesc from '../games'
+
 
  let wlist = ref( localStorage.getItem('wish_list') != undefined ? JSON.parse(localStorage.getItem('wish_list')) : [])
 
@@ -298,8 +300,7 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
        gamesgrid2.value = gamesgrid2.value.filter(i=>{
         return i !== game
        })
-       
-
+       game.inw=false
        for(let gl of game_lists){
         for(let gl2 of gl){
             for(let g of gl){
@@ -310,7 +311,8 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
             }
         }
        }
-       
+
+       gamesc.get(game.name).inw=false
        localStorage.setItem('wish_list',JSON.stringify(wlist.value))
 
  }
@@ -389,9 +391,11 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
                          <div class="flex flex-row justify-end items-center">
                     <button @click="remove(game)" class="border-b-[.1rem] text-[.7rem] text-gray-400 text-start w-fit h-fit">Remove</button>
 
-                            <button class="w-[20%] border-[.1rem] border-gray-400 
-                    text-center text-white text-[.9rem] py-[.8rem] ml-[1rem] transition-all duration-150 hover:bg-zinc-600  rounded-md">Add to cart</button>
+                    <button @click="addcart(game)" :class="`w-full ${check_in_cart(game)? 'hidden':''} w-[20%] border-[.1rem] border-gray-400 
+                    text-center text-white text-[.9rem] py-[.8rem] ml-[1rem] transition-all duration-150 hover:bg-zinc-600  rounded-md`">Add to cart</button>
 
+                    <router-link v-if="check_in_cart(game)" class="w-[20%] border-[.1rem] border-gray-400 
+                    text-center text-white text-[.9rem] py-[.8rem] ml-[1rem]  transition-all duration-150 hover:bg-zinc-600  rounded-md" to="cart"><button :class="`w-full ${!check_in_cart(game)? 'hidden':''}  `">view in cart</button></router-link>
 
 
                          </div>  

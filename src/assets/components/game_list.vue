@@ -61,6 +61,7 @@ const props = defineProps({
      let s = setTimeout(()=>{
          game2.ro=false
          game2.inw=true
+         games.get(game2.name).inw=true
        },1000)
 
      localStorage.setItem('wish_list',JSON.stringify(wlist))
@@ -80,6 +81,7 @@ let remove_wish = (game)=>{
        let s = setTimeout(()=>{
         game.inw=false
         game.ro=false
+        games.get(game.name).inw=false
        },1000)
        localStorage.setItem('wish_list',JSON.stringify(wlist))
 
@@ -171,7 +173,7 @@ let remove_wish = (game)=>{
                                 <div class=" cursor-pointer rounded-md absolute flex items-start justify-end h-[17rem] p-3  w-full bg-gray-200 opacity-0 hover:opacity-10 transition-all duration-200">
                               </div>
                       
-                              <img :src="game.game_list_img" alt=""  :class="`${ game.last ? 'w-0 h-0':'w-full lg:h-[17rem] md:h-[17rem]'} rounded-md`">
+                              <img :src="game.logoimg" alt=""  :class="`${ game.last ? 'w-0 h-0':'w-full lg:h-[17rem] md:h-[17rem]'} rounded-md`">
                               </router-link>
                    
                       <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-2'}`">

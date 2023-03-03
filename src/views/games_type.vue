@@ -1,7 +1,11 @@
 <script setup>
 
-   import { defineProps, reactive, toRef,ref } from "vue";
-   import gamesgrid from "../games_grid";
+   import { defineProps, reactive, toRef,ref,watch} from "vue";
+   import gamesgrid12 from "../games_grid";
+   import games from "../games"
+
+   let gamesgrid = ref(gamesgrid12)
+
 
         const props = defineProps({
             id:String       
@@ -11,6 +15,21 @@
        let id = props.id
        let type = id
        let title = ''
+
+       let uri = window.location.href.split('?');
+        
+        let key_word_input = ref('')
+            if(uri[1]){
+                if(uri[1].split('=')[1]){
+                    key_word_input.value=uri[1].split('=')[1]
+                    while(key_word_input.value.indexOf("%")!== -1){
+                       let rem = key_word_input.value.indexOf("%")
+                       key_word_input.value = key_word_input.value.slice(0, rem) + key_word_input.value.slice(rem+3);
+                       key_word_input.value = [key_word_input.value.slice(0, rem), key_word_input.value.slice(rem)].join(' ');
+                    }
+                }
+            }
+
 
        switch(type){
          case 'ac':
@@ -122,7 +141,8 @@
    let dis_show = ref(false)
    let show_val = ref('all')
 
-   let gamesgrid2 = ref(gamesgrid)
+   let gamesgrid2 = ref(gamesgrid.value)
+   let end_num = ref(Math.ceil(gamesgrid2.value.length/12))
    let pos=ref(1)
    let start = ref(0)
    let end = ref(11)
@@ -134,8 +154,7 @@
             start.value = end.value - 12 > 0 ?  end.value - 12 : 0
             pos.value = new_pos
             view_grid.value = gamesgrid2.value.slice(start.value,end.value)
-            for(let i in view_grid.value){
-            }
+
         window.scrollTo({ top: 0, behavior:'smooth'})
 
     }
@@ -182,12 +201,13 @@
         start.value = 0
         end.value= 11
         view_grid.value = gamesgrid2.value.slice(start.value,end.value)
+         end_num.value = Math.ceil(gamesgrid2.value.length/12)
 
     }
 
     let filter_helper = ()=>{
 
-        gamesgrid2.value = gamesgrid.filter(i=>{
+        gamesgrid2.value = gamesgrid.value.filter(i=>{
                    
               let c1 = false, c2= false, c3 = false , c4=false , c5=false, c6=false, c7=false , c8=false
               
@@ -305,6 +325,103 @@
       })
 
     
+let add_wish = (game2)=>{
+
+let wlist = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : []
+
+
+for(let g of wlist){
+if(g.name === game2.name)
+return
+}
+let game = games.get(game2.name)
+if(game)
+wlist.push(game)
+
+game2.ro=true
+let s = setTimeout(()=>{
+ game2.ro=false
+ game2.inw=true
+ games.get(game2.name).inw=true
+},1000)
+
+localStorage.setItem('wish_list',JSON.stringify(wlist))
+
+}
+
+
+
+let remove_wish = (game)=>{
+
+let wlist = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : []
+wlist = wlist.filter(i=>{
+return i.name !== game.name
+})
+console.log(game)
+game.ro=true
+let s = setTimeout(()=>{
+game.inw=false
+game.ro=false
+games.get(game.name).inw=false
+},1000)
+
+}
+
+
+
+if(key_word_input.value!==""){
+    gamesgrid2.value=[]
+        for(let g of gamesgrid.value){
+            if(g.name.substring(0,key_word_input.value.length).toLowerCase() === key_word_input.value.toLowerCase() )
+            gamesgrid2.value.push(g)
+        }
+        view_grid = ref(gamesgrid2.value.slice(0,12))
+        end_num.value = Math.ceil(gamesgrid2.value.length/12)
+
+      }
+
+
+      watch(key_word_input,()=>{
+
+        console.log('skager')
+        
+        if(key_word_input.value!==""){
+
+        gamesgrid2.value=[]
+        for(let g of gamesgrid.value){
+            if(g.name.substring(0,key_word_input.value.length).toLowerCase() === key_word_input.value.toLowerCase() && g.gener=== type  )
+            gamesgrid2.value.push(g)
+        }
+
+        end_num.value = Math.ceil(gamesgrid2.value.length/12)
+
+      }
+
+      else{
+        
+        gamesgrid2.value=[]
+        for(let g of gamesgrid.value){
+            if( g.gener=== type  )
+            gamesgrid2.value.push(g)
+        }
+
+
+      }
+      gamesgrid2.value.filter(i=>{
+         return i.gener == id
+      })
+      view_grid.value = gamesgrid2.value.slice(0,12)
+      end_num.value = Math.ceil(gamesgrid2.value.length/12)
+
+      })
+
+ 
+    window.scrollTo({
+     top:0,
+   })
+
+
+
 
 </script>
 
@@ -347,28 +464,71 @@
 
                 </button>
                 
+
+                
+                <div v-if="view_grid.length<=0" class="text-white  w-full flex flex-col items-center justify-center text-center text-[2rem] pt-[1rem] " >
+                         <label for="">no results found</label>    
+                         <label class="text-[1rem] mt-[.5rem] text-gray-400" for="">Unfortunately I could not find any results matching your search.</label>
+                        </div>
+
                 <div class="grid grid-cols-4 gap-[1rem]">
 
-                        <div v-for="game in view_grid" class=" group w-full py-[1rem] h-[100%] ">
+
+
+
+                        <div v-if="view_grid.length>0" v-for="game in view_grid" :class="`  group w-full py-[1rem] h-[100%] `">
                                       
-                                   <div class="w-[100%] h-[70%] rounded-md relative">
+                                   <div class="w-[100%] h-[65%] rounded-md relative">
                                       
                                     <div class="bg-gray-400 absolute rounded-md w-[100%] h-[100%] opacity-0 group-hover:opacity-20 transition-all duration-200 cursor-pointer"></div>
-                                     <img :src="game.img" class="w-[100%] h-[100%] rounded-md" alt="">
+                                    
+                                    <div class="absolute flex w-full justify-end items-start p-3"> 
+                            
+                            <div v-if="!game.inw"  class=" 
+                             relative rounded-full z-30 text-2xl 
+                             opacity-0 group-hover:opacity-100  transition-all duration-100 
+                             after_wish">
+                                 <button class="group relative " @click="add_wish(game)">
+                                   <ion-icon  :class="` ${game.ro ? ' rotate-[360deg] transition-all duration-1000':''} bg-white   text-black rounded-full z-30 `" name="add-circle">
+                                   </ion-icon>
+                           
+
+                                 </button>
+                                 
+                                 </div>
+
+
+
+                                 <div v-if="game.inw"  class=" 
+                             relative rounded-full z-30 text-2xl 
+                             opacity-0 group-hover:opacity-100  transition-all duration-100 
+                             after_wish2">
+                                 <button class="  group " @click="remove_wish(game)">
+                                   <ion-icon :class="`${game.ro ? ' rotate-[-360deg] transition-all duration-1000':''} bg-white  text-black  rounded-full z-30` " name="checkmark-circle">
+                                   </ion-icon>
+                           
+                                 </button>
+                                 
+                                 </div>
+
+
+                             </div>
+
+
+                                    <img :src="game.logoimg" class="w-[100%] h-[100%] rounded-md" alt="">
                                      
                                    </div>
                                      <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-2'}`">
                                         <label for="" class="w-full text-sm text-gray-600">Base game </label>
-                                            <label for="" class="w-full text-xl text-white">{{ game.name }} </label>
+                                            <label for="" class="w-full text-lg text-white">{{ game.name }} </label>
                                             <div class="flex w-full mt-2 items-center">
                                                 <label for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">50%</label>
-                                                <label for="" class="text-gray-500 mr-2 line-through">$59.99</label>
-                                                <label for="" class="text-white">${{ game.price }}</label>
-                                                <label for="" class="text-white">{{ game.event }}</label>
+                                                <label for="" class="text-gray-500 text-[.7rem] mr-2 line-through">$59.99</label>
+                                                <label for="" class="text-white text-[.7rem]">${{ game.price }}</label>
                                             </div>
 
-                                            <label for="" class="text-white">{{ game.gener }}</label>
-                                            <label for="" class="text-white">{{ game.new }}</label>
+                                         
+                                            <label for="">{{game.gener}}</label>
 
 
 
@@ -396,7 +556,7 @@
                         </div>
             
                         <div class="w-full bg-dark2 my-[1rem] p-[.5rem] rounded-md">
-                                <input type="text" class=" w-[90%] bg-dark2" placeholder="keywords">
+                                <input v-model=" key_word_input" type="text" class=" outline-none w-[90%] bg-dark2" placeholder="keywords">
                         </div>
             
                      
@@ -420,51 +580,51 @@
 
 
 
-                <div class="col-span-3 mt-[5rem] flex justify-center">
+                <div v-if="view_grid.length>0" class="col-span-3 mt-[5rem] flex justify-center">
                        
-                     <div v-if="end >= 48 && end <=(180)" class="text-gray-500">
+                       <div v-if="end >= 48 && end <=(gamesgrid2.length - (3*12))" class="text-gray-500">
                              
-                              <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
-                              <button @click="change(1)">1</button>
-                              ...
-                              <button @click="change(pos-1)" clas="ml-1">{{ pos-1 }}</button>
-                              <button @click="change(pos)" class="text-white ml-1">{{ pos }}</button>
-                              <button @click="change(pos+1)" class="ml-1">{{ pos+1 }}</button>
-                              ...
-                              <button @click="change(20)">20</button>
-                              <button v-if="pos<20" @click="change(pos+1)"><ion-icon name="arrow-dropright"></ion-icon></button>
-            
-                     </div>  
+                             <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
+                             <button @click="change(1)">1</button>
+                             ...
+                             <button @click="change(pos-1)" clas="ml-1">{{ pos-1 }}</button>
+                             <button @click="change(pos)" class="text-white ml-1">{{ pos }}</button>
+                             <button @click="change(pos+1)" class="ml-1">{{ pos+1 }}</button>
+                             ...
+                             <button @click="change(end_num)">{{end_num}}</button>
+                             <button v-if="pos<20" @click="change(pos+1)"><ion-icon name="arrow-dropright"></ion-icon></button>
+           
+                    </div>  
 
 
-                     <div v-else-if="end <=48" class="text-gray-500">
-                    
-                        <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
+                    <div v-else-if="end <=48" class="text-gray-500">
+                   
+                       <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
 
-                              <button @click="change(1)" :class="`${pos==1?'text-white':''} ml-1`">1</button>
-                              <button @click="change(2)" :class="`${pos==2?'text-white':''} ml-1`">2</button>
-                              <button @click="change(3)" :class="`${pos==3?'text-white':''} ml-1`">3</button>
-                              <button @click="change(4)" :class="`${pos==4?'text-white':''} ml-1`">4</button>
-                              <button @click="change(5)" :class="`${pos==5?'text-white':''} ml-1`">5</button>
-                              ...
-                              <button @click="change(20)">20</button>
-                              <button v-if="pos<20" @click="change(pos+1)"><ion-icon name="arrow-dropright"></ion-icon></button>
+                             <button @click="change(1)" :class="`${pos==1?'text-white':''} mx-1`">1</button>
+                             <button v-if="end_num>=2" @click="change(2)" :class="`${pos==2?'text-white':''} ml-1`">2</button>
+                             <button v-if="end_num>=3" @click="change(3)" :class="`${pos==3?'text-white':''} ml-1`">3</button>
+                             <button v-if="end_num>=4" @click="change(4)" :class="`${pos==4?'text-white':''} ml-1`">4</button>
+                             <button v-if="end_num>=5" @click="change(5)" :class="`${pos==5?'text-white':''} ml-1`">5</button>
+                              <label v-if="end_num>5" for=""> ... </label>
+                             <button v-if="end_num>5" @click="change(end_num)">{{end_num}}</button>
+                             <button v-if="pos<end_num" @click="change(pos+1)"><ion-icon name="arrow-dropright"></ion-icon></button>
 
-                     </div>
-                    
-                     <div v-else class="text-gray-400">
-                        <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
+                    </div>
+                   
+                    <div v-else class="text-gray-400">
+                       <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
 
-                        <button @click="change(1)" :class="`${pos==1?'text-white':''}`">1</button>
-                        ...
-                        <button @click="change(16)" :class="`${pos==16?'text-white':''} ml-1`">16</button>
-                              <button @click="change(17)" :class="`${pos==17?'text-white':''} ml-1`">17</button>
-                              <button @click="change(18)" :class="`${pos==18?'text-white':''}ml-1`">18</button>
-                              <button @click="change(19)" :class="`${pos==19?'text-white':''}ml-1`">19</button>
-                              <button @click="change(20)" :class="`${pos==20?'text-white':''}ml-1`">20</button>
-                              <button v-if="pos<20" @click="change(pos+1)" class="ml-1"><ion-icon name="arrow-dropright"></ion-icon></button>
+                       <button @click="change(1)" :class="`${pos==1?'text-white':''}`">1</button>
+                       ...
+                       <button @click="change(end_num-4)" :class="`${pos==end_num-4?'text-white':''} mx-1`">{{end_num-4}}</button>
+                       <button @click="change(end_num-3)" :class="`${pos==end_num-3?'text-white':''} mx-1`">{{end_num-3}}</button>
+                       <button @click="change(end_num-2)" :class="`${pos==end_num-2?'text-white':''} mx-1`">{{end_num-2}}</button>
+                       <button @click="change(end_num-1)" :class="`${pos==end_num-1?'text-white':''} mx-1`">{{end_num-1}}</button>
+                       <button @click="change(end_num)" :class="`${pos==end_num?'text-white':''} mx-1`">{{end_num}}</button>
+                             <button v-if="pos<end_num" @click="change(pos+1)" class="ml-1"><ion-icon name="arrow-dropright"></ion-icon></button>
 
-                     </div>
+                    </div>
                      
                     
                 </div>
@@ -569,7 +729,7 @@
                                       <div class="w-[100%] h-[70%] rounded-md relative">
                                          
                                        <div class="bg-gray-400 absolute rounded-md w-[100%] h-[100%] opacity-0 group-hover:opacity-20 transition-all duration-200 cursor-pointer"></div>
-                                        <img :src="game.img" class="w-[100%] h-[100%] rounded-md" alt="">
+                                        <img :src="game.logoimg" class="w-[100%] h-[100%] rounded-md" alt="">
                                         
                                       </div>
                                         <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-[.2rem]'}`">
@@ -600,50 +760,49 @@
 
             <div class=" my-[2rem] flex justify-center">
                        
-                       <div v-if="end >= 48 && end <=(180)" class="text-gray-500">
-                               
-                                <button class="mr-[1rem]" v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
-                                <button class="mr-[1rem]" @click="change(1)">1</button>
-                                <label class="mr-[1rem]" for="">...</label>
-                                <button @click="change(pos-1)" clas="ml-[1rem]">{{ pos-1 }}</button>
-                                <button @click="change(pos)" class="text-white ml-[1rem]">{{ pos }}</button>
-                                <button @click="change(pos+1)" class="ml-[1rem]">{{ pos+1 }}</button>
-                                <label class="ml-[1rem]" for="">...</label>
-                                <button class="ml-[1rem]" @click="change(20)">20</button>
-                                <button class="ml-[1rem]" v-if="pos<20" @click="change(pos+1)"><ion-icon name="arrow-dropright"></ion-icon></button>
-              
-                       </div>  
-  
-  
-                       <div v-else-if="end <=48" class="text-gray-500">
-                      
-                          <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
-  
-                                <button @click="change(1)" :class="`${pos==1?'text-white':''} ml-[1rem]`">1</button>
-                                <button @click="change(2)" :class="`${pos==2?'text-white':''} ml-[1rem]`">2</button>
-                                <button @click="change(3)" :class="`${pos==3?'text-white':''} ml-[1rem]`">3</button>
-                                <button @click="change(4)" :class="`${pos==4?'text-white':''} ml-[1rem]`">4</button>
-                                <button @click="change(5)" :class="`${pos==5?'text-white':''} mx-[1rem]`">5</button>
-                                ...
-                                <button class="mx-[1rem]" @click="change(20)">20</button>
-                                <button v-if="pos<20" @click="change(pos+1)"><ion-icon name="arrow-dropright"></ion-icon></button>
-  
-                       </div>
-                      
-                       <div v-else class="text-gray-500">
-                          <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
-  
-                          <button class="mx-[1rem]" @click="change(1)" :class="`${pos==1?'text-white':''}`">1</button>
-                          ...
-                          <button @click="change(16)" :class="`${pos==16?'text-white':''} ml-[1rem]`">16</button>
-                                <button @click="change(17)" :class="`${pos==17?'text-white':''} ml-[1rem]`">17</button>
-                                <button @click="change(18)" :class="`${pos==18?'text-white':'' }ml-[1rem]`">18</button>
-                                <button @click="change(19)" :class="`${pos==19?'text-white':''} ml-[1rem]`">19</button>
-                                <button @click="change(20)" :class="`${pos==20?'text-white':''} mx-[1rem]`">20</button>
-                                <button v-if="pos<20" @click="change(pos+1)" class="ml-1"><ion-icon name="arrow-dropright"></ion-icon></button>
-  
-                       </div>
-                       
+                <div v-if="end > 48 && end <=(gamesgrid2.length - (3*12))" class="text-gray-500">
+                             
+                             <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
+                             <button @click="change(1)">1</button>
+                             ...
+                             <button @click="change(pos-1)" clas="mx-1">{{ pos-1 }}</button>
+                             <button @click="change(pos)" class="text-white mx-1">{{ pos }}</button>
+                             <button @click="change(pos+1)" class="mx-1">{{ pos+1 }}</button>
+                             ...
+                             <button @click="change(end_num)">{{end_num}}</button>
+                             <button v-if="pos<20" @click="change(pos+1)"><ion-icon name="arrow-dropright"></ion-icon></button>
+           
+                    </div>  
+
+
+                    <div v-else-if="end <=48" class="text-gray-500">
+                   
+                       <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
+
+                             <button @click="change(1)" :class="`${pos==1?'text-white':''} mx-1`">1</button>
+                             <button v-if="end_num>=2" @click="change(2)" :class="`${pos==2?'text-white':''} mx-1`">2</button>
+                             <button v-if="end_num>=3" @click="change(3)" :class="`${pos==3?'text-white':''} mx-1`">3</button>
+                             <button v-if="end_num>=4" @click="change(4)" :class="`${pos==4?'text-white':''} mx-1`">4</button>
+                             <button v-if="end_num>=5" @click="change(5)" :class="`${pos==5?'text-white':''} mx-1`">5</button>
+                              <label v-if="end_num>5" for=""> ... </label>
+                             <button v-if="end_num>5" @click="change(end_num)">{{end_num}}</button>
+                             <button v-if="pos<end_num" @click="change(pos+1)"><ion-icon name="arrow-dropright"></ion-icon></button>
+
+                    </div>
+                   
+                    <div v-else class="text-gray-400">
+                       <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
+
+                       <button @click="change(1)" :class="`${pos==1?'text-white':''}`">1</button>
+                       ...
+                             <button @click="change(end_num-4)" :class="`${pos==end_num-4?'text-white':''} mx-1`">{{end_num-4}}</button>
+                             <button @click="change(end_num-3)" :class="`${pos==end_num-3?'text-white':''} mx-1`">{{end_num-3}}</button>
+                             <button @click="change(end_num-2)" :class="`${pos==end_num-2?'text-white':''} mx-1`">{{end_num-2}}</button>
+                             <button @click="change(end_num-1)" :class="`${pos==end_num-1?'text-white':''} mx-1`">{{end_num-1}}</button>
+                             <button @click="change(end_num)" :class="`${pos==end_num?'text-white':''} mx-1`">{{end_num}}</button>
+                             <button v-if="pos<end_num" @click="change(pos+1)" class="ml-1"><ion-icon name="arrow-dropright"></ion-icon></button>
+
+                    </div>
                       
                   </div>
 

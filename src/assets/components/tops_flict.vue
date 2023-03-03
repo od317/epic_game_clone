@@ -1,7 +1,7 @@
 <template>
     <Carousel class=" pt-[1rem]  md:hidden mb-[2rem] " :items-to-show="1.2" >
      
-        <slide class=" pl-[2rem]  h-full overflow-hidden flex flex-col items-start border-r-2 text-white" v-for="game_list in games" :key="game">
+        <slide class=" pl-[2rem] last:border-r-0  h-full overflow-hidden flex flex-col items-start border-r-2 text-white" v-for="game_list in games" :key="game">
                     
                     <div class="flex text-start justify-between w-full pr-[1rem]" for="">
                         <label for="">{{ game_list.title }}</label>
@@ -9,7 +9,7 @@
                     </div>
                     
                     <div class="w-full my-[1rem] flex flex-row" v-for="game in game_list.games">
-                        <img class="w-[18%] mr-[1.1rem] rounded-md"  :src="game.img" alt="">
+                        <img class="w-[18%] mr-[1.1rem] rounded-md"  :src="game.logoimg" alt="">
                         <div class="flex flex-col text-start mt-[.5rem]" for="">
                             <label for="">{{ game.name }}</label>
                             <div class="flex flex-row items-center text-center mt-[.5rem]">

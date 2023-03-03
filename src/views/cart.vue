@@ -87,9 +87,9 @@ md:flex-col  md:items-center">
         <div v-for="game in gamesgrid2" :key="game" class="bg-dark2 p-[1rem] mt-[1.2rem]
                     flex flex-col">
                           
-                    <div class="flex flex-row justify-between text-white">   
+                    <div class="flex flex-row  justify-between text-white">   
                         
-                        <div class="flex flex-row">
+                        <div class="flex flex-row max-w-[32rem]">
                                <img  class="w-[20%] mr-[1rem] rounded-md" :src="game.logoimg"/>
                                 <div class="flex flex-col h-full">
                                     <label class="py-[.3rem] px-[.5rem] w-fit bg-dark4 rounded-md text-center text-[.8rem]"> Base game </label>
@@ -212,7 +212,7 @@ md:flex-row md:w-[78%] md:items-center `">
         <div v-for="game in gamesgrid2" :key="game" class="bg-dark2 rounded-md p-[1rem] mt-[1.2rem]
         flex flex-col">
               
-        <div class="flex flex-row text-white">   
+        <div class="flex flex-row  text-white">   
                    <img  class="w-[20%] mr-[1rem] rounded-md" :src="game.logoimg"/>
                     <div class="flex flex-col h-full">
                         <label class="py-[.3rem] px-[.5rem] w-fit bg-dark4 rounded-md text-center text-[.8rem]"> Base game </label>

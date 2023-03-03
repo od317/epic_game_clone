@@ -88,9 +88,9 @@ const props = defineProps({
                    <router-link :to="'games/'+game.set" class="group w-1/4  h-fit ml-4 first:ml-0 px-[1rem] pt-[2rem] pb-[1rem] mr-2 relative bg-dark2 flex flex-col rounded-md"  v-for="game in genl">
                  
                     <div class="flex justify-between ">
-                    <img :src="game.imgs[1]" alt=""  :class="`  w-[40%] h-[10rem]   rounded-lg`">
-                    <img :src="game.imgs[0]" alt=""  :class="` translate-x-[60%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  absolute w-[40%] h-[10rem]   rounded-lg`">
-                    <img :src="game.imgs[2]" alt=""  :class="`  w-[40%] h-[10rem]  rounded-lg`">
+                    <img :src="game.imgs[1]" alt=""  :class="`  w-[40%] h-[8rem]   rounded-lg`">
+                    <img :src="game.imgs[0]" alt=""  :class="` translate-x-[60%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  absolute w-[40%] h-[8rem]   rounded-lg`">
+                    <img :src="game.imgs[2]" alt=""  :class="`  w-[40%] h-[8rem]  rounded-lg`">
 
                    </div>       
                    <div class="text-center text-white text-xl mt-[1rem]">{{ game.type }}</div>                 

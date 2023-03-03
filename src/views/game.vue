@@ -212,7 +212,7 @@ window.scrollTo({
 
 
 
-                        <div :class="`flex mt-[2.4rem] text-[1.4rem] text-white sticky top-[6.5rem] bg-dark1 z-50 p-[1.2rem] pb-[1rem]`">
+                        <div :class="`flex mt-[2.4rem] text-[1.4rem] text-white sticky top-[6.5rem] bg-dark1 z-30 p-[1.2rem] pb-[1rem]`">
 
                             <button @click="change_nav('over')" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='over'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">over</button>
                                <button @click="change_nav('ach')" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='ach'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">ach</button>
@@ -281,7 +281,7 @@ window.scrollTo({
 
                           <div class="flex justify-between items-center">
                             
-                           <button @click="backward()" class="z-40">></button>
+                           <button @click="backward()" class="z-20">></button>
 
                                         
                            <div class="w-[78%] overflow-x-hidden">
@@ -301,7 +301,7 @@ window.scrollTo({
                   </div>
 
 
-                           <button @click="forward()" class="z-40">></button>
+                           <button @click="forward()" class="z-20">></button>
 
 
                           </div>
