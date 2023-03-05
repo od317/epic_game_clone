@@ -212,7 +212,7 @@ window.scrollTo({
 
 
 
-                        <div :class="`flex mt-[2.4rem] text-[1.4rem] text-white sticky top-[6.5rem] bg-dark1 z-30 p-[1.2rem] pb-[1rem]`">
+                        <div :class="`flex  text-[1.4rem] text-white sticky top-[4rem] bg-dark1 z-30 p-[1.2rem] pb-[1rem]`">
 
                             <button @click="change_nav('over')" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='over'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">over</button>
                                <button @click="change_nav('ach')" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='ach'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">ach</button>
@@ -265,14 +265,6 @@ window.scrollTo({
                             <div class="flex flex-row overflow-x-hidden">
                                <img  v-for="img in slide_imgs" :class="`  transition-all duration-200 
                                 translate-x-[${slide_top_img_per === '-100%' ? '-100%' : (slide_top_img_per === '-200%' ? '-200%' : ((slide_top_img_per === '-300%' ? '-300%' : ((slide_top_img_per === '-400%' ? '-400%' : ((slide_top_img_per === '-500%' ? '-500%' : ((slide_top_img_per === '-600%' ? '-600%' : ((slide_top_img_per === '-700%' ? '-700%' : ((slide_top_img_per === '-800%' ? '-800%' :(slide_top_img_per === '-900%' ? '-900%' :(slide_top_img_per === '-1000%' ? '-1000%' :(slide_top_img_per === '-1100%' ? '-1100%' :'0%')))))))))))))))) }]`" :src="img.img" alt="">
-                               <!-- 
-                                <img  :src="`${slide_imgs[pos_top[0]]}`" alt="" 
-                                :class="` ${slide_top_on ? ' translate-x-['+slide_top_val+'%] transition-all duration-300':''} translate-x-[-100%]  rounded-md`">
-                                <img :src="`${slide_imgs[pos_top[1]]}`" alt="" 
-                                :class="` ${slide_top_on ? ' translate-x-['+slide_top_val+'%] transition-all duration-300':''} translate-x-[-100%]  rounded-md`">
-                                <img :src="`${slide_imgs[pos_top[2]]}`" alt="" 
-                                :class="` ${slide_top_on ? '  translate-x-['+slide_top_val+'%] transition-all duration-300':''} translate-x-[-100%] rounded-md`">
-                              -->
                             </div>
                             
                             
@@ -374,23 +366,23 @@ window.scrollTo({
 
 
                            <div class="">
-                                <div class="sticky top-[9.5rem] h-[50%]  px-[3rem] py-[1rem]">
-                                    <div class="mb-[2rem]"><img :src="game.img" alt=""></div>
+                                <div class="sticky top-[7rem] h-[50%]  pl-[3rem] py-[1rem] text-sm">
+                                    <div class="flex items-center justify-center mb-[1rem]"><img class="w-[60%]" :src="game.img" alt=""></div>
                                     
                                     <div class="felx flex-col">
-                                        <label for="" class="bg-dark2 rounded-md px-[1rem] py-[.3rem]">basegame</label>
+                                        <label for="" class="bg-dark2 rounded-sm px-[.5rem]  text-[.7rem] py-[.3rem]">Base game</label>
                                         
-                                        <div class="felx mt-[2rem] mb-[1rem]">
-                                             <label for="" :class="`bg-[${game.theme_color}] rounded-md px-[1rem] py-[.3rem] text-sm`">50%</label>
+                                        <div class="felx mt-[.5rem] mb-[1rem]">
+                                             <label for="" :class="`bg-[${game.theme_color}] rounded-md   py-[.3rem] text-sm`">50%</label>
                                              <label for="" class="text-gray-400 mx-3">59.99$</label>
                                              <label for="" class="text-white mx-2">59.99$</label>
                                         </div>
 
                                         <label class=" " for="">sales end in d2314</label>
 
-                                        <button :class="`bg-[${game.theme_color}] w-full mt-[1rem] px-[1rem] py-[.6rem] rounded-md`">ok</button>
+                                        <button :class="`bg-red-500  w-full mt-[1rem] px-[1rem] py-[.6rem] rounded-md`">Buy now</button>
                                         <button @click=" addcart(game)" class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem]">Add to cart</button>
-                                        <button class=" border border-white rounded-md px-[1rem] py-[.2rem] w-full mt-[1rem] mb-[1rem]">ok</button>
+                                        <button @click=" add_wish(game) " class=" border border-white rounded-md px-[1rem] py-[.2rem] w-full mt-[1rem] mb-[1rem]">add to wishlist</button>
                                         
                                         <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[.5rem] border-b-2 border-gray-400">
                                             <label for="">osa</label>

@@ -125,12 +125,12 @@
 
 <!-- nav-bar --> 
 
-<div class="flex h-[3.7rem] overflow-x-hidden max-w-screen ">
+<div class="flex h-[3.3rem] overflow-x-hidden max-w-screen ">
 <div class=" bg-dark2   w-full flex justify-between">
 
 
-  <div class=" hidden pl-8 pt-3  flex-grow md:flex">     
-        <div @Click="logopush()" class="min-w-[30px] w-[2rem] mr-8 cursor-pointer "><img src="../img/logo.png" class="" alt=""></div>
+  <div class=" hidden pl-8 pt-[.6rem]  flex-grow md:flex">     
+        <div @Click="logopush()" class="min-w-[30px] w-[1rem] mr-8 cursor-pointer "><img src="../img/logo.png" class="" alt=""></div>
          <div class="grid  px-5 pt-2 text-zinc-400  text-sm border-b-[6px] border-blue1 font-medium  cursor-pointer">STORE</div>
          <div class="grid  px-5 pt-2 text-zinc-400   text-sm border-b-[0px] border-blue1 font-medium hover:border-b-[6px] transition-all duration-100 cursor-pointer">Support</div>
          <div class="grid   pt-2 border-l-2 border-l-white h-[70%]"></div>
@@ -142,7 +142,7 @@
     <div class="ml-3 w-1/4  hidden md:flex  ">
      <div class="mr-1 w-[30%] flex items-center text-white text-xl pl-5"><ion-icon name="globe"></ion-icon></div>
      <div class="mr-5 w-[30%] flex items-center text-white"><ion-icon name="person" class="mr-2"></ion-icon><p>SIGN IN</p></div>
-     <div class="w-[50%]"><button class="bg-blue1 w-full h-full text-white p-3 text-sm">Download</button></div>
+     <div class="w-[50%]"><button class="bg-blue1 w-full h-full text-white p-2 text-sm">Download</button></div>
 
     </div>
 
@@ -208,11 +208,11 @@
 <div  :class="`flex justify-center max-w-screen  sticky top-0  ${ !offcanv ? 'z-40':'z-40'} lg:bg-dark1 
  `">
    <!-- large screen --> 
-  <div class="text-white lg:flex   items-center  py-[2rem] w-[78%] sticky top-0 z-50 bg-dark1 hidden ">
+  <div class="text-white lg:flex   items-center  py-[1.5rem] w-[78%] sticky top-0 z-50 bg-dark1 hidden ">
       
       <div class=" h-[2.7rem] p-3 rounded-3xl outline-none bg-[#1c1c1c] flex    ">
-          <ion-icon name="search" class="text-gray-400 mr-1 "></ion-icon> 
-          <input type="text" placeholder="search store" class=" rounded-3xl text-lg flex items-center outline-none bg-[#1c1c1c] " v-model="search_input">
+          <ion-icon name="search" class="text-gray-400 translate-y-[10%] mr-1 "></ion-icon> 
+          <input type="text" placeholder="search store" class=" rounded-3xl text-md flex items-center outline-none bg-[#1c1c1c] " v-model="search_input">
           
           <div v-if=" search_res.length >0 " class="flex flex-col absolute translate-y-[2.1rem] w-[50%] rounded-sm p-[1rem] bg-dark2">
             <div @click="res_game_push(game_res.name)" class="flex items-center group flex-row mb-[1rem] cursor-pointer" v-for=" game_res of search_res">
@@ -233,8 +233,8 @@
         <router-link class="grow" to="/news"><button @click="page='news'" :class="`ml-6 flex p-2 ${page!=='news'?'text-gray-400 hover:text-white':' rounded-md'}   transition-all duration-200`">News</button></router-link> 
      
       <div class="flex items-center justify-center px-[2.5rem]">
-      <router-link  to="/wishlist"><button @click="page='wishlist'" :class="`ml-6 p-2 rounded-md ${page!=='wishlist'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200 `">wishList</button></router-link>
-      <router-link  to="/cart">  <button @click="page='cart'" :class="`ml-6 flex flex-row p-2 rounded-md ${page!=='cart'?'text-gray-400 hover:text-white':'text-lg border-[1px]'} transition-all duration-200 `">cart <label :class="` ${ i>0 ? 'bg-white text-black  py-[.1rem] px-[.5rem] rounded-full':'hidden'} `" for="">{{ i }}</label></button></router-link>
+      <router-link  to="/wishlist"><button @click="page='wishlist'" :class="`ml-6 p-2 rounded-md ${page!=='wishlist'?'text-gray-400 hover:text-white':''} transition-all duration-200 `">wishList</button></router-link>
+      <router-link  to="/cart">  <button @click="page='cart'" :class="`ml-6 flex flex-row p-2 rounded-md ${page!=='cart'?'text-gray-400 hover:text-white':''} transition-all duration-200 `">cart <label :class="` ${ i>0 ? 'bg-white text-black  py-[.1rem] px-[.5rem] rounded-full':'hidden'} `" for="">{{ i }}</label></button></router-link>
       </div>
       
   </div>
