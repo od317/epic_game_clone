@@ -1,6 +1,9 @@
 <script setup> 
 
 import {ref} from 'vue'
+import {useRouter} from 'vue-router'
+
+let router = useRouter()
 
  let cart = ref( localStorage.getItem('cart') != undefined ? JSON.parse(localStorage.getItem('cart')) : [])
 
@@ -55,6 +58,13 @@ localStorage.setItem('wish_list',JSON.stringify(wlist))
 
 }
 
+
+let cart_push_router = (name)=>{
+
+router.push('game/'+name)
+
+}
+
  window.scrollTo({top:0})
 
 </script>
@@ -85,25 +95,26 @@ md:flex-col  md:items-center">
 
 
         <div v-for="game in gamesgrid2" :key="game" class="bg-dark2 p-[1rem] mt-[1.2rem]
-                    flex flex-col">
+                    flex flex-col hover:bg-gray-400 hover:bg-opacity-30 cursor-pointer"
+                    @Click="cart_push_router(game.name)">
                           
                     <div class="flex flex-row  justify-between text-white">   
                         
                         <div class="flex flex-row max-w-[32rem]">
-                               <img  class="w-[20%] mr-[1rem] rounded-md" :src="game.logoimg"/>
+                               <img  class="w-[20%] mr-[1rem] rounded-md cursor-pointer" :src="game.logoimg"/>
                                 <div class="flex flex-col h-full">
-                                    <label class="py-[.3rem] px-[.5rem] w-fit bg-dark4 rounded-md text-center text-[.8rem]"> Base game </label>
-                                    <label class="text-start text-[1.2rem]">{{ game.name }}</label>
+                                    <label class="py-[.3rem] px-[.5rem] w-fit bg-dark4 rounded-md text-center text-[.8rem] cursor-pointer"> Base game </label>
+                                    <label class="text-start text-[1.2rem] cursor-pointer">{{ game.name }}</label>
                                 </div>
                            </div>
 
                            <div class="flex  text-[1rem] flex-col">
                         <div class="flex flex-row">
-                        <label for="" class="text-white text-[.7rem] h-fit bg-blue1 rounded-md p-1 px-2 mr-3">-50%</label>
-                          <label for="" class="text-gray-500 mr-2 line-through">${{ game.price }}</label>
-                          <label for="" class="text-white">${{ game.price }}</label>
+                        <label for="" class="text-white text-[.7rem] h-fit bg-blue1 rounded-md p-1 px-2 mr-3 cursor-pointer">-50%</label>
+                          <label for="" class="text-gray-500 mr-2 line-through cursor-pointer">${{ game.price }}</label>
+                          <label for="" class="text-white cursor-pointer">${{ game.price }}</label>
                         </div>
-                          <label class="text-white mt-[.5rem]">sales end at 43/12/21 31:13</label>
+                          <label class="text-white mt-[.5rem] cursor-pointer">sales end at 43/12/21 31:13</label>
 
                         </div> 
 
@@ -112,11 +123,11 @@ md:flex-col  md:items-center">
 
                  
                          <div class="flex flex-row  justify-end items-center">
-                            <button @click="add_wish(game)" class=" group cursor-pointer  flex items-center text-start w-fit h-fit mr-[1rem]">
+                            <button v-on:click.stop @click="add_wish(game)" class=" group cursor-pointer  flex items-center text-start w-fit h-fit mr-[1rem]">
                               <label class="flex items-center" for=""><ion-icon class="transition-all cursor-pointer  duration-150 group-hover:text-white   translate-y-[10%] mr-[.4rem]  text-gray-400  rounded-full z-50 " name="add-circle-outline"></ion-icon> </label> 
                               <label class="transition-all cursor-pointer  duration-150 group-hover:text-white group-hover:border-white  border-b-[.1rem] text-gray-400" for="">move to wishlist</label>  
                             </button>
-                            <button @click="remove(game)" class="border-b-[.1rem] text-gray-400 text-start w-fit h-fit">Remove</button>
+                            <button v-on:click.stop @click="remove(game)" class="border-b-[.1rem] text-gray-400 text-start w-fit h-fit">Remove</button>
                          </div>  
 
                     

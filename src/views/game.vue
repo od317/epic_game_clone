@@ -6,8 +6,9 @@ import { defineProps, reactive, toRef,ref } from "vue";
 import games from '../games'
 import ach from '../assets/components/game.vue/ach.vue' 
 import flic from '../assets/components/game.vue/flic_game.vue'
+import { useRouter } from "vue-router";
 
-
+let router = useRouter()
 
 const props = defineProps({
       id : String
@@ -17,9 +18,9 @@ let id = props.id
 
 
 
-let game = games.get(id)
+let game = ref(games.get(id))
 
-let v_ach = ref(game.achievements.slice(0,4))
+let v_ach = ref(game.value.achievements.slice(0,4))
 
 let s = []
 
@@ -46,7 +47,7 @@ let backward = ()=>{
 }
 
 let forward = ()=>{
-    if(slide_val_bot.value<= - (game.imgs.length-1)){
+    if(slide_val_bot.value<= - (game.value.imgs.length-1)/4){
      slide_val_bot.value = 0
    }  
    else{
@@ -63,8 +64,8 @@ let slide_imgs = []
 
 let cur_slide_imgs = ref()
 
-for(let i =0 ; i<game.imgs.length;i++){
-    slide_imgs = slide_imgs.concat(game.imgs[i])
+for(let i =0 ; i<game.value.imgs.length;i++){
+    slide_imgs = slide_imgs.concat(game.value.imgs[i])
 }
     let slide_top_img_per = ref(slide_top_val.value+'00%');
   
@@ -148,23 +149,78 @@ for(let g of cart){
 
 cart.push(game)
 localStorage.setItem('cart',JSON.stringify(cart))
-
+incart.value = true
 }
 
 
 
-let add_wish= (game)=>{
+let add_wish = (game2)=>{
 
 let wlist = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : []
 
+
+
 for(let g of wlist){
- if(g.name === game.name)
+ if(g.name === game2.name)
  return
 }
-
+let game = games.get(game2.name)
+if(game)
 wlist.push(game)
+
+game2.ro=true
+let s = setTimeout(()=>{
+    game2.ro=false
+    game2.inw=true
+    games.get(game2.name).inw=true
+  },1000)
+
 localStorage.setItem('wish_list',JSON.stringify(wlist))
 
+}
+
+
+
+let remove_wish = (game)=>{
+
+let wlist = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : []
+wlist = wlist.filter(i=>{
+ return i.name !== game.name
+})
+console.log(game)
+game.ro=true
+let s = setTimeout(()=>{
+ game.inw=false
+ game.ro=false
+ games.get(game.name).inw=false
+},1000)
+localStorage.setItem('wish_list',JSON.stringify(wlist))
+
+}
+
+
+
+let wlist2 = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : [] 
+        for(let g2 of wlist2){
+              if(game.value.name == g2.name){
+                  game.value.inw = true
+                  break
+              }
+          }
+
+let incart = ref(false)
+let cart = localStorage.getItem('cart')? JSON.parse(localStorage.getItem('cart')) : [] 
+        for(let g2 of cart){
+              if(game.value.name == g2.name){
+                  incart.value = true
+                  break
+              }
+          }          
+
+
+
+let cart_router_push = ()=>{
+    router.push({ path: `/cart` })
 }
 
 
@@ -381,9 +437,25 @@ window.scrollTo({
                                         <label class=" " for="">sales end in d2314</label>
 
                                         <button :class="`bg-red-500  w-full mt-[1rem] px-[1rem] py-[.6rem] rounded-md`">Buy now</button>
-                                        <button @click=" addcart(game)" class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem]">Add to cart</button>
-                                        <button @click=" add_wish(game) " class=" border border-white rounded-md px-[1rem] py-[.2rem] w-full mt-[1rem] mb-[1rem]">add to wishlist</button>
+                                        <button v-if="!incart" @click=" addcart(game)" class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100">Add to cart</button>
+                                        <button v-else @click=" cart_router_push()" class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100">view in cart</button>
+                                        <button v-if="!game.inw" @click=" add_wish(game) " :class="` border border-white rounded-md px-[1rem] py-[.2rem] w-full mt-[1rem] mb-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100 
+                                        `">
+                                           <ion-icon  :class="` ${game.ro ? ' rotate-[360deg] transition-all duration-1000':''} bg-white translate-y-[30%] mr-[.5rem] text-black rounded-full z-30 `" name="add-circle">
+                                           </ion-icon>
+                                           <label class=" cursor-pointer" for="">add to wishlist</label> 
+
+                                        </button>
                                         
+                                        <button v-else @click=" remove_wish(game) " :class="` border border-white rounded-md px-[1rem] py-[.2rem] w-full mt-[1rem] mb-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100 
+                                        `">
+                                         
+                                           <ion-icon  :class="`${game.ro ? ' rotate-[-360deg] transition-all duration-1000':''} bg-white translate-y-[30%] mr-[.5rem] text-black  rounded-full z-30` " name="checkmark-circle">
+                                           </ion-icon>
+                                           <label class=" cursor-pointer" for="">remove form wishlist</label>
+
+                                        </button>
+
                                         <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[.5rem] border-b-2 border-gray-400">
                                             <label for="">osa</label>
                                             <label for="">ma</label>
@@ -706,8 +778,10 @@ window.scrollTo({
                         <label class="text-white mb-[.6rem]" for="">{{game.price}}$</label>
 
                         <button :class="`bg-[#ed0000] w-full py-[.8rem] text-[1.1rem] rounded-md mb-[.8rem]`">Buy now</button>
-                        <button @click=" addcart(game)" :class="` w-full py-[.8rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500`">Add To Cart</button>
-                        <button @click=" add_wish(game) " :class="` w-full py-[.3rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]`">add to wishlist</button>
+                        <button v-if="!incart" @click=" addcart(game)" :class="` w-full py-[.8rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500`">Add To Cart</button>
+                        <button v-else @click=" cart_router_push()" :class="` w-full py-[.8rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500`">view in cart</button>
+                        <button v-if="!game.inw" @click=" add_wish(game) " :class="` w-full py-[.3rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]`">add to wishlist</button>
+                        <button v-if="game.inw" @click=" remove_wish(game) " :class="` w-full py-[.3rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]`">remove from wishlist</button>
 
 
                         <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] pb-[.4rem] mb-[.5rem]">

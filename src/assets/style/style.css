@@ -21,4 +21,26 @@
        
 }
 
+
+.after_wish3{
+
+    @apply after:content-['add-to-wishlist']  after:absolute  after:text-white after:text-[1rem] after:px-[1.2rem] after:py-[.2rem]
+    after:rounded-lg  after:bg-dark2 z-50 after:w-[10rem]
+    after:translate-y-[-150%] after:translate-x-[-80%] after:hidden after:opacity-0 hover:after:opacity-100 hover:after:inline-block after:transition-all
+    after:duration-200;
+       
+}
+
+
+
+.after_wish4{
+
+    @apply after:content-['remove-from-wishlist']  after:absolute  after:text-white after:text-[1rem] after:px-[1.2rem] after:py-[.2rem]
+    after:rounded-lg  after:bg-dark2 z-50 after:w-[10rem]
+    after:translate-y-[-150%] after:translate-x-[-80%] after:hidden after:opacity-0 hover:after:opacity-100 hover:after:inline-block after:transition-all
+    after:duration-200;
+       
+}
+
+
 }

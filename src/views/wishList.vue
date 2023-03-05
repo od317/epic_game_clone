@@ -4,6 +4,9 @@ import {ref} from 'vue'
 
 import game_lists from '../gamelist'
 import gamesc from '../games'
+import {useRouter} from 'vue-router'
+
+let router = useRouter()
 
 
  let wlist = ref( localStorage.getItem('wish_list') != undefined ? JSON.parse(localStorage.getItem('wish_list')) : [])
@@ -317,6 +320,13 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
 
  }
 
+
+ let wish_push_router = (name)=>{
+
+       router.push('game/'+name)
+
+ }
+
  window.scrollTo({top:0})
 
 </script>
@@ -362,25 +372,26 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
                 <div :class="` ${wlist.length>0 ? 'flex' : 'hidden'}  flex-col  `">
 
                   <div v-for="game in gamesgrid2" :key="game" class="bg-dark2 p-[1rem] mt-[1.2rem]
-                    flex flex-col">
+                    flex flex-col hover:bg-gray-400 transition-all duration-150 hover:bg-opacity-30 cursor-pointer"
+                    @Click="wish_push_router(game.name)">
                           
-                    <div class="flex flex-row justify-between text-white">   
+                    <div class="flex flex-row justify-between text-white ">   
                         
                         <div class="flex flex-row">
                                <img  class="w-[20%] mr-[1rem] rounded-md" :src="game.logoimg"/>
                                 <div class="flex flex-col h-full">
-                                    <label class="py-[.3rem] px-[.5rem] w-fit bg-dark4 rounded-md text-center text-[.8rem]"> Base game </label>
-                                    <label class="text-start text-[1.2rem]">{{ game.name }}</label>
+                                    <label class="py-[.3rem] px-[.5rem] w-fit bg-dark4 rounded-md text-center text-[.8rem] cursor-pointer"> Base game </label>
+                                    <label class="text-start text-[1.2rem] cursor-pointer">{{ game.name }}</label>
                                 </div>
                            </div>
 
                            <div class="flex  text-[1rem] flex-col">
                         <div class="flex flex-row">
-                        <label for="" class="text-white text-[.7rem] h-fit bg-blue1 rounded-md p-1 px-2 mr-3">-50%</label>
-                          <label for="" class="text-gray-500 mr-2 line-through">${{ game.price }}</label>
-                          <label for="" class="text-white">${{ game.price }}</label>
+                        <label for="" class="text-white text-[.7rem] h-fit bg-blue1 rounded-md p-1 px-2 mr-3 cursor-pointer">-50%</label>
+                          <label for="" class="text-gray-500 mr-2 line-through cursor-pointer">${{ game.price }}</label>
+                          <label for="" class="text-white cursor-pointer">${{ game.price }}</label>
                         </div>
-                          <label class="text-white mt-[.5rem]">sales end at 43/12/21 31:13</label>
+                          <label class="text-white mt-[.5rem] cursor-pointer">sales end at 43/12/21 31:13</label>
 
                         </div> 
 
@@ -389,13 +400,13 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
 
                  
                          <div class="flex flex-row justify-end items-center">
-                    <button @click="remove(game)" class="border-b-[.1rem] text-[.7rem] text-gray-400 text-start w-fit h-fit">Remove</button>
+                    <button v-on:click.stop @click="remove(game)" class="border-b-[.1rem] text-[.7rem] text-gray-400 text-start w-fit h-fit cursor-pointer">Remove</button>
 
-                    <button @click="addcart(game)" :class="`w-full ${check_in_cart(game)? 'hidden':''} w-[20%] border-[.1rem] border-gray-400 
-                    text-center text-white text-[.9rem] py-[.8rem] ml-[1rem] transition-all duration-150 hover:bg-zinc-600  rounded-md`">Add to cart</button>
+                    <button v-on:click.stop @click="addcart(game)" :class="`w-full ${check_in_cart(game)? 'hidden':''} w-[20%] border-[.1rem] border-gray-400 
+                    text-center text-white text-[.9rem] py-[.8rem] ml-[1rem] transition-all duration-150 hover:bg-zinc-600  rounded-md cursor-pointer `" >Add to cart</button>
 
-                    <router-link v-if="check_in_cart(game)" class="w-[20%] border-[.1rem] border-gray-400 
-                    text-center text-white text-[.9rem] py-[.8rem] ml-[1rem]  transition-all duration-150 hover:bg-zinc-600  rounded-md" to="cart"><button :class="`w-full ${!check_in_cart(game)? 'hidden':''}  `">view in cart</button></router-link>
+                    <router-link v-on:click.stop v-if="check_in_cart(game)" class="w-[20%] border-[.1rem] border-gray-400 
+                    text-center text-white text-[.9rem] py-[.8rem] ml-[1rem]  transition-all duration-150 hover:bg-zinc-600  rounded-md "  to="cart"><button :class="`w-full cursor-pointer ${!check_in_cart(game)? 'hidden':''}  `">view in cart</button></router-link>
 
 
                          </div>  
