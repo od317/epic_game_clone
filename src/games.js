@@ -218,36 +218,25 @@ let games_list =[
     ],
     game_disc:[
         {
+            img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f423.svg',
+            title:'This game is',
+            text:'Great for Beginners'
+        },
+        {
             img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f3a8.svg',
             title:'This game has Inclusive',
             text:'Character Customization'
         },
         {
             img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f996.svg',
-            title:'This game has Inclusive',
-            text:'Character Customization'
+            title:'This game has',
+            text:'Great Boss Battles'
         },
         {
-            img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f3a8.svg',
-            title:'This game has Inclusive',
-            text:'Character Customization'
+            img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f60d.svg',
+            title:'This game is',
+            text:'Extremely Fun'
         },
-        {
-            img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f3a8.svg',
-            title:'This game has Inclusive',
-            text:'Character Customization'
-        },
-        {
-            img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f3a8.svg',
-            title:'This game has Inclusive',
-            text:'Character Customization'
-        },
-        {
-            img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f3a8.svg',
-            title:'This game has Inclusive',
-            text:'Character Customization'
-        },
-
     ]  
     },
     {
@@ -425,7 +414,7 @@ let games_list =[
         price:'59.99',
         dis:null,
         oldprice:null,
-        rate:4.6,
+        rate:2.5,
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/egs-marvelsspidermanremastered-insomniacgamesnixxessoftware-g1a-00-1920x1080-25b4862bff3b.jpg",
@@ -669,12 +658,12 @@ let games_list =[
             logoimg:'https://cdn1.epicgames.com/offer/1dcddbcc334945c48353b75a8fce5e5e/EGS_Dishonored2_ArkaneStudios_S2_1200x1600-96a53bbf6b94c5c93e568faebeffeb69?h=480&quality=medium&resize=1&w=360',
             img:'https://cdn2.unrealengine.com/egs-dishonored2-arkanestudios-ic1-400x400-ac105c61a65b.png?h=270&quality=medium&resize=1&w=480',
             ach_img:'https://cdn1.epicgames.com/offer/1dcddbcc334945c48353b75a8fce5e5e/EGS_Dishonored2_ArkaneStudios_S1_2560x1440-9b6ce619bb7247b4ed0f637dc6eb51c1?h=270&quality=medium&resize=1&w=480',
-            bottom_img:'https://cdn2.unrealengine.com/dl2-1st-anniversary-roadmap-1920x1080-eng-1920x1080-bb5b3ec5de61.jpg',
+            bottom_img:'https://cdn.vox-cdn.com/thumbor/BRbyogYROnwyRqWY6cnch_wouS0=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/7843013/emilypowers.jpg',
             theme_color:'blue-500',
             price:'59.99',
             dis:null,
             oldprice:null,
-            rate:4.6,
+            rate:5.0,
             imgs:[
                 [
                     {img:"https://cdn2.unrealengine.com/egs-dishonored2-arkanestudios-g1a-01-1920x1080-5c74cbef0624.jpg",
@@ -809,39 +798,30 @@ let games_list =[
             ],
             editions:[
                 {
-                    img:'https://cdn2.unrealengine.com/egs-dyinglight2stayhuman-techland-s3-2560x1440-89aebf7caf01.jpg?h=270&resize=1&w=480',
-                    name:'Dying Light 2 Stay Human',
-                    text:'The virus won and civilization has fallen back to the Dark Ages. The City, one of the last human settlements, is on the brink of collapse. Use your agility and combat skills to survive, and reshape the world. Your choices matter.',
+                    img:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_DishonoredDefinitiveEdition_ArkaneStudios_S3_2560x1440-172cba030b0261550b46b6c1224330bf',
+                    name:'Dishonored definitive edition',
+                    text:'The virus won and civilization has fallen back to the Dark Ages. The City, one of the last human settlements....',
                     type:'BASE GAME',
                     dis:'50%',
-                    price:'39.99',
+                    price:'59.99',
                     oldprice:'59.99',
                     date:'Sale ends 2/16/2023 at 7:00 PM'
                 },
                 {
-                    img:'https://cdn2.unrealengine.com/egs-dyinglight2stayhuman-techland-s3-2560x1440-89aebf7caf01.jpg?h=270&resize=1&w=480',
-                    name:'Dying Light 2 Stay Human',
-                    text:'The virus won and civilization has fallen back to the Dark Ages. The City, one of the last human settlements, is on the brink of collapse. Use your agility and combat skills to survive, and reshape the world. Your choices matter.',
+                    img:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_DishonoredDefinitiveEdition_ArkaneStudios_S3_2560x1440-172cba030b0261550b46b6c1224330bf',
+                    name:'Dishonored definitive edition',
+                    text:'The virus won and civilization has fallen back to the Dark Ages. The City, one of the last human settlements....',
                     type:'BASE GAME',
                     dis:'50%',
-                    price:'39.99',
-                    oldprice:'59.99',
-                    date:'Sale ends 2/16/2023 at 7:00 PM'
-                },                {
-                    img:'https://cdn2.unrealengine.com/egs-dyinglight2stayhuman-techland-s3-2560x1440-89aebf7caf01.jpg?h=270&resize=1&w=480',
-                    name:'Dying Light 2 Stay Human',
-                    text:'The virus won and civilization has fallen back to the Dark Ages. The City, one of the last human settlements, is on the brink of collapse. Use your agility and combat skills to survive, and reshape the world. Your choices matter.',
-                    type:'BASE GAME',
-                    dis:'50%',
-                    price:'39.99',
+                    price:'59.99',
                     oldprice:'59.99',
                     date:'Sale ends 2/16/2023 at 7:00 PM'
                 },
             ],
             adds:[
                 {
-                    img:'https://cdn1.epicgames.com/offer/87b7846d2eba4bc49eead0854323aba8/EGS_DyingLight2StayHumanRaisBundle_Techland_DLC_S1_2560x1440-9fe212588008f5a1380fe4bd9ad11a2c?h=270&resize=1&w=480',
-                    name:'Dying Light 2 Stay Human: Rais Bundle',
+                    img:'https://cdn.akamai.steamstatic.com/steam/apps/614570/capsule_616x353.jpg?t=1603891882',
+                    name:'Dishonored  death of the outsider',
                     text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
                     type:'ADD-ON',
                     dis:null,
@@ -850,8 +830,8 @@ let games_list =[
                     date:null
                 },
                 {
-                    img:'https://cdn1.epicgames.com/offer/87b7846d2eba4bc49eead0854323aba8/EGS_DyingLight2StayHumanRaisBundle_Techland_DLC_S1_2560x1440-9fe212588008f5a1380fe4bd9ad11a2c?h=270&resize=1&w=480',
-                    name:'Dying Light 2 Stay Human: Rais Bundle',
+                    img:'https://cdn.akamai.steamstatic.com/steam/apps/614570/capsule_616x353.jpg?t=1603891882',
+                    name:'Dishonored  death of the outsider',
                     text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
                     type:'ADD-ON',
                     dis:null,
@@ -860,8 +840,8 @@ let games_list =[
                     date:null
                 },
                 {
-                    img:'https://cdn1.epicgames.com/offer/87b7846d2eba4bc49eead0854323aba8/EGS_DyingLight2StayHumanRaisBundle_Techland_DLC_S1_2560x1440-9fe212588008f5a1380fe4bd9ad11a2c?h=270&resize=1&w=480',
-                    name:'Dying Light 2 Stay Human: Rais Bundle',
+                    img:'https://cdn.akamai.steamstatic.com/steam/apps/614570/capsule_616x353.jpg?t=1603891882',
+                    name:'Dishonored  death of the outsider',
                     text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
                     type:'ADD-ON',
                     dis:null,
@@ -879,30 +859,14 @@ let games_list =[
                 },
                 {
                     img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f996.svg',
-                    title:'This game has Inclusive',
-                    text:'Character Customization'
+                    title:'This game has',
+                    text:'Great Boss Battles'
                 },
                 {
-                    img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f3a8.svg',
-                    title:'This game has Inclusive',
-                    text:'Character Customization'
+                    img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f60d.svg',
+                    title:'This game is',
+                    text:'Extremely Fun'
                 },
-                {
-                    img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f3a8.svg',
-                    title:'This game has Inclusive',
-                    text:'Character Customization'
-                },
-                {
-                    img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f3a8.svg',
-                    title:'This game has Inclusive',
-                    text:'Character Customization'
-                },
-                {
-                    img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f3a8.svg',
-                    title:'This game has Inclusive',
-                    text:'Character Customization'
-                },
-        
             ]  
             },
 

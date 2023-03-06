@@ -47,7 +47,7 @@ let backward = ()=>{
 }
 
 let forward = ()=>{
-    if(slide_val_bot.value<= - (game.value.imgs.length-1)/4){
+    if(slide_val_bot.value<= - (game.value.imgs.length-1)){
      slide_val_bot.value = 0
    }  
    else{
@@ -224,6 +224,8 @@ let cart_router_push = ()=>{
 }
 
 
+
+
 window.scrollTo({
         top:0   ,
       })
@@ -245,14 +247,36 @@ window.scrollTo({
                             <div v-if=" nav=='over' " class="flex items-center ">
                                   
                                   <div class="mt-[1rem] flex items-center text-lg">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <label for="" class=" ml-[.5rem] text-[.8rem] rounded-md text-gray-400 bg-dark2 px-2 py-1">5.0</label>
-                                            <label for="" class=" ml-[.5rem]   px-2 py-1">Great Boss Battles</label>
-                                            <label for="" class=" ml-[.5rem]   px-2 py-1">Great Boss Battles</label>
+                                    <ion-icon v-if="game.rate>=1" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>0 && game.rate<1" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<1" name="star-outline"></ion-icon>  
+
+                                                                <ion-icon v-if="game.rate>=2" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>1 && game.rate <2" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<2" name="star-outline"></ion-icon>    
+
+                                                                <ion-icon v-if="game.rate>=3" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>2 && game.rate <3" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<3" name="star-outline"></ion-icon>   
+
+                                                                <ion-icon v-if="game.rate>=4" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>3 && game.rate<4" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<4" name="star-outline"></ion-icon>   
+
+                                                                <ion-icon v-if="game.rate==5" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>4 && game.rate<5" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<5" name="star-outline"></ion-icon>   
+
+                                            <label for="" class=" ml-[.5rem] text-[.8rem] rounded-md text-gray-400 bg-dark2 px-2 py-1">{{game.rate}}</label>
+                                            
+                                            <label for="" class=" ml-[.5rem] flex flex-row items-center pl-1 py-1">
+                                                <img class="w-[11%] mr-[.3rem]" :src="game.game_disc[0].img" alt="">
+                                                {{game.game_disc[0].text}}
+                                            </label>
+                                            <label for="" class="  flex flex-row items-center pl-1 py-1">
+                                                <img class="w-[11%] mr-[.3rem]" :src="game.game_disc[1].img" alt="">
+                                                {{game.game_disc[1].text}}
+                                            </label>
 
                                         
                                         </div>
@@ -318,9 +342,9 @@ window.scrollTo({
 
                             </div>
 
-                            <div class="flex flex-row overflow-x-hidden">
+                            <div class="flex flex-row overflow-x-hidden relative">
                                <img  v-for="img in slide_imgs" :class="`  transition-all duration-200 
-                                translate-x-[${slide_top_img_per === '-100%' ? '-100%' : (slide_top_img_per === '-200%' ? '-200%' : ((slide_top_img_per === '-300%' ? '-300%' : ((slide_top_img_per === '-400%' ? '-400%' : ((slide_top_img_per === '-500%' ? '-500%' : ((slide_top_img_per === '-600%' ? '-600%' : ((slide_top_img_per === '-700%' ? '-700%' : ((slide_top_img_per === '-800%' ? '-800%' :(slide_top_img_per === '-900%' ? '-900%' :(slide_top_img_per === '-1000%' ? '-1000%' :(slide_top_img_per === '-1100%' ? '-1100%' :'0%')))))))))))))))) }]`" :src="img.img" alt="">
+                                translate-x-[${slide_top_img_per}]    `" :src="img.img" alt="">
                             </div>
                             
                             
@@ -429,19 +453,19 @@ window.scrollTo({
                                         <label for="" class="bg-dark2 rounded-sm px-[.5rem]  text-[.7rem] py-[.3rem]">Base game</label>
                                         
                                         <div class="felx mt-[.5rem] mb-[1rem]">
-                                             <label for="" :class="`bg-[${game.theme_color}] rounded-md   py-[.3rem] text-sm`">50%</label>
-                                             <label for="" class="text-gray-400 mx-3">59.99$</label>
-                                             <label for="" class="text-white mx-2">59.99$</label>
+                                             <label v-if="game.dis" for="" :class="`bg-[${game.theme_color}] rounded-md   py-[.3rem] text-sm`">{{game.dis}}</label>
+                                             <label v-if="game.oldprice" for="" class="text-gray-400 mx-3"> {{game.oldprice}} $ </label>
+                                             <label for="" class="text-white mx-2">{{game.price}}$</label>
                                         </div>
 
                                         <label class=" " for="">sales end in d2314</label>
 
                                         <button :class="`bg-red-500  w-full mt-[1rem] px-[1rem] py-[.6rem] rounded-md`">Buy now</button>
-                                        <button v-if="!incart" @click=" addcart(game)" class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100">Add to cart</button>
+                                        <button v-if="!incart" @click=" addcart(game)" class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100 ">Add to cart</button>
                                         <button v-else @click=" cart_router_push()" class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100">view in cart</button>
                                         <button v-if="!game.inw" @click=" add_wish(game) " :class="` border border-white rounded-md px-[1rem] py-[.2rem] w-full mt-[1rem] mb-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100 
                                         `">
-                                           <ion-icon  :class="` ${game.ro ? ' rotate-[360deg] transition-all duration-1000':''} bg-white translate-y-[30%] mr-[.5rem] text-black rounded-full z-30 `" name="add-circle">
+                                           <ion-icon  :class="` ${game.ro ? ' rotate-[360deg] transition-all duration-1000':''} bg-white translate-y-[15%] mr-[.5rem] text-black rounded-full z-30 `" name="add-circle">
                                            </ion-icon>
                                            <label class=" cursor-pointer" for="">add to wishlist</label> 
 
@@ -450,7 +474,7 @@ window.scrollTo({
                                         <button v-else @click=" remove_wish(game) " :class="` border border-white rounded-md px-[1rem] py-[.2rem] w-full mt-[1rem] mb-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100 
                                         `">
                                          
-                                           <ion-icon  :class="`${game.ro ? ' rotate-[-360deg] transition-all duration-1000':''} bg-white translate-y-[30%] mr-[.5rem] text-black  rounded-full z-30` " name="checkmark-circle">
+                                           <ion-icon  :class="`${game.ro ? ' rotate-[-360deg] transition-all duration-1000':''} bg-white translate-y-[15%] mr-[.5rem] text-black  rounded-full z-30` " name="checkmark-circle">
                                            </ion-icon>
                                            <label class=" cursor-pointer" for="">remove form wishlist</label>
 
@@ -489,8 +513,8 @@ window.scrollTo({
 
                                         <div class="flex mt-[1rem] justify-between">
 
-                                            <button class="w-[48%] border px-[.1rem] py-[.2rem] rounded-md">share</button>
-                                            <button class="w-[48%] border px-[.1rem] py-[.2rem] rounded-md">share</button>
+                                            <button class="w-[48%] border px-[.1rem] py-[.2rem] rounded-md hover:bg-gray-400 hover:bg-opacity-30">share</button>
+                                            <button class="w-[48%] border px-[.1rem] py-[.2rem] rounded-md hover:bg-gray-400 hover:bg-opacity-30">report</button>
 
 
                                         </div>
@@ -536,7 +560,7 @@ window.scrollTo({
 
                                     <div class="flex flex-row  justify-between my-[1rem]">
                                         
-                                            <div v-for="ach in v_ach" class="flex flex-col w-[15%] my-[1rem]">
+                                            <div v-for="ach in v_ach" class="flex flex-col w-[12%] my-[1rem]">
 
                                                         <img :src="ach.img" alt="" class="mb-[.5rem]">
                                                         <label for="" class="">{{ach.name.length >= 10 ? ach.name.substring(0,10)+'...':ach.name}}</label>
@@ -558,17 +582,17 @@ window.scrollTo({
                                     
                                                 <label v-if="game.editions" for="">Editions</label>
 
-                                                <div v-if="game.editions" v-for="ed in game.editions" class="flex rounded-md mt-[1rem] flex-col bg-dark2">
+                                                <div v-if="game.editions" v-for="ed in game.editions" class="flex rounded-md text-[.9rem] mt-[1rem] flex-col bg-dark2">
                                                         <div class="flex flex-row border-b-2">
                                                             <img :src="ed.img" class="w-[50%] rounded-tl-md" alt="">
                                                             <div class="flex flex-col ">
 
                                                                     <div class="flex flex-row p-[1rem]">
-                                                                        <label for="" class="bg-dark1 rounded-md p-[.2rem] text-sm mr-[1rem]">{{ ed.type }}</label>
+                                                                        <label for="" class="bg-dark1 rounded-md p-[.2rem] text-[.7rem] mr-[1rem]">{{ ed.type }}</label>
                                                                         <label for="">{{ ed.name }}</label>
                                                                     </div>
 
-                                                                    <label for="" class="p-[1rem]">{{ ed.text }}</label>
+                                                                    <label for="" class="pl-[1rem]">{{ ed.text }}</label>
 
                                                             </div>
 
@@ -582,19 +606,15 @@ window.scrollTo({
 
                                                                             <div class="flex flex-row items-center justify-end">
 
-                                                                                    <label for="" class="bg-red-800 rounded-md text-small
-                                                                                    p-1 mx-[.5rem]">{{ ed.dis }}</label>
-                                                                                    <label for="" class="mx-[.5rem]">{{ ed.oldprice }}</label>
-                                                                                    <label for="" class="mx-[.5rem]">{{ ed.price }}</label>
+                                                                                    <label for="" class="mx-[.5rem]">${{ ed.price }}</label>
 
 
                                                                             </div>
 
-                                                                            <label for="" class="text-sm">{{ ed.date }}</label>
                                                                     </div>
                                                             
-                                                                    <button class="py-[1.1rem] px-[1rem] border w-[30%] mx-[1rem]">add to cart</button>
-                                                                    <button @click=" add_wish(game) " class="py-[1.1rem] border w-[30%] mx-[1rem]">add to wishlist</button>
+                                                                    <button class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem]  rounded-sm hover:bg-gray-400 hover:bg-opacity-30">add to cart</button>
+                                                                    <button @click=" add_wish(game) " class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem] rounded-sm hover:bg-gray-400 hover:bg-opacity-30">add to wishlist</button>
 
                                                         </div>
                                                         
@@ -615,47 +635,43 @@ window.scrollTo({
                                     
                                     <label v-if="game.adds" for="">Add ons</label>
 
-                                    <div v-if="game.adds" v-for="ed in game.adds" class="flex rounded-md mt-[1rem] flex-col bg-dark2">
-                                            <div class="flex flex-row border-b-2">
-                                                <img :src="ed.img" class="w-[50%] rounded-tl-md" alt="">
-                                                <div class="flex flex-col ">
+                                    <div v-if="game.editions" v-for="ed in game.adds" class="flex rounded-md text-[.9rem] mt-[1rem] flex-col bg-dark2">
+                                                        <div class="flex flex-row border-b-2">
+                                                            <img :src="ed.img" class="w-[50%] rounded-tl-md" alt="">
+                                                            <div class="flex flex-col ">
 
-                                                        <div class="flex flex-row p-[1rem]">
-                                                            <label for="" class="bg-dark1 rounded-md p-[.2rem] text-sm mr-[1rem]">{{ ed.type }}</label>
-                                                            <label for="">{{ ed.name }}</label>
-                                                        </div>
+                                                                    <div class="flex flex-row p-[1rem]">
+                                                                        <label for="" class="bg-dark1 rounded-md p-[.2rem] text-[.7rem] mr-[1rem]">{{ ed.type }}</label>
+                                                                        <label for="">{{ ed.name }}</label>
+                                                                    </div>
 
-                                                        <label for="" class="p-[1rem]">{{ ed.text }}</label>
+                                                                    <label for="" class="pl-[1rem]">{{ ed.text }}</label>
 
-                                                </div>
+                                                            </div>
 
 
-                                            
-                                            </div>
-
-                                            <div class="flex justify-end items-center py-[1rem]">
                                                         
-                                                        <div class="flex flex-col">
-
-                                                                <div class="flex flex-row items-center justify-end">
-
-                                                                        <label v-if="ed.dis" for="" class="bg-red-800 rounded-md text-small
-                                                                        p-1 mx-[.5rem]">{{ ed.dis }}</label>
-                                                                        <label v-if="ed.oldprice" for="" class="mx-[.5rem]">{{ ed.oldprice }}</label>
-                                                                        <label for="" class="mx-[.5rem]">{{ ed.price }}</label>
-
-
-                                                                </div>
-
-                                                                <label for="" class="text-sm">{{ ed.date }}</label>
                                                         </div>
-                                                
-                                                        <button class="py-[1.1rem] px-[1rem] border w-[30%] mx-[1rem]">add to cart</button>
-                                                        <button class="py-[1.1rem] border w-[30%] mx-[1rem]">add to wishlist</button>
 
-                                            </div>
-                                            
-                                    </div>
+                                                        <div class="flex justify-end items-center py-[1rem]">
+                                                                    
+                                                                    <div class="flex flex-col">
+
+                                                                            <div class="flex flex-row items-center justify-end">
+
+                                                                                    <label for="" class="mx-[.5rem]">${{ ed.price }}</label>
+
+
+                                                                            </div>
+
+                                                                    </div>
+                                                            
+                                                                    <button class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem]  rounded-sm hover:bg-gray-400 hover:bg-opacity-30 ">add to cart</button>
+                                                                    <button @click=" add_wish(game) " class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem] rounded-sm hover:bg-gray-400 hover:bg-opacity-30 ">add to wishlist</button>
+
+                                                        </div>
+                                                        
+                                                </div>
 
 
                         </div>
@@ -691,11 +707,34 @@ window.scrollTo({
                                             <label for="" class="text-lg">Epic Player Ratings</label>
                                             <label for="" class="text-md text-gray-400 mt-4">Captured from players in the Epic Games ecosystem.</label>
                                                 
-                                            <div class="text-[3rem] mt-[2rem] flex flex-row items-center justify-center">
+                                            <div class="text-[2.8rem] mt-[2rem] flex flex-row items-center justify-center">
                                                         <label for="" class="">{{ game.rate }}</label>
                                                         
                                                         <label for="">
-                                                            stars
+                                                            
+                                                            <div class="flex items-center">
+                                                                <ion-icon v-if="game.rate>=1" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>0 && game.rate<1" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<1" name="star-outline"></ion-icon>  
+
+                                                                <ion-icon v-if="game.rate>=2" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>1 && game.rate <2" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<2" name="star-outline"></ion-icon>    
+
+                                                                <ion-icon v-if="game.rate>=3" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>2 && game.rate <3" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<3" name="star-outline"></ion-icon>   
+
+                                                                <ion-icon v-if="game.rate>=4" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>3 && game.rate<4" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<4" name="star-outline"></ion-icon>   
+
+                                                                <ion-icon v-if="game.rate==5" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>4 && game.rate<5" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<5" name="star-outline"></ion-icon>   
+
+                                                            </div>
+
                                                         </label>
                                                     
                                             </div>
@@ -811,8 +850,8 @@ window.scrollTo({
 
 
                         <div class="flex justify-between w-full my-[1rem]">
-                            <button class="w-[48%] border-[.1rem] border-gray-200 py-[.4rem] rounded-md">Share</button>
-                            <button class="w-[48%] border-[.1rem] border-gray-200 py-[.4rem] rounded-md">Report</button>
+                            <button class="w-[48%] border-[.1rem] border-gray-200 py-[.4rem] rounded-md hover:bg-gray-400 hover:bg-opacity-30">Share</button>
+                            <button class="w-[48%] border-[.1rem] border-gray-200 py-[.4rem] rounded-md hover:bg-gray-400 hover:bg-opacity-30">Report</button>
                         </div>
 
 
@@ -875,7 +914,7 @@ window.scrollTo({
                 <button class="w-[100%] rounded-md mt-[1rem] py-[.5rem] border-[.1rem] border-gray-500">view patch notes</button>
              </div>
 
-             <img class="my-[1rem]" :src="game.bottom_img" alt="">
+             <img data-placeholder class="my-[1rem]" :src="game.bottom_img" alt="">
 
              <div class=" relative mt-[1rem] overflow-y-hidden text-white">
                                     Over twenty years ago in Harran, we fought the virus—and lost. Now, we’re losing again. The City, one of the last large human settlements, is torn by conflict. Civilization has fallen back into the Dark Ages. And yet, we still have hope.
@@ -977,7 +1016,28 @@ window.scrollTo({
                                                         <label for="" class="">{{ game.rate }}</label>
                                                         
                                                         <label for="">
-                                                            stars
+                                                            <div class="flex items-center">
+                                                                <ion-icon v-if="game.rate>=1" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>0 && game.rate<1" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<1" name="star-outline"></ion-icon>  
+
+                                                                <ion-icon v-if="game.rate>=2" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>1 && game.rate <2" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<2" name="star-outline"></ion-icon>    
+
+                                                                <ion-icon v-if="game.rate>=3" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>2 && game.rate <3" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<3" name="star-outline"></ion-icon>   
+
+                                                                <ion-icon v-if="game.rate>=4" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>3 && game.rate<4" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<4" name="star-outline"></ion-icon>   
+
+                                                                <ion-icon v-if="game.rate==5" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>4 && game.rate<5" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<5" name="star-outline"></ion-icon>   
+
+                                                            </div>
                                                         </label>
                                                     
                                             </div>
