@@ -36,7 +36,19 @@ const routes = [
         path:'/cart',
         component:()=> import('./views/cart.vue'),
         props: true
-    }
+    },
+    {
+        path:'/collection/:id?',
+        name:'collection',
+        props: true,
+        component:()=> import('./views/collection.vue')
+    },
+    {
+        path:'/:pathMatch(.*)*',
+        name:'not-found',
+        props: true,
+        component:()=> import('./views/404.vue')
+    },
 
 ]
 

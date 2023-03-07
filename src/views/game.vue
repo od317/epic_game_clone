@@ -417,12 +417,10 @@ window.scrollTo({
 
 
                            <div class=" relative mt-[1rem] overflow-y-hidden">
-                                    <div :class="` ${sm ?'absolute z-0 opacity-10':''}`">
-                                    Over twenty years ago in Harran, we fought the virus—and lost. Now, we’re losing again. The City, one of the last large human settlements, is torn by conflict. Civilization has fallen back into the Dark Ages. And yet, we still have hope.
+                            Over twenty years ago in Harran, we fought the virus—and lost. Now, we’re losing again. The City, one of the last large human settlements, is torn by conflict. Civilization has fallen back into the Dark Ages. And yet, we still have hope.
                                     You are a wanderer with the power to change the fate of The City. But your exceptional abilities come at a price. Haunted by memories you cannot decipher, you set out to learn the truth… and find yourself in a combat zone. Hone your skills, as to defeat your enemies and make allies, you’ll need both fists and wits. Unravel the dark secrets behind the wielders of power, choose sides and decide your destiny. But wherever your actions take you, there's one thing you can never forget—stay human.
-                                    VAST OPEN WORLD
-                                    Participate in the life of a city engulfed in a new dark era. Discover different paths and hidden passages, as you explore its multiple levels and locations.
-                                    CREATIVE & BRUTAL COMBAT
+                                    Participate in the life of a city engulfed in a new dark era. Discover different paths and hidden passages, as you explore its multipl
+                                    <div :class="` ${sm ?'absolute z-0 opacity-20':''}`">
                                     Take advantage of your parkour skills to tip the scales of even the most brutal encounter. Clever thinking, traps and creative weapons will be your best friends.
                                     DAY AND NIGHT CYCLE
                                     Wait for night to venture into dark hideouts of the Infected. Sunlight keeps them at bay, but once it’s gone, monsters begin the hunt, leaving their lairs free to explore.
@@ -430,8 +428,8 @@ window.scrollTo({
                                     Shape the future of The City with your actions and watch how it changes. Determine the balance of power by making choices in a growing conflict and forge your own experience.
                                     2-4 PLAYER CO-OP GAMEPLAY
                                     Play in up to four-player co-op. Host your own games or join others and see how their choices have played out differently than yours.</div>
-                                   <button v-if="sm" @click="sm = !sm" class="w-full bg-dark3 mt-[1.5rem] p-[1rem] relative z-0">show more^</button>
-                                   <button v-else @click="sm = !sm" class="w-full bg-dark3 mt-[1.5rem] p-[1rem] relative z-50">show less^</button>
+                                   <button v-if="sm" @click="sm = !sm" class="rounded-md w-full bg-dark3 mt-[1.5rem] py-[.5rem] relative z-0">show more<ion-icon class="translate-y-[15%]" name="arrow-dropdown"></ion-icon></button>
+                                   <button v-else @click="sm = !sm" class="rounded-md w-full bg-dark3 mt-[1.5rem] py-[.5rem] relative z-50">show less<ion-icon class="translate-y-[15%]" name="arrow-dropup"></ion-icon></button>
 
                            </div>
 
@@ -458,13 +456,12 @@ window.scrollTo({
                                              <label for="" class="text-white mx-2">{{game.price}}$</label>
                                         </div>
 
-                                        <label class=" " for="">sales end in d2314</label>
+                                        <label v-if="game.dis" class=" " for="">sales end in {{ '2023/'+(Math.floor(Math.random() * (12 - 5 + 1)) + 5)+'/'+(Math.floor(Math.random() * (29 - 1 + 1)) + 1) }}</label>
 
-                                        <button :class="`bg-red-500  w-full mt-[1rem] px-[1rem] py-[.6rem] rounded-md`">Buy now</button>
+                                        <button :class="`bg-blue1 w-full mt-[1rem] px-[1rem] py-[.6rem] rounded-md`">Buy now</button>
                                         <button v-if="!incart" @click=" addcart(game)" class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100 ">Add to cart</button>
                                         <button v-else @click=" cart_router_push()" class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100">view in cart</button>
-                                        <button v-if="!game.inw" @click=" add_wish(game) " :class="` border border-white rounded-md px-[1rem] py-[.2rem] w-full mt-[1rem] mb-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100 
-                                        `">
+                                        <button v-if="!game.inw" @click=" add_wish(game) " :class="` border border-white rounded-md px-[1rem] py-[.2rem] w-full mt-[1rem] mb-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100 `">
                                            <ion-icon  :class="` ${game.ro ? ' rotate-[360deg] transition-all duration-1000':''} bg-white translate-y-[15%] mr-[.5rem] text-black rounded-full z-30 `" name="add-circle">
                                            </ion-icon>
                                            <label class=" cursor-pointer" for="">add to wishlist</label> 
@@ -480,35 +477,40 @@ window.scrollTo({
 
                                         </button>
 
-                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[.5rem] border-b-2 border-gray-400">
-                                            <label for="">osa</label>
-                                            <label for="">ma</label>
+                                        <div class="flex justify-between px-[.1rem] py-[.8rem] pb-[.5rem] border-b-2 border-gray-400">
+                                            <label for="">Refund Type</label>
+                                            <label for="">Self-Refundable</label>
                                         </div>                                        
 
 
-                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[.5rem] border-b-2 border-gray-400">
-                                            <label for="">osa</label>
-                                            <label for="">ma</label>
+                                        <div class="flex justify-between px-[.1rem] py-[.8rem] pb-[.5rem] border-b-2 border-gray-400">
+                                            <label for="">Developer</label>
+                                            <label for="">{{game.dev}}</label>
                                         </div>  
 
 
-                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[.5rem] border-b-2 border-gray-400">
-                                            <label for="">osa</label>
-                                            <label for="">ma</label>
+                                        <div class="flex justify-between px-[.1rem] py-[.8rem] pb-[.5rem] border-b-2 border-gray-400">
+                                            <label for="">Publisher</label>
+                                            <label for="">{{game.pub}}</label>
                                         </div>  
 
 
-                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[.5rem] border-b-2 border-gray-400">
-                                            <label for="">osa</label>
-                                            <label for="">ma</label>
+                                        <div class="flex justify-between px-[.1rem] py-[.8rem] pb-[.5rem] border-b-2 border-gray-400">
+                                            <label for="">Release Date</label>
+                                            <label for="">{{game.rdate}}</label>
                                         </div>  
 
 
-                                        <div class="flex justify-between px-[.1rem] py-[.2rem] pb-[.5rem] border-b-2 border-gray-400">
-                                            <label for="">osa</label>
-                                            <label for="">ma</label>
+                                        <div class="flex justify-between px-[.1rem] py-[.8rem] pb-[.5rem] border-b-2 border-gray-400">
+                                            <label for="">Initial Release</label>
+                                            <label for="">{{game.indate}}</label>
                                         </div>  
 
+                                   
+                                        <div class="flex justify-between px-[.1rem] py-[.8rem] pb-[.5rem] border-b-2 border-gray-400">
+                                            <label for="">Platform</label>
+                                            <label class="text-[1.3rem]" for=""><ion-icon name="logo-windows"></ion-icon></label>
+                                        </div>  
 
 
                                         <div class="flex mt-[1rem] justify-between">
@@ -931,8 +933,8 @@ window.scrollTo({
                                     Shape the future of The City with your actions and watch how it changes. Determine the balance of power by making choices in a growing conflict and forge your own experience.
                                     2-4 PLAYER CO-OP GAMEPLAY
                                     Play in up to four-player co-op. Host your own games or join others and see how their choices have played out differently than yours.</div>
-                                   <button v-if="sm" @click="sm = !sm" class="rounded-md w-full bg-dark3 mt-[1.5rem] py-[.5rem] relative z-0">show more^</button>
-                                   <button v-else @click="sm = !sm" class="rounded-md w-full bg-dark3 mt-[1.5rem] py-[.5rem] relative z-50">show less^</button>
+                                    <button v-if="sm" @click="sm = !sm" class="rounded-md w-full bg-dark3 mt-[1.5rem] py-[.5rem] relative z-0">show more<ion-icon class="translate-y-[15%]" name="arrow-dropdown"></ion-icon></button>
+                                   <button v-else @click="sm = !sm" class="rounded-md w-full bg-dark3 mt-[1.5rem] py-[.5rem] relative z-50">show less<ion-icon class="translate-y-[15%]" name="arrow-dropup"></ion-icon></button>
 
                            </div>
 

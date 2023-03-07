@@ -3,7 +3,8 @@
    import { defineProps, reactive, toRef,ref,watch} from "vue";
    import games from '../../../games'
    import { useRouter } from "vue-router";
-   
+   import {useRoute} from "vue-router";
+
    let router = useRouter()
 
         const props = defineProps({
@@ -13,20 +14,11 @@
 
         let gamesgrid = ref(props.gamegrid) 
 
-
+ 
         let uri = window.location.href.split('?');
         
-        let key_word_input = ref('')
-            if(uri[1]){
-                if(uri[1].split('=')[1]){
-                    key_word_input.value=uri[1].split('=')[1]
-                    while(key_word_input.value.indexOf("%")!== -1){
-                       let rem = key_word_input.value.indexOf("%")
-                       key_word_input.value = key_word_input.value.slice(0, rem) + key_word_input.value.slice(rem+3);
-                       key_word_input.value = [key_word_input.value.slice(0, rem), key_word_input.value.slice(rem)].join(' ');
-                    }
-                }
-            }
+        let key_word_input = ref(useRoute().query.q||'')
+            
         
 
       for(let g of gamesgrid.value){
@@ -433,6 +425,9 @@ let remove_wish = (game)=>{
 
       })
       
+      if(useRoute().query.filter){
+        filter(useRoute().query.filter,0)
+      }
 
     
        window.scrollTo({
@@ -531,6 +526,7 @@ let remove_wish = (game)=>{
                                                 <label for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">50%</label>
                                                 <label for="" class="text-gray-500 text-[.8rem] mr-2 line-through">{{ game.price }}</label>
                                                 <label for="" class="text-white text-[.8rem]">${{ game.price }}</label>
+                                                <label for="" class="text-white text-[.8rem]">${{ game.event }}</label>
                                             </div>
 
 

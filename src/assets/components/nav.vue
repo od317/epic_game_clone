@@ -8,7 +8,7 @@
 
   let router = useRouter()
 
-
+  
 
   let currentUrl = window.location.pathname;
   let cp = currentUrl.split('/')[1]
@@ -116,6 +116,19 @@
     search_res.value=[]
     search_input.value = ""
   }
+
+  let check = setInterval(()=>{
+    if(window.location.href.split('/')[3]==''){
+        page.value='discover'
+    }
+    else if(window.location.href.split('/')[3].substring(0,'6')=='browse')
+    {
+      page.value = 'browse'
+    }
+  
+
+  },1)
+
 
 </script>
 

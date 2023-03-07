@@ -5,7 +5,7 @@
                     
                     <div class="flex text-start justify-between w-full pr-[1rem]" for="">
                         <label for="">{{ game_list.title }}</label>
-                        <button class="border-2 border-white py-[.2rem] px-[.4rem] rounded-md">view more</button>
+                        <router-Link :to="'/collection/'+game_list.title" class="border-2 border-white py-[.2rem] px-[.4rem] rounded-md">view more</router-Link>
                     </div>
                     
                     <div class="w-full my-[1rem] flex flex-row" v-for="game in game_list.games">

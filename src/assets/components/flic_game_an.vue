@@ -1,15 +1,14 @@
 <template>
-    <Carousel class=" pt-[1rem] pl-[.3rem] md:hidden mb-[2rem] " :items-to-show="1.2" >
+    <Carousel class=" pt-[3rem] pl-[.3rem] md:hidden mb-[2rem] " :items-to-show="1.2" >
      
-        <slide class="  h-full overflow-hidden rounded-[1rem]" v-for="game in games" :key="game">
-         <div :class="`h-[26rem] w-[90%]   rounded-[1rem]
+        <slide @Click="router_push(game.type,game.dst)" class="  h-full overflow-hidden rounded-[1rem]" v-for="game in games" :key="game">
+         <div :class="` w-[90%]   rounded-[1rem]
                        flex  items-end text-white `">
                         <div class="flex flex-col  z-40">
                                 <img class="w-[100%] mb-[1rem] ml-[1rem] rounded-lg" :src="game.img" alt="">
-                                <label class="text-[.7rem] text-start pl-[1rem] font-bold" for="">Now on epic</label>
-                                <label class="text-start w-[90%] pl-[1rem] mt-[.4rem] text-[.9rem] font-bold mb-[1rem]" for="">Break the cycle. Fight to survive as this 
-                                award-winning third-person shooter brings Selene's story to PC.</label>
-                                <label class="text-start w-[90%] pl-[1rem] mb-[1rem] text-[.8rem] font-bold " for="">Starting at 59.99$</label>
+                                <label class="text-[.7rem] text-start pl-[1rem] font-bold" for="">{{ game.name }}</label>
+                                <label class="text-start h-[3.5rem] w-[90%] pl-[1rem] mt-[.4rem] text-[.9rem] font-bold mb-[1rem]" for="">{{ game.label }}</label>
+                                <label class="text-start w-[90%] pl-[1rem] mb-[1rem] text-[.8rem] font-bold " for="">{{game.down_text}}</label>
                        </div>
         </div>
         </slide>
@@ -25,6 +24,9 @@
   import 'vue3-carousel/dist/carousel.css'
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
   import { defineProps, reactive, toRef,ref } from "vue";
+  import { useRouter  } from 'vue-router';
+
+  let router = useRouter()
   
   const props = defineProps({
   games: Array,
@@ -35,7 +37,17 @@
    for(let i of games){
     console.log("yes"+i.src)
    }
-   
+   let router_push = (type,dist)=>{
+
+if(type == 'game'){
+    router.push('/game/'+dist)
+}
+
+else{
+    router.push('/browse?filter='+dist)
+}
+
+}
 
   </script>
 

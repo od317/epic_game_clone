@@ -5,7 +5,7 @@ let games_lists = [
         games.get("daying light2"),
         games.get("spiderman Remastered"),
         games.get("The Last of Us Part I"),
-        games.get("daying light2"),
+        games.get("dishonored2"),
         games.get("spiderman Remastered"),
     ],
     [ 

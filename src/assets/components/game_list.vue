@@ -14,7 +14,20 @@ const props = defineProps({
 
  let gamelist = ref(props.gamelist)
  let type = props.type
- 
+ let view_type = ref('')
+
+ switch(type){
+  case 'ac':
+    view_type.value = 'action games'
+    break
+  case 'adv':
+    view_type.value = 'adventuer games'
+    break
+  
+  default:
+    break  
+ }
+
  for(let gl of gamelist.value)
       for(let g of  gl){
        let wlist2 = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : [] 
@@ -106,7 +119,7 @@ let remove_wish = (game)=>{
      ">
 
      <router-link class=" cursor-pointer" :to="`games/`+type"> 
-     <label for="" class="text-xl text-white cursor-pointer">games on sale</label>
+     <label for="" class="text-xl text-white cursor-pointer">{{ view_type }}</label>
      </router-link>
         <div>
           <button @click="backward" :disabled="parseInt(slide_perecent)<=0" :class="`disabled:bg-[#0f0f0f] text-white bg-[#212121] mx-2 rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropleft" ></ion-icon></button>
@@ -180,9 +193,9 @@ let remove_wish = (game)=>{
                        <label for="" class="w-full text-sm text-gray-600">Base game </label>
                         <label for="" class="w-full text-xl text-white">{{ game.name }} </label>
                         <div class="flex w-full mt-2 items-center">
-                          <label for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">50%</label>
-                          <label for="" class="text-gray-500 mr-2 line-through">$59.99</label>
-                          <label for="" class="text-white">$29.99</label>
+                          <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
+                          <label v-if="game.oldprice" for="" class="text-gray-500 mr-2 line-through">${{ game.oldprice }}</label>
+                          <label  for="" class="text-white">${{ game.price }}</label>
 
                         </div>
                       </div>
