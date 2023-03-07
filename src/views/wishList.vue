@@ -158,9 +158,9 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
    let drop_platform = ref(false)
 
 
-   let show = ref('all')
+   let show = ref('random')
    let dis_show = ref(false)
-   let show_val = ref('all')
+   let show_val = ref('random')
 
  let filter = (f,poss)=>{
         let find = -1
@@ -246,19 +246,15 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
          show_val.value = c
          show.value=c
          switch(c){
-            case 'new':
-                gamesgrid2.value = gamesgrid2.value.filter(i=>{
-                    return i.new
-                })
-                break
-            case 'cs':
-                gamesgrid2.value = gamesgrid2.value.filter(i=>{
-                    return i.cs
-                })
-                break
             case 'alpha':
-                gamesgrid2.value.sort((a,b)=>{
-                    return a.name - b.name
+            gamesgrid2.value.sort((a,b)=>{
+                if (a.name.toLowerCase() < b.name.toLowerCase()) {
+                    return -1;
+                }
+                if (a.name.toLowerCase() > b.name.toLowerCase()) {
+                    return 1;
+                }
+                return 0;                
                 })
                 break
             case 'lh':
@@ -273,6 +269,8 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
                 })
                 break        
             default:
+            gamesgrid2.value = wlist.value
+             filter_helper()
                 break
          }
         
@@ -357,9 +355,7 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
                 <div :class="` absolute z-10 bg-dark3 w-[250%] rounded-sm ${ !dis_show ? 'hidden':'block' } `">
                 
                     <div class="flex flex-col justify-start items-start p-[1rem] text-[1rem] text-white">
-                        <button @click="show_c('all')">All</button>
-                        <button @click="show_c('new')">new</button>
-                        <button @click="show_c('cs')">coming soon</button>
+                        <button @click="show_c('random')">random</button>
                         <button @click="show_c('alpha')">alpha</button>
                         <button @click="show_c('hl')"> h to l</button>
                         <button @click="show_c('lh')"> l to h</button>
@@ -430,35 +426,35 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
 
 
             
-                       <div class="hidden md:inline-block col-span-1  text-lg text-white w-[80%] ">
+            <div class="hidden md:inline-block col-span-1   text-white w-[90%] text-sm">
             
-                        <div>filters
-                             <div v-if="filter_num !=0" class="inline-block">
-                                {{ filter_num }}
-                                <button @click="reset_filt()">reset</button>
-                            </div>
-                        </div>
-            
-                        <div class="w-full bg-dark2 my-[1rem] p-[.5rem] rounded-md">
-                                <input type="text" class=" w-[90%] bg-dark2" placeholder="keywords">
-                        </div>
-            
-                     
-                            <div v-for="drop in drop_list">
-                                    <button @click="drop.on = !drop.on" class="mb-1 cursor-pointer text-white flex items-start justify-between p-[1rem] border-t-2 border-gray-400  w-full">
-                                        <label for="">{{ drop.type }}</label>
-                                        <ion-icon name="arrow-dropdown"></ion-icon>
-                                    </button>
-                                    <div :class="`flex flex-col items-start ${ drop.on ?'block':'hidden'}`">
+            <div class="flex flex-row text-sm mb-[2rem]">
+                    
+                <label class="flex-grow">Filters <label v-if="filter_num>0" for="">({{ filter_num }})</label></label>
+                 <div v-if="filter_num !=0" class="inline-block">
+                    <button @click="reset_filt()">RESET</button>
+                </div>
+            </div>
 
-                                              <button v-for="type in drop.content" 
-                                              @click="filter(type.set,drop.num)" class=" cursor-pointer">
-                                                    {{ type.name }}
-                                              </button>
 
-                                    </div>
-                            </div>    
-                    </div>
+
+         
+                <div v-for="drop in drop_list">
+                        <button @click="drop.on = !drop.on" class=" cursor-pointer text-white flex items-start justify-between px-[1rem] py-[1rem] border-t-2 border-gray-400 text-sm  w-full">
+                            <label class="cursor-pointer" for="">{{ drop.type }}</label>
+                            <label :class="`cursor-pointer transition-all flex items-center text-center justify-center duration-300 ${drop.on? ' rotate-180':'' }`"><ion-icon  name="arrow-dropdown"></ion-icon></label>
+                        </button>
+                        <div :class="`flex flex-col items-start text-sm py-[.4rem] cursor-pointer  text-gray-400  ${ drop.on ?'block':'hidden'}`">
+
+                                  <button v-for="type in drop.content" 
+                                  @click="filter(type.set,drop.num)" :class="`group flex flex-row py-[.9rem] px-[1rem] text-sm cursor-pointer w-full text-start ${ filters[drop.num] == type.set ? 'bg-dark2 rounded-md text-white':''}`">
+                                    <label class="flex-grow cursor-pointer group-hover:text-white">{{ type.name }}</label> 
+                                    <label class="cursor-pointer" v-if="filters[drop.num] == type.set" ><ion-icon name="checkmark"></ion-icon></label>
+                                  </button>
+
+                        </div>
+                </div>    
+        </div>
 
 
 

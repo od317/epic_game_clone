@@ -137,9 +137,9 @@
    let drop_types = ref(false)
    let drop_platform = ref(false)
 
-   let show = ref('all')
+   let show = ref('random')
    let dis_show = ref(false)
-   let show_val = ref('all')
+   let show_val = ref('random')
 
    let gamesgrid2 = ref(gamesgrid.value)
    let end_num = ref(Math.ceil(gamesgrid2.value.length/12))
@@ -199,7 +199,7 @@
         show_c(show_val.value)
         pos.value= 1
         start.value = 0
-        end.value= 11
+        end.value= 12
         view_grid.value = gamesgrid2.value.slice(start.value,end.value)
          end_num.value = Math.ceil(gamesgrid2.value.length/12)
 
@@ -260,8 +260,14 @@
                 })
                 break
             case 'alpha':
-                gamesgrid2.value.sort((a,b)=>{
-                    return a.name - b.name
+            gamesgrid2.value.sort((a,b)=>{
+                if (a.name.toLowerCase() < b.name.toLowerCase()) {
+                    return -1;
+                }
+                if (a.name.toLowerCase() > b.name.toLowerCase()) {
+                    return 1;
+                }
+                return 0;                
                 })
                 break
             case 'lh':
@@ -276,12 +282,14 @@
                 })
                 break        
             default:
+            gamesgrid2.value = gamesgrid.value
+             filter_helper()
                 break
          }
         
         pos.value= 1
         start.value = 0
-        end.value= 11
+        end.value= 12
         view_grid.value = gamesgrid2.value.slice(start.value,end.value)
 
 
@@ -415,6 +423,12 @@ if(key_word_input.value!==""){
 
       })
 
+      let route_push_game = (game)=>{
+
+        router.push('/game/'+game)
+
+
+      }  
  
     window.scrollTo({
      top:0,
@@ -449,12 +463,10 @@ if(key_word_input.value!==""){
 
                 <label for=""  class=" cursor-pointer text-gray-500">show:</label>
                 <label for="" class="text-white cursor-pointer ml-1">{{ show }}</label>
-                <div :class="` absolute z-10 bg-dark3 w-[250%] rounded-sm ${ !dis_show ? 'hidden':'block' } `">
+                <div :class="` absolute z-40 bg-dark3 w-[250%] rounded-sm ${ !dis_show ? 'hidden':'block' } `">
                 
                     <div class="flex flex-col justify-start items-start p-[1rem] text-[1rem] text-white">
-                        <button @click="show_c('all')">All</button>
-                        <button @click="show_c('new')">new</button>
-                        <button @click="show_c('cs')">coming soon</button>
+                        <button @click="show_c('random')">random</button>
                         <button @click="show_c('alpha')">alpha</button>
                         <button @click="show_c('hl')"> h to l</button>
                         <button @click="show_c('lh')"> l to h</button>
@@ -476,9 +488,9 @@ if(key_word_input.value!==""){
 
 
 
-                        <div v-if="view_grid.length>0" v-for="game in view_grid" :class="`  group w-full py-[1rem] h-[100%] `">
+                        <div @Click="route_push_game(game.name)" v-if="view_grid.length>0" v-for="game in view_grid" :class="`  group w-full py-[1rem]  `">
                                       
-                                   <div class="w-[100%] h-[65%] rounded-md relative">
+                                   <div class="w-[100%]  rounded-md relative">
                                       
                                     <div class="bg-gray-400 absolute rounded-md w-[100%] h-[100%] opacity-0 group-hover:opacity-20 transition-all duration-200 cursor-pointer"></div>
                                     
@@ -515,20 +527,18 @@ if(key_word_input.value!==""){
                              </div>
 
 
-                                    <img :src="game.logoimg" class="w-[100%] h-[100%] rounded-md" alt="">
+                                    <img :src="game.logoimg" class="w-[100%] h-[16rem] rounded-md" alt="">
                                      
                                    </div>
                                      <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-2'}`">
                                         <label for="" class="w-full text-sm text-gray-600">Base game </label>
                                             <label for="" class="w-full text-lg text-white">{{ game.name }} </label>
                                             <div class="flex w-full mt-2 items-center">
-                                                <label for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">50%</label>
-                                                <label for="" class="text-gray-500 text-[.7rem] mr-2 line-through">$59.99</label>
-                                                <label for="" class="text-white text-[.7rem]">${{ game.price }}</label>
+                                                <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
+                                                <label v-if="game.dis" for="" class="text-gray-500 text-[.8rem] mr-2 line-through">${{ game.oldprice }}</label>
+                                                <label for="" class="text-white text-[.8rem]">${{ game.price }}</label>
                                             </div>
 
-                                         
-                                            <label for="">{{game.gener}}</label>
 
 
 
@@ -546,35 +556,39 @@ if(key_word_input.value!==""){
 
 
             
-                       <div class="hidden md:inline-block col-span-1  text-lg text-white w-[80%] ">
+           
+            <div class="hidden md:inline-block col-span-1   text-white w-[90%] text-sm">
             
-                        <div>filters
-                             <div v-if="filter_num-1 >0" class="inline-block">
-                                {{ filter_num -1 }}
-                                <button @click="reset_filt()">reset</button>
-                            </div>
-                        </div>
-            
-                        <div class="w-full bg-dark2 my-[1rem] p-[.5rem] rounded-md">
-                                <input v-model=" key_word_input" type="text" class=" outline-none w-[90%] bg-dark2" placeholder="keywords">
-                        </div>
-            
-                     
-                            <div v-for="drop in drop_list">
-                                    <button @click="drop.on = !drop.on" class="mb-1 cursor-pointer text-white flex items-start justify-between p-[1rem] border-t-2 border-gray-400  w-full">
-                                        <label for="">{{ drop.type }}</label>
-                                        <ion-icon name="arrow-dropdown"></ion-icon>
-                                    </button>
-                                    <div :class="`flex flex-col items-start ${ drop.on ?'block':'hidden'}`">
+            <div class="flex flex-row text-sm">
+                    
+                <label class="flex-grow">Filters <label v-if="filter_num-1>0" for="">({{ filter_num -1 }})</label></label>
+                 <div v-if="filter_num-1 !=0" class="inline-block">
+                    <button @click="reset_filt()">RESET</button>
+                </div>
+            </div>
 
-                                              <button v-for="type in drop.content" 
-                                              @click="filter(type.set,drop.num)" class=" cursor-pointer">
-                                                    {{ type.name }}
-                                              </button>
+            <div class="w-full  bg-dark2 my-[1rem] p-[.6rem] rounded-sm">
+                    <ion-icon class=" translate-y-[10%] text-sm w-[8%] mr-[2%]" name="search"></ion-icon>
+                    <input type="text" class=" w-[90%] text-sm bg-dark2 outline-none" placeholder="keywords" v-model="key_word_input">
+            </div>
 
-                                    </div>
-                            </div>    
-                    </div>
+         
+                <div v-for="drop in drop_list">
+                        <button @click="drop.on = !drop.on" class=" cursor-pointer text-white flex items-start justify-between px-[1rem] py-[1rem] border-t-2 border-gray-400 text-sm  w-full">
+                            <label class="cursor-pointer" for="">{{ drop.type }}</label>
+                            <label :class="`cursor-pointer transition-all flex items-center text-center justify-center duration-300 ${drop.on? ' rotate-180':'' }`"><ion-icon  name="arrow-dropdown"></ion-icon></label>
+                        </button>
+                        <div :class="`flex flex-col items-start text-sm py-[.4rem] cursor-pointer  text-gray-400  ${ drop.on ?'block':'hidden'}`">
+
+                                  <button v-for="type in drop.content" 
+                                  @click="filter(type.set,drop.num)" :class="`group flex flex-row py-[.9rem] px-[1rem] text-sm cursor-pointer w-full text-start ${ filters[drop.num] == type.set ? 'bg-dark2 rounded-md text-white':''}`">
+                                    <label class="flex-grow cursor-pointer group-hover:text-white">{{ type.name }}</label> 
+                                    <label class="cursor-pointer" v-if="filters[drop.num] == type.set" ><ion-icon name="checkmark"></ion-icon></label>
+                                  </button>
+
+                        </div>
+                </div>    
+        </div>
 
 
 

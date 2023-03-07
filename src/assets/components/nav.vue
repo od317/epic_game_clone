@@ -218,7 +218,7 @@
 
 <!-- search-bar --> 
 
-<div  :class="`flex justify-center max-w-screen  sticky top-0  ${ !offcanv ? 'z-40':'z-40'} lg:bg-dark1 
+<div  :class="`flex justify-center max-w-screen  sticky top-0  ${ !offcanv ? 'z-50':'z-50'} lg:bg-dark1 
  `">
    <!-- large screen --> 
   <div class="text-white lg:flex   items-center  py-[1.5rem] w-[78%] sticky top-0 z-50 bg-dark1 hidden ">
