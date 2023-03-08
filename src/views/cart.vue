@@ -65,6 +65,9 @@ router.push('game/'+name)
 
 }
 
+
+
+
  window.scrollTo({top:0})
 
 </script>
@@ -127,7 +130,7 @@ md:flex-col  md:items-center">
                               <label class="flex items-center" for=""><ion-icon class="transition-all cursor-pointer  duration-150 group-hover:text-white   translate-y-[10%] mr-[.4rem]  text-gray-400  rounded-full z-50 " name="add-circle-outline"></ion-icon> </label> 
                               <label class="transition-all cursor-pointer  duration-150 group-hover:text-white group-hover:border-white  border-b-[.1rem] text-gray-400" for="">move to wishlist</label>  
                             </button>
-                            <button v-on:click.stop @click="remove(game)" class="border-b-[.1rem] text-gray-400 text-start w-fit h-fit">Remove</button>
+                            <button v-on:click.stop @click="remove(game)" class="border-b-[.1rem] text-gray-400 text-start hover:text-white  w-fit h-fit">Remove</button>
                          </div>  
 
                     
@@ -246,7 +249,7 @@ md:flex-row md:w-[78%] md:items-center `">
                               <label class="flex items-center" for=""><ion-icon class="transition-all cursor-pointer  duration-150 group-hover:text-white   translate-y-[10%] mr-[.4rem]  text-gray-400  rounded-full z-50 " name="add-circle-outline"></ion-icon> </label> 
                               <label class="transition-all cursor-pointer  duration-150 group-hover:text-white group-hover:border-white  border-b-[.1rem] text-gray-400" for="">move to wishlist</label>  
                             </button>
-                            <button @click="remove(game)" class="border-b-[.1rem] text-gray-400 text-start w-fit h-fit">Remove</button>  </div>
+                            <button @click="remove(game)" class="border-b-[.1rem] text-gray-400 text-start  w-fit h-fit">Remove</button>  </div>
         </div>
 
 </div>

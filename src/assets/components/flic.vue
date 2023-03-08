@@ -1,7 +1,7 @@
 <template>
     <Carousel class=" pt-[1rem] pl-[.3rem] md:hidden mb-[2rem] " :items-to-show="1.2" >
      
-        <slide class="  h-full overflow-hidden rounded-[1rem]" v-for="game in games" :key="game">
+        <slide @click="router_push_header(game.name)" class="  h-full overflow-hidden rounded-[1rem]" v-for="game in games" :key="game">
          <div :class="`h-[26rem] w-[90%]   rounded-[1rem]
                        flex  items-end text-white `">
                     <div class="absolute opacity-30 w-full bg-black h-full rounded-[1rem]   text-white  z-30">
@@ -28,7 +28,15 @@
   import 'vue3-carousel/dist/carousel.css'
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
   import { defineProps, reactive, toRef,ref } from "vue";
-  
+  import { useRouter } from 'vue-router';
+  let router = useRouter()
+
+  let router_push_header = (name)=>{
+
+        router.push('/game/'+name)
+    }
+
+
   const props = defineProps({
   games: Array,
   });

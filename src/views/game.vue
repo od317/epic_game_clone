@@ -796,7 +796,33 @@ window.scrollTo({
                 <label for="">{{ game.name }}</label>
 
                 <div class="flex">
-                    <label class="bg-dark2 text-[1rem] px-[.2rem] py-[.1rem] rounded-md" for="">{{ game.rate }}</label>
+                    <label class="bg-dark2 text-[1rem] flex flex-row items-center justify-center px-[.2rem] mt-[.5rem] py-[.1rem] rounded-md" for="">
+                        <label for="">{{ game.rate }}</label>
+                        <label for="">
+                                                            <div class="flex items-center">
+                                                                <ion-icon v-if="game.rate>=1" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>0 && game.rate<1" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<1" name="star-outline"></ion-icon>  
+
+                                                                <ion-icon v-if="game.rate>=2" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>1 && game.rate <2" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<2" name="star-outline"></ion-icon>    
+
+                                                                <ion-icon v-if="game.rate>=3" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>2 && game.rate <3" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<3" name="star-outline"></ion-icon>   
+
+                                                                <ion-icon v-if="game.rate>=4" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>3 && game.rate<4" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<4" name="star-outline"></ion-icon>   
+
+                                                                <ion-icon v-if="game.rate==5" name="star"></ion-icon>
+                                                                <ion-icon v-else-if ="game.rate>4 && game.rate<5" name="star-half"></ion-icon>   
+                                                                <ion-icon v-else-if="game.rate<5" name="star-outline"></ion-icon>   
+
+                                                            </div>
+                                                        </label></label>
+                    
                 </div>
 
              </div>
@@ -825,31 +851,36 @@ window.scrollTo({
                         <button v-if="game.inw" @click=" remove_wish(game) " :class="` w-full py-[.3rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]`">remove from wishlist</button>
 
 
-                        <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] pb-[.4rem] mb-[.5rem]">
+                        <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] mt-[.5rem] pb-[.4rem] mb-[.5rem]">
                             <label class="text-gray-300" for="">Refund type</label>
                             <label for="">sefl refundable</label>
                         </div>
                         
                         <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] pb-[.4rem] mb-[.5rem]">
-                            <label class="text-gray-300" for="">Refund type</label>
-                            <label for="">sefl refundable</label>
+                            <label class="text-gray-300" for="">Developer</label>
+                            <label for="">{{game.dev}}</label>
                         </div>
 
                         <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] pb-[.4rem] mb-[.5rem]">
-                            <label class="text-gray-300" for="">Refund type</label>
-                            <label for="">sefl refundable</label>
+                            <label class="text-gray-300" for="">Publisher</label>
+                            <label for="">{{game.pub}}</label>
                         </div>
 
                         <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] pb-[.4rem] mb-[.5rem]">
-                            <label class="text-gray-300" for="">Refund type</label>
-                            <label for="">sefl refundable</label>
+                            <label class="text-gray-300" for="">Release Date</label>
+                            <label for="">{{game.rdate}}</label>
                         </div>
 
                         <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] pb-[.4rem] mb-[.5rem]">
-                            <label class="text-gray-300" for="">Refund type</label>
-                            <label for="">sefl refundable</label>
+                            <label class="text-gray-300" for="">Initial Release</label>
+                            <label for="">{{game.indate}}</label>
                         </div>
 
+
+                        <div class="flex justify-between border-b-[.1rem] border-gray-500 w-full text-[1rem] pb-[.4rem] mb-[.5rem]">
+                            <label class="text-gray-300" for="">Platform</label>
+                            <label class="text-[1.3rem]" for=""><ion-icon name="logo-windows"></ion-icon></label>
+                        </div>
 
                         <div class="flex justify-between w-full my-[1rem]">
                             <button class="w-[48%] border-[.1rem] border-gray-200 py-[.4rem] rounded-md hover:bg-gray-400 hover:bg-opacity-30">Share</button>
@@ -912,8 +943,7 @@ window.scrollTo({
              <div class="mt-[2rem] flex flex-col items-center bg-dark2 text-white rounded-md p-[1rem] text-[1.1rem]">
                 New update is live! We made some of the most requested 
                 features a reality and introduced various improvements. 
-                Click here for more information
-                <button class="w-[100%] rounded-md mt-[1rem] py-[.5rem] border-[.1rem] border-gray-500">view patch notes</button>
+   
              </div>
 
              <img data-placeholder class="my-[1rem]" :src="game.bottom_img" alt="">

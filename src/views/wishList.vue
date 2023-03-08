@@ -396,7 +396,7 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
 
                  
                          <div class="flex flex-row justify-end items-center">
-                    <button v-on:click.stop @click="remove(game)" class="border-b-[.1rem] text-[.7rem] text-gray-400 text-start w-fit h-fit cursor-pointer">Remove</button>
+                    <button v-on:click.stop @click="remove(game)" class="border-b-[.1rem] text-[.7rem] text-gray-400 text-start hover:text-white w-fit h-fit cursor-pointer">Remove</button>
 
                     <button v-on:click.stop @click="addcart(game)" :class="`w-full ${check_in_cart(game)? 'hidden':''} w-[20%] border-[.1rem] border-gray-400 
                     text-center text-white text-[.9rem] py-[.8rem] ml-[1rem] transition-all duration-150 hover:bg-zinc-600  rounded-md cursor-pointer `" >Add to cart</button>
@@ -481,10 +481,7 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
                     </div>
                 </div>
     
-                <div class="  w-[90%] px-[1.5rem] bg-dark2 text-center flex items-center my-[1rem] py-[.5rem] rounded-md">
-                    <ion-icon class="mr-[.5rem]" name="search"></ion-icon>
-                    <input type="text" class="  w-[90%] bg-dark2" placeholder="keywords">
-                </div>
+
     
                 <div class="flex-grow w-full">
                     <div class="py-[1.5rem] w-full px-[1.5rem] border-t-[.1rem] border-gray-400" v-for="drop in drop_list">

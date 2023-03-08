@@ -23,6 +23,10 @@
    });
 
 
+   
+ let c = setInterval(() => {
+      i.value = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')).length : '0'
+},1000);
 
 
   if(cp !== 'browse' && cp!== 'news' && cp!=='wishlist' && cp!=='cart'){
@@ -121,7 +125,7 @@
     if(window.location.href.split('/')[3]==''){
         page.value='discover'
     }
-    else if(window.location.href.split('/')[3].substring(0,'6')=='browse')
+    else if(window.location.href.split('/')[3].substring(0,'6')=='browse'||window.location.href.split('/')[3].substring(0,'6')=='games')
     {
       page.value = 'browse'
     }

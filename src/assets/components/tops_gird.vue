@@ -69,6 +69,12 @@ let remove_wish = (game)=>{
 
   }
 
+  let router_push_game = (game)=>{
+    router.push('/game/'+game)
+    setTimeout(()=>{
+    },1)
+  }
+
 </script>
 
 
@@ -79,7 +85,7 @@ let remove_wish = (game)=>{
         
             <div class="grid grid-cols-3 grid-rows-1   text-white w-[78%]  ">
  
-                     <div v-for="game_list in games_grid" :class="`px-[1rem] ${game_list.last? '':'border-r border-1px border-dark2'}`">
+                     <div  v-for="game_list in games_grid" :class="`px-[1rem] ${game_list.last? '':'border-r border-1px border-dark2'}`">
                             
                              <div :class="`flex items-center mb-1`">
                                <div class="flex-grow text-[1rem] pl-[.5rem]">{{ game_list.title }}</div>
@@ -88,7 +94,7 @@ let remove_wish = (game)=>{
                             
                             <div class="grid grid-cols-1 grid-rows-5">
 
-                                  <div v-for="game in game_list.games" class=" group flex items-top rounded-2xl  px-[1rem] py-[.1rem] hover:bg-dark2 cursor-pointer transition-all duration-200">
+                                  <div @click="router_push_game(game.name)" v-for="game in game_list.games" class=" group flex items-top rounded-2xl  px-[1rem] py-[.1rem] hover:bg-dark2 cursor-pointer transition-all duration-200">
                                             <div  class="w-[19%] h-[5rem] p-1 relative ">
                                                 <div class="absolute flex justify-end   py-1  w-[80%]">
                                                         <div v-if="!game.inw"  class=" 

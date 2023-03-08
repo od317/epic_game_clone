@@ -3,6 +3,9 @@
    import { defineProps, reactive, toRef,ref,watch} from "vue";
    import gamesgrid12 from "../games_grid";
    import games from "../games"
+   import {useRouter} from 'vue-router'
+
+   let router = useRouter()
 
    let gamesgrid = ref(gamesgrid12)
 
@@ -490,9 +493,9 @@ if(key_word_input.value!==""){
 
                         <div @Click="route_push_game(game.name)" v-if="view_grid.length>0" v-for="game in view_grid" :class="`  group w-full py-[1rem]  `">
                                       
-                                   <div class="w-[100%]  rounded-md relative">
+                                   <div  class="w-[100%]  rounded-md relative cursor-pointer">
                                       
-                                    <div class="bg-gray-400 absolute rounded-md w-[100%] h-[100%] opacity-0 group-hover:opacity-20 transition-all duration-200 cursor-pointer"></div>
+                                    <div  class="bg-gray-400 absolute rounded-md w-[100%] h-[100%] opacity-0 group-hover:opacity-20 transition-all duration-200 cursor-pointer"></div>
                                     
                                     <div class="absolute flex w-full justify-end items-start p-3"> 
                             
@@ -500,7 +503,7 @@ if(key_word_input.value!==""){
                              relative rounded-full z-30 text-2xl 
                              opacity-0 group-hover:opacity-100  transition-all duration-100 
                              after_wish">
-                                 <button class="group relative " @click="add_wish(game)">
+                                 <button @click.stop.prevent  class="group relative " @click="add_wish(game)">
                                    <ion-icon  :class="` ${game.ro ? ' rotate-[360deg] transition-all duration-1000':''} bg-white   text-black rounded-full z-30 `" name="add-circle">
                                    </ion-icon>
                            
@@ -515,7 +518,7 @@ if(key_word_input.value!==""){
                              relative rounded-full z-30 text-2xl 
                              opacity-0 group-hover:opacity-100  transition-all duration-100 
                              after_wish2">
-                                 <button class="  group " @click="remove_wish(game)">
+                                 <button @click.stop.prevent  class="  group " @click="remove_wish(game)">
                                    <ion-icon :class="`${game.ro ? ' rotate-[-360deg] transition-all duration-1000':''} bg-white  text-black  rounded-full z-30` " name="checkmark-circle">
                                    </ion-icon>
                            
@@ -527,7 +530,7 @@ if(key_word_input.value!==""){
                              </div>
 
 
-                                    <img :src="game.logoimg" class="w-[100%] h-[16rem] rounded-md" alt="">
+                                    <img  :src="game.logoimg" class="w-[100%] h-[16rem] rounded-md" alt="">
                                      
                                    </div>
                                      <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-2'}`">

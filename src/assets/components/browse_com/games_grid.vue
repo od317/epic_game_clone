@@ -492,18 +492,18 @@ let remove_wish = (game)=>{
 
                         <div  @Click="route_push_game(game.name)" v-for="game in view_grid" class="  w-full py-[1rem]  ">
                                       
-                                   <div class="w-[100%]  group rounded-md relative">
+                                   <div class="w-[100%]  group rounded-md relative cursor-pointer">
                                       
-                                    <div class="bg-gray-400 absolute rounded-md w-[100%] h-[100%] opacity-0 group-hover:opacity-20 transition-all duration-200 cursor-pointer"></div>
+                                    <div  class="bg-gray-400 absolute rounded-md w-[100%] h-[100%] opacity-0 group-hover:opacity-20 transition-all duration-200 cursor-pointer"></div>
                                  
                                     
-                                    <div class="absolute flex w-full justify-end items-start p-3"> 
+                                    <div class="absolute flex w-full justify-end items-start p-3 cursor-pointer"> 
                             
                             <div v-if="!game.inw"  class=" 
                              relative rounded-full z-30 text-2xl 
                              opacity-0 group-hover:opacity-100  transition-all duration-100 
                              after_wish">
-                                 <button class="group relative " @click="add_wish(game)">
+                                 <button @click.stop.prevent class="group relative " @click="add_wish(game)">
                                    <ion-icon  :class="` ${game.ro ? ' rotate-[360deg] transition-all duration-1000':''} bg-white   text-black rounded-full z-30 `" name="add-circle">
                                    </ion-icon>
                            
@@ -518,7 +518,7 @@ let remove_wish = (game)=>{
                              relative rounded-full z-30 text-2xl 
                              opacity-0 group-hover:opacity-100  transition-all duration-100 
                              after_wish2">
-                                 <button class="  group " @click="remove_wish(game)">
+                                 <button @click.stop.prevent class="  group " @click="remove_wish(game)">
                                    <ion-icon :class="`${game.ro ? ' rotate-[-360deg] transition-all duration-1000':''} bg-white  text-black  rounded-full z-30` " name="checkmark-circle">
                                    </ion-icon>
                            
@@ -530,7 +530,7 @@ let remove_wish = (game)=>{
                              </div>
 
 
-                                    <img :src="game.logoimg" class="w-[100%]  h-[16rem] rounded-md" alt="">
+                                    <img  :src="game.logoimg" class="w-[100%]  h-[16rem] rounded-md" alt="">
                                      
 
                                      
