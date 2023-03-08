@@ -187,7 +187,6 @@ let wlist = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('
 wlist = wlist.filter(i=>{
  return i.name !== game.name
 })
-console.log(game)
 game.ro=true
 let s = setTimeout(()=>{
  game.inw=false
@@ -224,7 +223,14 @@ let cart_router_push = ()=>{
 }
 
 
+let router_push_game_type = (g)=>{
+    router.push('/games/'+g)
+}
 
+
+let router_push_game_browse = (f)=>{
+    router.push('/browse?filter='+f)
+}
 
 window.scrollTo({
         top:0   ,
@@ -389,15 +395,20 @@ window.scrollTo({
 
                            <div class="flex my-[2rem]">
 
-                                <label for="" class="w-[50%] border-l-2 pl-[1rem]">Lorem ipsum dolor sit amet, consectetur 
-                                    acere ipsum recusandae mollitia aut eveniet maiores inventore expedita debitis 
-                                    nostrum. Iste, dignissimos?
-                                </label>
+                            <div class=" flex flex-wrap items-start w-[49%] px-[1rem] border-l-[.1rem] broder-gray-500 text-white">
+                        <label class="w-[100%] text-gray-500   " for="">Genres</label>
+                        <button @click="router_push_game_type(g)" v-for="g in game.gener" class=" border-b-[.1rem] ml-[.5rem]">{{g}} </button>
+                        
+                       </div>
 
-                                <label for="" class="w-[50%] border-l-2 pl-[1rem]">Lorem ipsum dolor sit amet, consectetur 
-                                    acere ipsum recusandae mollitia aut eveniet maiores inventore expedita debitis 
-                                    nostrum. Iste, dignissimos?
-                                </label>
+
+                        <div class=" flex flex-wrap w-[49%] border-l-[.1rem] px-[1rem] broder-gray-500 text-white">
+                        <label class="w-[100%] text-gray-500 " for="">Features</label>
+
+                        <button @click="router_push_game_browse(f)" v-for="f in game.features" class=" border-b-[.1rem] ml-[.5rem]">{{f}} </button>
+
+
+                       </div>
 
                            </div>
 
@@ -827,7 +838,7 @@ window.scrollTo({
 
              </div>
 
-             <div class=" sticky top-[10%] pt-[.5rem] pb-[.7rem] flex px-[1rem] mt-[1.5rem] text-white text-[1.5rem] bg-dark1 z-30">
+             <div class=" sticky top-[10%] pt-[.5rem] pb-[.7rem] flex px-[1rem]  text-white text-[1.5rem] bg-dark1 z-30">
                                <button @click="change_nav('over')" :class="` border-b-2 border-opacity-0 ${nav=='over'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">overview</button>
                                <button @click="change_nav('ach')" :class="`ml-[2rem] border-b-2 border-opacity-0 ${nav=='ach'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">achievements</button>
 
@@ -902,35 +913,16 @@ window.scrollTo({
 
              <div class="flex flex-row ">
 
-                       <div class=" flex flex-wrap items-start w-[49%]  border-l-[.1rem] broder-gray-500 text-white">
-                        <label class="w-[100%] text-gray-500 ml-[1rem]" for="">Generes</label>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-
-
+                       <div class=" flex flex-wrap items-start w-[49%] px-[1rem] border-l-[.1rem] broder-gray-500 text-white">
+                        <label class="w-[100%] text-gray-500   " for="">Genres</label>
+                        <button @click="router_push_game_type(g)" v-for="g in game.gener" class=" border-b-[.1rem] ml-[.5rem]">{{g}} </button>
                        </div>
 
 
-                        <div class=" flex flex-wrap w-[49%] border-l-[.1rem]  broder-gray-500 text-white">
-                        <label class="w-[100%] text-gray-500 ml-[1rem]" for="">Generes</label>
+                        <div class=" flex flex-wrap w-[49%] border-l-[.1rem] px-[1rem] broder-gray-500 text-white">
+                        <label class="w-[100%] text-gray-500 " for="">Features</label>
 
-                        <button class="ml-[1.2rem]">cloud saves</button>
-                        <button class="ml-[1.2rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
-                        <button class="ml-[1rem]">action</button>
+                        <button @click="router_push_game_browse(f)" v-for="f in game.features" class=" border-b-[.1rem] ml-[.5rem]">{{f}} </button>
 
 
                        </div>

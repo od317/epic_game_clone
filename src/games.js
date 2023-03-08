@@ -675,6 +675,8 @@ let games_list =[
             pub:'Bethesda Softworks',
             rdate:"11/03/22",
             indate:"11/11/6",
+            gener:['fps','ac','adv'],
+            features:['sp','cp'],
             col:['top sellers','Top Upcoming Wishlisted'],
             imgs:[
                 [
@@ -2039,7 +2041,8 @@ for(let game of games_list){
         date:game.date,
         col:game.col,
         event:event[Math.floor(Math.random() * (3 - 0 + 1)) + 0],
-        gener:geners[Math.floor(Math.random() * (3 - 0 + 1)) + 0],
+        gener:game.gener||[geners[Math.floor(Math.random() * (3 - 0 + 1)) + 0]],
+        features:game.features||['mp','cs'],
         new:new_old[Math.floor(Math.random() * (1 - 0 + 1)) + 0]
     })
 }

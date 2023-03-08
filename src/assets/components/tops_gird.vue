@@ -94,14 +94,14 @@ let remove_wish = (game)=>{
                             
                             <div class="grid grid-cols-1 grid-rows-5">
 
-                                  <div @click="router_push_game(game.name)" v-for="game in game_list.games" class=" group flex items-top rounded-2xl  px-[1rem] py-[.1rem] hover:bg-dark2 cursor-pointer transition-all duration-200">
+                                  <div  @click="router_push_game(game.name)" v-for="game in game_list.games" class=" group flex items-top rounded-2xl  px-[1rem] py-[.1rem] hover:bg-dark2 cursor-pointer transition-all duration-200">
                                             <div  class="w-[19%] h-[5rem] p-1 relative ">
                                                 <div class="absolute flex justify-end   py-1  w-[80%]">
                                                         <div v-if="!game.inw"  class=" 
                               relative rounded-full z-30 text-xl 
                               opacity-0 group-hover:opacity-100  transition-all duration-100 
                               after_wish">
-                                  <button class="group relative " @click="add_wish(game)">
+                                  <button @click.stop.prevent class="group relative " @click="add_wish(game)">
                                     <ion-icon  :class="` ${game.ro ? ' rotate-[360deg] transition-all duration-1000':''} bg-white   text-black rounded-full z-30 `" name="add-circle">
                                     </ion-icon>
                             
@@ -116,7 +116,7 @@ let remove_wish = (game)=>{
                               relative rounded-full z-30 text-xl 
                               opacity-0 group-hover:opacity-100  transition-all duration-100 
                               after_wish">
-                                  <button class="  group " @click="remove_wish(game)">
+                                  <button @click.stop.prevent class="  group " @click="remove_wish(game)">
                                     <ion-icon :class="`${game.ro ? ' rotate-[-360deg] transition-all duration-1000':''} bg-white  text-black  rounded-full z-30` " name="checkmark-circle">
                                     </ion-icon>
                             

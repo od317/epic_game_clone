@@ -216,8 +216,16 @@
               
               c1 = filters.value[0] == 'all' || i.event == filters.value[0]
               
-              c3 = filters.value[2] == 'all' || i.gener == filters.value[2] 
+              let gener = false 
+              
+              for(let g of i.gener){
+                if(g===filters.value[2]){
+                gener=true
+                break
+                }
+              }
 
+              c3 = filters.value[2] == 'all' || gener
               switch(filters.value[1]){
                 case "un-10":
                     c2 = i.price<=10
@@ -368,7 +376,6 @@ let wlist = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('
 wlist = wlist.filter(i=>{
 return i.name !== game.name
 })
-console.log(game)
 game.ro=true
 let s = setTimeout(()=>{
 game.inw=false
@@ -394,7 +401,6 @@ if(key_word_input.value!==""){
 
       watch(key_word_input,()=>{
 
-        console.log('skager')
         
         if(key_word_input.value!==""){
 
@@ -577,7 +583,7 @@ if(key_word_input.value!==""){
 
          
                 <div v-for="drop in drop_list">
-                        <button @click="drop.on = !drop.on" class=" cursor-pointer text-white flex items-start justify-between px-[1rem] py-[1rem] border-t-2 border-gray-400 text-sm  w-full">
+                        <button @click="drop.on = !drop.on" class="text-gray-400 hover:text-white cursor-pointer text-white flex items-start justify-between px-[1rem] py-[1rem] border-t-2 border-gray-400 text-sm  w-full">
                             <label class="cursor-pointer" for="">{{ drop.type }}</label>
                             <label :class="`cursor-pointer transition-all flex items-center text-center justify-center duration-300 ${drop.on? ' rotate-180':'' }`"><ion-icon  name="arrow-dropdown"></ion-icon></label>
                         </button>
@@ -756,8 +762,6 @@ if(key_word_input.value!==""){
                                                    <label for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-[.3rem]">50%</label>
                                                    <label for="" class="text-gray-500 mr-[.2rem] line-through">$59.99</label>
                                                    <label for="" class="text-white">${{ game.price }}</label>
-                                                   <label for="" class="text-white">{{ game.event }}</label>
-                                                   <label for="" class="text-white">{{ game.gener }}</label>
 
                                                    <br>
 

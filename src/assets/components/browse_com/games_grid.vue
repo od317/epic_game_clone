@@ -138,7 +138,35 @@
                 num:12
             }
         ]
+    },
+    {
+        type:'features',
+        num:3,
+        on:false,
+        content:[
+            {
+                name:'Controller Support',
+                set:'cp',
+                num:13
+            },
+            {
+                name:'Cloud Saves',
+                set:'cs',
+                num:14
+            },
+            {
+                name:'Single Player',
+                set:'sp',
+                num:15
+            },
+            {
+                name:'Multiplayer',
+                set:'mp',
+                num:16
+            }
+        ]
     }
+    
    ])
 
     
@@ -187,7 +215,6 @@
             pos.value = new_pos
             view_grid.value = gamesgrid2.value.slice(start.value,end.value)
             
-            console.log(gamesgrid2.value.length - (4*12)+"  "+end.value)
             
         window.scrollTo({ top: 0, behavior:'smooth'})
 
@@ -246,7 +273,16 @@
               
               c1 = filters.value[0] == 'all' || i.event == filters.value[0]
               
-              c3 = filters.value[2] == 'all' || i.gener == filters.value[2] 
+              let gener = false 
+              
+              for(let g of i.gener){
+                if(g===filters.value[2]){
+                gener=true
+                break
+                }
+              }
+
+              c3 = filters.value[2] == 'all' || gener
 
               switch(filters.value[1]){
                 case "un-10":
@@ -271,7 +307,19 @@
                     c2=true
                     break                
               }
-              return c1&&c2&&c3
+
+              let features = false
+
+              for(let f of i.features){
+                if(f===filters.value[3]){
+                features=true
+                break
+                }
+              }
+
+              c4 = filters.value[3] == 'all' || features
+
+              return c1&&c2&&c3&&c4
        })
     end_num.value = Math.ceil(gamesgrid2.value.length/12)
     }
@@ -393,7 +441,6 @@ let remove_wish = (game)=>{
   wlist = wlist.filter(i=>{
    return i.name !== game.name
   })
-  console.log(game)
   game.ro=true
   let s = setTimeout(()=>{
    game.inw=false
@@ -433,6 +480,19 @@ let remove_wish = (game)=>{
       })
       
       if(useRoute().query.filter){
+        let is =false
+        for(let o of drop_list.value){
+            for(let c of o.content){
+                if(c.set === useRoute().query.filter ){
+                    is=true
+                    break
+                }
+            }
+            if(is) break
+        }
+        if(is)
+        filter(useRoute().query.filter,3)
+        else
         filter(useRoute().query.filter,0)
       }
 
@@ -580,7 +640,7 @@ let remove_wish = (game)=>{
             
                      
                             <div v-for="drop in drop_list">
-                                    <button @click="drop.on = !drop.on" class=" cursor-pointer text-white flex items-start justify-between px-[1rem] py-[1rem] border-t-2 border-gray-400 text-sm  w-full">
+                                    <button @click="drop.on = !drop.on" class=" cursor-pointer text-white flex items-start justify-between px-[1rem] py-[1rem] border-t-2 border-gray-400 text-sm text-gray-400  hover:text-white w-full">
                                         <label class="cursor-pointer" for="">{{ drop.type }}</label>
                                         <label :class="`cursor-pointer transition-all flex items-center text-center justify-center duration-300 ${drop.on? ' rotate-180':'' }`"><ion-icon  name="arrow-dropdown"></ion-icon></label>
                                     </button>
