@@ -12,7 +12,7 @@ const props = defineProps({
    let free_games = props.free_games 
 
    let router_push_more = ()=>{
-      router.push('/browse?filter=free games')
+      router.push('/browse?filter=free')
    }
 
    let router_push_game = (game)=>{
@@ -23,7 +23,7 @@ const props = defineProps({
 
 <template>
 
-   <div class="hidden w-screen md:flex items-start justify-center mb-[3rem]">
+   <div class="hidden w-screen md:flex items-start justify-center mb-[4rem]">
 
         <div class="flex flex-col rounded-md items-center pt-[2rem] justify-center w-[78%] bg-dark3">
                 

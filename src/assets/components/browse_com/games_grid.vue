@@ -484,16 +484,14 @@ let remove_wish = (game)=>{
         for(let o of drop_list.value){
             for(let c of o.content){
                 if(c.set === useRoute().query.filter ){
+                    filter(useRoute().query.filter,o.num)            
+                    drop_list.value[o.num].on=true
                     is=true
                     break
                 }
             }
             if(is) break
         }
-        if(is)
-        filter(useRoute().query.filter,3)
-        else
-        filter(useRoute().query.filter,0)
       }
 
     
@@ -764,13 +762,11 @@ let remove_wish = (game)=>{
                    <button @click="dis_show = !dis_show" class="text-white text-[1.1rem] relative">
 
                 <label for=""  class=" cursor-pointer text-gray-500">show:</label>
-                <label for="" class="text-white cursor-pointer ml-1">{{ show }}^</label>
+                <label for="" class="text-white cursor-pointer ml-1">{{ show }}</label>
                 <div :class="` absolute z-10 bg-dark3 w-[250%] rounded-sm ${ !dis_show ? 'hidden':'block' } `">
                 
                     <div class="flex flex-col justify-start items-start p-[1rem] text-[1rem] text-white">
-                        <button @click="show_c('all')">All</button>
-                        <button @click="show_c('new')">new</button>
-                        <button @click="show_c('cs')">coming soon</button>
+                        <button @click="show_c('random')">random</button>
                         <button @click="show_c('alpha')">alpha</button>
                         <button @click="show_c('hl')"> h to l</button>
                         <button @click="show_c('lh')"> l to h</button>

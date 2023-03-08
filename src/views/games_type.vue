@@ -719,13 +719,11 @@ if(key_word_input.value!==""){
                    <button @click="dis_show = !dis_show" class="text-white text-[1.1rem] relative">
 
                 <label for=""  class=" cursor-pointer text-gray-500">show:</label>
-                <label for="" class="text-white cursor-pointer ml-1">{{ show }}^</label>
+                <label for="" class="text-white cursor-pointer ml-1">{{ show }}</label>
                 <div :class="` absolute z-10 bg-dark3 w-[250%] rounded-sm ${ !dis_show ? 'hidden':'block' } `">
                 
                     <div class="flex flex-col justify-start items-start p-[1rem] text-[1rem] text-white">
-                        <button @click="show_c('all')">All</button>
-                        <button @click="show_c('new')">new</button>
-                        <button @click="show_c('cs')">coming soon</button>
+                        <button @click="show_c('random')">random</button>
                         <button @click="show_c('alpha')">alpha</button>
                         <button @click="show_c('hl')"> h to l</button>
                         <button @click="show_c('lh')"> l to h</button>
