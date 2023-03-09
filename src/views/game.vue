@@ -889,7 +889,7 @@ window.scrollTo({
 
              </div>
 
-             <div class=" sticky top-[10%] pt-[.5rem] pb-[.7rem] flex px-[1rem]  text-white text-[1.5rem] bg-dark1 z-30">
+             <div class=" sticky top-[10%] md:pt-[.5rem] pt-[1.5rem] pb-[.7rem] flex px-[1rem]  text-white text-[1.5rem] bg-dark1 z-30">
                                <button @click="change_nav('over')" :class="` border-b-2 border-opacity-0 ${nav=='over'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">overview</button>
                                <button @click="change_nav('ach')" :class="`ml-[2rem] border-b-2 border-opacity-0 ${nav=='ach'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">achievements</button>
 
