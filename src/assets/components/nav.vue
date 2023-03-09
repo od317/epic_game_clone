@@ -129,7 +129,10 @@
     {
       page.value = 'browse'
     }
-  
+    else if(window.location.href.split('/')[3].substring(0,'4')=='cart'||window.location.href.split('/')[3].substring(0,'6')=='games')
+    {
+      page.value = 'cart'
+    }
 
   },1)
 

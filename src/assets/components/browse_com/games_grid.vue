@@ -638,7 +638,7 @@ let remove_wish = (game)=>{
             
                      
                             <div v-for="drop in drop_list">
-                                    <button @click="drop.on = !drop.on" class=" cursor-pointer text-white flex items-start justify-between px-[1rem] py-[1rem] border-t-2 border-gray-400 text-sm text-gray-400  hover:text-white w-full">
+                                    <button @click="drop.on = !drop.on" class=" cursor-pointer  flex items-start justify-between px-[1rem] py-[1rem] border-t-2 border-gray-400 text-sm text-gray-400  hover:text-white w-full">
                                         <label class="cursor-pointer" for="">{{ drop.type }}</label>
                                         <label :class="`cursor-pointer transition-all flex items-center text-center justify-center duration-300 ${drop.on? ' rotate-180':'' }`"><ion-icon  name="arrow-dropdown"></ion-icon></label>
                                     </button>

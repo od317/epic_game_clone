@@ -833,37 +833,21 @@ let games_list =[
                 },
             ],
             adds:[
-                {
+                {   mainname:"dishonored2",
+                    gener:['fps','ac','adv'],
+                    features:['sp','cp'],
                     img:'https://cdn.akamai.steamstatic.com/steam/apps/614570/capsule_616x353.jpg?t=1603891882',
+                    logoimg:'https://m.media-amazon.com/images/M/MV5BMDI2YThmNjktYjczNy00ZWNkLWE5ODEtZjhjMGExZGFiNTUyXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_.jpg',
                     name:'Dishonored  death of the outsider',
                     text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
-                    type:'ADD-ON',
+                    type:'Add-on',
                     dis:null,
                     price:'2.39',
                     oldprice:null,
-                    date:null
-                },
-                {
-                    img:'https://cdn.akamai.steamstatic.com/steam/apps/614570/capsule_616x353.jpg?t=1603891882',
-                    name:'Dishonored  death of the outsider',
-                    text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
-                    type:'ADD-ON',
-                    dis:null,
-                    price:'2.39',
-                    oldprice:null,
-                    date:null
-                },
-                {
-                    img:'https://cdn.akamai.steamstatic.com/steam/apps/614570/capsule_616x353.jpg?t=1603891882',
-                    name:'Dishonored  death of the outsider',
-                    text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
-                    type:'ADD-ON',
-                    dis:null,
-                    price:'2.39',
-                    oldprice:null,
-                    date:null
-                },
-                
+                    date:null,
+                    inw:false,
+                    ro:false,
+                },                
             ],
             game_disc:[
                 {
@@ -2003,6 +1987,7 @@ let new_old = [true,false]
 for(let game of games_list){
     games.set(game.name,{
         name:game.name,
+        type:'basegame',
         dev:game.dev,
         pub:game.pub,
         rdate:game.rdate,

@@ -23,7 +23,7 @@ const props = defineProps({
 
 <template>
 
-   <div class="hidden w-screen md:flex items-start justify-center mb-[4rem]">
+   <div class="hidden w-screen md:flex items-start justify-center mb-[4rem] mt-[5rem]">
 
         <div class="flex flex-col rounded-md items-center pt-[2rem] justify-center w-[78%] bg-dark3">
                 

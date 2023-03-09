@@ -165,14 +165,26 @@ for(let g of wlist){
  return
 }
 let game = games.get(game2.name)
-if(game)
-wlist.push(game)
+if(game2.type=='basegame'){
+   if(game)
+   wlist.push(game)
+  }
+else
+wlist.push(game2)
 
 game2.ro=true
 let s = setTimeout(()=>{
     game2.ro=false
     game2.inw=true
+    if(game2.type=='basegame')
     games.get(game2.name).inw=true
+    else{
+        for(let t of games.get(game2.mainname).adds){
+            if(t.name == game2.name){
+                t.inw=true
+            }
+        }
+    }
   },1000)
 
 localStorage.setItem('wish_list',JSON.stringify(wlist))
@@ -191,8 +203,15 @@ game.ro=true
 let s = setTimeout(()=>{
  game.inw=false
  game.ro=false
- games.get(game.name).inw=false
-},1000)
+ if(game2.type=='basegame')
+    games.get(game.name).inw=false
+    else{
+        for(let t of games.get(game2.mainname)){
+            if(t.name == game.name){
+                t.inw=false
+            }
+        }
+    }},1000)
 localStorage.setItem('wish_list',JSON.stringify(wlist))
 
 }
@@ -231,6 +250,35 @@ let router_push_game_type = (g)=>{
 let router_push_game_browse = (f)=>{
     router.push('/browse?filter='+f)
 }
+
+
+let in_ed_add = (t1,t2)=>{
+
+    if(t2=='c'){
+        let cart = localStorage.getItem('cart')? JSON.parse(localStorage.getItem('cart')) : [] 
+        for(let c of cart){
+            if(t1.name == c.name)
+               return true
+        }
+    }
+    else{
+        let wlist2 = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : [] 
+        for(let c of wlist2){
+            if(t1.name == c.name)
+               return true
+        }
+    }
+    return false
+}
+
+
+let ed_add_push = (t)=>{
+    if(t=='c')
+    router.push('/cart')
+    else
+    router.push('/wishlist')
+}
+
 
 window.scrollTo({
         top:0   ,
@@ -679,8 +727,11 @@ window.scrollTo({
 
                                                                     </div>
                                                             
-                                                                    <button class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem]  rounded-sm hover:bg-gray-400 hover:bg-opacity-30 ">add to cart</button>
-                                                                    <button @click=" add_wish(game) " class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem] rounded-sm hover:bg-gray-400 hover:bg-opacity-30 ">add to wishlist</button>
+                                                                    <button v-if="!in_ed_add(ed,'c')" @click="addcart(ed) " class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem]  rounded-sm hover:bg-gray-400 hover:bg-opacity-30 ">add to cart</button>
+                                                                    <button v-else @click="ed_add_push('c') " class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem]  rounded-sm hover:bg-gray-400 hover:bg-opacity-30 ">view in cart</button>
+                                                                    <button v-if="!in_ed_add(ed,'w') && !ed.inw" @click=" add_wish(ed) " class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem] rounded-sm hover:bg-gray-400 hover:bg-opacity-30 ">add to wishlist</button>
+                                                                    <button v-else @click="ed_add_push('w') " class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem]  rounded-sm hover:bg-gray-400 hover:bg-opacity-30 ">view in wishlist</button>
+
 
                                                         </div>
                                                         
@@ -1014,6 +1065,47 @@ window.scrollTo({
 
                         </div>
 
+
+
+
+                        <div class="text-white mt-[2rem]">
+                            <label class="text-[1.1rem] mb-[.5rem]" for="">Add ons</label>
+                            
+                            <div class="flex flex-col mb-[1rem]" v-for="ed in game.adds">
+                            
+                                <img class="rounded-md" :src="ed.img" alt="">
+                            
+                                <div class="flex flex-col items-center justify-center bg-dark2 ">
+                                   
+                                    <div class="flex flex-col items-center border-b-[.1rem] border-b-gray-400">
+                                        <div class="mt-[1rem] flex items-center w-[100%] justify-center">
+                                                <label class="mr-[.2rem] bg-dark3 py-[.2rem] px-[.4rem]" for="">Add on</label>
+                                                <label for="">{{ed.name}}</label>
+                                        </div>
+
+                                        <label class=" flex items-center w-[75%] mt-[.5rem] mb-[2rem] justify-center" for="">{{ed.text}}</label>
+                                   
+                                    </div>
+                                
+
+                                                                     
+                                        <div class="flex flex-col w-full items-center mt-[1.5rem]">
+                                            <label class="text-[1.1rem] mb-[.5rem]" for="">{{ ed.price }}$</label> 
+                                            <button v-if="!in_ed_add(ed,'c')" @click="addcart(ed) " class="w-[90%] py-[.6rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500">add to cart</button>
+                                            <button v-else @click="ed_add_push('c') " class="w-[90%] py-[.6rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500">view in cart</button>
+                                            <button v-if="!in_ed_add(ed,'w') && !ed.inw" @click=" add_wish(ed) " class="w-[90%] py-[.2rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]">add to wishlist</button>
+                                            <button v-else @click="ed_add_push('w') " class="w-[90%] py-[.2rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]">view in wishlist</button>
+
+                                        </div>
+
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
 
                         
                                     <div class="flex flex-col text-white mb-[2rem]">

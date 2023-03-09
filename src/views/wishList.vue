@@ -205,13 +205,21 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
     let filter_helper = ()=>{
 
         gamesgrid2.value = wlist.value.filter(i=>{
-                   
+              console.log(i)
               let c1 = false, c2= false, c3 = false , c4=false , c5=false, c6=false, c7=false , c8=false
               
               c1 = filters.value[0] == 'all' || i.event == filters.value[0]
               
-              c3 = filters.value[2] == 'all' || i.gener == filters.value[2] 
+              let gener = false 
+              
+              for(let g of i.gener){
+                if(g===filters.value[2]){
+                gener=true
+                break
+                }
+              }
 
+              c3 = filters.value[2] == 'all' || gener
               switch(filters.value[1]){
                 case "un-10":
                     c2 = i.price<=10
@@ -235,7 +243,18 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
                     c2=true
                     break                
               }
-              return c1&&c2&&c3
+              let features = false
+
+              for(let f of i.features){
+                if(f===filters.value[3]){
+                features=true
+                break
+                }
+              }
+
+              c4 = filters.value[3] == 'all' || features
+
+              return c1&&c2&&c3&&c4
        })
     }
 
@@ -307,22 +326,24 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
             for(let g of gl){
                 for(let g2 of g){
                     if(g2.name == game.name)
+                       if(game.type=='basegame')
                        g2.inw = false
                 }
             }
         }
        }
-
+       if(game.type=='basegame')
        gamesc.get(game.name).inw=false
        localStorage.setItem('wish_list',JSON.stringify(wlist.value))
 
  }
 
 
- let wish_push_router = (name)=>{
-
-       router.push('game/'+name)
-
+ let wish_push_router = (game)=>{
+       if(game.type=='basegame')      
+       router.push('game/'+game.name)
+       else
+       router.push('game/'+game.mainname)
  }
 
  window.scrollTo({top:0})
@@ -369,14 +390,15 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
 
                   <div v-for="game in gamesgrid2" :key="game" class="bg-dark2 p-[1rem] mt-[1.2rem]
                     flex flex-col hover:bg-gray-400 transition-all duration-150 hover:bg-opacity-30 cursor-pointer"
-                    @Click="wish_push_router(game.name)">
+                    @Click="wish_push_router(game)">
                           
                     <div class="flex flex-row justify-between text-white ">   
                         
                         <div class="flex flex-row">
-                               <img  class="w-[20%] mr-[1rem] rounded-md" :src="game.logoimg"/>
-                                <div class="flex flex-col h-full">
-                                    <label class="py-[.3rem] px-[.5rem] w-fit bg-dark4 rounded-md text-center text-[.8rem] cursor-pointer"> Base game </label>
+                               <img   class="w-[20%] mr-[1rem] rounded-md" :src="game.logoimg"/>
+                               <div class="flex flex-col h-full">
+                                    <label v-if="game.type == 'basegame'" class="py-[.3rem] px-[.5rem] w-fit bg-dark4 rounded-md text-center text-[.8rem] cursor-pointer"> Base game </label>
+                                    <label v-else class="py-[.3rem] px-[.5rem] w-fit bg-dark4 rounded-md text-center text-[.8rem] cursor-pointer"> Add-on </label>
                                     <label class="text-start text-[1.2rem] cursor-pointer">{{ game.name }}</label>
                                 </div>
                            </div>
@@ -537,9 +559,7 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
                             <div :class="` absolute z-10 bg-dark3 w-[250%] rounded-sm ${ !dis_show ? 'hidden':'block' } `">
                         
                                 <div class="flex flex-col justify-start items-start p-[1rem] text-[1rem] text-white">
-                                    <button @click="show_c('all')">All</button>
-                                    <button @click="show_c('new')">new</button>
-                                    <button @click="show_c('cs')">coming soon</button>
+                                    <button @click="show_c('random')">random</button>
                                     <button @click="show_c('alpha')">alpha</button>
                                     <button @click="show_c('hl')"> h to l</button>
                                     <button @click="show_c('lh')"> l to h</button>
@@ -549,7 +569,7 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
 
                     </button>
 
-                    <div v-for="game in gamesgrid2" :key="game" class="bg-dark2 p-[1rem] mt-[1.2rem]
+                    <div @Click="wish_push_router(game)" v-for="game in gamesgrid2" :key="game" class="bg-dark2 p-[1rem] mt-[1.2rem]
                     flex flex-col">
                           
                     <div class="flex flex-row text-white">   
@@ -570,14 +590,14 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
                            
                     <label class="text-white mt-[.5rem]">sales end at 43/12/21 31:13</label>
 
-                    <button @click="addcart(game)" :class="`w-full ${check_in_cart(game)? 'hidden':''} border-[.1rem] border-gray-400 
+                    <button @click.stop @click="addcart(game)" :class="`w-full ${check_in_cart(game)? 'hidden':''} border-[.1rem] border-gray-400 
                     text-center text-white text-[1.1rem] py-[.8rem] mt-[2rem] rounded-md`">Add to cart</button>
 
-                    <router-link  to="cart"><button :class="`w-full ${!check_in_cart(game)? 'hidden':''} border-[.1rem] border-gray-400 
+                    <router-link @click.stop  to="cart"><button :class="`w-full ${!check_in_cart(game)? 'hidden':''} border-[.1rem] border-gray-400 
                     text-center text-white text-[1.1rem] py-[.8rem] mt-[2rem] rounded-md`">view in cart</button></router-link>
 
 
-                    <button @click="remove(game)" class="border-b-[.1rem] text-gray-400 text-start w-fit mt-[1.2rem]">Remove</button>
+                    <button @click.stop @click="remove(game)" class="border-b-[.1rem] text-gray-400 text-start w-fit mt-[1.2rem]">Remove</button>
 
                     </div>
             
