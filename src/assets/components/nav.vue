@@ -195,11 +195,11 @@
 </div>
 
 <div :class="`text-white md:hidden  h-full z-50 pb-[3.7rem]  w-[100%] absolute   flex flex-row 
-                     transiton-all duration-200  ${!offcanv? 'translate-x-[-101%]':''}`">
+                     transiton-all duration-200  ${!offcanv? 'translate-x-[-101%]':''} z-[100]`">
 
                     <div class="bg-dark2 flex flex-col justify-between
-                     transiton-all duration-200 pt-[2rem] text-white w-[70%]  h-full z-50 "> 
-                     <div class=" flex grow flex-col">
+                     transiton-all duration-200 pb-[3rem]  text-white w-[70%]  h-screen z-[100] "> 
+                     <div class=" flex grow flex-col ">
                           <button class="text-start pl-[1rem] mb-[1rem] py-[.5rem] border-b-[.1rem] border-gray-400">Store</button>
                           <button class="text-start pl-[1rem] mb-[1rem] py-[.5rem] border-b-[.1rem] border-gray-400">Support</button> 
                           <button class="text-start pl-[1rem] mb-[1rem] py-[.5rem] border-b-[.1rem] border-gray-400">unrealengine</button> 
