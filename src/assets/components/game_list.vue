@@ -18,12 +18,21 @@ const props = defineProps({
 
  switch(type){
   case 'ac':
-    view_type.value = 'action games'
+    view_type.value = 'Top Action Games'
     break
   case 'adv':
-    view_type.value = 'adventuer games'
+    view_type.value = 'Top adventuer Games'
     break
-  
+    case 'fps':
+    view_type.value = 'Top Fps Games'
+    break
+    case 'ac-adv':
+    view_type.value = 'Top Action Adventure Games'
+    break
+    case 'mp':
+    view_type.value = 'Top Mulyiplayer Games'
+    break
+    
   default:
     break  
  }
@@ -118,9 +127,14 @@ let remove_wish = (game)=>{
        md:w-[100%]
      ">
 
-     <router-link class=" cursor-pointer" :to="`games/`+type"> 
+     <router-link v-if="type!='mp'" class=" cursor-pointer" :to="`games/`+type"> 
      <label for="" class="text-xl text-white cursor-pointer">{{ view_type }}</label>
      </router-link>
+
+     <router-link v-else class=" cursor-pointer" :to="`/browse?filter=`+type"> 
+     <label for="" class="text-xl text-white cursor-pointer">{{ view_type }}</label>
+     </router-link>
+
         <div>
           <button @click="backward" :disabled="parseInt(slide_perecent)<=0" :class="`disabled:bg-[#0f0f0f] text-white bg-[#212121] mx-2 rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropleft" ></ion-icon></button>
           <button @click="forward" :disabled="parseInt(slide_perecent)>=300" :class="` disabled:bg-[#0f0f0f] text-white bg-[#212121] rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropright"></ion-icon></button>   

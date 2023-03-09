@@ -7,7 +7,7 @@ import games from '../games'
 import ach from '../assets/components/game.vue/ach.vue' 
 import flic from '../assets/components/game.vue/flic_game.vue'
 import { useRouter } from "vue-router";
-
+import adds_grid from '../assets/components/game.vue/adds_grid.vue'
 let router = useRouter()
 
 const props = defineProps({
@@ -297,7 +297,7 @@ window.scrollTo({
                <div class="w-[78%]   text-white ">
 
                          <div class='px-[1.2rem]'>
-                            <label class=" text-[2rem] ">{{ game.name }}</label>
+                            <label  class="  text-[2rem] ">{{ game.name }}</label>
                             <div v-if=" nav=='over' " class="flex items-center ">
                                   
                                   <div class="mt-[1rem] flex items-center text-lg">
@@ -346,10 +346,12 @@ window.scrollTo({
 
 
 
-                        <div :class="`flex  text-[1.4rem] text-white sticky top-[4rem] bg-dark1 z-30 p-[1.2rem] pb-[1rem]`">
+                        <div :class="`flex  text-[1.4rem] text-white sticky top-[4rem] bg-dark1 z-50 p-[1.2rem] pb-[1rem]`">
 
-                            <button @click="change_nav('over')" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='over'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">over</button>
-                               <button @click="change_nav('ach')" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='ach'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">ach</button>
+                            <button @click="change_nav('over')" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='over'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">overview</button>
+                               <button @click="change_nav('ach')" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='ach'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">achivments</button>
+                               <button @click="change_nav('adds')" :class="`mx-[2rem] border-b-4 border-opacity-0 ${nav=='adds'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">Add ons</button>
+
                                 
                         </div>
 
@@ -839,6 +841,7 @@ window.scrollTo({
 
                        <ach v-if="nav=='ach'" :game="game"/>
 
+                       <adds_grid v-else :game="game"/>
 
                   </div>
 
@@ -855,11 +858,12 @@ window.scrollTo({
 
              <div class="flex flex-col text-white text-[1.8rem] px-[1rem]">
                 
-                <label for="">{{ game.name }}</label>
+                <label v-if=" nav=='over' || nav=='ach' " for="">{{ game.name }}</label>
+                <label class="text-sm" v-if=" nav=='adds' " for="">{{ game.name }}</label>
+                <label class="text-[1.6rem]" v-if=" nav=='adds' " for="">DLC and Add-ons</label>
 
-                <div class="flex">
-                    <label class="bg-dark2 text-[1rem] flex flex-row items-center justify-center px-[.2rem] mt-[.5rem] py-[.1rem] rounded-md" for="">
-                        <label for="">{{ game.rate }}</label>
+                <div v-if=" nav=='over' " class="flex">
+                    <label class="text-[1rem] flex flex-row items-center justify-center px-[.2rem] mt-[.5rem] py-[.1rem] rounded-md" for="">
                         <label for="">
                                                             <div class="flex items-center">
                                                                 <ion-icon v-if="game.rate>=1" name="star"></ion-icon>
@@ -883,15 +887,18 @@ window.scrollTo({
                                                                 <ion-icon v-else-if="game.rate<5" name="star-outline"></ion-icon>   
 
                                                             </div>
-                                                        </label></label>
+                                                        </label>
+                                                        <label class="bg-dark2 ml-[.5rem] rounded-lg px-[.5rem] py-[.1rem]" for="">{{ game.rate }}</label>
+                                                    </label>
                     
                 </div>
 
              </div>
 
-             <div class=" sticky top-[10%] md:pt-[.5rem] pt-[1.5rem] pb-[.7rem] flex px-[1rem]  text-white text-[1.5rem] bg-dark1 z-30">
+             <div class=" sticky top-[10%] md:pt-[.5rem] pt-[1.5rem] pb-[.7rem] flex px-[1rem] text-lg text-white text-[1.5rem] bg-dark1 z-50">
                                <button @click="change_nav('over')" :class="` border-b-2 border-opacity-0 ${nav=='over'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">overview</button>
                                <button @click="change_nav('ach')" :class="`ml-[2rem] border-b-2 border-opacity-0 ${nav=='ach'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">achievements</button>
+                               <button @click="change_nav('adds')" :class="`ml-[2rem] border-b-2 border-opacity-0 ${nav=='adds'?' border-b-4 border-opacity-100 border-white ':'hover:border-opacity-100 border-gray-400 transition-all duration-200'}`">Add ons</button>
 
 
              </div>
@@ -1177,8 +1184,9 @@ window.scrollTo({
 
               
 
-             <ach v-else :game="game"/>
+             <ach v-else-if="nav=='ach'" :game="game"/>
 
+             <adds_grid v-else :game="game" />
 
 
     </div>

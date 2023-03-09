@@ -41,7 +41,7 @@
          case 'adv':
             title="Adventuer"
             break
-        case 'ac/adv':
+        case 'ac-adv':
             title="Action-Adventuer"
             break
         case 'fps':
@@ -53,7 +53,7 @@
 
 
        let event = ['2kpub','febs','thq']
-       let geners = ['fps','adv','ac','ac/adv']
+       let geners = ['fps','adv','ac','ac-adv']
        let price_filt = ['free',"un-10","un-20","un-30","up-14",'dis']
        let new_old = [true,false]
        let all_filters = [event,price_filt,geners]
@@ -583,7 +583,7 @@ if(key_word_input.value!==""){
 
          
                 <div v-for="drop in drop_list">
-                        <button @click="drop.on = !drop.on" class="text-gray-400 hover:text-white cursor-pointer text-white flex items-start justify-between px-[1rem] py-[1rem] border-t-2 border-gray-400 text-sm  w-full">
+                        <button @click="drop.on = !drop.on" class=" hover:text-white cursor-pointer text-white flex items-start justify-between px-[1rem] py-[1rem] border-t-2 border-gray-400 text-sm  w-full">
                             <label class="cursor-pointer" for="">{{ drop.type }}</label>
                             <label :class="`cursor-pointer transition-all flex items-center text-center justify-center duration-300 ${drop.on? ' rotate-180':'' }`"><ion-icon  name="arrow-dropdown"></ion-icon></label>
                         </button>

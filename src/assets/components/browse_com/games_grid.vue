@@ -40,7 +40,7 @@
 
 
        let event = ['2kpub','febs','thq']
-       let geners = ['fps','adv','ac','ac/adv']
+       let geners = ['fps','adv','ac','ac-adv']
        let price_filt = ['free',"un-10","un-20","un-30","up-14",'dis']
        let new_old = [true,false]
        let all_filters = [event,price_filt,geners]
@@ -134,7 +134,7 @@
             },
             {
                 name:'ac/adv',
-                set:'ac/adv',
+                set:'ac-adv',
                 num:12
             }
         ]
