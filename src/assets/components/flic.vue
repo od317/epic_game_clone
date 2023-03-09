@@ -6,7 +6,7 @@
                        flex  items-end text-white `">
                     <div class="absolute opacity-30 w-full bg-black h-full rounded-[1rem]   text-white  z-30">
                     </div>
-                     <img class=" absolute  h-full w-full rounded-[1rem]" src="https://s1.1zoom.me/b4854/375/Dishonored_Warriors_2_Emily_Kaldwin_Head_533170_600x800.jpg" alt="">
+                     <img class=" absolute  h-full w-full rounded-[1rem]" :src="game.logoimg" alt="">
                         <div class="flex flex-col  z-40">
                                 <img class="w-[60%] mb-[1rem] ml-[1rem]" :src="game.slide_img" alt="">
                                 <label class="text-[.7rem] text-start pl-[1rem] font-bold" for="">Now on epic</label>

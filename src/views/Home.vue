@@ -11,6 +11,8 @@
  import gamess from '../games'
  import games_lists from '../gamelist'
  import tops_grids from '../tops_grid'
+ import addons from '../assets/components/addons.vue'
+
 
  let router = useRouter(); 
 
@@ -436,7 +438,7 @@ let remove_wish = (game)=>{
 <list_game :gamelist="games_list1" type="fps"/>
 
 
-
+<addons :type="'distiny 2'" />
 
 
 <!--gamelist4-->
