@@ -94,7 +94,7 @@ for(let w of wlist){
 <div  class="hidden mb-[4rem] md:flex flex-col  px-[1.5rem] 
 md:flex-col  md:items-center">
     
- <div class="flex flex-col w-[78%]">
+ <div class="flex flex-col lg:w-[78%] md:w-[90%]">
     
     <div class="flex flex-row justify-between items-center">
 
@@ -171,7 +171,7 @@ md:flex-col  md:items-center">
         </div>
         
         <div class="flex flex-col">
-        <div class="flex mb-[.5rem] flex-row justify-between border-b-[.1rem] border-b-gray-400 pb-[2rem]">
+        <div class="flex mb-[.5rem] flex-col justify-between border-b-[.1rem] border-b-gray-400 pb-[2rem]">
             <label for="">taxes</label>
             <label class="text-gray-400" for="">calculated at check out</label>
         </div>
@@ -239,7 +239,7 @@ md:flex-row md:w-[78%] md:items-center `">
 
 
         <div @click="cart_push_router(game)" v-for="game in gamesgrid2" :key="game" class="bg-dark2 rounded-md p-[1rem] mt-[1.2rem]
-        flex flex-col">
+        flex flex-col w-full">
               
         <div class="flex flex-row  text-white">   
                    <img  class="w-[20%] mr-[1rem] rounded-md" :src="game.logoimg"/>

@@ -8,7 +8,6 @@
                     </div>
                      <img class=" absolute  h-full w-full rounded-[1rem]" :src="game.logoimg" alt="">
                         <div class="flex flex-col  z-40">
-                                <img class="w-[60%] mb-[1rem] ml-[1rem]" :src="game.slide_img" alt="">
                                 <label class="text-[.7rem] text-start pl-[1rem] font-bold" for="">Now on epic</label>
                                 <label class="text-start w-[90%] pl-[1rem] mt-[.4rem] text-[.9rem] font-bold mb-[1rem]" for="">Break the cycle. Fight to survive as this 
                                 award-winning third-person shooter brings Selene's story to PC.</label>

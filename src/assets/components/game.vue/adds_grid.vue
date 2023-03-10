@@ -470,7 +470,7 @@ top:0,
                  <label class="text-[1rem] mt-[.5rem] text-gray-400" for="">Unfortunately I could not find any results matching your search.</label>
                 </div>
 
-        <div v-else class="grid grid-cols-4 gap-x-[1rem]">
+        <div v-else class="grid lg:grid-cols-4 md:grid-cols-3 gap-x-[1rem]">
 
                 <div  @Click="route_push_game(game.mainname)" v-for="game in view_grid" class="  w-full py-[1rem]  ">
                               

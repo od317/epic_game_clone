@@ -40,7 +40,7 @@
 
 
        let event = ['2kpub','febs','thq']
-       let geners = ['fps','adv','ac','ac-adv']
+       let geners = ['fps','adv','ac','ac-adv','rpg','ow']
        let price_filt = ['free',"un-10","un-20","un-30","up-14",'dis']
        let new_old = [true,false]
        let all_filters = [event,price_filt,geners]
@@ -136,7 +136,18 @@
                 name:'ac/adv',
                 set:'ac-adv',
                 num:12
+            },
+            {
+                name:'rpg',
+                set:'rpg',
+                num:12
+            },
+            {
+                name:'open world',
+                set:'ow',
+                num:12
             }
+            
         ]
     },
     {
@@ -460,7 +471,7 @@ let remove_wish = (game)=>{
 
  
       if(key_word_input.value!==""){
-
+        
         gamesgrid2.value=[]
         for(let g of gamesgrid.value){
             if(g.name.substring(0,key_word_input.value.length).toLowerCase() === key_word_input.value.toLowerCase() )
@@ -519,7 +530,7 @@ let remove_wish = (game)=>{
 
 
        <div class=" hidden md:flex w-full justify-center mb-[4rem] md:pt-[2rem]">
-           <div class="md:grid md:w-[78%] md:row-start-1 md:row-end-1   md:grid-cols-4">
+           <div class="md:grid lg:w-[78%] md:row-start-1 lg:row-end-1 lg:px-[0rem] md:w-[90%]  md:grid-cols-4">
 
                        
             <div class="md:text-lg md:row-span-1  md:col-span-3 md:w-[95%]">
@@ -546,7 +557,7 @@ let remove_wish = (game)=>{
                          <label class="text-[1rem] mt-[.5rem] text-gray-400" for="">Unfortunately I could not find any results matching your search.</label>
                         </div>
 
-                <div v-else class="grid grid-cols-4 gap-x-[1rem]">
+                <div v-else class="grid lg:grid-cols-4 md:grid-cols-3 gap-x-[1rem]">
 
                         <div  @Click="route_push_game(game.name)" v-for="game in view_grid" class="  w-full py-[1rem]  ">
                                       
@@ -600,7 +611,8 @@ let remove_wish = (game)=>{
                                             <div class="flex w-full mt-2 items-center">
                                                 <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
                                                 <label v-if="game.dis" for="" class="text-gray-500 text-[.8rem] mr-2 line-through">${{ game.oldprice }}</label>
-                                                <label for="" class="text-white text-[.8rem]">${{ game.price }}</label>
+                                                <label v-if="game.price>0" for="" class="text-white text-[.8rem]">${{ game.price }}</label>
+                                                <label v-else for="" class="text-white text-[.8rem]">Free</label>
                                             </div>
 
 

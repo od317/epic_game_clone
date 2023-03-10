@@ -360,8 +360,8 @@ let remove_wish = (game)=>{
                           <img :src="game.src" :class="` rounded-md z-10 
                             lg:h-full lg:w-[2.5rem]
                             md:h-[75%] md:w-[30%]`" alt="">  
-                          <div class=" ml-5  grid content-center w-full ">
-                            <p class="text-white z-10">{{ game.name }}</p>
+                          <div class=" lg:ml-5 md:ml-1  grid content-center w-full ">
+                            <p class="text-white lg:text-[1rem] md:text-[.7rem] z-10">{{ game.name }}</p>
                             </div>
                             
                         </div>

@@ -126,6 +126,7 @@ let nav = ref('over')
 let change_nav = (v)=>{
 
         nav.value = v
+        console.log(nav.value)
         window.scrollTo({
         top:0   ,
       })
@@ -294,10 +295,14 @@ window.scrollTo({
       <!--large screen-->
       <div class="hidden md:flex justify-center">
 
-               <div class="w-[78%]   text-white ">
+               <div class="lg:w-[78%] lg:px-0 md:px-[2rem]  text-white ">
 
                          <div class='px-[1.2rem]'>
-                            <label  class="  text-[2rem] ">{{ game.name }}</label>
+                        <div class="flex flex-col">
+                            <label v-if=" nav=='over' || nav=='ach' " class="text-xl" for="">{{ game.name }}</label>
+                            <label class="text-xl" v-if=" nav=='adds' " for="">{{ game.name }}</label>
+                            <label class="text-[1.6rem]" v-if=" nav=='adds' " for="">DLC and Add-ons</label>
+                        </div>    
                             <div v-if=" nav=='over' " class="flex items-center ">
                                   
                                   <div class="mt-[1rem] flex items-center text-lg">
@@ -613,7 +618,7 @@ window.scrollTo({
 
 
 
-                         <div v-if="nav=='over'" class=" grid grid-cols-3">
+                         <div v-if="nav=='over'" class=" lg:grid lg:grid-cols-3">
 
 
                             <div class=" col-span-2 p-[1.2rem]">        
@@ -841,7 +846,7 @@ window.scrollTo({
 
                        <ach v-if="nav=='ach'" :game="game"/>
 
-                       <adds_grid v-else :game="game"/>
+                       <adds_grid v-if="nav=='adds'" :game="game"/>
 
                   </div>
 

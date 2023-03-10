@@ -127,12 +127,16 @@ let remove_wish = (game)=>{
        md:w-[100%]
      ">
 
-     <router-link v-if="type!='mp'" class=" cursor-pointer" :to="`games/`+type"> 
+     <router-link v-if="type!='mp'" class="flex flex-row items-center cursor-pointer group " :to="`games/`+type"> 
      <label for="" class="text-xl text-white cursor-pointer">{{ view_type }}</label>
+    <label class="text-[1rem] flex items-center text-center text-white ml-[1rem] group-hover:ml-[2rem] transition-all duration-150" for="">></label>
+
      </router-link>
 
-     <router-link v-else class=" cursor-pointer" :to="`/browse?filter=`+type"> 
+     <router-link v-else class="flex flex-row items-center cursor-pointer group " :to="`/browse?filter=`+type"> 
      <label for="" class="text-xl text-white cursor-pointer">{{ view_type }}</label>
+    <label class="text-[1rem] flex items-center text-center text-white ml-[1rem] group-hover:ml-[2rem] transition-all duration-150" for="">></label>
+
      </router-link>
 
         <div>
@@ -154,8 +158,7 @@ let remove_wish = (game)=>{
                   <div v-for="gl in gamelist" :class="`flex  justify-between w-full  h-fit translate-x-[-${slide_perecent== 100 ? '100':(slide_perecent== 200 ? '200':(slide_perecent== 300 ? '300':'0'))}%] transition-all duration-500`">
             
                       
-                      <div class="group   ml-2 mr-2 relative
-                      md:w-1/5
+                      <div class="group  ml-2 mr-2 relative w-1/6 lg:w-1/5
                       "  v-for="game in gl">
                             
 
@@ -197,10 +200,10 @@ let remove_wish = (game)=>{
 
                               <router-link :to="`game/`+game.name"> 
                            
-                                <div class=" cursor-pointer rounded-md absolute flex items-start justify-end h-[17rem] p-3  w-full bg-gray-200 opacity-0 hover:opacity-10 transition-all duration-200">
+                                <div class=" cursor-pointer rounded-md absolute flex items-start justify-end lg:h-[17rem] md:h-[60%] p-3  w-full bg-gray-200 opacity-0 hover:opacity-10 transition-all duration-200">
                               </div>
                       
-                              <img :src="game.logoimg" alt=""  :class="`${ game.last ? 'w-0 h-0':'w-full lg:h-[17rem] md:h-[17rem]'} rounded-md`">
+                              <img :src="game.logoimg" alt=""  :class="`${ game.last ? 'w-0 h-0':'w-full lg:h-[17rem] md:h-[60%]'} rounded-md`">
                               </router-link>
                    
                       <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-2'}`">

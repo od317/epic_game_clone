@@ -83,7 +83,7 @@ let remove_wish = (game)=>{
 
      <div class="hidden w-full md:flex items-center justify-center">
         
-            <div class="grid grid-cols-3 grid-rows-1   text-white w-[78%]  ">
+            <div class="grid grid-cols-3 grid-rows-1   text-white lg:w-[78%]  ">
  
                      <div  v-for="game_list in games_grid" :class="`px-[1rem] ${game_list.last? '':'border-r border-1px border-dark2'}`">
                             

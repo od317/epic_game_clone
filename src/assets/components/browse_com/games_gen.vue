@@ -58,18 +58,18 @@ const props = defineProps({
 </div>
 
 
-<div  class="hidden md:flex flex-col  w-full h-fit items-center  mb-[4.5rem]">
+<div  class="hidden md:flex flex-col overflow-x-hidden w-full h-fit items-center  mb-[4.5rem]">
   
-  <div class="flex justify-between w-[78%] px-2 mb-4 ">
+  <div class="flex justify-between lg:w-[78%]  md:w-[90%] px-2 mb-4 ">
 
      <label for="" class="text-xl text-white">games-gen</label>
      <div>
-       <button @click="backward" :class="` disabled:bg-[#0f0f0f] text-white bg-[#212121] mx-2 rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropleft" ></ion-icon></button>
-       <button @click="forward"  :class="` disabled:bg-[#0f0f0f] text-white bg-[#212121] rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropright"></ion-icon></button>   
+       <button :disabled="slide" @click="backward" :class="` disabled:cursor-pointer text-white bg-[#212121] mx-2 rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropleft" ></ion-icon></button>
+       <button :disabled="slide" @click="forward"  :class="` disabled:cursor-pointer text-white bg-[#212121] rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropright"></ion-icon></button>   
      </div>
      
   </div>
- <div class="w-[78%] justify-center  overflow-x-hidden ">
+ <div class="lg:w-[78%] md:w-[90%] justify-center  overflow-x-hidden ">
      
      <div  class="flex w-[300%]   flex-row">
              
@@ -89,7 +89,7 @@ const props = defineProps({
                  
                     <div class="flex justify-between ">
                     <img :src="game.imgs[1]" alt=""  :class="`  w-[40%] h-[8rem]   rounded-lg`">
-                    <img :src="game.imgs[0]" alt=""  :class="` translate-x-[60%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  absolute w-[40%] h-[8rem]   rounded-lg`">
+                    <img :src="game.imgs[0]" alt=""  :class="` translate-x-[60%]  absolute w-[40%] h-[8rem]   rounded-lg`">
                     <img :src="game.imgs[2]" alt=""  :class="`  w-[40%] h-[8rem]  rounded-lg`">
 
                    </div>       

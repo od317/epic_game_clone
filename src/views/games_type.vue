@@ -46,14 +46,20 @@
             break
         case 'fps':
             title='fps'
-            break           
-       }
+            break
+        case 'rpg':
+            title='rpg'
+            break
+        case 'ow':
+            title='open world'
+            break                             
+       }    
 
        
 
 
        let event = ['2kpub','febs','thq']
-       let geners = ['fps','adv','ac','ac-adv']
+       let geners = ['fps','adv','ac','ac-adv','rpg','ow']
        let price_filt = ['free',"un-10","un-20","un-30","up-14",'dis']
        let new_old = [true,false]
        let all_filters = [event,price_filt,geners]
@@ -401,12 +407,19 @@ if(key_word_input.value!==""){
 
       watch(key_word_input,()=>{
 
+        console.log(key_word_input+"  ")
         
         if(key_word_input.value!==""){
 
         gamesgrid2.value=[]
         for(let g of gamesgrid.value){
-            if(g.name.substring(0,key_word_input.value.length).toLowerCase() === key_word_input.value.toLowerCase() && g.gener=== type  )
+            console.log(g.name.substring(0,key_word_input.value.length).toLowerCase()+"  "+key_word_input.value.toLowerCase())
+            let gener=false
+            for(let gen of g.gener){
+                if(gen === type)
+                  gener=true
+            }
+            if(g.name.substring(0,key_word_input.value.length).toLowerCase() === key_word_input.value.toLowerCase() && gener )
             gamesgrid2.value.push(g)
         }
 
@@ -418,7 +431,12 @@ if(key_word_input.value!==""){
         
         gamesgrid2.value=[]
         for(let g of gamesgrid.value){
-            if( g.gener=== type  )
+            let gener=false
+            for(let gen of g.gener){
+                if(gen === type)
+                  gener=true
+            }
+            if(gener)
             gamesgrid2.value.push(g)
         }
 
@@ -454,7 +472,7 @@ if(key_word_input.value!==""){
 
 
 
-<div class="hidden md:flex flex-col items-start text-white text-[1.7rem] px-[11%] pt-[1rem] bg-dark1">
+<div class="hidden md:flex flex-col items-start text-white text-[1.7rem] px-[8%] pt-[1rem] bg-dark1">
             <label>{{ title }} Games</label>
             <label class="text-[1rem] lowercase w-[40%] mt-[.5rem]">
                 Epic Games Store offers some of the best {{ title }} Games. 
@@ -463,7 +481,7 @@ if(key_word_input.value!==""){
         </div>
 
        <div class=" hidden md:flex w-full justify-center md:pt-[2rem]">
-           <div class="md:grid md:w-[78%] md:row-start-1 md:row-end-1   md:grid-cols-4">
+           <div class="md:grid lg:w-[78%] md:w-[90%] md:row-start-1 md:row-end-1   md:grid-cols-4">
 
                        
             <div class="md:text-lg md:row-span-1  md:col-span-3 md:w-[95%] ">
@@ -492,7 +510,7 @@ if(key_word_input.value!==""){
                          <label class="text-[1rem] mt-[.5rem] text-gray-400" for="">Unfortunately I could not find any results matching your search.</label>
                         </div>
 
-                <div class="grid grid-cols-4 gap-[1rem]">
+                <div class="grid lg:grid-cols-4 md:grid-cols-3 gap-[1rem]">
 
 
 

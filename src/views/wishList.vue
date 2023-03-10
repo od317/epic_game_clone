@@ -364,7 +364,7 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
 
 
 <div class=" hidden md:flex w-full justify-center md:pt-[2rem] mb-[4rem]">
-           <div class="md:grid md:w-[78%] md:row-start-1 md:row-end-1   md:grid-cols-4">
+           <div class="md:grid lg:w-[78%] md:w-[90%] md:row-start-1 md:row-end-1   md:grid-cols-4">
 
                        
             <div class="md:text-lg md:row-span-1  md:col-span-3 md:w-[95%]">

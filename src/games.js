@@ -1762,7 +1762,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#fcfcfc',
-        price:'59.99',
+        price:0,
         dis:null,
         oldprice:null,
         rate:5.0,
@@ -1770,7 +1770,7 @@ let games_list =[
         pub:'Bethesda Softworks',
         rdate:"11/03/22",
         indate:"11/11/6",
-        gener:['fps','ac','adv'],
+        gener:['fps','ac','adv','rpg','ow'],
         features:['sp','cp'],
         col:['top sellers','Top Upcoming Wishlisted'],
         imgs:[
@@ -2010,7 +2010,7 @@ let games_list =[
 ]
 
 let event = ['2kpub','febs','thq']
-let geners = ['fps','adv','ac','ac-adv']
+let geners = ['fps','adv','ac','ac-adv','rpg','ow']
 let price_filt = ['free',"un-10","un-20","un-30","up-14",'dis']
 let new_old = [true,false]
 

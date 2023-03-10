@@ -44,7 +44,7 @@ const props = defineProps({
         </div>
 
 
-      <div v-else  :class="`grid w-[78%]  grid-cols-2 grid-rows-1 gap-[2rem]`">
+      <div v-else  :class="`grid md:px-[2rem] lg:px-0 lg:w-[78%]  grid-cols-2 grid-rows-1 gap-[2rem]`">
 
             <div @Click="router_push(ga.type,ga.dst)" v-for="ga in game_an" class="flex flex-col cursor-pointer max-h-[25rem]">
                 <img  :src="ga.img" alt="" class="rounded-2xl hover:opacity-50 transition-all duration-150 cursor-pointer max-h-[18rem]">

@@ -2,7 +2,7 @@
     
     <div class="md:hidden mt-[4rem]">
  
-         <router-link :to="`games/${type}`"><button class="pl-[1.5rem] text-white">{{ view_type }}</button></router-link> 
+         <router-link :to="`games/${type}`"><button class="pl-[1.5rem] text-[1.4rem] text-white">{{ view_type }}</button></router-link> 
 
     </div>
     
@@ -58,10 +58,19 @@
    let view_type = ref('')
    switch(type){
     case 'ac':
-        view_type.value = 'action games'
+        view_type.value = 'Action Games'
         break
     case 'adv':
-        view_type.value = 'adventuer games'
+        view_type.value = 'Adventuer Games'
+        break
+    case 'fps':
+        view_type.value = 'Top Fps Games'
+        break
+    case 'ac-adv':
+        view_type.value = 'Top Action Adventure Games'
+        break
+    case 'mp':
+        view_type.value = 'Top Mulyiplayer Games'
         break
     default:
         break  

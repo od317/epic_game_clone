@@ -106,7 +106,7 @@
  
 
 
-                 <div class="w-[78%] flex flex-col bg-dark1">
+                 <div class="lg:w-[78%] md:w-[90%] flex flex-col bg-dark1">
 
                    <label class="text-white text-[1.3rem]"  for="">Epic games news</label>
 
