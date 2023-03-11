@@ -8,7 +8,6 @@ const props = defineProps({
     let game = props.game
     let view_sort = ref(false)
     let sort_op = ref('Alphabetical')
-    console.log(game.ach_img)
     
     
     let ach = ref(game.achievements)
@@ -24,7 +23,6 @@ const props = defineProps({
 
     let totlaxp = ref(0)
     for(let x of ach.value){
-        console.log(x.name)
         totlaxp.value+= parseInt(x.xp.split(" ")[0])
     }
 

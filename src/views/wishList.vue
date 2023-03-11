@@ -205,7 +205,6 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
     let filter_helper = ()=>{
 
         gamesgrid2.value = wlist.value.filter(i=>{
-              console.log(i)
               let c1 = false, c2= false, c3 = false , c4=false , c5=false, c6=false, c7=false , c8=false
               
               c1 = filters.value[0] == 'all' || i.event == filters.value[0]

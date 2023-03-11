@@ -98,7 +98,6 @@ let remove_wish = (game)=>{
        wlist = wlist.filter(i=>{
         return i.name !== game.name
        })
-       console.log(game)
        game.ro=true
        let s = setTimeout(()=>{
         game.inw=false

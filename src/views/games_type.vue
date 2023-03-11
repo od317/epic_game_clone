@@ -407,13 +407,11 @@ if(key_word_input.value!==""){
 
       watch(key_word_input,()=>{
 
-        console.log(key_word_input+"  ")
         
         if(key_word_input.value!==""){
 
         gamesgrid2.value=[]
         for(let g of gamesgrid.value){
-            console.log(g.name.substring(0,key_word_input.value.length).toLowerCase()+"  "+key_word_input.value.toLowerCase())
             let gener=false
             for(let gen of g.gener){
                 if(gen === type)

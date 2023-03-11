@@ -47,12 +47,10 @@
    for(let gl of props.gen_list){
         for(let gen of gl){
             genlist.push(gen)
-            console.log(gen)
         }
    }
 
    for(let gen of genlist){
-    console.log(gen)
    }
    let currentSlide = ref(0)
 

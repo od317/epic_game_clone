@@ -69,7 +69,6 @@ let wlist = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('
 wlist = wlist.filter(i=>{
 return i.name !== game.name
 })
-console.log(game)
 game.ro=true
 let s = setTimeout(()=>{
 game.inw=false

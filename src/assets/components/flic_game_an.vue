@@ -34,9 +34,7 @@
 
    let games = props.games
 
-   for(let i of games){
-    console.log("yes"+i.src)
-   }
+
    let router_push = (type,dist)=>{
 
 if(type == 'game'){

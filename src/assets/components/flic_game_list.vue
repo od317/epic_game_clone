@@ -45,16 +45,13 @@
 
    let games_list = props.games
    let type = props.type
-   console.log(games_list)
    let games = []
    for(let gl of games_list){
        for(let i of gl){
         games.push(i)
        }
    }
-   for(let i of games){
-    console.log("yes"+i.img)
-   }
+ 
    let view_type = ref('')
    switch(type){
     case 'ac':

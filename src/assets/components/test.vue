@@ -98,7 +98,6 @@ let remove_wish = (game)=>{
        wlist = wlist.filter(i=>{
         return i.name !== game.name
        })
-       console.log(game)
        game.ro=true
        let s = setTimeout(()=>{
         game.inw=false
@@ -462,7 +461,10 @@ let remove_wish = (game)=>{
                     <div v-for="gl in gamelist" :class="`flex  justify-between w-full  h-fit translate-x-[-1000%] transition-all duration-500`"></div>
                     <div v-for="gl in gamelist" :class="`flex  justify-between w-full  h-fit translate-x-[-1100%] transition-all duration-500`"></div>
                     <div v-for="gl in gamelist" :class="`flex  justify-between w-full  h-fit translate-x-[-1200%] transition-all duration-500`"></div>
-
+                     <button class="bg-[#ed0000]">ss</button>
+                     <button class="bg-[#0062ff]">ss</button>
+                     <button class="bg-[#2047d4]">ss</button>
+                     
                                 
                  
 

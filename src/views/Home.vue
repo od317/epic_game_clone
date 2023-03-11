@@ -16,7 +16,7 @@
  let router = useRouter(); 
 
  /* for slider and sidebar  */
-let game_tops_names = ['dishonored2','farcry6','heart','ac valhal','Hogwarts legacy','distiny 2']
+let game_tops_names = ['dishonored2','farcry6','heart','fortnite','Hogwarts legacy','distiny 2']
 let games = ref([])
 
 for(let i =1;i<=6;i++){
@@ -226,7 +226,6 @@ let remove_wish = (game)=>{
   wlist = wlist.filter(i=>{
    return i.name !== game.name
   })
-  console.log(game)
   game.ro=true
   let s = setTimeout(()=>{
    game.inw=false
