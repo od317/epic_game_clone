@@ -405,8 +405,8 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
 
                            <div class="flex  text-[1rem] flex-col">
                         <div class="flex flex-row">
-                        <label for="" class="text-white text-[.7rem] h-fit bg-blue1 rounded-md p-1 px-2 mr-3 cursor-pointer">-50%</label>
-                          <label for="" class="text-gray-500 mr-2 line-through cursor-pointer">${{ game.price }}</label>
+                        <label v-if="game.dis" for="" class="text-white text-[.7rem] h-fit bg-blue1 rounded-md p-1 px-2 mr-3 cursor-pointer">{{game.dis}}</label>
+                          <label v-if="game.oldprice" for="" class="text-gray-500 mr-2 line-through cursor-pointer">${{ game.oldprice }}</label>
                           <label for="" class="text-white cursor-pointer">${{ game.price }}</label>
                         </div>
                           <label class="text-white mt-[.5rem] cursor-pointer">sales end at 43/12/21 31:13</label>
@@ -582,8 +582,8 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
 
                     <div class="flex mt-[1.5rem] flex-row">
                         
-                        <label for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">-50%</label>
-                          <label for="" class="text-gray-500 mr-2 line-through">${{ game.price }}</label>
+                        <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
+                          <label v-if="game.oldprice" for="" class="text-gray-500 mr-2 line-through">${{ game.oldprice }}</label>
                           <label for="" class="text-white">${{ game.price }}</label>
 
                         </div> 

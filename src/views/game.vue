@@ -36,8 +36,14 @@ let bot_top_pos = ref(1)
 
 let backward = ()=>{
    slide_on.value=true
+   let tot = 0
+    for(let imgs of game.value.imgs){
+        for(let im of imgs){
+            tot+=1
+        }
+    }
    if(slide_val_bot.value>=0){
-     slide_val_bot.value = -2
+     slide_val_bot.value = (-Math.floor(Math.floor(slide_imgs.length-1/4)/4))
    }
    else{
     slide_val_bot.value += 1
@@ -47,7 +53,13 @@ let backward = ()=>{
 }
 
 let forward = ()=>{
-    if(slide_val_bot.value<= - (game.value.imgs.length-1)){
+    let tot = 0
+    for(let imgs of game.value.imgs){
+        for(let im of imgs){
+            tot+=1
+        }
+    }
+    if(slide_val_bot.value<= -1 *(Math.ceil((tot)/4)-1)){
      slide_val_bot.value = 0
    }  
    else{
@@ -204,10 +216,10 @@ game.ro=true
 let s = setTimeout(()=>{
  game.inw=false
  game.ro=false
- if(game2.type=='basegame')
+ if(game.type=='basegame')
     games.get(game.name).inw=false
     else{
-        for(let t of games.get(game2.mainname)){
+        for(let t of games.get(game.mainname)){
             if(t.name == game.name){
                 t.inw=false
             }
@@ -258,14 +270,14 @@ let in_ed_add = (t1,t2)=>{
     if(t2=='c'){
         let cart = localStorage.getItem('cart')? JSON.parse(localStorage.getItem('cart')) : [] 
         for(let c of cart){
-            if(t1.name == c.name)
+            if(t1.name === c.name)
                return true
         }
     }
     else{
         let wlist2 = localStorage.getItem('wish_list')? JSON.parse(localStorage.getItem('wish_list')) : [] 
         for(let c of wlist2){
-            if(t1.name == c.name)
+            if(t1.name === c.name)
                return true
         }
     }
@@ -385,7 +397,7 @@ window.scrollTo({
                                     text-xl 
                                     flex items-center 
                                     ">
-                                       <button @click="backward_1()" class="opacity-0 group-hover:opacity-100  bg-opacity-0 transition-all duration-300 ">></button>   
+                                       <button @click="backward_1()" class="opacity-0 group-hover:opacity-100  bg-opacity-0 transition-all duration-300 "><ion-icon name="arrow-dropleft"></ion-icon></button>   
                                 </div>
                             
                             
@@ -397,7 +409,7 @@ window.scrollTo({
                                     flex items-center 
                                     ">
                                        <button @click="forward_1()"
-                                        class="opacity-0 group-hover:opacity-100   bg-opacity-0 transition-all duration-300 ">></button>   
+                                        class="opacity-0 group-hover:opacity-100   bg-opacity-0 transition-all duration-300 "><ion-icon name="arrow-dropright"></ion-icon></button>   
                                 </div>
                             
 
@@ -414,7 +426,7 @@ window.scrollTo({
 
                           <div class="flex justify-between items-center">
                             
-                           <button @click="backward()" class="z-20">></button>
+                           <button @click="backward()" class="z-20"><ion-icon name="arrow-dropleft"></ion-icon></button>
 
                                         
                            <div class="w-[78%] overflow-x-hidden">
@@ -434,7 +446,7 @@ window.scrollTo({
                   </div>
 
 
-                           <button @click="forward()" class="z-20">></button>
+                           <button @click="forward()" class="z-20"><ion-icon name="arrow-dropright"></ion-icon></button>
 
 
                           </div>
@@ -692,7 +704,7 @@ window.scrollTo({
                                                             
                                                                     <button v-if="!in_ed_add(ed,'c')" @click="addcart(ed) " class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem]  rounded-sm hover:bg-gray-400 hover:bg-opacity-30 ">add to cart</button>
                                                                     <button v-else @click="ed_add_push('c') " class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem]  rounded-sm hover:bg-gray-400 hover:bg-opacity-30 ">view in cart</button>
-                                                                    <button v-if="!in_ed_add(ed,'w') && !ed.inw" @click=" add_wish(ed) " class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem] rounded-sm hover:bg-gray-400 hover:bg-opacity-30 ">add to wishlist</button>
+                                                                    <button v-if=" !in_ed_add(ed,'w')" @click=" add_wish(ed) " class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem] rounded-sm hover:bg-gray-400 hover:bg-opacity-30 ">add to wishlist</button>
                                                                     <button v-else @click="ed_add_push('w') " class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem]  rounded-sm hover:bg-gray-400 hover:bg-opacity-30 ">view in wishlist</button>
 
 
