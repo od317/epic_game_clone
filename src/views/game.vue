@@ -646,50 +646,6 @@ window.scrollTo({
                                 
 
 
-                                <div class="flex flex-col mt-[4rem] mb-[3rem]">
-                                    
-                                                <label v-if="game.editions" for="">Editions</label>
-
-                                                <div v-if="game.editions" v-for="ed in game.editions" class="flex rounded-md text-[.9rem] mt-[1rem] flex-col bg-dark2">
-                                                        <div class="flex flex-row border-b-2">
-                                                            <img :src="ed.img" class="w-[50%] rounded-tl-md" alt="">
-                                                            <div class="flex flex-col ">
-
-                                                                    <div class="flex flex-row p-[1rem]">
-                                                                        <label for="" class="bg-dark1 rounded-md p-[.2rem] text-[.7rem] mr-[1rem]">{{ ed.type }}</label>
-                                                                        <label for="">{{ ed.name }}</label>
-                                                                    </div>
-
-                                                                    <label for="" class="pl-[1rem]">{{ ed.text }}</label>
-
-                                                            </div>
-
-
-                                                        
-                                                        </div>
-
-                                                        <div class="flex justify-end items-center py-[1rem]">
-                                                                    
-                                                                    <div class="flex flex-col">
-
-                                                                            <div class="flex flex-row items-center justify-end">
-
-                                                                                    <label for="" class="mx-[.5rem]">${{ ed.price }}</label>
-
-
-                                                                            </div>
-
-                                                                    </div>
-                                                            
-                                                                    <button class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem]  rounded-sm hover:bg-gray-400 hover:bg-opacity-30">add to cart</button>
-                                                                    <button @click=" add_wish(game) " class="py-[.7rem] px-[.6rem] border w-[30%] mx-[.5rem] rounded-sm hover:bg-gray-400 hover:bg-opacity-30">add to wishlist</button>
-
-                                                        </div>
-                                                        
-                                                </div>
-
-
-                                </div>
 
 
 
@@ -1041,41 +997,7 @@ window.scrollTo({
                         </div>   
 
 
-                        <div class="text-white">
-                            <label class="text-[1.1rem] mb-[.5rem]" for="">Editions</label>
-                            
-                            <div class="flex flex-col mb-[1rem]" v-for="ed in game.editions">
-                            
-                                <img class="rounded-md" :src="ed.img" alt="">
-                            
-                                <div class="flex flex-col items-center justify-center bg-dark2 ">
-                                   
-                                    <div class="flex flex-col items-center border-b-[.1rem] border-b-gray-400">
-                                        <div class="mt-[1rem] flex items-center w-[100%] justify-center">
-                                                <label class="mr-[.2rem] bg-dark3 py-[.2rem] px-[.4rem]" for="">base game</label>
-                                                <label for="">Dying Light 2 Stay Human</label>
-                                        </div>
 
-                                        <label class=" flex items-center w-[75%] mt-[.5rem] mb-[2rem] justify-center" for="">The virus won and civilization has fallen back to the Dark Ages.</label>
-                                   
-                                    </div>
-                                
-
-                                                                     
-                                        <div class="flex flex-col w-full items-center mt-[1.5rem]">
-                                            <label class="text-[1.1rem] mb-[.5rem]" for="">{{ ed.price }}$</label> 
-                                            <button :class="` w-[90%] py-[.6rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500`">Add To Cart</button>
-                                            <button :class="` w-[90%] py-[.2rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]`">add to wishlist</button>
-                                        </div>
-
-                                </div>
-
-
-
-
-                            </div>
-
-                        </div>
 
 
 

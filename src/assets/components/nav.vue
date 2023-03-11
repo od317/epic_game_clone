@@ -269,7 +269,7 @@
   <div :class="`text-white lg:hidden md:pb-[1.5rem]   static  items-center  w-[100%]  ${ !offcanv ? 'z-50':'z-40'} bg-dark1   `">
         
 
-            <div class="text-white px-[6%] pt-[2rem]  flex  justify-between items-center  w-[100%] bg-dark1  ">
+            <div class="text-white px-[6%] md:pt-[2rem] md:pb-0 py-[2rem]   flex  justify-between items-center  w-[100%] bg-dark1  ">
               <div class=" w-[20%] text-start ">
                  <button @click="search_click()">
                     <ion-icon name="search" class="text-gray-400 text-[1.5rem]  "></ion-icon> 

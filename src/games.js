@@ -1,3 +1,53 @@
+let game_discs = new Map()
+
+game_discs.set('cc',            {
+    img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f3a8.svg',
+    title:'This game has Inclusive',
+    text:'Character Customization'
+})
+
+game_discs.set('gbb',                {
+    img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f996.svg',
+    title:'This game has',
+    text:'Great Boss Battles'
+})
+
+game_discs.set('ef',                {
+    img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f60d.svg',
+    title:'This game is',
+    text:'Extremely Fun'
+})
+
+game_discs.set('as',                {
+    img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f4dd.svg',
+    title:'This game has ',
+    text:'Amazing Storytelling'
+})
+
+
+
+game_discs.set('r',                                {
+    img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f6c1.svg',
+    title:'This game is',
+    text:'Relaxing'
+})
+
+
+game_discs.set('gfb',                {
+    img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f996.svg',
+    title:'This game is',
+    text:'Great for Beginners'
+})
+
+
+game_discs.set('ac',                {
+    img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f3ad.svg',
+    title:'This game has',
+    text:'Amazing Characters'
+})
+
+
+
 let games = new Map()
 let games_list =[
     
@@ -1529,14 +1579,14 @@ let games_list =[
         ]  
     },
     {
-        name:'Elden Ring',
-        logoimg:'https://cdn1.epicgames.com/offer/1dcddbcc334945c48353b75a8fce5e5e/EGS_Dishonored2_ArkaneStudios_S2_1200x1600-96a53bbf6b94c5c93e568faebeffeb69?h=480&quality=medium&resize=1&w=360',
+        name:'Hogwarts legacy',
+        logoimg:'https://cdn1.epicgames.com/offer/e97659b501af4e3981d5430dad170911/EGS_HogwartsLegacy_AvalancheSoftware_S2_1200x1600-2bb94423bf1c7e2fca10577d9f2878b9?h=480&quality=medium&resize=1&w=360',
         img:'https://cdn2.unrealengine.com/egs-dishonored2-arkanestudios-ic1-400x400-ac105c61a65b.png?h=270&quality=medium&resize=1&w=480',
         ach_img:'https://cdn1.epicgames.com/offer/1dcddbcc334945c48353b75a8fce5e5e/EGS_Dishonored2_ArkaneStudios_S1_2560x1440-9b6ce619bb7247b4ed0f637dc6eb51c1?h=270&quality=medium&resize=1&w=480',
         bottom_img:'https://cdn.vox-cdn.com/thumbor/BRbyogYROnwyRqWY6cnch_wouS0=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/7843013/emilypowers.jpg',
-        src:'https://images8.alphacoders.com/118/1186452.jpg',
+        src:'https://cdn2.unrealengine.com/egs-hogwarts-legacy-carousel-desktop-v3-1248x702-d5639baf4870.jpg?h=720&quality=medium&resize=1&w=1280',
         srcm:"https://images8.alphacoders.com/118/1186452.jpg",
-        slide_img:"https://upload.wikimedia.org/wikipedia/commons/f/fd/Elden_Ring_-_Title.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/a/ae/Hogwarts_Legacy_Logo.png",
         theme_color:'#fcfcfc',
         price:'59.99',
         dis:null,
@@ -1546,7 +1596,9 @@ let games_list =[
         pub:'Bethesda Softworks',
         rdate:"11/03/22",
         indate:"11/11/6",
-        col:[],
+        gener:['fps','ac','adv'],
+        features:['sp','cp'],
+        col:['top sellers','Top Upcoming Wishlisted'],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/egs-dishonored2-arkanestudios-g1a-01-1920x1080-5c74cbef0624.jpg",
@@ -1702,54 +1754,27 @@ let games_list =[
             },
         ],
         adds:[
-            {
-                img:'https://cdn.akamai.steamstatic.com/steam/apps/614570/capsule_616x353.jpg?t=1603891882',
-                name:'Dishonored  death of the outsider',
-                text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
-                type:'ADD-ON',
-                dis:null,
-                price:'2.39',
-                oldprice:null,
-                date:null
-            },
-            {
-                img:'https://cdn.akamai.steamstatic.com/steam/apps/614570/capsule_616x353.jpg?t=1603891882',
-                name:'Dishonored  death of the outsider',
-                text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
-                type:'ADD-ON',
-                dis:null,
-                price:'2.39',
-                oldprice:null,
-                date:null
-            },
-            {
-                img:'https://cdn.akamai.steamstatic.com/steam/apps/614570/capsule_616x353.jpg?t=1603891882',
-                name:'Dishonored  death of the outsider',
-                text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
-                type:'ADD-ON',
-                dis:null,
-                price:'2.39',
-                oldprice:null,
-                date:null
-            },
-            
+            {   mainname:"dishonored2",
+            gener:['fps','ac','adv'],
+            features:['sp','cp'],
+            img:'https://cdn.akamai.steamstatic.com/steam/apps/614570/capsule_616x353.jpg?t=1603891882',
+            logoimg:'https://m.media-amazon.com/images/M/MV5BMDI2YThmNjktYjczNy00ZWNkLWE5ODEtZjhjMGExZGFiNTUyXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_.jpg',
+            name:'Dishonored  death of the outsider',
+            text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
+            type:'Add-on',
+            dis:null,
+            price:'2.39',
+            oldprice:null,
+            date:null,
+            inw:false,
+            ro:false,
+        }
         ],
         game_disc:[
-            {
-                img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f3a8.svg',
-                title:'This game has Inclusive',
-                text:'Character Customization'
-            },
-            {
-                img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f996.svg',
-                title:'This game has',
-                text:'Great Boss Battles'
-            },
-            {
-                img:'https://cdn2.epicgames.com/static/fonts/joypixel/1f60d.svg',
-                title:'This game is',
-                text:'Extremely Fun'
-            },
+           game_discs.get('cc'),
+           game_discs.get('gbb'),
+           game_discs.get('as'),
+           game_discs.get('ef'),
         ]  
     },
     {
