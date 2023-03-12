@@ -13,7 +13,7 @@
 
         let game = props.game
 
-        let gamesgrid = ref(game.adds) 
+        let gamesgrid = ref(game.adds||[]) 
 
  
 let uri = window.location.href.split('?');
@@ -466,8 +466,7 @@ top:0,
         </button>
         
         <div v-if="view_grid.length<=0" class="text-white  w-full flex flex-col items-center justify-center text-center text-[2rem] pt-[1rem] " >
-                 <label for="">no results found</label>    
-                 <label class="text-[1rem] mt-[.5rem] text-gray-400" for="">Unfortunately I could not find any results matching your search.</label>
+                 <label for="">no Add-ons found</label>    
                 </div>
 
         <div v-else class="grid lg:grid-cols-4 md:grid-cols-3 gap-x-[1rem]">

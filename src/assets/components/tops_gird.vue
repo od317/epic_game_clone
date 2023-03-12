@@ -88,7 +88,7 @@ let remove_wish = (game)=>{
                             
                              <div :class="`flex items-center mb-1`">
                                <div class="flex-grow text-[1rem] pl-[.5rem]">{{ game_list.title }}</div>
-                               <router-Link :to="'/collection/'+game_list.title"  class="border text-[.9rem] px-[1rem] py-[.3rem] rounded-sm hover:bg-gray-500 hover:bg-opacity-50 transition-all duration-150">view more</router-link>
+                               <router-Link :to="'/collection/'+game_list.title"  class="border text-[.9rem] mb-[.5rem] px-[1rem] py-[.3rem] rounded-sm hover:bg-gray-500 hover:bg-opacity-50 transition-all duration-150">view more</router-link>
                              </div>
                             
                             <div class="grid grid-cols-1 grid-rows-5">
@@ -131,8 +131,10 @@ let remove_wish = (game)=>{
                                                     <div for="" :class="`text-white text-[13px]  ${game.date? 'mt-[.5rem]':'flex items-center  '}  pb-1`">
                                                           <label for="" :class="`${game.dis?'':'hidden'} bg-blue1 text-sm py-1 px-3 text-[12px] rounded-md self-end `">{{ game.dis }}</label>
                                                           <label for="" :class="`${game.oldprice?'':'hidden'} py-1 ml-1 line-through text-gray-500 self-end`">${{ game.oldprice }}</label> 
-                                                          <label for="" :class="`self-end py-1 ml-1`">${{ game.price }}</label> 
-                                                    </div>
+                                                          <label v-if="game.price!=='free'" for="" :class="`self-end py-1 ml-1`">${{ game.price }}</label> 
+                                                          <label v-else for="" :class="`self-end py-1 ml-1`">{{ game.price }}</label> 
+                          
+                                                        </div>
         
                                           </div>
                                   </div>

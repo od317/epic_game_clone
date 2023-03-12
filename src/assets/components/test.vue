@@ -464,10 +464,8 @@ let remove_wish = (game)=>{
                      <button class="bg-[#ed0000]">ss</button>
                      <button class="bg-[#0062ff]">ss</button>
                      <button class="bg-[#2047d4]">ss</button>
-                     
-                                
-                 
-
+                     <button class="bg-[#fcfcfc]">ss</button>
+                     <button class="bg-[#d1022b]">ss</button>
                     
     </div>
 

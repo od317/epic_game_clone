@@ -536,8 +536,8 @@ window.scrollTo({
 
                                         <label v-if="game.dis" class=" " for="">sales end in {{ '2023/'+(Math.floor(Math.random() * (12 - 5 + 1)) + 5)+'/'+(Math.floor(Math.random() * (29 - 1 + 1)) + 1) }}</label>
 
-                                        <button v-if="game.price!=='free'" :class="`bg-[${game.theme_color}] w-full mt-[1rem] px-[1rem] py-[.6rem] rounded-md`">Buy now</button>
-                                        <button v-else :class="`bg-[${game.theme_color}] w-full mt-[1rem] px-[1rem] py-[.6rem] rounded-md`">Get now</button>
+                                        <button v-if="game.price!=='free'" :class="`bg-[${game.theme_color}] ${ game.theme_color === '#fcfcfc' ?'text-black':'text-white'} w-full mt-[1rem] px-[1rem] py-[.6rem] rounded-md`">Buy now</button>
+                                        <button v-else :class="`bg-[${game.theme_color}] ${ game.theme_color === '#fcfcfc' ?'text-black':'text-white'} w-full mt-[1rem] px-[1rem] py-[.6rem] rounded-md`">Get now</button>
                                         <button v-if="!incart" @click=" addcart(game)" class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100 ">Add to cart</button>
                                         <button v-else @click=" cart_router_push()" class=" border border-white rounded-md px-[1rem] py-[.6rem] w-full mt-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100">view in cart</button>
                                         <button v-if="!game.inw" @click=" add_wish(game) " :class="` border border-white rounded-md px-[1rem] py-[.2rem] w-full mt-[1rem] mb-[1rem] hover:bg-gray-400 hover:bg-opacity-30 transition-all duration-100 `">
@@ -885,16 +885,17 @@ window.scrollTo({
                     <div class="flex flex-col items-center text-white">
                         <img class="rounded-md mb-[1rem]" :src="game.ach_img" alt="">
                         <label class="text-white bg-dark2 rounded-md text-[.9rem] px-[.8rem] py-[.4rem] mb-[.6rem]" for="">base game</label>
-                    <div class="flex flex-row items-center justitfy-center  gap-3"> 
-                        <label v-if="game.dis" :class="`bg-[${game.theme_color}] rounded-md px-[.2rem] text-white mb-[.6rem]`" for="">{{game.dis}}</label>
+                        <div class="flex flex-row items-center justitfy-center  gap-3"> 
+                        <label v-if="game.dis" :class="`bg-[${game.theme_color}] rounded-md px-[.2rem] ${ game.theme_color ==='#fcfcfc' ?'text-black':'text-white'} mb-[.6rem]`" for="">{{game.dis}}</label>
                         <label v-if="game.dis" class=" mb-[.6rem] line-through text-gray-400" for="">{{game.oldprice}}$</label>
-                        <label v-if="game.price!=='free'" class="text-white mb-[.6rem]" for="">{{game.price}}$</label>
-                        <label v-else class="text-white mb-[.6rem]" for="">{{game.price}}</label>
+                        <label v-if="game.price!=='free'" :class="`text-white mb-[.6rem]`" for="">{{game.price}}$</label>
+                        <label v-else :class="` mb-[.6rem] `" for="">{{game.price}}</label>
 
                     </div>
+                    <label v-if="game.dis" class=" mb-[.3rem] " for="">sales end in {{ '2023/'+(Math.floor(Math.random() * (12 - 5 + 1)) + 5)+'/'+(Math.floor(Math.random() * (29 - 1 + 1)) + 1) }}</label>
 
-                        <button v-if="game.price!=='free'" :class="`bg-[${game.theme_color}] w-full py-[.8rem] text-[1.1rem] rounded-md mb-[.8rem]`">Buy now</button>
-                        <button v-else :class="`bg-[${game.theme_color}] w-full py-[.8rem] text-[1.1rem] rounded-md mb-[.8rem]`">Get now</button>
+                        <button v-if="game.price!=='free'" :class="`bg-[${game.theme_color}] ${ game.theme_color === '#fcfcfc' ?'text-black':'text-white'}  w-full py-[.8rem] text-[1.1rem] rounded-md mb-[.8rem]`">Buy now</button>
+                        <button v-else :class="`bg-[${game.theme_color}] ${ game.theme_color === '#fcfcfc' ?'text-black':'text-white'} w-full py-[.8rem] text-[1.1rem] rounded-md mb-[.8rem]`">Get now</button>
                         <button v-if="!incart" @click=" addcart(game)" :class="` w-full py-[.8rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500`">Add To Cart</button>
                         <button v-else @click=" cart_router_push()" :class="` w-full py-[.8rem] text-[1.1rem] rounded-md border-2 mb-[.8rem] border-gray-500`">view in cart</button>
                         <button v-if="!game.inw" @click=" add_wish(game) " :class="` w-full py-[.3rem] text-[1.1rem] rounded-md border-2 border-gray-500 mb-[1rem]`">add to wishlist</button>

@@ -10,7 +10,6 @@ for(let tit of titles){
         for(let g of games){
             for(let c of games.get(g[0]).col){
                 if(c.toLocaleLowerCase()==tit.toLocaleLowerCase()){
-                   console.log("gis "+games.get(g[0]).name)
                   grid.push(games.get(g[0]))
                   i++
                 }
