@@ -112,6 +112,18 @@ let remove_wish = (game)=>{
         top:0,
       })
 
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 <template>
@@ -466,7 +478,12 @@ let remove_wish = (game)=>{
                      <button class="bg-[#2047d4]">ss</button>
                      <button class="bg-[#fcfcfc]">ss</button>
                      <button class="bg-[#d1022b]">ss</button>
-                    
+                     <button class="bg-[#e6c41c]">ss</button>
+                     <button class="bg-[#b006d6]">ss</button>
+                     <button class="bg-[#e84338]">ss</button>
+                     <button class="bg-[#327da8]">ss</button>
+
+
     </div>
 
     </div>

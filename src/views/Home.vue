@@ -39,7 +39,10 @@ for(let i =1;i<=6;i++){
           }
         }
 
-let games_list1= games_lists[0]
+let games_list1 = games_lists[0]
+
+let games_list2 = games_lists[1]
+
 
 for(let g1 of games_list1){
 }
@@ -414,7 +417,7 @@ let remove_wish = (game)=>{
 
 <!--gamelist2-->
 
-<list_game :gamelist="games_list1" type="adv"/>
+<list_game :gamelist="games_list2" type="adv"/>
 
 
 

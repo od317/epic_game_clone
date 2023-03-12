@@ -140,7 +140,7 @@ let remove_wish = (game)=>{
 
         <div>
           <button @click="backward" :disabled="parseInt(slide_perecent)<=0" :class="`disabled:bg-[#0f0f0f] text-white bg-[#212121] mx-2 rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropleft" ></ion-icon></button>
-          <button @click="forward" :disabled="parseInt(slide_perecent)>=300" :class="` disabled:bg-[#0f0f0f] text-white bg-[#212121] rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropright"></ion-icon></button>   
+          <button @click="forward" :disabled="parseInt(slide_perecent)>=200" :class="` disabled:bg-[#0f0f0f] text-white bg-[#212121] rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropright"></ion-icon></button>   
         </div>
         
      </div>
@@ -149,7 +149,7 @@ let remove_wish = (game)=>{
        lg:w-[78%]
        md:w-[100%]">
         
-        <div class="flex   flex-row w-[400%]">
+        <div class="flex   flex-row w-[300%]">
                 
 
 
