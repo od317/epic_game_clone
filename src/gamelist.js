@@ -1,58 +1,52 @@
 import games from './games'
 
 let games_lists = [
-      [[ 
-        games.get("daying light2"),
-        games.get("spiderman Remastered"),
-        games.get("The Last of Us Part I"),
-        games.get("cyberpunk-2077"),
-        games.get("dishonored2"),
-    ],
-    [ 
-      games.get("control"),
-      games.get("distiny 2"),
-      games.get("Hogwarts legacy"),
-      games.get("fortnite"),
-      games.get("heart"),
-  ],
-  [ 
-    games.get("farcry6"),
-    games.get("Red Dead Redemption 2"),
-    games.get("Borderlands 3"),
-    games.get("The Witcher 3"),
-    games.get("Tiny Tina s Wonderlands"),
-],
-],
-
-
-
-[[ 
-  games.get("HITMAN World of Assassination"),
-  games.get("Horizon Zero Dawn™ Complete Edition"),
-  games.get("Sifu"),
-  games.get("DEATH STRANDING"),
-  games.get("STAR WARS Jedi: Fallen Order Standard Edition"),
-],
-[ 
-games.get("VALORANT"),
-games.get("distiny 2"),
-games.get("Hogwarts legacy"),
-games.get("fortnite"),
-games.get("heart"),
-],
-[ 
-games.get("farcry6"),
-games.get("Red Dead Redemption 2"),
-games.get("Borderlands 3"),
-games.get("The Witcher 3"),
-games.get("Tiny Tina s Wonderlands"),
-],
+      [[ ],[ ],[ ],],
+      [[ ],[ ],[ ],],
+      [[ ],[ ],[ ],],
+      [[ ],[ ],[ ],],
+      [[ ],[ ],[ ],],
 ]
 
+let lisits = ['ac','adv','fps','mp','free']
+
+
+
+for(let p =0;p<games_lists.length;p++){
+   let i = 0
+   for(let game of games){
+       if(lisits[p]!=='mp' && lisits[p]!=='free')
+       for(let c of games.get(game[0]).gener){
+            if(i>=15)
+               break
+            if(c == lisits[p]){
+               games_lists[p][Math.floor(i/5)].push(games.get(game[0]))
+               i++
+           }
+       }
+      else if (lisits[p]==='free'){
+            if(i>=15)
+               break
+            if(games.get(game[0]).price == lisits[p] && !games.get(game[0]).oldprice){
+               games_lists[p][Math.floor(i/5)].push(games.get(game[0]))
+               i++
+           }
+       }
+      else
+      for(let c of games.get(game[0]).features){
+        if(i>=15)
+           break
+        if(c == lisits[p]){
+           games_lists[p][Math.floor(i/5)].push(games.get(game[0]))
+           i++
+       }
+   }   
+  }
+
+}
 
 
 
 
-]
 
 export default games_lists;

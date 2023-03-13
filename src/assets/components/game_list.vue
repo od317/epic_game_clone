@@ -32,6 +32,9 @@ const props = defineProps({
     case 'mp':
     view_type.value = 'Top Mulyiplayer Games'
     break
+    case 'free':
+    view_type.value = 'Top free Games'
+    break
     
   default:
     break  
@@ -126,7 +129,7 @@ let remove_wish = (game)=>{
        md:w-[100%]
      ">
 
-     <router-link v-if="type!='mp'" class="flex flex-row items-center cursor-pointer group " :to="`games/`+type"> 
+     <router-link v-if="type!='mp' && type!='free'" class="flex flex-row items-center cursor-pointer group " :to="`games/`+type"> 
      <label for="" class="text-xl text-white cursor-pointer">{{ view_type }}</label>
     <label class="text-[1rem] flex items-center text-center text-white ml-[1rem] group-hover:ml-[2rem] transition-all duration-150" for="">></label>
 
@@ -211,7 +214,9 @@ let remove_wish = (game)=>{
                         <div class="flex w-full mt-2 items-center">
                           <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
                           <label v-if="game.oldprice" for="" class="text-gray-500 mr-2 line-through">${{ game.oldprice }}</label>
-                          <label  for="" class="text-white">${{ game.price }}</label>
+                          <label v-if="game.price!=='free'"  for="" class="text-white">${{ game.price }}</label>
+                          <label v-else for="" class="text-white">{{ game.price }}</label>
+
 
                         </div>
                       </div>

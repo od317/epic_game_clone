@@ -104,7 +104,7 @@ window.scrollTo({
         <div class="grid md:grid-cols-4 grid-cols-2 gap-[1rem] w-full mt-[3rem]">
 
 
-            <div @Click="router_push_game(game.name)" v-for="game in collection" class="  w-full py-[1rem] h-[100%] ">
+            <div @Click="router_push_game(game.name)" v-for="game in collection" class="  w-full py-[1rem] h-[100%]  ">
                                       
                                       <div class="w-[100%]  group rounded-md relative">
                                          
@@ -144,7 +144,7 @@ window.scrollTo({
                                 </div>
    
    
-                                       <img :src="game.logoimg" class="w-[100%]  rounded-md" alt="">
+                                       <img :src="game.logoimg" class="w-[100%] max-h-[21rem] rounded-md" alt="">
                                         
    
                                         

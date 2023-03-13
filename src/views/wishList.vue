@@ -233,7 +233,7 @@ localStorage.setItem('cart',JSON.stringify(cart.value))
                 c2 = i.price>=14
                     break
                 case 'free':
-                    c2= i.price === 0
+                    c2= i.price === 'free'
                     break
                 case 'dis':
                     c2 = i.dis

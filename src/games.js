@@ -84,7 +84,9 @@ let games_list =[
     dis:null,
     oldprice:null,
     rate:4.6,
-    col:[],
+    gener:['fps','ac'],
+    features:['sp','cp','mp'],
+    col:['top sellers',''],
     imgs:[
         [
             {img:"https://cdn2.unrealengine.com/dl2-1920x1080-66d335afff6e.jpg",
@@ -326,11 +328,11 @@ let games_list =[
         pub:'PlayStation PC LLC',
         rdate:"03/28/23",
         indate:"11/11/6",
-        gener:['fps','ac','adv'],
+        gener:['fps','adv'],
         features:['sp','cp'],
         rate:4.9,
         date:'Avalibale 2023',
-        col:['top sellers','Most Played'],
+        col:['top sellers',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/egs-thelastofusparti-naughtydogllc-g1a-00-1920x1080-9e4acd6e5364.jpg",
@@ -443,7 +445,7 @@ let games_list =[
     },
     {
         name:'spiderman Remastered',
-        logoimg:'https://m.media-amazon.com/images/M/MV5BNGQ5YjE0NWYtNDRmNS00MzEyLTgzOWUtZTdiMDk5ZThiZmZkXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg',
+        logoimg:'https://m.media-amazon.com/images/M/MV5BNGQ5YjE0NWYtNDRmNS00MzEyLTgzOWUtZTdiMDk5ZThiZmZkXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg?h=480&quality=medium&resize=1&w=360',
         img:'https://cdn2.unrealengine.com/egs-marvelsspidermanremastered-insomniacgamesnixxessoftware-ic1-400x400-783ee335e810.png?h=270&quality=medium&resize=1&w=480',
         ach_img:'https://cdn1.epicgames.com/offer/4bc43145bb8245a5b5cc9ea262ffbe0e/EGS_MarvelsSpiderManRemastered_InsomniacGamesNixxesSoftware_S1_2560x1440-73702d11161b29a0b7c40a8b489b1808?h=270&quality=medium&resize=1&w=480',
         theme_color:'#0062ff',
@@ -455,9 +457,9 @@ let games_list =[
         pub:'PlayStation PC LLC',
         rdate:"08/12/22",
         indate:"11/11/6",
-        gener:['fps','ac','adv'],
-        features:['sp','cp'],
-        col:[],
+        gener:['ac'],
+        features:['sp','cp','mp'],
+        col:['Most Played',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/egs-marvelsspidermanremastered-insomniacgamesnixxessoftware-g1a-00-1920x1080-25b4862bff3b.jpg",
@@ -638,7 +640,7 @@ let games_list =[
             ach_img:'https://cdn1.epicgames.com/offer/1dcddbcc334945c48353b75a8fce5e5e/EGS_Dishonored2_ArkaneStudios_S1_2560x1440-9b6ce619bb7247b4ed0f637dc6eb51c1?h=270&quality=medium&resize=1&w=480',
             bottom_img:'https://cdn.vox-cdn.com/thumbor/BRbyogYROnwyRqWY6cnch_wouS0=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/7843013/emilypowers.jpg',
             src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
-            srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+            srcm:"https://dokumen.pub/img/dishonored-the-roleplaying-game-core-rulebook-9781912743216.jpg",
             slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
             theme_color:'#fcfcfc',
             price:'59.99',
@@ -649,9 +651,9 @@ let games_list =[
             pub:'Bethesda Softworks',
             rdate:"11/03/22",
             indate:"11/11/6",
-            gener:['fps','ac','adv'],
+            gener:['fps','adv'],
             features:['sp','cp'],
-            col:['top sellers','Top Upcoming Wishlisted'],
+            col:['top sellers',''],
             imgs:[
                 [
                     {img:"https://cdn2.unrealengine.com/egs-dishonored2-arkanestudios-g1a-01-1920x1080-5c74cbef0624.jpg",
@@ -848,7 +850,7 @@ let games_list =[
             ach_img:'https://cdn2.unrealengine.com/tetra-preorder-standard-edition-epic-store-landscape-2560x1440-2560x1440-430970417.jpg',
             bottom_img:'https://cdn2.unrealengine.com/fc6-epic-banner-accolade-1200x200-uk-1200x200-11fcee6eb0a8.jpg',
             src:'https://images3.alphacoders.com/108/thumb-1920-1087064.jpg',
-            srcm:"https://images3.alphacoders.com/108/thumb-1920-1087064.jpg",
+            srcm:"https://assets-prd.ignimgs.com/2020/07/10/far-cry-6-placeholder-1594397352824.jpg",
             slide_img:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/FC6_Logo.png/1200px-FC6_Logo.png",
             theme_color:'#2047d4',
             price:'59.99',
@@ -859,7 +861,8 @@ let games_list =[
             pub:'Ubisoft',
             rdate:"11/29/22",
             indate:"10/07/21",
-            col:[],
+            gener:['fps','ac'],
+            col:['Most Played','mp'],
             imgs:[
                 [
                     {img:"https://assets2.rockpapershotgun.com/far-cry-6-exploding-car.jpg/BROK/resize/1920x1920%3E/format/jpg/quality/80/far-cry-6-exploding-car.jpg",
@@ -1060,7 +1063,7 @@ let games_list =[
         ach_img:'https://cdn2.unrealengine.com/egs-wildhearts-koeitecmogamescoltd-s1-2560x1440-5c8f24919516.jpg?h=270&quality=medium&resize=1&w=480',
         bottom_img:'https://cdn2.unrealengine.com/wh-launch-infographic-epic-en-1920x1080-4e17b5ec0c33.jpg',
         src:'https://cdn2.unrealengine.com/egs-wild-hearts-carousel-desktop-1248x702-5426345bf742.jpg?h=720&quality=medium&resize=1&w=1280',
-        srcm:"https://cdn2.unrealengine.com/egs-wild-hearts-carousel-desktop-1248x702-5426345bf742.jpg?h=720&quality=medium&resize=1&w=1280",
+        srcm:"https://store-images.s-microsoft.com/image/apps.15566.14419340246812518.6ed7971c-0390-4d30-8373-3724d60e305e.18f702a4-ab4c-4faf-92ac-b940ef5561e2?mode=scale&q=90&h=225&w=150",
         slide_img:"https://cdn2.unrealengine.com/egs-wildhearts-koeitecmogamescoltd-ic1-400x400-c3e4c7cf64f4.png?h=270&quality=medium&resize=1&w=480",
         theme_color:'#fcfcfc',
         price:'69.99',
@@ -1071,7 +1074,8 @@ let games_list =[
         pub:'Electronic Arts',
         rdate:"11/03/22",
         indate:"02/16/23",
-        col:[],
+        gener:['fps','adv'],
+        col:['Most Played',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/egs-wildheartsstandardedition-koeitecmogamescoltd-g1a-01-1920x1080-ebd1e3b7a39f.jpg",
@@ -1244,7 +1248,7 @@ let games_list =[
         ach_img:'https://cdn2.unrealengine.com/24br-s24-egs-launcher-pdp-2560x1440-2560x1440-15633fe086b0.jpg',
         bottom_img:'https://cdn2.unrealengine.com/24br-s24-egs-launcher-pdp-2560x1440-2560x1440-15633fe086b0.jpg',
         src:'https://cdn2.unrealengine.com/egs-fortnite-ch4-s2-carousel-desktop-1248x702-f69aa15e3d14.jpg?h=720&quality=medium&resize=1&w=1280https://cdn2.unrealengine.com/egs-fortnite-ch4-s2-carousel-desktop-1248x702-f69aa15e3d14.jpg?h=720&quality=medium&resize=1&w=1280https://cdn2.unrealengine.com/egs-fortnite-ch4-s2-carousel-desktop-1248x702-f69aa15e3d14.jpg?h=720&quality=medium&resize=1&w=1280',
-        srcm:"https://cdn2.unrealengine.com/egs-fortnite-ch4-s2-carousel-desktop-1248x702-f69aa15e3d14.jpg?h=720&quality=medium&resize=1&w=1280https://cdn2.unrealengine.com/egs-fortnite-ch4-s2-carousel-desktop-1248x702-f69aa15e3d14.jpg?h=720&quality=medium&resize=1&w=1280https://cdn2.unrealengine.com/egs-fortnite-ch4-s2-carousel-desktop-1248x702-f69aa15e3d14.jpg?h=720&quality=medium&resize=1&w=1280",
+        srcm:"https://cdn2.unrealengine.com/egs-fortnite-ch4-s2-carousel-thumb-1200x1600-ae771a0f5dea.jpg?h=128&quality=medium&resize=1&w=96",
         slide_img:"https://cdn2.unrealengine.com/24br-s24-egs-launcher-logo-350x100-350x100-b63249f937d9.png?h=270&quality=medium&resize=1&w=480",
         theme_color:'#2047d4',
         price:'free',
@@ -1255,7 +1259,8 @@ let games_list =[
         pub:'Epic Games',
         rdate:"07/21/17",
         indate:"07/21/17",
-        col:[],
+        gener:['fps','ac'],
+        col:['Most Played',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/en-24br-zerobuild-egs-landscape-2560x1440-2560x1440-ca0c0d6529a4.jpg",
@@ -1480,7 +1485,7 @@ let games_list =[
         img:'https://cdn2.unrealengine.com/egs-hogwartslegacy-avalanchesoftware-ic1-400x400-d22498d075da.png?h=270&quality=medium&resize=1&w=480',
         ach_img:'https://cdn1.epicgames.com/offer/e97659b501af4e3981d5430dad170911/EGS_HogwartsLegacy_AvalancheSoftware_S1_2560x1440-2baf3188eb3c1aa248bcc1af6a927b7e',
         src:'https://cdn2.unrealengine.com/egs-hogwarts-legacy-carousel-desktop-v3-1248x702-d5639baf4870.jpg?h=720&quality=medium&resize=1&w=1280',
-        srcm:"https://images8.alphacoders.com/118/1186452.jpg",
+        srcm:"https://cdn2.unrealengine.com/egs-hogwarts-legacy-carousel-thumb-1200x1600-a012b7811415.jpg?h=128&quality=medium&resize=1&w=96",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/a/ae/Hogwarts_Legacy_Logo.png",
         theme_color:'#2047d4',
         price:'59.99',
@@ -1491,9 +1496,9 @@ let games_list =[
         pub:'Warner Bros. Games',
         rdate:"02/10/23",
         indate:"11/11/6",
-        gener:['fps','ac','adv'],
-        features:['sp','cp'],
-        col:['top sellers','Top Upcoming Wishlisted'],
+        gener:['adv'],
+        features:['sp','cp','mp'],
+        col:['top sellers',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/egs-hogwartslegacy-avalanchesoftware-g1a-00-1920x1080-6ae741e030bb.jpg",
@@ -1674,7 +1679,7 @@ let games_list =[
         img:'https://cdn2.unrealengine.com/en-bungie-destiny2-ic1-400x400-400x400-428671b4082f.png?h=270&quality=medium&resize=1&w=480',
         ach_img:'https://cdn1.epicgames.com/offer/428115def4ca4deea9d69c99c5a5a99e/FR_Bungie_Destiny2_S1_2560x1440_2560x1440-eb02e9edc6111b582ebbacbaae6482ed',
         src:"https://cdn2.unrealengine.com/egs-destiny-2-lightfall-carousel-desktop-1280x702-e2432bee71b8.jpg?h=720&quality=medium&resize=1&w=1280",
-        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        srcm:"https://upload.wikimedia.org/wikipedia/en/0/06/Destiny_XBO.jpg",
         slide_img:"https://cdn2.unrealengine.com/en-bungie-destiny2-ic1-400x400-400x400-428671b4082f.png?h=270&quality=medium&resize=1&w=480",
         theme_color:'#fcfcfc',
         price:'free',    
@@ -1685,9 +1690,9 @@ let games_list =[
         pub:'Bungie',
         rdate:"08/23/22",
         indate:"10/24/17",
-        gener:['fps','ac','adv','rpg','ow'],
-        features:['sp','cp'],
-        col:['top sellers','Top Upcoming Wishlisted'],
+        gener:['ac','rpg','ow'],
+        features:['sp','cp','mp'],
+        col:['top sellers',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/screenshot-01-1920x1080-883ead3f2627.jpg",
@@ -1852,7 +1857,7 @@ let games_list =[
         ],
         adds:[
             {   mainname:"distiny 2",
-                gener:['fps','ac','adv'],
+                gener:['ac','adv'],
                 features:['sp','cp'],
                 img:'https://cdn1.epicgames.com/offer/428115def4ca4deea9d69c99c5a5a99e/EGS_Destiny2LightfallAnnualPass_Bungie_AddOn_S1_2560x1440-c119b2a5b37129d1241309c707a511b3?h=270&quality=medium&resize=1&w=480',
                 logoimg:'https://cdn1.epicgames.com/offer/428115def4ca4deea9d69c99c5a5a99e/EGS_Destiny2LightfallAnnualPass_Bungie_AddOn_S2_1200x1600-3be933afa71298936dacbae79e09c342?h=480&quality=medium&resize=1&w=360',
@@ -1867,7 +1872,7 @@ let games_list =[
                 ro:false,
             },
             {   mainname:"distiny 2",
-            gener:['fps','ac','adv'],
+            gener:['ac','adv'],
             features:['sp','cp'],
             img:'https://cdn1.epicgames.com/offer/428115def4ca4deea9d69c99c5a5a99e/EGS_Destiny2LegacyCollection2023_Bungie_Bundles_S1_2560x1440-c12dafc5484d838c29532a5e8c87fd74?h=270&quality=medium&resize=1&w=480',
             logoimg:'https://cdn1.epicgames.com/offer/428115def4ca4deea9d69c99c5a5a99e/EGS_Destiny2BeyondLight_Bungie_AddOn_S2_1200x1600-a5f8ef083d8b51a66d2c0c22cbb67843?h=480&quality=medium&resize=1&w=360',
@@ -1882,7 +1887,7 @@ let games_list =[
             ro:false,
            },
            {   mainname:"distiny 2",
-            gener:['fps','ac','adv'],
+            gener:['ac','adv'],
             features:['sp','cp'],
             img:'https://cdn1.epicgames.com/offer/428115def4ca4deea9d69c99c5a5a99e/EN_Bungie_S20_Silver_Bundle_S3_2560x1440_2560x1440-f3777a1754c5d9bef617df3107289c19?h=270&quality=medium&resize=1&w=480',
             logoimg:'https://cdn1.epicgames.com/offer/428115def4ca4deea9d69c99c5a5a99e/EGS_Destiny2Bungie30thAnniversaryPack_Bungie_AddOn_S2_1200x1600-b3a839aa9a80c15f609dab688e21190c?h=480&quality=medium&resize=1&w=360',
@@ -1934,9 +1939,9 @@ let games_list =[
         pub:'505 Games',
         rdate:"08/27/19",
         indate:"08/27/19",
-        gener:['fps','ac','adv'],
-        features:['sp','cp'],
-        col:['top sellers','Top Upcoming Wishlisted'],
+        gener:[,'adv'],
+        features:['sp','cp','mp'],
+        col:['Most Played',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fcontrol%2Fhome%2FControl_Awards-1920x1080-1920x1080-ec09bae0882a0e71f3f536a8fea401fc12da67e1.jpg",
@@ -2146,9 +2151,9 @@ let games_list =[
         pub:'CD PROJEKT RED',
         rdate:"12/10/20",
         indate:"12/10/20",
-        gener:['fps','ac','adv'],
+        gener:['fps','ac'],
         features:['sp','cp'],
-        col:['top sellers','Top Upcoming Wishlisted'],
+        col:['Top Upcoming Wishlisted',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/egs-cyberpunk2077-cdprojektred-g1a-04-02-24-22-1920x1080-e44528f4fa16.jpg",
@@ -2329,9 +2334,9 @@ let games_list =[
         dev:'Rockstar Games',
         pub:'Rockstar Games',
         rdate:"11/05/19",
-        gener:['fps','ac','adv'],
-        features:['sp','cp'],
-        col:['top sellers','Top Upcoming Wishlisted'],
+        gener:[,'adv'],
+        features:['sp','cp','mp'],
+        col:['Top Upcoming Wishlisted','Top Popular'],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fheather%2Fhome%2FEGS_RockstarGames_RedDeadRedemption2_G1A_00-1920x1080-308f101576da37225c889173094f373f2afc56c1.jpg",
@@ -2499,9 +2504,9 @@ let games_list =[
         dev:'Gearbox Software',
         pub:'Gearbox Software',
         rdate:"09/13/19",
-        gener:['fps','rgp','ac'],
+        gener:['fps','ac'],
         features:['sp','cp'],
-        col:['top sellers','Top Upcoming Wishlisted'],
+        col:['Top Upcoming Wishlisted',''],
         imgs:[
             [
                 {img:"https://www.techspot.com/articles-info/1912/images/2019-09-15-image.jpg",
@@ -2689,8 +2694,8 @@ let games_list =[
         dev:'CD PROJEKT RED',
         pub:'CD PROJEKT RED',
         rdate:"09/13/19",
-        gener:['fps','rpg','ac'],
-        features:['sp','cp'],
+        gener:['rpg','adv'],
+        features:['sp','cp','mp'],
         col:['top sellers','Top Upcoming Wishlisted'],
         imgs:[
             [
@@ -2849,7 +2854,7 @@ let games_list =[
         rdate:"03/25/22",
         gener:['fps','rpg','ac'],
         features:['sp','cp'],
-        col:['top sellers','Top Upcoming Wishlisted'],
+        col:['Top Upcoming Wishlisted',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/ttwl-gameplay-reveal-screenshots-banshee-1080-1mb-1920x1080-bf235e1791e1.jpg",
@@ -3008,9 +3013,9 @@ let games_list =[
         pub:'IO Interactive A/S',
         rdate:"01/20/22",
         indate:'01/20/22',
-        gener:['fps','rpg','ac'],
-        features:['sp','cp'],
-        col:['top sellers','Top Upcoming Wishlisted'],
+        gener:['rpg','adv'],
+        features:['sp','cp','mp'],
+        col:['Top Upcoming Wishlisted',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/egs-hitmanworldofassassination-iointeractiveas-bundles-g1a-00-1920x1080-f5d44fdadec6.jpg",
@@ -3174,7 +3179,7 @@ let games_list =[
         indate:'08/07/20',
         gener:['fps','rpg','ac'],
         features:['sp','cp'],
-        col:['top sellers','Top Upcoming Wishlisted'],
+        col:['New Releases',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/hzn-zdce-storefront-2560x1440-v2-2560x1440-378073920.jpg",
@@ -3323,9 +3328,9 @@ let games_list =[
         pub:'Sloclap',
         rdate:"02/08/22",
         indate:'02/08/22',
-        gener:['fps','rpg','ac'],
+        gener:['fps','rpg','adv'],
         features:['sp','cp'],
-        col:['top sellers','Top Upcoming Wishlisted'],
+        col:['New Releases',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/egs-sifustandardedition-sloclap-g1a-03new-1920x1080-baa0719f9112.jpg",
@@ -3485,7 +3490,7 @@ let games_list =[
         indate:'03/30/22',
         gener:['fps','rpg','ac'],
         features:['sp','cp'],
-        col:['top sellers','Top Upcoming Wishlisted'],
+        col:['New Releases',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/egs-deathstrandingdirectorscut-kojimaproductions-g1a-00-1920x1080-ff95f1c6868f.jpg",
@@ -3643,9 +3648,9 @@ let games_list =[
         pub:'Electronic Arts',
         rdate:"11/14/19",
         indate:'11/14/19',
-        gener:['fps','rpg','ac'],
+        gener:['fps','rpg','adv'],
         features:['sp','cp'],
-        col:['top sellers','Top Upcoming Wishlisted'],
+        col:['New Releases',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fstar-wars-jedi-fallen-order%2Fhome%2FSWFJO_Standard_Keyart_1920x1080-1920x1080-7a42241ea451299ac73036ac61eb73c1184753e0.jpg",
@@ -3795,7 +3800,7 @@ let games_list =[
         indate:'06/02/20',
         gener:['fps','rpg','ac'],
         features:['sp','cp'],
-        col:['top sellers','Top Upcoming Wishlisted'],
+        col:['New Releases',''],
         imgs:[
             [
                 {img:"https://cdn2.unrealengine.com/egs-valorant-riotgames-g1a-02-1920x1080-580683fffe0f.jpg",
@@ -3933,12 +3938,2860 @@ let games_list =[
         game_discs.get('r'),
         ]  
     },
+    {
+        name:'Genshin Impact',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_GenshinImpact_miHoYoLimited_S2_1200x1600-c12cdcc2cac330df2185aa58c508e820?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-genshinimpact-mihoyolimited-ic1-400x400-0a1ff1b6cf40.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_GenshinImpact_miHoYoLimited_S1_2560x1440-91c6cd7312cc2647c3ebccca10f30399?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#0062ff',
+        price:'free',
+        dis:null,
+        oldprice:null,
+        rate:4.5,
+        dev:'COGNOSPHERE PTE. LTD',
+        pub:'COGNOSPHERE PTE. LTD',
+        rdate:"06/09/21",
+        gener:['fps','rpg','adv'],
+        features:['sp','cp'],
+        col:['Top Player Rated'],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-genshinimpact-cognospherepteltd-g1a-00-1920x1080-8d4bab533b67.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-genshinimpactsumerudebut-cognospherepteltd-g1a-01-1920x1080-f8aadc1c45d6.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-genshinimpactsumerudebut-cognospherepteltd-g1a-02-1920x1080-180b2d3f292f.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-genshinimpactsumerudebut-cognospherepteltd-g1a-03-1920x1080-9a87794f1890.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-genshinimpactsumerudebut-cognospherepteltd-g1a-04-1920x1080-0f614884f850.jpg",
+                num:5},
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'League of Legends',
+        logoimg:'https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/LoL_1200x1600-15ad6c981af8d98f50e833eac7843986?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-leagueoflegends-riotgames-ic1-388x150-9fa18958e18b.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/LOL_2560x1440-98749e0d718e82d27a084941939bc9d3?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#0062ff',
+        price:'free',
+        dis:null,
+        oldprice:null,
+        rate:3.5,
+        dev:'Riot Games',
+        pub:'Riot Games',
+        rdate:"11/04/21",
+        indate:'10/27/09',
+        gener:['fps','rpg','ac'],
+        features:['sp','cp'],
+        col:['Top Player Rated'],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-leagueoflegends-riotgames-g1a-04-1920x1080-1ddfea6ca636.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-leagueoflegends-riotgames-g1a-05-1920x1080-826873d63b34.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-leagueoflegends-riotgames-g1a-06-1920x1080-98fe7aef83c9.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-leagueoflegends-riotgames-g1a-07-1920x1080-294594dedec6.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-leagueoflegends-riotgames-g1a-08-1920x1080-7607516fd73b.jpg",
+                num:5},
+
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Warframe',
+        logoimg:'https://cdn1.epicgames.com/offer/244aaaa06bfa49d088205b13b9d2d115/EGS_Warframe_DigitalExtremes_S2_1200x1600-5bf4bc570c2a4c695f552b7ed5aa4e50?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-warframe-digitalextremes-ic1-400x149-daea26b82987.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/offer/244aaaa06bfa49d088205b13b9d2d115/EGS_Warframe_DigitalExtremes_S1_2560x1440-c4a764b2e827bbda5d08491cf4eda6fb?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#0062ff',
+        price:'free',
+        dis:null,
+        oldprice:null,
+        rate:4.5,
+        dev:'Digital Extremes',
+        pub:'Digital Extremes',
+        rdate:"12/11/20",
+        indate:'03/25/20',
+        gener:['fps','rpg','adv'],
+        features:['sp','cp'],
+        col:['Top Player Rated'],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-warframe-digitalextremes-g1a-01-1920x1080-2d1069a28637.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-warframe-digitalextremes-g1a-02-1920x1080-741f00f76d6d.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-warframe-digitalextremes-g1a-03-1920x1080-119c4db10175.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-warframe-digitalextremes-g1a-04-1920x1080-b2e1004326b5.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-warframe-digitalextremes-g1a-05-1920x1080-474caec4caad.jpg",
+                num:5},
+                {img:"https://cdn2.unrealengine.com/egs-warframe-digitalextremes-g1a-06-1920x1080-97b20b6b8ba4.jpg",
+                num:6},
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        adds:[
+            {   mainname:"Warframe",
+                gener:['fps','ac','adv'],
+                features:['sp','cp'],
+                img:'https://cdn1.epicgames.com/offer/244aaaa06bfa49d088205b13b9d2d115/EGS_WarframeBaruukPrimeAccessDesolatePack_DigitalExtremes_DLC_S1_2560x1440-821e503f25c658812364d3fa7033a1d8?h=270&quality=medium&resize=1&w=480',
+                logoimg:'https://cdn1.epicgames.com/offer/244aaaa06bfa49d088205b13b9d2d115/EGS_WarframeBaruukPrimeAccessDesolatePack_DigitalExtremes_DLC_S2_1200x1600-dfdda90c3533020bc0cabc891f51bb14?h=480&quality=medium&resize=1&w=360',
+                name:'Warframe: Baruuk Prime Access - Serene Storm Pack',
+                text:'Add the latest Prime Warframe, Weapons, and exclusive Accessories to your Arsenal instantly. The Serene Storm Pack includes 3990 Platinum, Baruuk Prime',
+                type:'Add-on',
+                dis:null,
+                price:'125.99',
+                oldprice:null,
+                date:null,
+                inw:false,
+                ro:false,
+            },              
+            {   mainname:"Warframe",
+            gener:['fps','ac','adv'],
+            features:['sp','cp'],
+            img:'https://cdn1.epicgames.com/offer/244aaaa06bfa49d088205b13b9d2d115/EGS_WarframeBaruukPrimeAccessSereneStormPack_DigitalExtremes_DLC_S1_2560x1440-4d5a80f0d8c1bfe1688a8af0972bdb25?h=270&quality=medium&resize=1&w=480',
+            logoimg:'https://cdn1.epicgames.com/offer/244aaaa06bfa49d088205b13b9d2d115/EGS_WarframeBaruukPrimeAccessSereneStormPack_DigitalExtremes_DLC_S2_1200x1600-41b2a5891b531bc49de109e7a1d9f8e1?h=480&quality=medium&resize=1&w=360',
+            name:' Warframe: Baruuk Prime Access - Desolate Pack',
+            text:'Make the newest Prime Warframe and Weapons yours instantly. The Desolate Pack includes 2625 Platinum, Baruuk Prime, Cobra & Crane Prime',
+            type:'Add-on',
+            dis:null,
+            price:'71.99',
+            oldprice:null,
+            date:null,
+            inw:false,
+            ro:false,
+        },               
+        ],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Tomb Raider',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_TombRaiderGAMEOFTHEYEAREDITION_CrystalDynamics_S2_1200x1600-a700eac197c57b46cfc99a08b1d62589?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-tombraidergameoftheyearedition-crystaldynamics-ic1-400x400-3e22efa0cd45-400x114-ba026833492c.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_TombRaiderGAMEOFTHEYEAREDITION_CrystalDynamics_S1_2560x1440-0c41fcc8db62992e8d098d304b2277f8?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#660404',
+        price:'19.99',
+        dis:null,
+        oldprice:null,
+        rate:4.7,
+        dev:'Crystal Dynamics',
+        pub:'Crystal Dynamics',
+        rdate:"12/30/21",
+        indate:'03/05/13',
+        gener:['fps','rpg','ac'],
+        features:['sp','cp'],
+        col:['Top Player Rated'],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-tombraidergameoftheyearedition-crystaldynamics-g1a-01-1920x1080-e805b0875b06.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-tombraidergameoftheyearedition-crystaldynamics-g1a-02-1920x1080-9f8be773b263.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-tombraidergameoftheyearedition-crystaldynamics-g1a-03-1920x1080-32077b61f78c.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-tombraidergameoftheyearedition-crystaldynamics-g1a-04-1920x1080-f2ad3f9c089c.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-tombraidergameoftheyearedition-crystaldynamics-g1a-05-1920x1080-0ad1fd2c6198.jpg",
+                num:5},
+                {img:"https://cdn2.unrealengine.com/egs-tombraidergameoftheyearedition-crystaldynamics-g1a-06-1920x1080-233dd5955a75.jpg",
+                num:6},
+                {img:"https://cdn2.unrealengine.com/egs-tombraidergameoftheyearedition-crystaldynamics-g1a-07-1920x1080-971511ca788b.jpg",
+                num:7},
+                
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Assassins Creed® Valhalla',
+        logoimg:'https://cdn1.epicgames.com/400347196e674de89c23cc2a7f2121db/offer/AC KINGDOM PREORDER_STANDARD EDITION_EPIC_Key_Art_Portrait_640x854-640x854-288120c5573756cb988b6c1968cebd86.png?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fassassins-creed-valhalla%2Fhome%2FAC-KINGDOM-PREORDER_STANDARD-EDITION_EPIC_Game_Logo_whiteblue_1000x375-1000x375-baa332e9500ef71697f4a31924488fe309c4784d.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/400347196e674de89c23cc2a7f2121db/offer/AC KINGDOM PREORDER_STANDARD EDITION_EPIC_Key_Art_Wide_3840x2160-3840x2160-485fe17203671386c71bde8110886c7d.jpg?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        bottom_img:'https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fassassins-creed-valhalla%2Fhome%2FBanner-1%2FACK_EPIC_KeyFeature_Banner1_Intro_1200x200_GB-1200x200-cbd94e4320c5eb468f95b64c19d6341526676999.jpg',
+        theme_color:'#2ab1eb',
+        price:'19.79',
+        dis:'67%',
+        oldprice:'59.99',
+        rate:4.6,
+        dev:'Ubisoft Montreal',
+        pub:'Ubisoft',
+        rdate:"11/17/20",
+        gener:['fps','rpg','adv'],
+        features:['sp','cp'],
+        col:['Top Player Rated'],
+        imgs:[
+            [
+                {img:"https://sm.ign.com/t/ign_nordic/news/a/assassins-/assassins-creed-valhalla-gameplay-story-details-revealed_841w.1200.jpg",
+                num:1},
+                {img:"https://news.xbox.com/en-us/wp-content/uploads/sites/2/2020/05/ACValhallaTrailer_HERO.jpg",
+                num:2},
+                {img:"https://cdn.vox-cdn.com/thumbor/9-GmhPsmQx2FY70AEJdmuevTg8s=/0x0:3840x2160/1200x675/filters:focal(1178x452:1792x1066)/cdn.vox-cdn.com/uploads/chorus_image/image/67047828/ACV_UbiFwd_0720_Enemy_Variety.0.jpg",
+                num:3},
+                {img:"https://d.newsweek.com/en/full/1651219/assassins-creed-valhalla-settlement.png",
+                num:4},
+            ],
+            [
+                {img:"https://asset.vg247.com/assassins_creed_valhalla_review_06.png/BROK/resize/1920x1920%3E/format/jpg/quality/80/assassins_creed_valhalla_review_06.png",
+                num:5},
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Celeste',
+        logoimg:'https://cdn1.epicgames.com/offer/b671fbc7be424e888c9346a9a6d3d9db/CodeRedemption_Celeste-340x440-873dacb76be8c59d659757b4b5284a611_1200x1600-9e39079f1ce19738e65d349a8bc98650?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fceleste%2Fhome%2FIC1-1920x1589-77b65e0a0aeff8e362ec3656670774bd16df06f1.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/b671fbc7be424e888c9346a9a6d3d9db/offer/Celeste - landscape offer image-2560x1440-0b9b94fd493d817704ecfdf4c704989a.jpg?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#2ab1eb',
+        price:'3.99',
+        dis:'75%',
+        oldprice:'15.99',
+        rate:5,
+        dev:'Maddy Makes Games',
+        pub:'Maddy Makes Games',
+        rdate:"01/05/18",
+        indate:"01/25/18",
+        gener:['fps','rpg','ac'],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fceleste%2Fhome%2F00-1920x1080-656978e07c631e4fb1dc5d2f435c536edaafd8d5.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fceleste%2Fhome%2F01-1920x1080-e2e349a02d2d6cb17b71eb93c0de65c8f7006153.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fceleste%2Fhome%2F02-1920x1080-d7c57dac7d9384dfb1898fa9ed4a30aae7b755d4.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fceleste%2Fhome%2F05-1920x1080-2bd192fb27de2cfad4b9ba861562844080413c8c.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fceleste%2Fhome%2F04-1920x1080-9324de42e90adf9e94ffa13ae2531c0eede475ed.jpg",
+                num:5},
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Hades',
+        logoimg:'https://cdn1.epicgames.com/min/offer/1200x1600-1200x1600-e92fa6b99bb20c9edee19c361b8853b9.jpg?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/hades-logo-launch-messaging-2000x647-983740753.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/min/offer/2560x1440-2560x1440-5e710b93049cbd2125cf0261dcfbf943.jpg?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        bottom_img:'https://cdn2.unrealengine.com/egs-hades-supergiantgames-g2-02-1920x1080-027048444.jpg?h=720&quality=medium&resize=1&w=1280',
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#ed0000',
+        price:'20.99',
+        dis:null,
+        oldprice:null,
+        rate:4.9,
+        dev:'Supergiant Games',
+        pub:'Supergiant Games',
+        rdate:"12/10/19",
+        gener:['fps','rpg','adv'],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-hades-supergiantgames-g1a-01-1920x1080-010078133.jpg",
+                num:1},
+            ],
+            [
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Dead Cells',
+        logoimg:'https://cdn1.epicgames.com/1368a7f14c3344bbaededbae528fafed/offer/EGS_DeadCells_MotionTwin_S2-1200x1600-34d9d5ebca89e17e0a26ddb2cb158b75.jpg?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-deadcells-motiontwin-ic1-400x130-312501311.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/1368a7f14c3344bbaededbae528fafed/offer/EGS_DeadCells_MotionTwin_S1-2560x1440-87045359c3856ef941959aeeb00dbc7f.jpg?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#0062ff',
+        price:'14.99',
+        dis:'40%',
+        oldprice:'24.99',
+        rate:4.8,
+        dev:'Motion Twin',
+        pub:'Motion Twin',
+        rdate:"10/22/20",
+        gener:['fps','rpg','ac'],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-deadcells-motiontwin-s1-2560x1440-312502186.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-deadcells-motiontwin-g1c-01-1920x1080-312502115.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-deadcells-motiontwin-g1a-02-1920x1080-312500881.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-deadcells-motiontwin-g1a-03-1920x1080-312501125.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-deadcells-motiontwin-g1a-04-1920x1080-312501095.jpg",
+                num:6},
+                {img:"https://cdn2.unrealengine.com/egs-deadcells-motiontwin-g1a-05-1920x1080-312501305.jpg",
+                num:7},
+
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Gotham Knights',
+        logoimg:'https://cdn1.epicgames.com/offer/05057ec2d5ea43c3b0701cc1518e0577/EGS_GothamKnights_WarnerBrosGamesMontreal_S2_1200x1600-5a46b442e57afa637f013bbc09fe5487?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-gothamknights-warnerbrosgamesmontreal-ic1-400x400-3957d6ffed34.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/offer/05057ec2d5ea43c3b0701cc1518e0577/EGS_GothamKnights_WarnerBrosGamesMontreal_S1_2560x1440-0c43d39faa7d02a599489d98b7678527?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#0062ff',
+        price:'23.99',
+        dis:'60%',
+        oldprice:'59.99',
+        rate:2,
+        dev:'Warner Bros. Games',
+        pub:'Warner Bros. Games',
+        rdate:"10/21/22",
+        gener:['fps','rpg','adv'],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-gothamknights-warnerbrosgamesmontrealqloc-g1a-02-1920x1080-8571afcfb36c.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-gothamknights-warnerbrosgamesmontrealqloc-g1a-03-1920x1080-260e845ab226.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-gothamknights-warnerbrosgamesmontrealqloc-g1a-04-1920x1080-73d784ed3bd3.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-gothamknights-warnerbrosgamesmontrealqloc-g1a-05-1920x1080-4550f1b42812.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-gothamknights-warnerbrosgamesmontrealqloc-g1a-06-1920x1080-865826d53aa9.jpg",
+                num:6},
+                {img:"https://cdn2.unrealengine.com/egs-gothamknights-warnerbrosgamesmontrealqloc-g1a-07-1920x1080-18f490dc33cb.jpg",
+                num:7},
+
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Aimlabs',
+        logoimg:'https://cdn1.epicgames.com/offer/baa1163025994ae3b1cf3d425230e90a/EGS_Aimlabs_StateSpaceLabsInc_S2_1200x1600-adeec4040a02ec05f3881323db86f814?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-aimlabs-statespacelabsinc-ic1-400x400-1bb2b59ed174.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/offer/baa1163025994ae3b1cf3d425230e90a/EGS_Aimlabs_StateSpaceLabsInc_S1_2560x1440-19ed7c3790290146977ec2ede7d5295e?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#0062ff',
+        price:'free',
+        dis:null,
+        oldprice:null,
+        rate:2,
+        dev:'State Space Labs Inc',
+        pub:'State Space Labs Inc',
+        rdate:"10/21/22",
+        gener:[],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-aimlabs-statespacelabsinc-g1a-00-1920x1080-9705da35ecc8.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-aimlabs-statespacelabsinc-g1a-01-1920x1080-5fee79121c75.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-aimlabs-statespacelabsinc-g1a-02-1920x1080-dadd107b77a5.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-aimlabs-statespacelabsinc-g1a-03-1920x1080-b5a0ea9c2e34.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-aimlabs-statespacelabsinc-g1a-04-1920x1080-d579bb9ae166.jpg",
+                num:6},
+                {img:"https://cdn2.unrealengine.com/egs-aimlabs-statespacelabsinc-g1a-05-1920x1080-98ccdf134521.jpg",
+                num:7},
+
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Fangs',
+        logoimg:'https://cdn1.epicgames.com/offer/315f40c8c7ae4f95ad7426f364a39194/EGS_Fangs_HiddenLeafGames_S2_1200x1600-2424ccfe1312106fb878a7aefc3817c0?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-fangs-hiddenleafgames-ic1-400x400-d5da45e07b24.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/offer/315f40c8c7ae4f95ad7426f364a39194/EGS_Fangs_HiddenLeafGames_S1_2560x1440-a23fb93cd2ca817bfe642298c097c6ec?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        bottom_img:'https://cdn2.unrealengine.com/logo-600x125-bc072934b242.png',
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#db0d4e',
+        price:'free',
+        dis:null,
+        oldprice:null,
+        rate:3,
+        dev:'Hidden Leaf Games',
+        pub:'Hidden Leaf Games',
+        rdate:"10/21/22",
+        gener:[],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-fangs-hiddenleafgames-g1a-01-1920x1080-50b9460cff90.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-fangs-hiddenleafgames-g1a-02-1920x1080-14fb7bf76fc9.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-fangs-hiddenleafgames-g1a-03-1920x1080-e5dcea365e1c.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-fangs-hiddenleafgames-g1a-04-1920x1080-853f448911ff.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-fangs-hiddenleafgames-g1a-05-1920x1080-8c22efa839ed.jpg",
+                num:6},
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'MultiVersus',
+        logoimg:'https://cdn1.epicgames.com/offer/3a212c0da4f1438e840c21565df4b6fe/EGS_MultiVersus_PlayerFirstGames_S2_1200x1600-e365b2244970128b898fd729263db67d?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-multiversus-playerfirstgames-ic1-season2-400x400-844db4384b6a.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/offer/3a212c0da4f1438e840c21565df4b6fe/EGS_MultiVersus_PlayerFirstGames_S1_2560x1440-0c97c9a155748f90f13fc0dd484ccc48?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#0062ff',
+        price:'free',
+        dis:null,
+        oldprice:null,
+        rate:4.5,
+        dev:'Player First Games',
+        pub:'Warner Bros. Games',
+        rdate:"07/26/22",
+        gener:[],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-multiversus-playerfirstgames-g1a-00-1920x1080-56dda75b15a3.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-multiversus-playerfirstgames-g1a-01-1920x1080-3f7950acfa11.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-multiversus-playerfirstgames-g1a-02-1920x1080-d53862382802.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-multiversus-playerfirstgames-g1a-03-1920x1080-8f2857a556a5.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-multiversus-playerfirstgames-g1a-04-1920x1080-aa30328a0c4b.jpg",
+                num:6},
+                {img:"https://cdn2.unrealengine.com/egs-multiversus-playerfirstgames-g1a-05-1920x1080-a86bd636140a.jpg",
+                num:7},
+                
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Century: Age of Ashes',
+        logoimg:'https://cdn1.epicgames.com/offer/f698d5d792654ac99f47d67e93916bef/EGS_CenturyAgeofAshes_Playwing_S2_1200x1600-e7d29deb8f16791a5e59f2cfef2d529c?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-centuryageofashes-playwing-ic1-400x200-709ec0fdf3d8.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/offer/f698d5d792654ac99f47d67e93916bef/EGS_CenturyAgeofAshes_Playwing_S1_2560x1440-b71bec626c97bd6d77aaa41ebe3382d1?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        bottom_img:'https://cdn2.unrealengine.com/egs-centuryageofashes-playwing-g2-00-2360x532-24353774879e.jpg',
+        theme_color:'#2a70d1',
+        price:'free',
+        dis:null,
+        oldprice:null,
+        rate:3.5,
+        dev:'Playwing',
+        pub:'Playwing',
+        rdate:"02/23/22",
+        gener:[],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-centuryageofashes-playwing-g1a-01-v2-1920x1080-d40547c7b82b.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-centuryageofashes-playwing-g1a-02-v2-1920x1080-4c9e83cc5bc2.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-centuryageofashes-playwing-g1a-03-1920x1080-fc7cbb014c15.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-centuryageofashes-playwing-g1a-04-1920x1080-8fc3d64ca194.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-centuryageofashes-playwing-g1a-05-1920x1080-42d39aae5610.jpg",
+                num:6},
+                {img:"https://cdn2.unrealengine.com/egs-centuryageofashes-playwing-g1a-06-1920x1080-c3148a73bb3f.jpg",
+                num:7},
+                
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Brawlhalla',
+        logoimg:'https://cdn2.unrealengine.com/atla-productart-1200x1600-1200x1600-59caced19b71.jpg?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/productlogo-390x390-840c9bb3ba02.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn2.unrealengine.com/atla-productart-1920x1080-1920x1080-477cda5a5a30.jpg?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#0062ff',
+        price:'free',
+        dis:null,
+        oldprice:null,
+        rate:2.5,
+        dev:'Blue Mammoth Games',
+        pub:'Ubisoft',
+        rdate:"11/15/22",
+        gener:[],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/gen-3fa-shadows-1920x1080-bb40a4ed7bb9.png",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/gen-brynn-shadows-1920x1080-83ef51d5894b.png",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/gen-ffa-shadows-1920x1080-0e50b2d8492d.png",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/gen-kojival-shadows-1920x1080-dafa1c774076.png",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/gen-onyxpetra-shadows-1920x1080-d1238454196a.png",
+                num:6},
+
+                
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Dauntless',
+        logoimg:'https://cdn1.epicgames.com/offer/jackal/EGS_LIVEFORTHEHUNT_PhoenixLabs_S2_1200x1600-20fc53f050fc87617216d71436e2ace4?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/dauntless-logo-white-centered-1204x593-101920654.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/offer/jackal/EGS_LIVEFORTHEHUNT_PhoenixLabs_S1_2560x1440-2b965037bf3386c42c5826ea920fa6cf?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        bottom_img:'https://cdn2.unrealengine.com/egs-liveforthehunt-phoenixlabs-g2-00-1920x500-001d5803be78.jpg',
+        theme_color:'#0062ff',
+        price:'free',
+        dis:null,
+        oldprice:null,
+        rate:2.5,
+        dev:'Phoenix Labs',
+        pub:'Phoenix Labs',
+        rdate:"03/19/20",
+        gener:[],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-liveforthehunt-phoenixlabs-g1a-01-1920x1080-ce4c7190cfa4.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-liveforthehunt-phoenixlabs-g1a-02-1920x1080-e53b05194ce8.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-liveforthehunt-phoenixlabs-g1a-03-1920x1080-6c0225e08a20.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-liveforthehunt-phoenixlabs-g1a-04-1920x1080-5e2ba0c19b18.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-liveforthehunt-phoenixlabs-g1a-05-1920x1080-c649941fb14c.jpg",
+                num:6},
+                {img:"https://cdn2.unrealengine.com/egs-liveforthehunt-phoenixlabs-g1a-07-1920x1080-ea49885fefcb.jpg",
+                num:7},
+                
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Rocket League®',
+        logoimg:'https://cdn1.epicgames.com/offer/9773aa1aa54f4f7b80e44bef04986cea/EGS_RocketLeague_PsyonixLLC_S2_1200x1600-689a36ce5c8643ff37c1483d68be7d6e?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-rocketleague-psyonixllc-ic1-200x200-25b4f760c45c.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/offer/9773aa1aa54f4f7b80e44bef04986cea/EGS_RocketLeague_PsyonixLLC_S3_2560x1440-1434001758900f513cab0c885121744a?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#0062ff',
+        price:'free',
+        dis:null,
+        oldprice:null,
+        rate:4.5,
+        dev:'Psyonix LLC',
+        pub:'Psyonix LLC',
+        rdate:"03/19/20",
+        gener:[],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-rocketleague-psyonixllc-g1a-00-1920x1080-acc5246faf36.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-rocketleague-psyonixllc-g1a-02-1920x1080-64a9d507311b.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-rocketleague-psyonixllc-g1a-03-1920x1080-dd11b399b5dd.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-rocketleague-psyonixllc-g1a-04-1920x1080-f9ae9721a9d9.jpg",
+                num:4},
+            ],
+            [
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'Warface',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_Warface_AllodsTeam_S2_1200x1600-90a094bdcb6824eefe84c60ef0c4a612?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-warface-allodsteam-ic1-png-300x130-c1d9cf9223f2.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_Warface_AllodsTeam_S1_2560x1440-bf3c5da7b0239523117b1ff2bba16dc9?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        bottom_img:'https://cdn2.unrealengine.com/egs-warface-allodsteam-g2-00-1920x1080-c173a432592b.jpg',
+        theme_color:'#0062ff',
+        price:'free',
+        dis:null,
+        oldprice:null,
+        rate:3.5,
+        dev:'Allods Team',
+        pub:'MY.GAMES',
+        rdate:"06/29/21",
+        gener:[],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-warface-allodsteam-g2-00-1920x1080-c173a432592b.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-warface-allodsteam-g1a-03-1920x1080-3c71732704ff.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-warface-allodsteam-g1a-04-1920x1080-61af894cba25.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-warface-allodsteam-g1a-05-1920x1080-98d59b41ee74.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-warface-allodsteam-g1a-06-1920x1080-1f2d811ba1a2.jpg",
+                num:5},
+                {img:"https://cdn2.unrealengine.com/egs-warface-allodsteam-g1a-07-1920x1080-32b9142a244b.jpg",
+                num:6},
+                {img:"https://cdn2.unrealengine.com/egs-warface-allodsteam-g2-01-1920x1080-dd83896256e8.jpg",
+                num:7},
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
+    {
+        name:'The Cycle: Frontier',
+        logoimg:'https://cdn1.epicgames.com/offer/azalea/EGS_TheCycleFrontier_YAGER_S2_1200x1600-473004ea09823cc40080ab1aba6d5090?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-thecyclefrontier-yager-ic1-400x400-446dac031b2b.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/offer/azalea/EGS_TheCycleFrontier_YAGER_S1_2560x1440-41498f780de5b4a62709b004126afbc1?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        bottom_img:'https://cdn2.unrealengine.com/egs-warface-allodsteam-g2-00-1920x1080-c173a432592b.jpg',
+        theme_color:'#de9312',
+        price:'free',
+        dis:null,
+        oldprice:null,
+        rate:3.5,
+        dev:'YAGER',
+        pub:'YAGER',
+        rdate:"06/08/22",
+        gener:[],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-thecyclefrontier-yager-g1a-01-1920x1080-45c1b179163c.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-thecyclefrontier-yager-g1a-04-1920x1080-16a94600ed5e.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-thecyclefrontier-yager-g1a-05-1920x1080-bafc5d0fd37f.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-thecyclefrontier-yager-g1a-06-1920x1080-2826eeaaa844.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-thecyclefrontier-yager-g1a-07-1920x1080-52fd38490f11.jpg",
+                num:5},
+                {img:"https://cdn2.unrealengine.com/egs-thecyclefrontier-yager-g1a-08-1920x1080-d8f5ad02ab39.jpg",
+                num:6},
+                {img:"https://cdn2.unrealengine.com/egs-thecyclefrontier-yager-g1a-09-1920x1080-10ba5aad1ec1.jpg",
+                num:7},
+            ],
+            [
+
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
 ]
 
 let event = ['2kpub','febs','thq']
 let geners = ['fps','adv','ac','ac-adv','rpg','ow']
 let price_filt = ['free',"un-10","un-20","un-30","up-14",'dis']
 let new_old = [true,false]
+
+games_list.sort((a,b)=>{
+    if(a.name.toLocaleLowerCase().charAt(0) > b.name.toLocaleLowerCase().charAt(0) ){
+        return 1
+    }
+    else return -1
+})
 
 for(let game of games_list){
     games.set(game.name,{

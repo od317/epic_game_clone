@@ -43,6 +43,14 @@ let games_list1 = games_lists[0]
 
 let games_list2 = games_lists[1]
 
+let games_list3 = games_lists[2]
+
+let games_list4 = games_lists[3]
+
+let games_list5 = games_lists[4]
+
+
+
 
 for(let g1 of games_list1){
 }
@@ -110,15 +118,35 @@ let games_grid1 = ref([
   },
   {
     title:'Most Played',
-    games:tops_grids.get('Top Sellers'.toLocaleLowerCase())
+    games:tops_grids.get('Most Played'.toLocaleLowerCase())
 
   },
   {
     title:'Top Upcoming Wishlisted',
-    games:tops_grids.get('Top Sellers'.toLocaleLowerCase()),
+    games:tops_grids.get('Top Upcoming Wishlisted'.toLocaleLowerCase()),
      last:true
   },
 ])
+
+
+let games_grid2 = ref([
+  {
+    title:'New Releases',
+    games:tops_grids.get('New Releases'.toLocaleLowerCase())
+  },
+  {
+    title:'Top Player Rated',
+    games:tops_grids.get('Top Player Rated'.toLocaleLowerCase())
+
+  },
+  {
+    title:'Top Popular',
+    games:tops_grids.get('Top Popular'.toLocaleLowerCase()),
+     last:true
+  },
+])
+
+
 
 
 
@@ -359,7 +387,7 @@ let remove_wish = (game)=>{
                         
                         <div :class="`   relative flex items-center  w-full h-full ${game.last !== true ? '':''} hover:cursor-pointer p-1`">
                          
-                          <img :src="game.src" :class="` rounded-md z-10 
+                          <img :src="game.srcm" :class="` rounded-md z-10 
                             lg:h-full lg:w-[2.5rem]
                             md:h-[75%] md:w-[30%]`" alt="">  
                           <div class=" lg:ml-5 md:ml-1  grid content-center w-full ">
@@ -422,7 +450,7 @@ let remove_wish = (game)=>{
 
 
 <!-- games_gird2-->
-<tops_gird :games_grid="games_grid1"/>
+<tops_gird :games_grid="games_grid2"/>
 
 
 
@@ -436,14 +464,14 @@ let remove_wish = (game)=>{
 
 <!--gamelist3-->
 
-<list_game :gamelist="games_list1" type="fps"/>
+<list_game :gamelist="games_list3" type="fps"/>
 
 
 
 
 <!--gamelist4-->
 
-<list_game :gamelist="games_list1" type="mp"/>
+<list_game :gamelist="games_list4" type="mp"/>
 
 
 
@@ -459,7 +487,7 @@ let remove_wish = (game)=>{
 
 <!--gamelist5-->
 
-<list_game :gamelist="games_list1"/>
+<list_game :gamelist="games_list5" type="free"/>
 
 
 
