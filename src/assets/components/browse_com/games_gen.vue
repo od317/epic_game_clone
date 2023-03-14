@@ -62,7 +62,7 @@ const props = defineProps({
   
   <div class="flex justify-between lg:w-[78%]  md:w-[90%] px-2 mb-4 ">
 
-     <label for="" class="text-xl text-white">games-gen</label>
+     <label for="" class="text-xl text-white">Popular Genres</label>
      <div>
        <button :disabled="slide" @click="backward" :class="` disabled:cursor-pointer text-white bg-[#212121] mx-2 rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropleft" ></ion-icon></button>
        <button :disabled="slide" @click="forward"  :class="` disabled:cursor-pointer text-white bg-[#212121] rounded-full h-[1.5rem] w-[1.5rem] text-lg hover:bg-dark2 transition-all duration-100`"><ion-icon name="arrow-dropright"></ion-icon></button>   

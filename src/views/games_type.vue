@@ -52,14 +52,38 @@
             break
         case 'ow':
             title='open world'
-            break                             
+            break          
+        case 'fg':
+            title='fantasy'
+            break                  
+        case 'eg':
+            title='Exploration'
+            break           
+        case 'hg':
+            title='Horror'
+            break
+        case 'sv':
+            title='Survival'
+            break
+        case 'td':
+            title='Tower Defense'
+            break    
+        case 'stg':
+            title='Strategy'
+            break   
+        case 'sv':
+            title='Survival'
+            break   
+        case 'sth':
+            title='Stealth'
+            break                                                                      
        }    
 
        
 
 
        let event = ['2kpub','febs','thq']
-       let geners = ['fps','adv','ac','ac-adv','rpg','ow']
+       let geners = ['fps','adv','ac','ac-adv','rpg','ow','fg','eg','hg','sv','td','stg','sth']
        let price_filt = ['free',"un-10","un-20","un-30","up-14",'dis']
        let new_old = [true,false]
        let all_filters = [event,price_filt,geners]
@@ -255,7 +279,18 @@
                     c2=true
                     break                
               }
-              return c1&&c2&&c3
+              let features = false
+
+              for(let f of i.features){
+                if(f===filters.value[3]){
+                features=true
+                break
+                }
+              }
+
+              c4 = filters.value[3] == 'all' || features
+
+              return c1&&c2&&c3&&c4
        })
     }
 
@@ -470,9 +505,9 @@ if(key_word_input.value!==""){
 
 
 
-<div class="hidden md:flex flex-col items-start text-white text-[1.7rem] px-[8%] pt-[1rem] bg-dark1">
+<div class="hidden md:flex flex-col items-start text-white text-[1.7rem] px-[11%] pt-[1rem] bg-dark1">
             <label>{{ title }} Games</label>
-            <label class="text-[1rem] lowercase w-[40%] mt-[.5rem]">
+            <label class="text-[1rem] lowercase w-[40%]  mt-[.5rem]">
                 Epic Games Store offers some of the best {{ title }} Games. 
                 Download today and start playing fun and exciting {{title}} Games.    
             </label>
@@ -555,13 +590,13 @@ if(key_word_input.value!==""){
                                     <img  :src="game.logoimg" class="w-[100%] h-[16rem] rounded-md" alt="">
                                      
                                    </div>
-                                     <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-2'}`">
-                                        <label for="" class="w-full text-sm text-gray-600">Base game </label>
-                                            <label for="" class="w-full text-lg text-white">{{ game.name }} </label>
-                                            <div class="flex w-full mt-2 items-center">
-                                                <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
-                                                <label v-if="game.dis" for="" class="text-gray-500 text-[.8rem] mr-2 line-through">${{ game.oldprice }}</label>
-                                                <label for="" class="text-white text-[.8rem]">${{ game.price }}</label>
+                                     <div :class="`${game.last ? 'hidden':'flex cursor-pointer flex-col w-full mt-2'}`">
+                                        <label for="" class="w-full text-sm cursor-pointer text-gray-600">Base game </label>
+                                            <label for="" class="w-full text-lg cursor-pointer text-white">{{ game.name }} </label>
+                                            <div class="flex w-full mt-2 cursor-pointer items-center">
+                                                <label v-if="game.dis" for="" class="text-white text-[.7rem] cursor-pointer bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
+                                                <label v-if="game.dis" for="" class="text-gray-500 text-[.8rem] cursor-pointer mr-2 line-through">${{ game.oldprice }}</label>
+                                                <label for="" class="text-white cursor-pointer text-[.8rem]">${{ game.price }}</label>
                                             </div>
 
 
@@ -619,11 +654,11 @@ if(key_word_input.value!==""){
 
 
 
-                <div v-if="view_grid.length>0" class="col-span-3 mt-[5rem] flex justify-center">
+                <div v-if="view_grid.length>0" class="col-span-3 my-[5rem] flex items-center justify-center">
                        
                        <div v-if="end >= 48 && end <=(gamesgrid2.length - (3*12))" class="text-gray-500">
                              
-                             <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
+                             <button class=" items-center justify-center" v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
                              <button @click="change(1)">1</button>
                              ...
                              <button @click="change(pos-1)" clas="ml-1">{{ pos-1 }}</button>
@@ -631,14 +666,14 @@ if(key_word_input.value!==""){
                              <button @click="change(pos+1)" class="ml-1">{{ pos+1 }}</button>
                              ...
                              <button @click="change(end_num)">{{end_num}}</button>
-                             <button v-if="pos<20" @click="change(pos+1)"><ion-icon name="arrow-dropright"></ion-icon></button>
+                             <button class=" items-center justify-center" v-if="pos<20" @click="change(pos+1)"><ion-icon name="arrow-dropright"></ion-icon></button>
            
                     </div>  
 
 
                     <div v-else-if="end <=48" class="text-gray-500">
                    
-                       <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
+                       <button class=" items-center justify-center" v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
 
                              <button @click="change(1)" :class="`${pos==1?'text-white':''} mx-1`">1</button>
                              <button v-if="end_num>=2" @click="change(2)" :class="`${pos==2?'text-white':''} ml-1`">2</button>
@@ -647,21 +682,21 @@ if(key_word_input.value!==""){
                              <button v-if="end_num>=5" @click="change(5)" :class="`${pos==5?'text-white':''} ml-1`">5</button>
                               <label v-if="end_num>5" for=""> ... </label>
                              <button v-if="end_num>5" @click="change(end_num)">{{end_num}}</button>
-                             <button v-if="pos<end_num" @click="change(pos+1)"><ion-icon name="arrow-dropright"></ion-icon></button>
+                             <button class=" items-center justify-center" v-if="pos<end_num" @click="change(pos+1)"><ion-icon name="arrow-dropright"></ion-icon></button>
 
                     </div>
                    
                     <div v-else class="text-gray-400">
                        <button v-if="pos>1" @click="change(pos-1)"><ion-icon name="arrow-dropleft"></ion-icon></button>
 
-                       <button @click="change(1)" :class="`${pos==1?'text-white':''}`">1</button>
+                       <button class=" items-center justify-center" @click="change(1)" :class="`${pos==1?'text-white':''}`">1</button>
                        ...
                        <button @click="change(end_num-4)" :class="`${pos==end_num-4?'text-white':''} mx-1`">{{end_num-4}}</button>
                        <button @click="change(end_num-3)" :class="`${pos==end_num-3?'text-white':''} mx-1`">{{end_num-3}}</button>
                        <button @click="change(end_num-2)" :class="`${pos==end_num-2?'text-white':''} mx-1`">{{end_num-2}}</button>
                        <button @click="change(end_num-1)" :class="`${pos==end_num-1?'text-white':''} mx-1`">{{end_num-1}}</button>
                        <button @click="change(end_num)" :class="`${pos==end_num?'text-white':''} mx-1`">{{end_num}}</button>
-                             <button v-if="pos<end_num" @click="change(pos+1)" class="ml-1"><ion-icon name="arrow-dropright"></ion-icon></button>
+                             <button class=" items-center justify-center ml-1" v-if="pos<end_num" @click="change(pos+1)" ><ion-icon name="arrow-dropright"></ion-icon></button>
 
                     </div>
                      

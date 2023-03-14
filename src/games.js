@@ -2136,7 +2136,7 @@ let games_list =[
         ]  
     },
     {
-        name:'cyberpunk-2077',
+        name:'cyberpunk 2077',
         logoimg:'https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S2_03_1200x1600-b1847981214ac013383111fc457eb9c5?h=480&quality=medium&resize=1&w=360',
         img:'https://cdn2.unrealengine.com/egs-cyberpunk2077-cdprojektred-ic1-400x400-82b90aa9a275.png?h=270&quality=medium&resize=1&w=480',
         ach_img:'https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7?h=270&quality=medium&resize=1&w=480',
@@ -6780,6 +6780,168 @@ let games_list =[
         game_discs.get('r'),
         ]  
     },
+    {
+        name:'The Outer Worlds: Spacers Choice',
+        logoimg:'https://cdn1.epicgames.com/offer/dc61166eea95474e912953b163791d42/EGS_TheOuterWorldsSpacersChoiceEdition_ObsidianEntertainment_S2_1200x1600-24b156886564b75bf9aa823a0a0eb18e?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-ic1-400x400-86c3bee5e2d2.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/offer/dc61166eea95474e912953b163791d42/EGS_TheOuterWorldsSpacersChoiceEdition_ObsidianEntertainment_S1_2560x1440-dd9211a8277a2392a9dd5b108858ba33?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        bottom_img:'https://cdn2.unrealengine.com/egs-warface-allodsteam-g2-00-1920x1080-c173a432592b.jpg',
+        theme_color:'#de9312',
+        price:'47.99',
+        dis:'20%',
+        oldprice:'59.99',
+        rate:4.5,
+        dev:'Obsidian Entertainment',
+        pub:'Private Division',
+        rdate:"03/07/23",
+        gener:[],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-00-1920x1080-a82009312103.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-01-1920x1080-f0ad1f7b8d71.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-02-1920x1080-51b91c65d2ed.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-03-1920x1080-1fd07dfe05fa.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-04-1920x1080-2e8084901833.jpg",
+                num:5},
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-05-1920x1080-1e38dba9b282.jpg",
+                num:6},
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-06-1920x1080-307e8f4f536f.jpg",
+                num:7},
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-07-1920x1080-b81e4a01ad2b.jpg",
+                num:8},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-08-1920x1080-9dd56a824e91.jpg",
+                 num:9}
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+        game_discs.get('quc'),
+        game_discs.get('ac'),
+        game_discs.get('cc'),
+        game_discs.get('as'),
+        game_discs.get('r'),
+        ]  
+    },
 ]
 
 
@@ -7178,12 +7340,159 @@ let dummy_games = [
         dis:null,
         oldprice:null,
     },
+    {
+        name:'Returnal™',
+        logoimg:'https://cdn1.epicgames.com/offer/4c461792757541e99c4a16c00834c956/EGS_Returnal_HousemarqueClimaxStudios_S2_1200x1600-617cb4daee4cf45fa937304bceb60a81?h=480&quality=medium&resize=1&w=360',
+        price:'59.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'The Callisto Protocol',
+        logoimg:'https://cdn1.epicgames.com/offer/6b0541b5d9aa476cbf407643ab3b1d7d/EGS_TheCallistoProtocol_StrikingDistanceStudios_S2_1200x1600-1e31eacc92833279f5b7a8d07cd3826c?h=480&quality=medium&resize=1&w=360',
+        price:'59.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Alan Wake Remastered',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/en_Remedy_DEER_S2_1200x1600_1200x1600-8024b0d13e7a3f3888cb27df87cf263f?h=480&quality=medium&resize=1&w=360',
+        price:'29.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Crysis Remastered',
+        logoimg:'https://cdn1.epicgames.com/offer/17a1f8585f9246808597b30780aaf4fb/EGS_Featured_Carousal_Image_1200x1600_MobileCRM_1200x1600-3c3a82d36e59aaae069224789fcfb8c8?h=480&quality=medium&resize=1&w=360',
+        price:'29.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Saints Row',
+        logoimg:'https://cdn1.epicgames.com/offer/0d23bb77ee2f45b7a571bde68caddb09/EGS_SaintsRow_DeepSilverVolition_S2_1200x1600-d95f6c911a764ad44302f021a3174a24?h=480&quality=medium&resize=1&w=360',
+        price:'29.99',
+        dis:'55%',
+        oldprice:'59.99',
+    },
+    {
+        name:'SUPERHOT',
+        logoimg:'https://cdn1.epicgames.com/908bed122ba84c4a908ee1e14da401c3/offer/2ac39eae-91af-4f2f-81bd-d1c51d74ddf1-1200x1600-2aee8dd73e7218a2af9ac961406530b5.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'59.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Crysis 3 Remastered',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_Crysis3Remastered_Crytek_S2_1200x1600-a98a0e5a8215ee2f2b768ec2140f5fd4?h=480&quality=medium&resize=1&w=360',
+        price:'16.99',
+        dis:'45%',
+        oldprice:'29.99',
+    },
+    {
+        name:'Arcadegeddon',
+        logoimg:'https://cdn1.epicgames.com/offer/043ffc92cbd64a9fbc350ea68f415937/EGS_Arcadegeddon_IllFonic_S2_1200x1600-eb8ee0f2ccf8ac8540c0034831562975?h=480&quality=medium&resize=1&w=360',
+        price:'15.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Mafia: Definitive Edition',
+        logoimg:'https://cdn1.epicgames.com/ee8802651a004c48999169fa32eb4903/offer/EGS_MafiaDefinitiveEditionPreOrder_Hangar13_S2-1200x1600-3674a5caa0e10eca89feb4dba0484112.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'13.99',
+        dis:'65%',
+        oldprice:'39.99',
+    },
+    {
+        name:'Monkey Barrels',
+        logoimg:'https://cdn1.epicgames.com/aa54bad47e504fdca79a3eb77be8c465/offer/EGS_MONKEYBARRELS_GoodFeelCoLtd_S2-1200x1600-2a1d398bad097402dcdca68d72c61641.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'59.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Prey',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_Prey_ArkaneStudios_S2_1200x1600-98e869dbf74a7db4857c4242c044272d?h=480&quality=medium&resize=1&w=360',
+        price:'39.99',
+        dis:'75%',
+        oldprice:'9.99',
+    },
+    {
+        name:'Marvels Midnight Suns',
+        logoimg:'https://cdn1.epicgames.com/offer/ea73c08ac633414584e281f838b3a78c/EGS_MarvelsMidnightSuns_FiraxisGames_S2_1200x1600-2bbbf1249898e7441527c7b5679b1dd2?h=480&quality=medium&resize=1&w=360',
+        price:'59.99',
+        dis:'50%',
+        oldprice:'29.99',
+    },
+    {
+        name:'Expeditions: Viking',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_ExpeditionsViking_LogicArtists_S2_1200x1600-149ca492cef6dff9152ddd751ea1f2dc?h=480&quality=medium&resize=1&w=360',
+        price:'29.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Hellpoint',
+        logoimg:'https://cdn1.epicgames.com/97f91a3e4a7449fa9f4505a09efe1645/offer/EGS_Hellpoint_CradleGames_S2-1200x1600-03cd47fb94500a866134675f32c85a34.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'27.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'ELEX II',
+        logoimg:'https://cdn1.epicgames.com/offer/75c06d52a99942e9884a47deced106bb/EGS_ELEXII_PiranhaBytes_S2_1200x1600-54abb7b85d02538e20e3237f67dd7b59?h=480&quality=medium&resize=1&w=360',
+        price:'29.99',
+        dis:'50%',
+        oldprice:'49.99',
+    },
+    {
+        name:'Assassins Creed® III: Remastered',
+        logoimg:'https://cdn1.epicgames.com/epic/offer/Helix_AC3r_Logo_Vertical_White_NoCrest-2500x781-118d92fac38c11d52d6fb1cf159022d6.png?h=480&quality=medium&resize=1&w=360',
+        price:'19.99',
+        dis:'50%',
+        oldprice:'39.99',
+    },
+    {
+        name:'Project Warlock II',
+        logoimg:'https://cdn1.epicgames.com/spt-assets/99980c9e2c8e4ba6812642b418e25b3c/download-project-warlock-ii-offer-uxh7o.png?h=480&quality=medium&resize=1&w=360',
+        price:'39.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'DEATHLOOP',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_DEATHLOOP_ArkaneStudios_S2_1200x1600-d062aa01760072626d27af24af05db77?h=480&quality=medium&resize=1&w=360',
+        price:'19.99',
+        dis:'67%',
+        oldprice:'59.99',
+    },
+    {
+        name:'Gravewood High',
+        logoimg:'https://cdn1.epicgames.com/36d3389b16b14deeb527754f6393469b/offer/EGS_GravewoodHigh_EvilCoGames_S2-1200x1600-919c38e636b31bc0614fc550d0cb0830.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'15.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Recursive Ruin',
+        logoimg:'https://cdn1.epicgames.com/spt-assets/8291b71e47a240c8b47c1992784346d0/download-recursive-ruin-offer-18k1r.png?h=480&quality=medium&resize=1&w=360',
+        price:'13.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Adams Venture Origins',
+        logoimg:'https://cdn1.epicgames.com/spt-assets/e04cbcb561c24dc184bc870778ac1746/download-adams-venture-origins-offer-1htig.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'9.99',
+        dis:null,
+        oldprice:null,
+    },
 ]
 
 console.log(dummy_games.length)
 
 let event = ['2kpub','febs','thq']
-let geners = ['fps','adv','ac','ac-adv','rpg','ow']
+let geners = ['fps','adv','ac','ac-adv','rpg','ow','fg','eg','hg','td','sv','stg','sth']
 let col = [ 'New Releases', 'Top Player Rated','Top Popular', 'Top Sellers','Most Played','Top Upcoming Wishlisted']
 let feat = ['cp','cs','sp','mp']
 /* adv ac fps rpg ow ac-adv */

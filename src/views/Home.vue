@@ -61,7 +61,7 @@ let game_an1 = [
       type:'game',
       img:'https://cdn2.unrealengine.com/egs-wild-hearts-breaker-1920x1080-6891298c91d2.jpg?h=270&quality=medium&resize=1&w=480',
       label:'Master ancient tech to hunt down giant beasts. Tame a world gone wild.',
-      down_text:'€69.99',
+      down_text:'$69.99',
       dst:"heart"
     },
     {
@@ -69,7 +69,7 @@ let game_an1 = [
       type:'game',
       img:'https://cdn2.unrealengine.com/en-egs-destiny-2-season-20-breaker-2560x1440-7abe8178294c.jpg?h=270&quality=medium&resize=1&w=480',
       label:'Destiny 2’s latest Season is here with all new story missions, activities, and rewards.',
-      down_text:'€14.99',
+      down_text:'$14.99',
       dst:"distiny 2"
     },
 ]
@@ -85,12 +85,40 @@ let game_an2 = [
       dst:"2kpub"
     },
     {
+      name:'cyberpunk 2077 sale',
+      type:'game',
+      img:'https://images.hdqwalls.com/download/cyberpunk-2077-2020-4k-game-0c-2560x1440.jpg',
+      label:'cyperbunk 2077 latest update is here with all new story missions, activities, and rewards.',
+      down_text:'$29.99',
+      dst:"cyberpunk 2077"
+    },
+    {
       name:'thq sales',
       type:'browse',
       img:'https://voonze.com/wp-content/uploads/2021/09/THQ-Nordic-Aniversario-Juegos-Gratis-Epic-Games-Store-y-Steam-1000x600.jpg',
-      label:'a new sale from thq on a lot of intersting game dont miss this out (-_-)',
+      label:'a new sale from thq on a lot of intersting game dont miss this out ',
       down_text:'view more',
       dst:"thq"
+    },
+]
+
+
+let game_an3 = [
+    {
+      name:'The Outer Worlds: Spacers Choice',
+      type:'game',
+      img:'https://cdn2.unrealengine.com/egs-outerworlds-spacers-choice-edition-breaker-1920x1080-eb8f482f0515.jpg?h=480&quality=medium&resize=1&w=854',
+      label:'You’ve tried the rest, now come back for the best! Now with improved visuals, a higher level cap, and more!',
+      down_text:'$47.99',
+      dst:"The Outer Worlds: Spacers Choice"
+    },
+    {
+      name:'black friday sales',
+      type:'browse',
+      img:'https://cdn2.unrealengine.com/Diesel%2Fblog%2Fblack-friday-sale%2FEN_EGS_Social_BlackFridaySale_News-2560x1440-67b7de600af470ecb0df2ef87099a100ced23e75.jpg',
+      label:'black friday is here save up to 75% on a lot of games ',
+      down_text:'view more',
+      dst:"febs"
     },
 ]
 
@@ -479,7 +507,7 @@ let remove_wish = (game)=>{
 
 <!-- game_an 3-->
 
-<game_an :game_an="game_an1"/>
+<game_an :game_an="game_an3"/>
 
 
 

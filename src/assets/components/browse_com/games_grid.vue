@@ -146,6 +146,36 @@
                 name:'open world',
                 set:'ow',
                 num:12
+            },
+            {
+                name:'Exploration',
+                set:'eg',
+                num:16
+            },
+            {
+                name:'Horror',
+                set:'hg',
+                num:16 
+            },
+            {
+                name:'Survival',
+                set:'sv',
+                num:16 
+            },
+            {
+                name:'Tower Defense',
+                set:'td',
+                num:16 
+            },
+            {
+                name:'Strategy',
+                set:'stg',
+                num:16 
+            },
+            {
+                name:'Stealth',
+                set:'sth',
+                num:16
             }
             
         ]
@@ -175,6 +205,8 @@
                 set:'mp',
                 num:16
             }
+            ,
+
         ]
     }
     
