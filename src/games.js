@@ -7447,7 +7447,7 @@ let dummy_games = [
     },
     {
         name:'Assassins Creed® III: Remastered',
-        logoimg:'https://cdn1.epicgames.com/epic/offer/Helix_AC3r_Logo_Vertical_White_NoCrest-2500x781-118d92fac38c11d52d6fb1cf159022d6.png?h=480&quality=medium&resize=1&w=360',
+        logoimg:'https://cdn1.epicgames.com/offer/camellia/ACOrigins_STD_Store_Portrait_1200x1600_1200x1600-4a79f9f393f7a3a9e5be3a0ae581f3d5?h=480&quality=medium&resize=1&w=360',
         price:'19.99',
         dis:'50%',
         oldprice:'39.99',

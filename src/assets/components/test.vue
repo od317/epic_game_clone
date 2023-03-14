@@ -127,9 +127,9 @@ let remove_wish = (game)=>{
 </script>
 
 <template>
+<div class="hidden">
 
-
-<flic :games="gamelist" :type="type"/>
+<flic  :games="gamelist" :type="type"/>
 
 <div  class="hidden  flex-col  w-full h-fit items-center mt-[6rem] mb-[4.5rem]">
   
@@ -494,7 +494,7 @@ let remove_wish = (game)=>{
     </div>
 </div>
 
-
+</div>
 
 
 </template>

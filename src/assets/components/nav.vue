@@ -169,7 +169,7 @@
 
     </div>
 
-    <div class="md:hidden  h-full w-full flex justify-between">
+    <div class="md:hidden  h-full w-full flex justify-between ">
 
       <div @click="logopush()" class="md:hidden ml-6 mt-3 min-w-[30px] w-[2rem] "><img src="../img/logo.png" class="" alt=""></div>
     
@@ -197,11 +197,11 @@
 
 </div>
 
-<div :class="`text-white md:hidden  h-full z-50 pb-[3.7rem]  w-[100%] absolute   flex flex-row 
+<div :class="`text-white md:hidden  h-screen z-50   w-[100%] absolute   flex flex-row 
                      transiton-all duration-200  ${!offcanv? 'translate-x-[-101%]':''} z-[100]`">
 
                     <div class="bg-dark2 flex flex-col justify-between
-                     transiton-all duration-200 pb-[3rem]  text-white w-[70%]  h-screen z-[100] "> 
+                     transiton-all duration-200 pb-[20%]  text-white w-[70%]  h-full z-[100] "> 
                      <div class=" flex grow flex-col ">
                           <button class="text-start pl-[1rem] mb-[1rem] py-[.5rem] border-b-[.1rem] border-gray-400">Store</button>
                           <button class="text-start pl-[1rem] mb-[1rem] py-[.5rem] border-b-[.1rem] border-gray-400">Support</button> 
@@ -228,7 +228,7 @@
 
 <!-- search-bar --> 
 
-<div  :class="`flex justify-center max-w-screen z-[100] sticky top-0  ${ !offcanv ? 'z-50':'z-50'} lg:bg-dark1 
+<div  :class="`flex justify-center max-w-screen  sticky top-0  ${ !offcanv ? 'z-[100]':'z-50'} lg:bg-dark1 
  `">
    <!-- large screen --> 
   <div class="text-white lg:flex   items-center  py-[1.5rem] w-[78%] sticky top-0 z-[100] bg-dark1 hidden ">
@@ -266,7 +266,7 @@
 
 
   <!--small screen -->
-  <div :class="`text-white lg:hidden md:pb-[1.5rem]   static  items-center  w-[100%]  ${ !offcanv ? 'z-50':'z-40'} bg-dark1   `">
+  <div :class="`text-white lg:hidden md:pb-[1.5rem]   static  items-center  w-[100%]  ${ !offcanv ? 'z-[50]':'z-[40]'} bg-dark1   `">
         
 
             <div class="text-white px-[6%] md:pt-[2rem] md:pb-0 py-[2rem]   flex  justify-between items-center  w-[100%] bg-dark1  ">
@@ -276,7 +276,7 @@
                  </button>
                </div>
 
-              <button class="flex items-center text-[1.2rem]" @click="george=!george">
+              <button class="flex  items-center text-[1.2rem]" @click="george=!george">
               
                 {{ (page == 'cart' || page == 'wishlist') ? 'discover':page }}
                 <label :class="` cursor-pointer flex items-center text-center ml-[.1rem] translate-y-[10%] ${george ? ' rotate-180':''} transition-all duration-300`" for="">
@@ -291,7 +291,7 @@
               </div>
             </div>
     
-              <div :class="` absolute bg-black bg-opacity-50 h-screen w-[100%]  ${george ? 'block':'hidden'}  `">
+              <div :class="` absolute  bg-black bg-opacity-50 h-screen w-[100%]  ${george ? 'block':'hidden'}  `">
 
                   <div :class="`w-full flex flex-col items-start px-[6%] py-[2rem] bg-dark1   `">
                           
@@ -338,7 +338,7 @@
 
               </div>
 
-               <div @click="george2=false" class="w-full h-screen flex flex-col bg-black bg-opacity-50 translate-y-[-6rem]">
+               <div @click="george2=false" class="w-full h-screen flex flex-col bg-black bg-opacity-50  translate-y-[-6rem]">
                 <div class="bg-dark4 z-50 ">
                 <div @click="res_game_push(g.name)"  class=" pl-[6%] mt-[1rem] flex flex-row" v-for=" g in search_res ">
                    <img class="w-[10%]" :src="g.logoimg" alt="">

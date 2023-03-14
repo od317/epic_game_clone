@@ -2,7 +2,8 @@
     
     <div class="md:hidden mt-[4rem]">
  
-         <router-link :to="`games/${type}`"><button class="pl-[1.5rem] text-[1.4rem] text-white">{{ view_type }}</button></router-link> 
+         <router-link v-if="type!=='free' && type=='mp'" :to="`games/${type}`"><button class="pl-[1.5rem] text-[1.4rem] text-white">{{ view_type }}</button></router-link> 
+         <router-link v-else :to="`browse?filter=${type}`"><button class="pl-[1.5rem] text-[1.4rem] text-white">{{ view_type }}</button></router-link> 
 
     </div>
     
@@ -21,7 +22,9 @@
                                             <div class="flex w-full mt-2 items-center">
                                                     <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
                                                     <label v-if="game.oldprice" for="" class="text-gray-500 mr-2 line-through">${{ game.oldprice }}</label>
-                                                    <label  for="" class="text-white">${{ game.price }}</label>
+                                                    <label v-if="game.price!=='free'" for="" class="text-white">${{ game.price }}</label>
+                                                    <label v-else for="" class="text-white">{{ game.price }}</label>
+
                                             </div>
                             </div>
                        </div>
@@ -69,6 +72,9 @@
     case 'mp':
         view_type.value = 'Top Mulyiplayer Games'
         break
+    case 'free':
+        view_type.value = 'Top Free Games'
+        break    
     default:
         break  
  }

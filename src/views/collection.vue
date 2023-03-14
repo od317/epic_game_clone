@@ -16,7 +16,6 @@ let id =  props.id
 
 let collection = ref([])
 
-for(let i=0;i<100;i++)
 for(let g of games){
     for(let c of games.get(g[0]).col){
         if(c.toLocaleLowerCase()== id){
