@@ -125,7 +125,11 @@ for(let g of gamesgrid.value){
     if(g.name.substring(0,key_word_input.value.length).toLowerCase() === key_word_input.value.toLowerCase() )
     gamesgrid2.value.push(g)
 }
-end_num.value = Math.ceil(gamesgrid2.value.length/12)
+        pos.value= 1
+        start.value = 0
+        end.value= 12
+        view_grid.value = gamesgrid2.value.slice(start.value,end.value)
+        end_num.value = Math.ceil(gamesgrid2.value.length/12)
 
 
 }

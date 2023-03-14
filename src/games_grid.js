@@ -16,13 +16,10 @@ let all_filters = [event,price_filt,geners]
 
 
 
-for(let i=1;i<=144;){
     for(let g of games){
         gamesgrid.push(games.get(g[0]))       
-        i++;
        
     }
 
-}
 
 export default gamesgrid

@@ -517,8 +517,11 @@ let remove_wish = (game)=>{
         gamesgrid2.value = gamesgrid.value
       }
 
-      view_grid.value = gamesgrid2.value.slice(0,12)
-      end_num.value = Math.ceil(gamesgrid2.value.length/12)
+        pos.value= 1
+        start.value = 0
+        end.value= 12
+        view_grid.value = gamesgrid2.value.slice(start.value,end.value)
+        end_num.value = Math.ceil(gamesgrid2.value.length/12)
 
       })
       
