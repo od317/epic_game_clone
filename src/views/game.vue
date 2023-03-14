@@ -529,7 +529,7 @@ window.scrollTo({
                                         
                                         <div class="felx mt-[.8rem] mb-[.5rem]">
                                              <label v-if="game.dis" for="" :class="`bg-[${game.theme_color}] ${ game.theme_color ==='#fcfcfc' || game.theme_color ==='#e6c41c' ?'text-black':'text-white'} rounded-md px-[.4rem]  py-[.3rem] text-sm`">{{game.dis}}</label>
-                                             <label v-if="game.oldprice" for="" class="text-gray-400 mx-1 ml-2 line-through"> {{game.oldprice}} $ </label>
+                                             <label v-if="game.oldprice" for="" class="text-gray-400 mx-1 ml-2 line-through"> {{game.oldprice}}$ </label>
                                              <label v-if="game.price!=='free'" for="" class="text-white mx-2">{{game.price}}$</label>
                                              <label v-else for="" class="text-white mx-2">{{game.price}}</label>
                                             </div>

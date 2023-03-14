@@ -709,7 +709,7 @@ if(key_word_input.value!==""){
        </div>
 
        
-       <div :class="`${george? '':'hidden'} text-white pt-[1.5rem]  flex flex-col items-center inset-0 md:hidden absolute w-screen h-fit min-h-screen  bg-dark1 z-50 `">
+       <div :class="`${george? '':'hidden'} text-white pt-[1.5rem]  flex flex-col items-center inset-0 md:hidden absolute w-screen h-fit min-h-screen  bg-dark1 z-[100] `">
                 
             <div class="w-full mb-[.8rem] px-[1.5rem]">
                 <label for="">Filters</label>

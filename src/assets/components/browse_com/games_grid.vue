@@ -757,7 +757,7 @@ let remove_wish = (game)=>{
        </div>
 
        
-       <div :class="`${george? '':'hidden'} text-white pt-[1.5rem]  flex flex-col items-center inset-0 md:hidden absolute w-screen h-fit min-h-screen  bg-dark1 z-50 `">
+       <div :class="`${george? '':'hidden'} text-white pt-[1.5rem] z-[100] flex flex-col items-center inset-0 md:hidden absolute w-screen h-fit min-h-screen  bg-dark1  `">
                 
             <div class="w-full mb-[.8rem] px-[1.5rem]">
                 <label for="">Filters</label>
@@ -768,7 +768,13 @@ let remove_wish = (game)=>{
 
 
 
-            <div class="flex-grow w-full">
+            <div class="flex-grow flex flex-col items-center w-full">
+                
+                <div class=" justify-self-center  bg-dark2 my-[1rem] py-[.6rem] w-[90%] rounded-sm">
+                                <ion-icon class=" translate-y-[10%] text-sm w-[8%] mr-[2%]" name="search"></ion-icon>
+                                <input type="text" class=" w-[90%] text-sm bg-dark2 outline-none" placeholder="keywords" v-model="key_word_input">
+                        </div>
+
                 <div class="py-[1.5rem] w-full px-[1.5rem] border-t-[.1rem] border-gray-400" v-for="drop in drop_list">
                         <button @click="drop.on = !drop.on" class="cursor-pointer  text-white flex items-start justify-between   w-full">
                             <label for="">{{ drop.type }}</label>
@@ -844,11 +850,10 @@ let remove_wish = (game)=>{
                                            <label for="" class="w-full text-sm text-gray-600">Base game </label>
                                                <label for="" class="w-full text-[1rem] text-white">{{ game.name }} </label>
                                                <div class="flex w-full mt-2 items-center">
-                                                   <label for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-[.3rem]">50%</label>
-                                                   <label for="" class="text-gray-500 mr-[.2rem] line-through">$59.99</label>
-                                                   <label for="" class="text-white">${{ game.price }}</label>
-                                                   <label for="" class="text-white">{{ game.event }}</label>
-                                                   <br>
+                                                   <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-[.3rem]">{{game.dis}}</label>
+                                                   <label v-if="game.oldprice" for="" class="text-gray-500 mr-[.2rem] line-through">${{ game.oldprice }}</label>
+                                                   <label v-if="game.price !=='free'" for="" class="text-white">${{ game.price }}</label>
+                                                   <label v-else for="" class="text-white">${{ game.price }}</label>
 
                                                </div>
    
