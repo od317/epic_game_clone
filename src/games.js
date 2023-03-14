@@ -71,6 +71,7 @@ game_discs.set('dc',                {
 })
 
 let games = new Map()
+
 let games_list =[
     
     {
@@ -6781,8 +6782,671 @@ let games_list =[
     },
 ]
 
+
+
+
+let dummy_games = [
+    {
+        name:'NARAKA: BLADEPOINT',
+        logoimg:'https://cdn1.epicgames.com/offer/0c6aee83b9b64372bf44a043001325f2/EGS_NARAKABLADEPOINT_24Entertainment_S2_1200x1600-88f4e1f1ee1ffa8f7a85bf4e3a492e7e?h=480&quality=medium&resize=1&w=360',
+        price:'19.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Magic: The Gathering Arena',
+        logoimg:'https://cdn1.epicgames.com/offer/5fdcc0dc67294af3be740f362bd976fd/EGS_MagicTheGatheringArena_WizardsoftheCoast_S2_1200x1600-598bab107ae56fa357070c71100cc0be?h=480&quality=medium&resize=1&w=360',
+        price:'free',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Magic: The Gathering Arena',
+        logoimg:'https://cdn1.epicgames.com/b156c3365a5b4cb9a01a5e1108b4e3f4/offer/EGS_STARWARSBattlefrontIICelebrationEdition_DICE_S2-1200x1600-11d040719a8457bbf36cabbe89b200db.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'9.99',
+        dis:'75%',
+        oldprice:'39.99',
+    },
+    {
+        name:'ARK: Survival Evolved',
+        logoimg:'https://cdn1.epicgames.com/ark/offer/EGS_ARKSurvivalEvolved_StudioWildcard_S2-1200x1600-5b58fdefea9f885c7426e894a1034921.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'19.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Metro Last Light Redux',
+        logoimg:'https://cdn1.epicgames.com/offer/c5e786eddfd041caa9984213e3f9621d/metro_last_light_epic_tile_1200x1600_1200x1600-d4f66fca79c098f57e6759dedb6c6565?h=480&quality=medium&resize=1&w=360',
+        price:'3.99',
+        dis:'80%',
+        oldprice:'19.99',
+    },
+    {
+        name:'Overcooked! 2',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/egs-overcooked2-tall_1200x1600-fbae89fad70c05cd1979316f620e64a9?h=480&quality=medium&resize=1&w=360',
+        price:'3.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'theHunter: Call of the Wild™',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_theHunterCalloftheWild_ExpansiveWorlds_S2_1200x1600-1e9b46aaabc33fe0a08cf5b418e76ba2?h=480&quality=medium&resize=1&w=360',
+        price:'4.99',
+        dis:'75%',
+        oldprice:'19.99',
+    },
+    {
+        name:'Nioh: The Complete Edition',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_NiohTheCompleteEdition_KOEITECMOGAMESCOLTD_S2_1200x1600-4723c89d30b680dafa5cf9f279a6cfb7?h=480&quality=medium&resize=1&w=360',
+        price:'49.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Car Mechanic Simulator 2018',
+        logoimg:'https://cdn1.epicgames.com/offer/226306adde104c9092247dcd4bfa1499/EGS_CarMechanicSimulator2018_RedDotGames_S2_1200x1600-f285924f9144353f57ac4631f0c689e6?h=480&quality=medium&resize=1&w=360',
+        price:'15.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Fallout 3: Game of the Year Edition',
+        logoimg:'https://cdn1.epicgames.com/offer/fa702d34a37248ba98fb17f680c085e3/EGS_Fallout3GameoftheYearEdition_BethesdaGameStudios_S2_1200x1600-e2ba392652a1f57c4feb65d6bbd1f963?h=480&quality=medium&resize=1&w=360',
+        price:'6.99',
+        dis:'67%',
+        oldprice:'19.99',
+    },
+    {
+        name:'Mortal Shell',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/c54f6d5f-2a48-41f9-9f36-38a441bdb535_1200x1600-8f81674351d5cbaa78be417ee078a80e?h=480&quality=medium&resize=1&w=360',
+        price:'9.99',
+        dis:'70%',
+        oldprice:'29.99',
+    },
+    {
+        name:'Saints Row IV Re-Elected',
+        logoimg:'https://cdn1.epicgames.com/offer/151e56468b5049628653dedab7c88007/EGS_SaintsRowIVReElected_DeepSilverVolition_S2_1200x1600-7607305fd444a7dab171d4404dbe7ff0?h=480&quality=medium&resize=1&w=360',
+        price:'4.99',
+        dis:'75%',
+        oldprice:'19.99',
+    },
+    {
+        name:'Riders Republic',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/EN_MAD_STD_GAME_EPIC_Store_Portrait_1200x1600_EN_1200x1600-ddd4f456e3035ce50ddfa0d358efa208?h=480&quality=medium&resize=1&w=360',
+        price:'17.99',
+        dis:'70%',
+        oldprice:'59.99',
+    },
+    {
+        name:'Rising Storm 2: Vietnam',
+        logoimg:'https://cdn1.epicgames.com/3542a1df211e492bb2abecb7c734f7f9/offer/EGS_RisingStorm2Vietnam_AntimatterGamesTripwireInteractive_S4-1200x1600-5e3b2f8107e17cc008237e52761d67e5.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'5.99',
+        dis:'75%',
+        oldprice:'21.99',
+    },
+    {
+        name:'Severed Steel',
+        logoimg:'https://cdn1.epicgames.com/offer/5db7394e65044dd1bb083ee983e2b3a5/EGS_SeveredSteel_GreylockStudio_S2_1200x1600-42edb36730050be3d18171baac58a7f2?h=480&quality=medium&resize=1&w=360',
+        price:'12.99',
+        dis:'50%',
+        oldprice:'24.99',
+    },
+    {
+        name:'Severed Steel',
+        logoimg:'https://cdn1.epicgames.com/offer/5db7394e65044dd1bb083ee983e2b3a5/EGS_SeveredSteel_GreylockStudio_S2_1200x1600-42edb36730050be3d18171baac58a7f2?h=480&quality=medium&resize=1&w=360',
+        price:'12.99',
+        dis:'50%',
+        oldprice:'24.99',
+    },
+    {
+        name:'World War Z Aftermath',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/wwzAfterTall_1200x1600-b7b0af3e21961a57059ec4a3019e57fb?h=480&quality=medium&resize=1&w=360',
+        price:'19.99',
+        dis:'50%',
+        oldprice:'39.99',
+    },
+    {
+        name:'PUBG: BATTLEGROUNDS',
+        logoimg:'https://cdn1.epicgames.com/spt-assets/53ec4985296b4facbe3a8d8d019afba9/download-pubg-battlegrounds-offer-1er5e.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'free',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'SnowRunner',
+        logoimg:'https://cdn1.epicgames.com/2744acda6a2e493e9894b389b6564df7/offer/Diesel_productv2_snowrunner_home_SnowRunner_EpicGames_PortraitImage_860x1148-860x1148-bdf591a23e5a348671dc2a77465d0ba6c5871d68-860x1148-5a5adeae2140a3f0b5586750f70bf8e2-860x1148-5a5adeae2140a3f0b5586750f70bf8e2.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'16.49',
+        dis:'45%',
+        oldprice:'29.99',
+    },
+    {
+        name:'Satisfactory',
+        logoimg:'https://cdn1.epicgames.com/offer/crab/U7_Epic_1200x1600_Logo_1200x1600-ed7f1a9f8a59acbfaba61af7accc0a4b?h=480&quality=medium&resize=1&w=360',
+        price:'29.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Kingdom Come: Deliverance',
+        logoimg:'https://cdn1.epicgames.com/undefined/offer/EGS_WarhorseStudios_KingdomComeDeliverance_S4-510x680-ec915782c8a2d6f1d64c028dd74a398f.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'7.49',
+        dis:'75%',
+        oldprice:'29.99',
+    },
+    {
+        name:'Idle Champions of the Forgotten Realms',
+        logoimg:'https://cdn1.epicgames.com/offer/7e508f543b05465abe3a935960eb70ac/EGS_IdleChampionsoftheForgottenRealms_CodenameEntertainment_S2_1200x1600-52d8736cc62172b3a3fb42a34dee38df?h=480&quality=medium&resize=1&w=360',
+        price:'free',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Paladins',
+        logoimg:'https://cdn1.epicgames.com/offer/badb0ee71b474ed591ec43212547cfc8/EGS_PortraitImage_860x1148_860x1148-b9b418bb9564d90a45d86ba3829f72f1?h=480&quality=medium&resize=1&w=360',
+        price:'free',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Frostpunk',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_Frostpunk_11bitstudios_S2_1200x1600-c71dc27cfe505c6c662c49011b36a0c5?h=480&quality=medium&resize=1&w=360',
+        price:'6.99',
+        dis:'75%',
+        oldprice:'27.99',
+    },
+    {
+        name:'Just Cause 4 Reloaded',
+        logoimg:'https://cdn1.epicgames.com/ba8062bdcc1342c0b78743e3c6242575/offer/JC4-Reloaded-860x1148-860x1148-145b58e1d3d597871b8585f824540c57-860x1148-145b58e1d3d597871b8585f824540c57.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'32.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Gloomhaven',
+        logoimg:'https://cdn1.epicgames.com/spt-assets/ef2777467a3c49059a076e42fd9b41f0/download-gloomhaven-offer-1ho2x.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'34.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Ghost Recon Breakpoint Standard Edition',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/GRT_STD_Edition_Store_Portrait_1200x1600_1200x1600-b08ee70d85ee2649b6e9c575d9192e66?h=480&quality=medium&resize=1&w=360',
+        price:'11.99',
+        dis:'80%',
+        oldprice:'59.99',
+    },
+    {
+        name:'A Total War Saga: TROY',
+        logoimg:'https://cdn1.epicgames.com/53310576ce1d4446b20dbbdac4f09f2d/offer/EGS_TotalWarSagaTROY_CREATIVEASSEMBLY_S2-1200x1600-4dc6b4bb1c8958b13c60e4346ad31288.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'24.99',
+        dis:'50%',
+        oldprice:'49.99',
+    },
+    {
+        name:'Mount & Blade II: Bannerlord',
+        logoimg:'https://cdn1.epicgames.com/offer/aeac94c7a11048758064b82f8f8d20ed/EGS_MountBladeIIBannerlord_TaleWorldsEntertainment_S2_1200x1600-67b826955ba37d7d6c33ec578aaa2d54?h=480&quality=medium&resize=1&w=360',
+        price:'49.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Evil Dead: The Game',
+        logoimg:'https://cdn1.epicgames.com/offer/95e09a8c24c44684bca1a6f25aea920c/EGS_EvilDeadTheGame_SaberInteractiveInc_S2_1200x1600-8e839d708bc638cd58c219ae38d58f6f_1200x1600-8e839d708bc638cd58c219ae38d58f6f?h=480&quality=medium&resize=1&w=360',
+        price:'19.99',
+        dis:'50%',
+        oldprice:'39.99',
+    },
+    {
+        name:'Total War: WARHAMMER',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_TotalWarWARHAMMER_CREATIVEASSEMBLY_S6_1200x1600-3e82a2d0de323e3de30f4ff4989a5c15?h=480&quality=medium&resize=1&w=360',
+        price:'14.99',
+        dis:'75%',
+        oldprice:'59.99',
+    },
+    {
+        name:'For The King',
+        logoimg:'https://cdn1.epicgames.com/epic/offer/Diesel_productv2_for-the-king_EGS_IronOakGames_ForTheKing_S4-510x680-124fa65abe75469a705800f43aaa481fcc0ae8df-510x680-226ea06223a3a31c31c242834bb6878f.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'4.99',
+        dis:'75%',
+        oldprice:'19.99',
+    },
+    {
+        name:'The Long Dark',
+        logoimg:'https://cdn1.epicgames.com/58dfcd1952ee48c1a1fa31c6ace5fe3d/offer/EGS_TheLongDark_HinterlandStudioInc_S6-1200x1600-3debfeb01e511b9e1221f973b6bb1fe7.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'13.99',
+        dis:'50%',
+        oldprice:'27.99',
+    },
+    {
+        name:'Goat Simulator 3',
+        logoimg:'https://cdn1.epicgames.com/offer/50bbaf85f4454b1c88786efeede5b302/EGS_GoatSimulator3_CoffeeStainNorthAB_S2_1200x1600-99737fa8a749438ca909c776a4cd9b89?h=480&quality=medium&resize=1&w=360',
+        price:'19.99',
+        dis:'35%',
+        oldprice:'29.99',
+    },
+    {
+        name:'Rising Storm 2: Vietnam',
+        logoimg:'https://cdn1.epicgames.com/3542a1df211e492bb2abecb7c734f7f9/offer/EGS_RisingStorm2Vietnam_AntimatterGamesTripwireInteractive_S4-1200x1600-5e3b2f8107e17cc008237e52761d67e5.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'5.99',
+        dis:'75%',
+        oldprice:'21.99',
+    },
+    {
+        name:'Metro Exodus Standard Edition',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/MetroExodus-PCEnhancedEdition_S2_1200x1600-64a550825c1427140460cc3a86cafdb5?h=480&quality=medium&resize=1&w=360',
+        price:'7.99',
+        dis:'75%',
+        oldprice:'29.99',
+    },
+    {
+        name:'Rough Justice: 84',
+        logoimg:'https://cdn1.epicgames.com/spt-assets/301c3581b20d4fc2aacbac10ac009ba3/rough-justice-84-12r2b.png?h=480&quality=medium&resize=1&w=360',
+        price:'17.99',
+        dis:'10%',
+        oldprice:'19.99',
+    },
+    {
+        name:'Trinity Fusion',
+        logoimg:'https://cdn1.epicgames.com/spt-assets/7ff0b14c1b50498ca2a180710f0874ee/trinity-fusion-has9t.png?h=480&quality=medium&resize=1&w=360',
+        price:'free',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Forspoken',
+        logoimg:'https://cdn1.epicgames.com/offer/a472b0f2f2a5493d960a941f01cf3393/EGS_Forspoken_LuminousProductions_S2_1200x1600-dd7b5d1f22cb04906377b7ed895779b8_1200x1600-dd7b5d1f22cb04906377b7ed895779b8?h=480&quality=medium&resize=1&w=360',
+        price:'79.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'FINAL FANTASY VII',
+        logoimg:'https://cdn1.epicgames.com/offer/6f43ab8025ad42d18510aa91e9eb688b/EGS_FINALFANTASYVIIREMAKEINTERGRADE_SquareEnix_S2_1200x1600-e147110cf8dd1bc8c96810a5867b3475?h=480&quality=medium&resize=1&w=360',
+        price:'79.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'NEO: The World Ends with You',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_NEOTheWorldEndswithYou_handInc_S2_1200x1600-bd41753975486e08ca8f0518d893280f?h=480&quality=medium&resize=1&w=360',
+        price:'59.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Marvel s Guardians of the Galaxy',
+        logoimg:'https://cdn1.epicgames.com/offer/2a09fb19b47f46dfb11ebd382f132a8f/EGS_MarvelsGuardiansoftheGalaxy_EidosMontral_S2_01_1200x1600-e8e868690d5e67692c7bf2c13aa84561?h=480&quality=medium&resize=1&w=360',
+        price:'59.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'KINGDOM HEARTS',
+        logoimg:'https://cdn1.epicgames.com/c8ff067c1c984cd7ab1998e8a9afc8b6/offer/EGS_KINGDOMHEARTSHD28FinalChapterPrologue_SquareEnix_S6-1200x1600-a3fc8fc218fe1ff3541dc2b5b9f076d7.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'59.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Age of Wonders 4',
+        logoimg:'https://cdn1.epicgames.com/offer/61375e6a52534a1aa2d8ba6d46f9ee64/EGS_AgeofWonders4_TriumphStudios_S2_1200x1600-6753645ce36ddcfd00142d40143f3c46?h=480&quality=medium&resize=1&w=360',
+        price:'49.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Sniper Elite 5',
+        logoimg:'https://cdn1.epicgames.com/offer/18ad196e381b4331bf856e71a85ee0df/EGS_SniperElite5_Rebellion_S2_1200x1600-a0198a289c1472b26bc8d7a409c358c1?h=480&quality=medium&resize=1&w=360',
+        price:'49.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Anno 1800 Standard Edition',
+        logoimg:'https://cdn1.epicgames.com/offer/oregano/an18-store-portrait-1200x1600-1200x1600-665115795_1200x1600-a714948f3c93306d618c279edded0525?h=480&quality=medium&resize=1&w=360',
+        price:'59.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'DAEMON X MACHINA',
+        logoimg:'https://cdn1.epicgames.com/offer/0dc18227b3f14162968d8e7969e454ef/EGS_DAEMONXMACHINA_MarvelousInc_S2_1200x1600-11d198187c5cc2f494f6473515866556?h=480&quality=medium&resize=1&w=360',
+        price:'49.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Kerbal Space Program 2',
+        logoimg:'https://cdn1.epicgames.com/offer/038295c445bb40d1b06545fd75741af1/EGS_KerbalSpaceProgram2_InterceptGames_S2_1200x1600-a28fc59b570d183358da192385d777d5?h=480&quality=medium&resize=1&w=360',
+        price:'49.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Kena: Bridge of Spirits',
+        logoimg:'https://cdn1.epicgames.com/7c53d7dc86494d5abcdc974b0ef0a843/offer/EGS_KenaBridgeofSpirits_EmberLab_S6-1200x1600-e701bd947727ee14b81626c7f9757e4f.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'39.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Farming Simulator 22',
+        logoimg:'https://cdn1.epicgames.com/salesEvent/salesEvent/725818d8-9768-4a6a-a723-3039aaee1e23_1200x1600-3b6116d3fc1b566b71251d04bce27938?h=480&quality=medium&resize=1&w=360',
+        price:'39.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'OUTRIDERS',
+        logoimg:'https://cdn1.epicgames.com/offer/c6e54ebd92da4ee8819c1c0956cebdc4/EGS_OUTRIDERS_PeopleCanFly_S2_1200x1600-9fb60a61da1704a46d3c2d29d45f6dca?h=480&quality=medium&resize=1&w=360',
+        price:'39.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Cris Tales',
+        logoimg:'https://cdn1.epicgames.com/ef361cdf19514595a8cb0945fb66962e/offer/EGS_AgorgeousindielovelettertoclassicJRPGs_DreamsUncorporatedSYCK_S2-1200x1600-1cb9e1f4514ece8e580803edccc2e99e.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'39.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Samurai Jack: Battle Through Time',
+        logoimg:'https://cdn1.epicgames.com/db9feb0da696474e9923764dd75b9854/offer/EGS_SamuraiJackBattleThroughTime_SoleilLtd_S2-1200x1600-244b9d4be3acb79075ca408875e05b8b.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'39.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'Kingdoms of Amalur: Re-Reckoning',
+        logoimg:'https://cdn1.epicgames.com/0f86606a1622460898a7874d488f288a/offer/Portrait_Product_Image-1200x1600-9f98edc40c24f96c10fb38316ad8860d.png?h=480&quality=medium&resize=1&w=360',
+        price:'39.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'DRAGON QUEST® XI',
+        logoimg:'https://cdn1.epicgames.com/94a50905f377470c84c8e4b7c38f9cdd/offer/EGS_DRAGONQUESTXISEchoesofanElusiveAge_SquareEnix_S2-1200x1600-85fb72821e496f64e3945969c6fd4290.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'39.99',
+        dis:null,
+        oldprice:null,
+    },
+    {
+        name:'System Shock',
+        logoimg:'https://cdn1.epicgames.com/e49aaa31c1324e398e0b1029a0c6d390/offer/EGS_Afighttothedeathinthedepthsofspace_NightdiveStudios_S4-1200x1600-45f2ccbf4fcbf71a059499d0742229f0.jpg?h=480&quality=medium&resize=1&w=360',
+        price:'39.99',
+        dis:null,
+        oldprice:null,
+    },
+]
+
+console.log(dummy_games.length)
+
 let event = ['2kpub','febs','thq']
 let geners = ['fps','adv','ac','ac-adv','rpg','ow']
+let col = [ 'New Releases', 'Top Player Rated','Top Popular', 'Top Sellers','Most Played','Top Upcoming Wishlisted']
+let feat = ['cp','cs','sp','mp']
+/* adv ac fps rpg ow ac-adv */
+
+/* New Releases Top Player Rated Top Popular Top Sellers Most Played Top Upcoming Wishlisted */
+
+/* cp cs sp mp  */
+
+
+for(let dum of dummy_games){
+    geners = geners.sort(function() {
+        return 0.5 - Math.random();
+      })
+    col = col.sort(function() {
+        return 0.5 - Math.random();
+      })
+    feat = feat.sort(function() {
+        return 0.5 - Math.random();
+      })
+    let g = [geners[0],geners[1],geners[2]]
+    let c = [col[0],col[1],col[2]]
+    let f = [feat[0],feat[1],feat[2]]
+
+    games_list.push({
+        name:dum.name,
+        logoimg:dum.logoimg,
+        img:'https://i.ytimg.com/vi/-he2LPUvHQ8/hqdefault.jpg',
+        ach_img:'https://cdn.vox-cdn.com/thumbor/cV1TVSZhJ_zxjDpXnw2Y_4Jb274=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+        bottom_img:'https://cdn.vox-cdn.com/thumbor/cV1TVSZhJ_zxjDpXnw2Y_4Jb274=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://dokumen.pub/img/dishonored-the-roleplaying-game-core-rulebook-9781912743216.jpg",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        theme_color:'#fcfcfc',
+        price:dum.price,
+        dis:dum.dis,
+        oldprice:dum.oldprice,
+        rate:5.0,
+        dev:'epic games',
+        pub:'epic games',
+        rdate:"11/03/22",
+        indate:"11/11/6",
+        gener:g,
+        features:f,
+        col:c,
+        dummy:true,
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/epic-games-store-ratings-and-polls-update-1920x1080-dc391bf9ab36.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/epic-games-store-ratings-and-polls-update-1920x1080-dc391bf9ab36.jpg",
+                num:2},                   
+                {img:"https://cdn2.unrealengine.com/epic-games-store-ratings-and-polls-update-1920x1080-dc391bf9ab36.jpg",
+                num:3},                    
+                {img:"https://cdn2.unrealengine.com/epic-games-store-ratings-and-polls-update-1920x1080-dc391bf9ab36.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/epic-games-store-ratings-and-polls-update-1920x1080-dc391bf9ab36.jpg",
+                num:5},
+                {img:"https://cdn2.unrealengine.com/epic-games-store-ratings-and-polls-update-1920x1080-dc391bf9ab36.jpg",
+                num:6},                   
+                {img:"https://cdn2.unrealengine.com/epic-games-store-ratings-and-polls-update-1920x1080-dc391bf9ab36.jpg",
+                num:7},                    
+                {img:"https://cdn2.unrealengine.com/epic-games-store-ratings-and-polls-update-1920x1080-dc391bf9ab36.jpg",
+                num:8},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/epic-games-store-ratings-and-polls-update-1920x1080-dc391bf9ab36.jpg",
+                num:9},
+                {img:"https://cdn2.unrealengine.com/epic-games-store-ratings-and-polls-update-1920x1080-dc391bf9ab36.jpg",
+                num:10},                   
+                {img:"https://cdn2.unrealengine.com/epic-games-store-ratings-and-polls-update-1920x1080-dc391bf9ab36.jpg",
+                num:11},                    
+                {img:"https://cdn2.unrealengine.com/epic-games-store-ratings-and-polls-update-1920x1080-dc391bf9ab36.jpg",
+                num:12},
+            ],
+        ],
+        achievements:[
+            {
+                name:'epic games ach',
+                img:'https://cdn.vox-cdn.com/thumbor/cV1TVSZhJ_zxjDpXnw2Y_4Jb274=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+                xp:Math.floor(Math.random() *(100 - 1 + 1)) + 1+" XP",
+                text:'epic games ach',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'epic games ach',
+                img:'https://cdn.vox-cdn.com/thumbor/cV1TVSZhJ_zxjDpXnw2Y_4Jb274=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+                xp:Math.floor(Math.random() *(100 - 1 + 1)) + 1+" XP",
+                text:'epic games ach',
+                unrate:'0.1% of players unlock'
+            },        {
+                name:'epic games ach',
+                img:'https://cdn.vox-cdn.com/thumbor/cV1TVSZhJ_zxjDpXnw2Y_4Jb274=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+                xp:Math.floor(Math.random() *(100 - 1 + 1)) + 1+" XP",
+                text:'epic games ach',
+                unrate:'0.1% of players unlock'
+            },        {
+                name:'epic games ach',
+                img:'https://cdn.vox-cdn.com/thumbor/cV1TVSZhJ_zxjDpXnw2Y_4Jb274=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+                xp:Math.floor(Math.random() *(100 - 1 + 1)) + 1+" XP",
+                text:'epic games ach',
+                unrate:'0.1% of players unlock'
+            },        {
+                name:'epic games ach',
+                img:'https://cdn.vox-cdn.com/thumbor/cV1TVSZhJ_zxjDpXnw2Y_4Jb274=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+                xp:Math.floor(Math.random() *(100 - 1 + 1)) + 1+" XP",
+                text:'epic games ach',
+                unrate:'0.1% of players unlock'
+            },        {
+                name:'epic games ach',
+                img:'https://cdn.vox-cdn.com/thumbor/cV1TVSZhJ_zxjDpXnw2Y_4Jb274=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+                xp:Math.floor(Math.random() *(100 - 1 + 1)) + 1+" XP",
+                text:'epic games ach',
+                unrate:'0.1% of players unlock'
+            },        {
+                name:'epic games ach',
+                img:'https://cdn.vox-cdn.com/thumbor/cV1TVSZhJ_zxjDpXnw2Y_4Jb274=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+                xp:Math.floor(Math.random() *(100 - 1 + 1)) + 1+" XP",
+                text:'epic games ach',
+                unrate:'0.1% of players unlock'
+            },        {
+                name:'epic games ach',
+                img:'https://cdn.vox-cdn.com/thumbor/cV1TVSZhJ_zxjDpXnw2Y_4Jb274=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+                xp:Math.floor(Math.random() *(100 - 1 + 1)) + 1+" XP",
+                text:'epic games ach',
+                unrate:'0.1% of players unlock'
+            },        {
+                name:'epic games ach',
+                img:'https://cdn.vox-cdn.com/thumbor/cV1TVSZhJ_zxjDpXnw2Y_4Jb274=/0x0:1920x1080/1200x800/filters:focal(807x387:1113x693)/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+                xp:Math.floor(Math.random() *(100 - 1 + 1)) + 1+" XP",
+                text:'epic games ach',
+                unrate:'0.1% of players unlock'
+            },
+        ],
+        editions:[
+            {
+                img:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_DishonoredDefinitiveEdition_ArkaneStudios_S3_2560x1440-172cba030b0261550b46b6c1224330bf',
+                name:'Dishonored definitive edition',
+                text:'The virus won and civilization has fallen back to the Dark Ages. The City, one of the last human settlements....',
+                type:'BASE GAME',
+                dis:'50%',
+                price:'59.99',
+                oldprice:'59.99',
+                date:'Sale ends 2/16/2023 at 7:00 PM'
+            },
+            {
+                img:'https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_DishonoredDefinitiveEdition_ArkaneStudios_S3_2560x1440-172cba030b0261550b46b6c1224330bf',
+                name:'Dishonored definitive edition',
+                text:'The virus won and civilization has fallen back to the Dark Ages. The City, one of the last human settlements....',
+                type:'BASE GAME',
+                dis:'50%',
+                price:'59.99',
+                oldprice:'59.99',
+                date:'Sale ends 2/16/2023 at 7:00 PM'
+            },
+        ],
+        adds:[
+            {   mainname:"",
+                gener:['fps','ac','adv'],
+                features:['sp','cp'],
+                img:'https://cdn.vox-cdn.com/thumbor/FtAfpk9Hfhs1Bjq0puMqvrVtTsU=/0x0:1920x1080/1400x933/filters:focal(807x387:1113x693):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+                logoimg:'https://game.watch.impress.co.jp/img/gmw/docs/1270/728/image00_l.jpg',
+                name:'add',
+                text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
+                type:'Add-on',
+                dis:'50%',
+                price:'4.99',
+                oldprice:'9.99',
+                date:null,
+                inw:false,
+                ro:false,
+            },          
+            {   mainname:"",
+            gener:['fps','ac','adv'],
+            features:['sp','cp'],
+            img:'https://cdn.vox-cdn.com/thumbor/FtAfpk9Hfhs1Bjq0puMqvrVtTsU=/0x0:1920x1080/1400x933/filters:focal(807x387:1113x693):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+            logoimg:'https://game.watch.impress.co.jp/img/gmw/docs/1270/728/image00_l.jpg',
+            name:'add',
+            text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
+            type:'Add-on',
+            dis:'50%',
+            price:'4.99',
+            oldprice:'9.99',
+            date:null,
+            inw:false,
+            ro:false,
+        },      {   mainname:"",
+        gener:['fps','ac','adv'],
+        features:['sp','cp'],
+        img:'https://cdn.vox-cdn.com/thumbor/FtAfpk9Hfhs1Bjq0puMqvrVtTsU=/0x0:1920x1080/1400x933/filters:focal(807x387:1113x693):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+        logoimg:'https://game.watch.impress.co.jp/img/gmw/docs/1270/728/image00_l.jpg',
+        name:'add',
+        text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
+        type:'Add-on',
+        dis:'50%',
+        price:'4.99',
+        oldprice:'9.99',
+        date:null,
+        inw:false,
+        ro:false,
+    },      {   mainname:"",
+    gener:['fps','ac','adv'],
+    features:['sp','cp'],
+    img:'https://cdn.vox-cdn.com/thumbor/FtAfpk9Hfhs1Bjq0puMqvrVtTsU=/0x0:1920x1080/1400x933/filters:focal(807x387:1113x693):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+    logoimg:'https://game.watch.impress.co.jp/img/gmw/docs/1270/728/image00_l.jpg',
+    name:'add',
+    text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
+    type:'Add-on',
+    dis:'50%',
+    price:'4.99',
+    oldprice:'9.99',
+    date:null,
+    inw:false,
+    ro:false,
+    },      {   mainname:"",
+    gener:['fps','ac','adv'],
+    features:['sp','cp'],
+    img:'https://cdn.vox-cdn.com/thumbor/FtAfpk9Hfhs1Bjq0puMqvrVtTsU=/0x0:1920x1080/1400x933/filters:focal(807x387:1113x693):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+    logoimg:'https://game.watch.impress.co.jp/img/gmw/docs/1270/728/image00_l.jpg',
+    name:'add',
+    text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
+    type:'Add-on',
+    dis:'50%',
+    price:'4.99',
+    oldprice:'9.99',
+    date:null,
+    inw:false,
+    ro:false,
+    },      {   mainname:"",
+    gener:['fps','ac','adv'],
+    features:['sp','cp'],
+    img:'https://cdn.vox-cdn.com/thumbor/FtAfpk9Hfhs1Bjq0puMqvrVtTsU=/0x0:1920x1080/1400x933/filters:focal(807x387:1113x693):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/68634511/epic_logo_black.0.jpg',
+    logoimg:'https://game.watch.impress.co.jp/img/gmw/docs/1270/728/image00_l.jpg',
+    name:'add',
+    text:'It’s time to live by your own rules and become the most feared man in The City. Satisfy your hunger for power and wealth as Rais, a powerful warlord who strikes fear in the hearts of all',
+    type:'Add-on',
+    dis:'50%',
+    price:'4.99',
+    oldprice:'9.99',
+    date:null,
+    inw:false,
+    ro:false,
+    },   
+        ],
+        game_disc:[
+           game_discs.get('cc'),
+            game_discs.get('gbb'),
+            game_discs.get('ef'),
+            game_discs.get('as'),
+            game_discs.get('r'),
+            game_discs.get('gfb'),
+            game_discs.get('ac'),
+            game_discs.get('quc'),
+            game_discs.get('hr'),
+            game_discs.get('chc'),
+            game_discs.get('dc'),
+        ]  
+    })
+}
+
+
+
 let price_filt = ['free',"un-10","un-20","un-30","up-14",'dis']
 let new_old = [true,false]
 
@@ -6822,6 +7486,7 @@ for(let game of games_list){
         slide_img:game.slide_img,
         last:game.last,
         date:game.date,
+        dummy:game.dummy,
         col:game.col,
         event:event[Math.floor(Math.random() * (3 - 0 + 1)) + 0],
         gener:game.gener||[geners[Math.floor(Math.random() * (3 - 0 + 1)) + 0]],

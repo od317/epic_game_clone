@@ -15,6 +15,8 @@ let lisits = ['ac','adv','fps','mp','free']
 for(let p =0;p<games_lists.length;p++){
    let i = 0
    for(let game of games){
+       if(games.get(game[0]).dummy)
+          continue
        if(lisits[p]!=='mp' && lisits[p]!=='free')
        for(let c of games.get(game[0]).gener){
             if(i>=15)

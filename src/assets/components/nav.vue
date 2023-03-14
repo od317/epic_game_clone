@@ -82,7 +82,7 @@
     if(search_input.value == "")
        return
     for(let game of games){
-      if(game[0].substring(0,search_input.value.length) === search_input.value)
+      if(game[0].substring(0,search_input.value.length).toLocaleLowerCase() === search_input.value.toLocaleLowerCase())
          search_res.value.push(games.get(game[0]))
       if(search_res.value.length == 4)
       break   

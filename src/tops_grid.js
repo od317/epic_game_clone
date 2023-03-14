@@ -8,6 +8,8 @@ for(let tit of titles){
     let grid = []
     for(let i=0;i<5;i++){
         for(let g of games){
+            if(games.get(g[0]).dummy)
+              continue
             for(let c of games.get(g[0]).col){
                 if(c.toLocaleLowerCase()==tit.toLocaleLowerCase()){
                   grid.push(games.get(g[0]))
