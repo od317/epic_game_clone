@@ -723,21 +723,21 @@ if(key_word_input.value!==""){
        </div>
 
        
-       <div :class="`${george? '':'hidden'} text-white pt-[1.5rem]  flex flex-col items-center inset-0 md:hidden absolute w-screen h-fit min-h-screen  bg-dark1 z-[100] `">
+       <div :class="`${george? '':'hidden'} text-white  pt-[1.5rem]  flex flex-col items-center inset-0 md:hidden absolute w-screen  h-[120%] pb-[6rem] min-h-screen  bg-dark1 z-[100] `">
                 
-            <div class="w-full mb-[.8rem] px-[1.5rem]">
+            <div class="w-full mb-[.8rem]  px-[1.5rem]">
                 <label for="">Filters</label>
                  <div v-if="filter_num-1 > 0" class="ml-[.5rem] inline-block">
                     ({{ filter_num-1 }})
                 </div>
             </div>
 
-            <div class="  w-[90%] px-[1.5rem] bg-dark2 text-center flex items-center my-[1rem] py-[.5rem] rounded-md">
+            <div class="  w-[90%] px-[1.5rem]  bg-dark2 text-center flex items-center my-[1rem] py-[.5rem] rounded-md">
                 <ion-icon class="mr-[.5rem]" name="search"></ion-icon>
                 <input type="text" class="  w-[90%] bg-dark2" placeholder="keywords">
             </div>
 
-            <div class="flex-grow w-full">
+            <div class="flex-grow w-full ">
                 <div class="py-[1.5rem] w-full px-[1.5rem] border-t-[.1rem] border-gray-400" v-for="drop in drop_list">
                         <button @click="drop.on = !drop.on" class="cursor-pointer  text-white flex items-start justify-between   w-full">
                             <label for="">{{ drop.type }}</label>
@@ -757,7 +757,7 @@ if(key_word_input.value!==""){
                 </div>    
             </div>
 
-                <div class="bg-dark2 w-full py-[1rem] px-[2rem] flex  items-center justify-self-end">
+                <div class="bg-dark2  fixed top-[89%] w-full py-[1rem] px-[2rem] flex  items-center justify-self-end">
                 
                 <button class="w-[40%] text-start" @click="reset_filt()">Clear</button>
                 
@@ -810,7 +810,7 @@ if(key_word_input.value!==""){
 
             <div class="flex justify-between flex-wrap">
 
-                <div v-for="game in view_grid" class=" group  py-[1rem] w-[48%] h-[100%] ">
+                <div @Click="route_push_game(game.name)" v-for="game in view_grid" class=" group  py-[1rem] w-[48%] h-[100%] ">
                                       
                                       <div class="w-[100%] h-[70%] rounded-md relative">
                                          

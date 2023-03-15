@@ -650,7 +650,7 @@ top:0,
 </div>
 
 
-<div :class="`${george? '':'hidden'} text-white pt-[1.5rem]  flex flex-col items-center inset-0 md:hidden absolute w-screen h-fit min-h-screen  bg-dark1 z-50 `">
+<div :class="`${george? '':'hidden'} text-white pt-[1.5rem] z-[100] flex flex-col items-center inset-0 md:hidden absolute w-screen  h-[120%] pb-[6rem] min-h-screen  bg-dark1 z-50 `">
         
     <div class="w-full mb-[.8rem] px-[1.5rem]">
         <label for="">Filters</label>
@@ -661,7 +661,7 @@ top:0,
 
 
 
-    <div class="flex-grow w-full">
+    <div class="flex-grow  bg-dark1 w-full">
         <div class="py-[1.5rem] w-full px-[1.5rem] border-t-[.1rem] border-gray-400" v-for="drop in drop_list">
                 <button @click="drop.on = !drop.on" class="cursor-pointer  text-white flex items-start justify-between   w-full">
                     <label for="">{{ drop.type }}</label>
@@ -681,7 +681,7 @@ top:0,
         </div>    
     </div>
 
-        <div class="bg-dark2 w-full py-[1rem] px-[2rem] flex  items-center justify-self-end">
+        <div class="bg-dark2 fixed top-[89%] w-full py-[1rem] px-[2rem] flex  items-center justify-self-end">
         
         <button class="w-[40%] text-start" @click="reset_filt()">Clear</button>
         
