@@ -282,11 +282,19 @@ let show_c = (c)=>{
         break
     case 'lh':
     gamesgrid2.value.sort((a,b)=>{
+        if(a.price==='free')
+                       return -1
+        else if(b.price==='free')
+                       return 1
             return a.price - b.price
         })
         break
     case 'hl':
     gamesgrid2.value.sort((a,b)=>{
+        if(a.price==='free')
+                       return 1
+        else if(b.price==='free')
+                       return -1
         return b.price - a.price
 
         })
@@ -461,8 +469,8 @@ top:0,
             <div class="flex flex-col justify-start items-start p-[1rem] text-[1rem] text-white">
                 <button @click="show_c('random')">random</button>
                 <button @click="show_c('alpha')">alpha</button>
-                <button @click="show_c('hl')"> h to l</button>
-                <button @click="show_c('lh')"> l to h</button>
+                <button @click="show_c('hl')">price h to l</button>
+                <button @click="show_c('lh')">price l to h</button>
             </div>
         
         </div>
@@ -525,9 +533,11 @@ top:0,
                                 <label for="" class="w-full text-sm text-gray-600">Base game </label>
                                     <label for="" class="w-full text-lg text-white">{{ game.name }} </label>
                                     <div class="flex w-full mt-2 items-center">
-                                        <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
-                                        <label v-if="game.dis" for="" class="text-gray-500 text-[.8rem] mr-2 line-through">${{ game.oldprice }}</label>
-                                        <label for="" class="text-white text-[.8rem]">${{ game.price }}</label>
+                                        <label v-if="game.dis" for="" class="text-white text-[.7rem] cursor-pointer bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
+                                                <label v-if="game.dis" for="" class="text-gray-500 text-[.8rem] cursor-pointer mr-2 line-through">${{ game.oldprice }}</label>
+                                                <label v-if="game.price!=='free'" for="" class="text-white cursor-pointer text-[.8rem]">${{ game.price }}</label>
+                                                <label v-else for="" class="text-white cursor-pointer text-[.8rem]">{{ game.price }}</label>
+
                                     </div>
 
 
@@ -695,8 +705,8 @@ top:0,
             <div class="flex flex-col justify-start items-start p-[1rem] text-[1rem] text-white">
                 <button @click="show_c('random')">random</button>
                 <button @click="show_c('alpha')">alpha</button>
-                <button @click="show_c('hl')"> h to l</button>
-                <button @click="show_c('lh')"> l to h</button>
+                <button @click="show_c('hl')">price h to l</button>
+                <button @click="show_c('lh')">price l to h</button>
             </div>
         
         </div>
@@ -727,11 +737,10 @@ top:0,
                                    <label for="" class="w-full text-sm text-gray-600">Base game </label>
                                        <label for="" class="w-full text-[1rem] text-white">{{ game.name }} </label>
                                        <div class="flex w-full mt-2 items-center">
-                                           <label for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-[.3rem]">50%</label>
-                                           <label for="" class="text-gray-500 mr-[.2rem] line-through">$59.99</label>
-                                           <label for="" class="text-white">${{ game.price }}</label>
-                                           <label for="" class="text-white">{{ game.event }}</label>
-                                           <br>
+                                        <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-[.3rem]">{{game.dis}}</label>
+                                                   <label v-if="game.oldprice" for="" class="text-gray-500 mr-[.2rem] line-through">${{ game.oldprice }}</label>
+                                                   <label v-if="game.price !=='free'" for="" class="text-white">${{ game.price }}</label>
+                                                   <label v-else for="" class="text-white">${{ game.price }}</label>
 
                                        </div>
 

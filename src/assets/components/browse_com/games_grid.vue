@@ -123,17 +123,17 @@
                 num:9
             },
             {
-                name:'adv',
+                name:'Adventure',
                 set:'adv',
                 num:10
             },
             {
-                name:'ac',
+                name:'Action',
                 set:'ac',
                 num:11
             },
             {
-                name:'ac/adv',
+                name:'Adventure',
                 set:'ac-adv',
                 num:12
             },
@@ -397,11 +397,19 @@
                 break
             case 'lh':
             gamesgrid2.value.sort((a,b)=>{
+                    if(a.price==='free')
+                       return -1
+                    else if(b.price==='free')
+                       return 1   
                     return a.price - b.price
                 })
                 break
             case 'hl':
             gamesgrid2.value.sort((a,b)=>{
+                if(a.price==='free')
+                       return 1
+                else if(b.price==='free')
+                       return -1
                 return b.price - a.price
 
                 })
@@ -579,8 +587,8 @@ let remove_wish = (game)=>{
                     <div class="flex flex-col justify-start items-start p-[1rem] text-[1rem] text-white">
                         <button @click="show_c('random')">random</button>
                         <button @click="show_c('alpha')">alpha</button>
-                        <button @click="show_c('hl')"> h to l</button>
-                        <button @click="show_c('lh')"> l to h</button>
+                        <button @click="show_c('hl')">price h to l</button>
+                        <button @click="show_c('lh')">price l to h</button>
                     </div>
                 
                 </div>
@@ -760,7 +768,7 @@ let remove_wish = (game)=>{
        </div>
 
        
-       <div :class="`${george? '':'hidden'} text-white pt-[1.5rem] z-[100] flex flex-col items-center inset-0 md:hidden absolute w-screen h-fit min-h-screen  bg-dark1  `">
+       <div :class="`${george? '':'hidden'} absolute  text-white pt-[1.5rem] z-[100] flex flex-col items-center inset-0 md:hidden  w-screen h-fit min-h-screen  bg-dark1  `">
                 
             <div class="w-full mb-[.8rem] px-[1.5rem]">
                 <label for="">Filters</label>
@@ -771,7 +779,7 @@ let remove_wish = (game)=>{
 
 
 
-            <div class="flex-grow flex flex-col items-center w-full">
+            <div class="flex-grow  h-screen flex flex-col items-center w-full">
                 
                 <div class=" justify-self-center  bg-dark2 my-[1rem] py-[.6rem] w-[90%] rounded-sm">
                                 <ion-icon class=" translate-y-[10%] text-sm w-[8%] mr-[2%]" name="search"></ion-icon>
@@ -797,7 +805,7 @@ let remove_wish = (game)=>{
                 </div>    
             </div>
 
-                <div class="bg-dark2 w-full py-[1rem] px-[2rem] flex  items-center justify-self-end">
+                <div class="bg-dark2 fixed top-[89%] w-full py-[1rem] px-[2rem] flex  items-center justify-self-end">
                 
                 <button class="w-[40%] text-start" @click="reset_filt()">Clear</button>
                 
@@ -821,8 +829,8 @@ let remove_wish = (game)=>{
                     <div class="flex flex-col justify-start items-start p-[1rem] text-[1rem] text-white">
                         <button @click="show_c('random')">random</button>
                         <button @click="show_c('alpha')">alpha</button>
-                        <button @click="show_c('hl')"> h to l</button>
-                        <button @click="show_c('lh')"> l to h</button>
+                        <button @click="show_c('hl')">price h to l</button>
+                        <button @click="show_c('lh')">price l to h</button>
                     </div>
                 
                 </div>

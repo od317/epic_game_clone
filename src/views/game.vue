@@ -18,7 +18,170 @@ let id = props.id
 
 
 
-let game = ref(games.get(id))
+   if(games.get(id)==null)
+        router.push('/404')
+
+
+let game = ref(games.get(id)||    
+{
+        name:'The Outer Worlds: Spacers Choice',
+        logoimg:'https://cdn1.epicgames.com/offer/dc61166eea95474e912953b163791d42/EGS_TheOuterWorldsSpacersChoiceEdition_ObsidianEntertainment_S2_1200x1600-24b156886564b75bf9aa823a0a0eb18e?h=480&quality=medium&resize=1&w=360',
+        img:'https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-ic1-400x400-86c3bee5e2d2.png?h=270&quality=medium&resize=1&w=480',
+        ach_img:'https://cdn1.epicgames.com/offer/dc61166eea95474e912953b163791d42/EGS_TheOuterWorldsSpacersChoiceEdition_ObsidianEntertainment_S1_2560x1440-dd9211a8277a2392a9dd5b108858ba33?h=270&quality=medium&resize=1&w=480',
+        src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
+        srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
+        slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
+        bottom_img:'https://cdn2.unrealengine.com/egs-warface-allodsteam-g2-00-1920x1080-c173a432592b.jpg',
+        theme_color:'#de9312',
+        price:'47.99',
+        event:'febs',
+        dis:'20%',
+        oldprice:'59.99',
+        rate:4.5,
+        dev:'Obsidian Entertainment',
+        pub:'Private Division',
+        rdate:"03/07/23",
+        gener:[],
+        features:['sp','cp'],
+        col:['Top Popular',],
+        imgs:[
+            [
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-00-1920x1080-a82009312103.jpg",
+                num:1},
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-01-1920x1080-f0ad1f7b8d71.jpg",
+                num:2},
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-02-1920x1080-51b91c65d2ed.jpg",
+                num:3},
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-03-1920x1080-1fd07dfe05fa.jpg",
+                num:4},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-04-1920x1080-2e8084901833.jpg",
+                num:5},
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-05-1920x1080-1e38dba9b282.jpg",
+                num:6},
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-06-1920x1080-307e8f4f536f.jpg",
+                num:7},
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-07-1920x1080-b81e4a01ad2b.jpg",
+                num:8},
+            ],
+            [
+                {img:"https://cdn2.unrealengine.com/egs-theouterworldsspacerschoiceedition-obsidianentertainment-g1a-08-1920x1080-9dd56a824e91.jpg",
+                 num:9}
+            ]
+        ],
+        editions:[],
+        achievements:[
+            {
+                name:'Anto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'19 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Virst Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'102 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.2% of players unlock'
+            },
+            {
+                name:'Cnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.3% of players unlock'
+            },
+            {
+                name:'Bnto the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'3 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.4% of players unlock'
+            },
+            {
+                name:'Ento the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'1 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.15% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'28 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'1.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'30 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'2.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'4 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.21% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'45 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'52 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'First Shot',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/b477fd8abd92f1d2e8b04173dbb48e26',
+                xp:'10 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            },
+            {
+                name:'Into the Unknown',
+                img:'https://shared-static-prod.epicgames.com/epic-achievements/f08f26f3509c473f8e074f7532798b92/87b7846d2eba4bc49eead0854323aba8/icons/7b113382f470d9b7f043bf5a570f6100',
+                xp:'5 XP',
+                text:'Help 50 survivors in Encounters.',
+                unrate:'0.1% of players unlock'
+            }
+        ],
+        game_disc:[
+
+        ]  
+    })
 
 let v_ach = ref(game.value.achievements.slice(0,4))
 
@@ -296,7 +459,7 @@ window.scrollTo({
         top:0   ,
       })
 
-     
+
        
 
 </script>
@@ -304,7 +467,7 @@ window.scrollTo({
 
 <template>
       <!--large screen-->
-      <div class="hidden md:flex justify-center">
+      <div v-if="game!==null" class="hidden md:flex justify-center">
 
                <div class="lg:w-[78%] lg:px-0 md:px-[2rem]  text-white ">
 
@@ -339,11 +502,11 @@ window.scrollTo({
 
                                             <label for="" class=" ml-[.5rem] text-[.8rem] rounded-md text-gray-400 bg-dark2 px-2 py-1">{{game.rate}}</label>
                                             
-                                            <label for="" class=" ml-[.5rem] flex flex-row items-center pl-1 py-1">
+                                            <label v-if=game.game_disc[0] for="" class=" ml-[.5rem] flex flex-row items-center pl-1 py-1">
                                                 <img class="w-[11%] mr-[.3rem]" :src="game.game_disc[0].img" alt="">
                                                 {{game.game_disc[0].text}}
                                             </label>
-                                            <label for="" class="  flex flex-row items-center pl-1 py-1">
+                                            <label v-if=game.game_disc[1] for="" class="  flex flex-row items-center pl-1 py-1">
                                                 <img class="w-[11%] mr-[.3rem]" :src="game.game_disc[1].img" alt="">
                                                 {{game.game_disc[1].text}}
                                             </label>
@@ -463,7 +626,9 @@ window.scrollTo({
 
                             <div class=" flex flex-wrap items-start w-[49%] px-[1rem] border-l-[.1rem] broder-gray-500 text-white">
                         <label class="w-[100%] text-gray-500   " for="">Genres</label>
-                        <button @click="router_push_game_type(g)" v-for="g in game.gener" class=" border-b-[.1rem] ml-[.5rem]">{{g}} </button>
+                        <button @click="router_push_game_type(g)" v-for="g in game.gener" class=" border-b-[.1rem] ml-[.5rem]">
+                         {{ g ==='adv' ? 'Adventure':(g==='ac' ? 'Action':(g==='ow' ? 'open world':(g==='eg' ? 'Exploration':(g==='hg' ? 'Horror':(g==='sv' ? 'Survival':(g==='td' ? 'Tower Defense':(g==='stg' ? 'Strategy':(g==='sth' ? 'Stealth':'Fps')))))))) }}
+                        </button>
                         
                        </div>
 
@@ -471,7 +636,9 @@ window.scrollTo({
                         <div class=" flex flex-wrap w-[49%] border-l-[.1rem] px-[1rem] broder-gray-500 text-white">
                         <label class="w-[100%] text-gray-500 " for="">Features</label>
 
-                        <button @click="router_push_game_browse(f)" v-for="f in game.features" class=" border-b-[.1rem] ml-[.5rem]">{{f}} </button>
+                        <button @click="router_push_game_browse(f)" v-for="f in game.features" class=" border-b-[.1rem] ml-[.5rem]">
+                            {{f === 'cp'? 'Controller Support':(f === 'sp'? 'Single Player':(f === 'cs'? 'Cloud Saves':'Multiplayer'))}}
+</button>
 
 
                        </div>
@@ -828,7 +995,7 @@ window.scrollTo({
 
     <!--small screen -->
 
-    <div class="md:hidden">
+    <div v-if="game!==null" class="md:hidden">
 
              <div class="flex flex-col text-white text-[1.8rem] px-[1rem]">
                 
@@ -955,14 +1122,21 @@ window.scrollTo({
 
                        <div class=" flex flex-wrap items-start w-[49%] px-[1rem] border-l-[.1rem] broder-gray-500 text-white">
                         <label class="w-[100%] text-gray-500   " for="">Genres</label>
-                        <button @click="router_push_game_type(g)" v-for="g in game.gener" class=" border-b-[.1rem] ml-[.5rem]">{{g}} </button>
+                        <button @click="router_push_game_type(g)" v-for="g in game.gener" class=" border-b-[.1rem] ml-[.5rem]">
+                            {{ g ==='adv' ? 'Adventure':(g==='ac' ? 'Action':(g==='ow' ? 'open world':(g==='eg' ? 'Exploration':(g==='hg' ? 'Horror':(g==='sv' ? 'Survival':(g==='td' ? 'Tower Defense':(g==='stg' ? 'Strategy':(g==='sth' ? 'Stealth':'Fps')))))))) }}
+
+                        </button>
                        </div>
 
 
                         <div class=" flex flex-wrap w-[49%] border-l-[.1rem] px-[1rem] broder-gray-500 text-white">
                         <label class="w-[100%] text-gray-500 " for="">Features</label>
 
-                        <button @click="router_push_game_browse(f)" v-for="f in game.features" class=" border-b-[.1rem] ml-[.5rem]">{{f}} </button>
+                        <button @click="router_push_game_browse(f)" v-for="f in game.features" class=" border-b-[.1rem] ml-[.5rem]">
+                        
+                             {{f === 'cp'? 'Controller Support':(f === 'sp'? 'Single Player':(f === 'cs'? 'Cloud Saves':'Multiplayer'))}}
+
+                        </button>
 
 
                        </div>

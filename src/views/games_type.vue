@@ -324,11 +324,19 @@
                 break
             case 'lh':
             gamesgrid2.value.sort((a,b)=>{
+                if(a.price==='free')
+                       return -1
+                    else if(b.price==='free')
+                       return 1
                     return a.price - b.price
                 })
                 break
             case 'hl':
             gamesgrid2.value.sort((a,b)=>{
+                if(a.price==='free')
+                       return 1
+                    else if(b.price==='free')
+                       return -1
                 return b.price - a.price
 
                 })
@@ -600,7 +608,9 @@ if(key_word_input.value!==""){
                                             <div class="flex w-full mt-2 cursor-pointer items-center">
                                                 <label v-if="game.dis" for="" class="text-white text-[.7rem] cursor-pointer bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
                                                 <label v-if="game.dis" for="" class="text-gray-500 text-[.8rem] cursor-pointer mr-2 line-through">${{ game.oldprice }}</label>
-                                                <label for="" class="text-white cursor-pointer text-[.8rem]">${{ game.price }}</label>
+                                                <label v-if="game.price!=='free'" for="" class="text-white cursor-pointer text-[.8rem]">${{ game.price }}</label>
+                                                <label v-else for="" class="text-white cursor-pointer text-[.8rem]">{{ game.price }}</label>
+
                                             </div>
 
 
@@ -812,11 +822,10 @@ if(key_word_input.value!==""){
                                            <label for="" class="w-full text-sm text-gray-600">Base game </label>
                                                <label for="" class="w-full text-[1rem] text-white">{{ game.name }} </label>
                                                <div class="flex w-full mt-2 items-center">
-                                                   <label for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-[.3rem]">50%</label>
-                                                   <label for="" class="text-gray-500 mr-[.2rem] line-through">$59.99</label>
-                                                   <label for="" class="text-white">${{ game.price }}</label>
-
-                                                   <br>
+                                                <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-[.3rem]">{{game.dis}}</label>
+                                                   <label v-if="game.oldprice" for="" class="text-gray-500 mr-[.2rem] line-through">${{ game.oldprice }}</label>
+                                                   <label v-if="game.price !=='free'" for="" class="text-white">${{ game.price }}</label>
+                                                   <label v-else for="" class="text-white">${{ game.price }}</label>
 
                                                </div>
    

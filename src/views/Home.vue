@@ -130,9 +130,9 @@ let free_games1 = [
      text:'Free now - Feb 09 at 5:00 pm'
   },
   {
-    name:'omsa',
-     img:'https://pbs.twimg.com/media/FnbVIiJWQAAIuaI.jpg',
-     text:'Free now - Feb 09 at 5:00 pm',
+    name:'Celeste',
+     img:'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/en_US/games/switch/c/celeste-switch/hero',
+     text:'coming soon - Feb 16 at 5:00 pm',
      cs:true
   }
 ]
@@ -346,7 +346,7 @@ let remove_wish = (game)=>{
                                                     
                                                       <img :src="`${ slider_img[0] }`" class="w-full  rounded-xl
                                                        lg:h-[26rem]
-                                                       md:" alt="">
+                                                       md:h-[25rem]" alt="">
                                                       <div class="absolute opacity-40 bg-black h-full rounded-xl   text-white bottom-0 
                                                       left-0 right-0">
                                                       </div>
@@ -378,7 +378,7 @@ let remove_wish = (game)=>{
                                                       
                                               <img :src="`${ slider_img[1] }`" class="w-full  rounded-xl
                                                lg:h-[26rem]
-                                               md:" alt="">
+                                               md:h-[25rem]" alt="">
                                                         <div class="absolute opacity-40 bg-black h-full rounded-xl   text-white bottom-0 left-0 right-0">
                                                         </div>
                                                         <div class="absolute   text-white bottom-0 left-0 right-0 w-[60%] p-5 text-[90%]">
@@ -406,14 +406,14 @@ let remove_wish = (game)=>{
 
                     <div class=" pl-4 flex flex-col justify-between
                     lg:h-[26rem]
-                    md:h-full
+                    md:h-[25rem]
                     ">
 
 
                       <div @click=" header_list_num !== game.num-1 ? click_change_pos(game.num-1) : router_push_header(game.name)" :class="` group relative flex items-center h-1/5  w-full ${game.last !== true ? 'mb-2':''} hover:cursor-pointer 
                        rounded-lg`" v-for="game in games" :key="game">
                         
-                        <div :class="`   relative flex items-center  w-full h-full ${game.last !== true ? '':''} hover:cursor-pointer p-1`">
+                        <div :class="`   relative flex items-center  w-full h-full ${game.last !== true ? '':''} hover:cursor-pointer md:px-1 lg:px-[0] lg:p-1`">
                          
                           <img :src="game.srcm" :class="` rounded-md z-10 
                             lg:h-full lg:w-[2.5rem]

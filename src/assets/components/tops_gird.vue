@@ -94,7 +94,7 @@ let remove_wish = (game)=>{
                             <div class="grid grid-cols-1 grid-rows-5">
 
                                   <div  @click="router_push_game(game.name)" v-for="game in game_list.games" class=" group flex items-top rounded-2xl  px-[1rem] py-[.1rem] hover:bg-dark2 cursor-pointer transition-all duration-200">
-                                            <div  class="w-[19%] h-[5rem] p-1 relative ">
+                                            <div  class="w-[20%] h-[5rem] p-1 relative ">
                                                 <div class="absolute flex justify-end   py-1  w-[80%]">
                                                         <div v-if="!game.inw"  class=" 
                               relative rounded-full z-30 text-xl 
@@ -123,9 +123,9 @@ let remove_wish = (game)=>{
                                   
                                   </div>          
                                 </div>
-                                                <img class=" w-full h-full rounded-[5px]" :src="game.logoimg" alt="">
+                                                <img class=" w-full h-full  rounded-[5px]" :src="game.logoimg" alt="">
                                             </div>
-                                            <div :class='`flex flex-col  justify-evenly  h-[5.2rem] ml-[1rem]`'> 
+                                            <div :class='`flex flex-col  justify-evenly w-[80%]  h-[5.2rem] ml-[1rem]`'> 
                                                             <div for="" class="text-white ">{{ game.name }}</div>
                                                             <div for="" :class="`${game.date? '':'hidden'} text-gray-400`">{{ game.date }}</div>
                                                     <div for="" :class="`text-white text-[13px]  ${game.date? 'mt-[.5rem]':'flex items-center  '}  pb-1`">

@@ -83,6 +83,7 @@ let games_list =[
     theme_color:'#ed0000',
     price:'59.99',
     dis:null,
+    event:'2kpub',
     oldprice:null,
     rate:4.6,
     gener:['fps','ac'],
@@ -325,12 +326,13 @@ let games_list =[
         price:'39.99',
         oldprice:'59.99',
         dis:'20%',
+        event:'2kpub',
         dev:'Naughty Dog LLC',
         pub:'PlayStation PC LLC',
         rdate:"03/28/23",
         indate:"11/11/6",
         gener:['fps','adv'],
-        features:['sp','cp'],
+        features:['sp','cp','mp'],
         rate:4.9,
         date:'Avalibale 2023',
         col:['top sellers',''],
@@ -451,6 +453,7 @@ let games_list =[
         ach_img:'https://cdn1.epicgames.com/offer/4bc43145bb8245a5b5cc9ea262ffbe0e/EGS_MarvelsSpiderManRemastered_InsomniacGamesNixxesSoftware_S1_2560x1440-73702d11161b29a0b7c40a8b489b1808?h=270&quality=medium&resize=1&w=480',
         theme_color:'#0062ff',
         price:'40.19',
+        event:'2kpub',
         dis:"33%",
         oldprice:'59.99',
         rate:4.9,
@@ -645,6 +648,7 @@ let games_list =[
             slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
             theme_color:'#fcfcfc',
             price:'59.99',
+            event:'2kpub',
             dis:null,
             oldprice:null,
             rate:5.0,
@@ -851,10 +855,11 @@ let games_list =[
             ach_img:'https://cdn2.unrealengine.com/tetra-preorder-standard-edition-epic-store-landscape-2560x1440-2560x1440-430970417.jpg',
             bottom_img:'https://cdn2.unrealengine.com/fc6-epic-banner-accolade-1200x200-uk-1200x200-11fcee6eb0a8.jpg',
             src:'https://images3.alphacoders.com/108/thumb-1920-1087064.jpg',
-            srcm:"https://assets-prd.ignimgs.com/2020/07/10/far-cry-6-placeholder-1594397352824.jpg",
+            srcm:"https://upload.wikimedia.org/wikipedia/en/3/35/Far_cry_6_cover.jpg",
             slide_img:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/FC6_Logo.png/1200px-FC6_Logo.png",
             theme_color:'#2047d4',
             price:'59.99',
+            event:'2kpub',
             dis:null,
             oldprice:null,
             rate:4.4,
@@ -1068,6 +1073,7 @@ let games_list =[
         slide_img:"https://cdn2.unrealengine.com/egs-wildhearts-koeitecmogamescoltd-ic1-400x400-c3e4c7cf64f4.png?h=270&quality=medium&resize=1&w=480",
         theme_color:'#fcfcfc',
         price:'69.99',
+        event:'2kpub',
         dis:null,
         oldprice:null,
         rate:3.5,
@@ -1253,6 +1259,7 @@ let games_list =[
         slide_img:"https://cdn2.unrealengine.com/24br-s24-egs-launcher-logo-350x100-350x100-b63249f937d9.png?h=270&quality=medium&resize=1&w=480",
         theme_color:'#2047d4',
         price:'free',
+        event:'2kpub',
         dis:null,
         oldprice:null,
         rate:1,
@@ -1490,6 +1497,7 @@ let games_list =[
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/a/ae/Hogwarts_Legacy_Logo.png",
         theme_color:'#2047d4',
         price:'59.99',
+        event:'2kpub',
         dis:null,
         oldprice:null,
         rate:4.8,
@@ -1683,7 +1691,8 @@ let games_list =[
         srcm:"https://upload.wikimedia.org/wikipedia/en/0/06/Destiny_XBO.jpg",
         slide_img:"https://cdn2.unrealengine.com/en-bungie-destiny2-ic1-400x400-400x400-428671b4082f.png?h=270&quality=medium&resize=1&w=480",
         theme_color:'#fcfcfc',
-        price:'free',    
+        price:'free',   
+        event:'2kpub', 
         dis:null,
         oldprice:null,
         rate:4.5,
@@ -1932,6 +1941,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#ed0000',
+        event:'2kpub',
         price:'free',
         dis:'100%',
         oldprice:'31.99',
@@ -2145,6 +2155,7 @@ let games_list =[
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#d1022b',
         price:'29.99',
+        event:'thq',
         dis:'50%',
         oldprice:'59.99',
         rate:4.2,
@@ -2153,7 +2164,7 @@ let games_list =[
         rdate:"12/10/20",
         indate:"12/10/20",
         gener:['fps','ac'],
-        features:['sp','cp'],
+        features:['sp','cp','mp'],
         col:['Top Upcoming Wishlisted',''],
         imgs:[
             [
@@ -2328,6 +2339,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#ed0000',
+        event:'thq',
         price:'19.79',
         dis:'67%',
         oldprice:'59.99',
@@ -2498,6 +2510,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#e6c41c',
+        event:'thq',
         price:'8.99',
         dis:'85%',
         oldprice:'59.99',
@@ -2688,6 +2701,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#e6c41c',
+        event:'thq',
         price:'14.98',
         dis:'70%',
         oldprice:'49.96',
@@ -2846,6 +2860,7 @@ let games_list =[
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         bottom_img:'https://cdn2.unrealengine.com/en-egs-tinytina-breaker-1920x1080-v03-1920x1080-4e9248d0c1fe.jpg',
         theme_color:'#b006d6',
+        event:'thq',
         price:'29.99',
         dis:'50%',
         oldprice:'59.99',
@@ -2854,7 +2869,7 @@ let games_list =[
         pub:'2K',
         rdate:"03/25/22",
         gener:['fps','rpg','ac'],
-        features:['sp','cp'],
+        features:['sp','cp','mp'],
         col:['Top Upcoming Wishlisted',''],
         imgs:[
             [
@@ -3006,6 +3021,7 @@ let games_list =[
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         bottom_img:'https://cdn2.unrealengine.com/en-egs-tinytina-breaker-1920x1080-v03-1920x1080-4e9248d0c1fe.jpg',
         theme_color:'#e84338',
+        event:'thq',
         price:'38.49',
         dis:'45%',
         oldprice:'69.99',
@@ -3170,6 +3186,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#fcfcfc',
+        event:'thq',
         price:'16.49',
         dis:'67%',
         oldprice:'49.99',
@@ -3321,6 +3338,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#fcfcfc',
+        event:'thq',
         price:'39.99',
         dis:null,
         oldprice:null,
@@ -3481,6 +3499,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#327da8',
+        event:'thq',
         price:'23.99',
         dis:'40%',
         oldprice:'39.99',
@@ -3490,7 +3509,7 @@ let games_list =[
         rdate:"03/30/22",
         indate:'03/30/22',
         gener:['fps','rpg','ac'],
-        features:['sp','cp'],
+        features:['sp','cp','mp'],
         col:['New Releases',''],
         imgs:[
             [
@@ -3641,6 +3660,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#327da8',
+        event:'thq',
         price:'3.99',
         dis:'90%',
         oldprice:'39.99',
@@ -3791,6 +3811,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#0062ff',
+        event:'thq',
         price:'free',
         dis:null,
         oldprice:null,
@@ -3948,6 +3969,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#0062ff',
+        event:'thq',
         price:'free',
         dis:null,
         oldprice:null,
@@ -4102,6 +4124,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#0062ff',
+        event:'febs',
         price:'free',
         dis:null,
         oldprice:null,
@@ -4258,6 +4281,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#0062ff',
+        event:'febs',
         price:'free',
         dis:null,
         oldprice:null,
@@ -4447,6 +4471,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#660404',
+        event:'febs',
         price:'19.99',
         dis:null,
         oldprice:null,
@@ -4608,6 +4633,7 @@ let games_list =[
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         bottom_img:'https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fassassins-creed-valhalla%2Fhome%2FBanner-1%2FACK_EPIC_KeyFeature_Banner1_Intro_1200x200_GB-1200x200-cbd94e4320c5eb468f95b64c19d6341526676999.jpg',
         theme_color:'#2ab1eb',
+        event:'febs',
         price:'19.79',
         dis:'67%',
         oldprice:'59.99',
@@ -4762,6 +4788,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#2ab1eb',
+        event:'febs',
         price:'3.99',
         dis:'75%',
         oldprice:'15.99',
@@ -4918,6 +4945,7 @@ let games_list =[
         bottom_img:'https://cdn2.unrealengine.com/egs-hades-supergiantgames-g2-02-1920x1080-027048444.jpg?h=720&quality=medium&resize=1&w=1280',
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#ed0000',
+        event:'febs',
         price:'20.99',
         dis:null,
         oldprice:null,
@@ -5064,6 +5092,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#0062ff',
+        event:'febs',
         price:'14.99',
         dis:'40%',
         oldprice:'24.99',
@@ -5221,6 +5250,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#0062ff',
+        event:'febs',
         price:'23.99',
         dis:'60%',
         oldprice:'59.99',
@@ -5378,6 +5408,7 @@ let games_list =[
         srcm:"https://images8.alphacoders.com/710/thumb-1920-710284.png",
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#0062ff',
+        event:'febs',
         price:'free',
         dis:null,
         oldprice:null,
@@ -5536,6 +5567,7 @@ let games_list =[
         bottom_img:'https://cdn2.unrealengine.com/logo-600x125-bc072934b242.png',
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#db0d4e',
+        event:'febs',
         price:'free',
         dis:null,
         oldprice:null,
@@ -5691,6 +5723,7 @@ let games_list =[
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#0062ff',
         price:'free',
+        event:'febs',
         dis:null,
         oldprice:null,
         rate:4.5,
@@ -5849,6 +5882,7 @@ let games_list =[
         bottom_img:'https://cdn2.unrealengine.com/egs-centuryageofashes-playwing-g2-00-2360x532-24353774879e.jpg',
         theme_color:'#2a70d1',
         price:'free',
+        event:'febs',
         dis:null,
         oldprice:null,
         rate:3.5,
@@ -6006,6 +6040,7 @@ let games_list =[
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#0062ff',
         price:'free',
+        event:'febs',
         dis:null,
         oldprice:null,
         rate:2.5,
@@ -6163,6 +6198,7 @@ let games_list =[
         bottom_img:'https://cdn2.unrealengine.com/egs-liveforthehunt-phoenixlabs-g2-00-1920x500-001d5803be78.jpg',
         theme_color:'#0062ff',
         price:'free',
+        event:'febs',
         dis:null,
         oldprice:null,
         rate:2.5,
@@ -6320,6 +6356,7 @@ let games_list =[
         slide_img:"https://upload.wikimedia.org/wikipedia/fr/2/29/Dishonored_2_Logo.png",
         theme_color:'#0062ff',
         price:'free',
+        event:'febs',
         dis:null,
         oldprice:null,
         rate:4.5,
@@ -6473,6 +6510,7 @@ let games_list =[
         bottom_img:'https://cdn2.unrealengine.com/egs-warface-allodsteam-g2-00-1920x1080-c173a432592b.jpg',
         theme_color:'#0062ff',
         price:'free',
+        event:'febs',
         dis:null,
         oldprice:null,
         rate:3.5,
@@ -6632,6 +6670,7 @@ let games_list =[
         bottom_img:'https://cdn2.unrealengine.com/egs-warface-allodsteam-g2-00-1920x1080-c173a432592b.jpg',
         theme_color:'#de9312',
         price:'free',
+        event:'febs',
         dis:null,
         oldprice:null,
         rate:3.5,
@@ -6791,6 +6830,7 @@ let games_list =[
         bottom_img:'https://cdn2.unrealengine.com/egs-warface-allodsteam-g2-00-1920x1080-c173a432592b.jpg',
         theme_color:'#de9312',
         price:'47.99',
+        event:'febs',
         dis:'20%',
         oldprice:'59.99',
         rate:4.5,
@@ -7650,9 +7690,9 @@ let dummy_games = [
     }
 ]
 
-https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_Voidtrain_NEARGA_S2_1200x1600-497cd22d4e46bc6c5ba56c3215fc5b4f?h=480&quality=medium&resize=1&w=360
+
+
  
-console.log(dummy_games.length)
 
 let event = ['2kpub','febs','thq']
 let geners = ['fps','adv','ac','ac-adv','rpg','ow','fg','eg','hg','td','sv','stg','sth']
@@ -7664,20 +7704,37 @@ let feat = ['cp','cs','sp','mp']
 
 /* cp cs sp mp  */
 
-
+let i = 0
+let f = 0
+let c = 0
 for(let dum of dummy_games){
-    geners = geners.sort(function() {
-        return 0.5 - Math.random();
-      })
-    col = col.sort(function() {
-        return 0.5 - Math.random();
-      })
-    feat = feat.sort(function() {
-        return 0.5 - Math.random();
-      })
-    let g = [geners[0],geners[1],geners[2]]
-    let c = [col[0],col[1],col[2]]
-    let f = [feat[0],feat[1],feat[2]]
+
+    let g1 = [geners[0],geners[1],geners[2],geners[11]]
+    let g2 = [geners[3],geners[4],geners[5]]
+    let g3 = [geners[6],geners[7],geners[8]]
+    let g4 = [geners[9],geners[10],geners[0]]
+    let g5 = [geners[11],geners[12],]
+    
+    let c1 = [col[0],col[1],col[2]]
+
+    let c2 = [col[3],col[4],col[5]]
+
+    let c3 = [col[0],col[2],col[4]]
+
+    let c4 = [col[1],col[3],col[5]]
+
+
+
+    let f1 = [feat[0],feat[1]]
+    let f2 = [feat[2],feat[3]]
+    let f3 = [feat[0],feat[3]]
+    let f4 = [feat[2],feat[1]]
+
+    if(f>=4){
+        f=0
+        c=0
+    }
+
 
     games_list.push({
         name:dum.name,
@@ -7693,13 +7750,14 @@ for(let dum of dummy_games){
         dis:dum.dis,
         oldprice:dum.oldprice,
         rate:5.0,
+        event: i<=30 ? 'febs':(i<=60? 'thq':'2kpub'),
         dev:'epic games',
         pub:'epic games',
         rdate:"11/03/22",
         indate:"11/11/6",
-        gener:g,
-        features:f,
-        col:c,
+        gener:i<=20? g1:(i<=40 ? g2:(i<=60 ? g3:(i<=80 ? g4 : g5))),
+        features:f===0? f1:(f===1 ? f2:(f===2 ? f3:f4)),
+        col:c===0? c2:(c===1 ? c3:(c===2 ? c4:c1)),
         dummy:true,
         imgs:[
             [
@@ -7915,6 +7973,9 @@ for(let dum of dummy_games){
             game_discs.get('dc'),
         ]  
     })
+    i++
+    f++
+    c++
 }
 
 
@@ -7960,7 +8021,7 @@ for(let game of games_list){
         date:game.date,
         dummy:game.dummy,
         col:game.col,
-        event:event[Math.floor(Math.random() * (3 - 0 + 1)) + 0],
+        event:game.event||event[Math.floor(Math.random() * (3 - 0 + 1)) + 0],
         gener:game.gener||[geners[Math.floor(Math.random() * (3 - 0 + 1)) + 0]],
         features:game.features||['mp','cs'],
         new:new_old[Math.floor(Math.random() * (1 - 0 + 1)) + 0]
