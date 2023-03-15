@@ -768,7 +768,7 @@ let remove_wish = (game)=>{
        </div>
 
        
-       <div :class="`${george? '':'hidden'} absolute  text-white pt-[1.5rem] z-[100] flex flex-col items-center inset-0 md:hidden  w-screen h-fit min-h-screen  bg-dark1  `">
+       <div :class="`${george? '':'hidden'} text-white absolute pt-[1.5rem] z-[100] flex flex-col items-center inset-0 md:hidden  w-screen h-[150%] min-h-screen  bg-dark1  `">
                 
             <div class="w-full mb-[.8rem] px-[1.5rem]">
                 <label for="">Filters</label>
@@ -779,14 +779,14 @@ let remove_wish = (game)=>{
 
 
 
-            <div class="flex-grow  h-screen flex flex-col items-center w-full">
+            <div class="flex-grow  h-[200%] pb-[6rem] bg-dark1 flex flex-col items-center w-full">
                 
                 <div class=" justify-self-center  bg-dark2 my-[1rem] py-[.6rem] w-[90%] rounded-sm">
                                 <ion-icon class=" translate-y-[10%] text-sm w-[8%] mr-[2%]" name="search"></ion-icon>
                                 <input type="text" class=" w-[90%] text-sm bg-dark2 outline-none" placeholder="keywords" v-model="key_word_input">
                         </div>
 
-                <div class="py-[1.5rem] w-full px-[1.5rem] border-t-[.1rem] border-gray-400" v-for="drop in drop_list">
+                <div class="py-[1.5rem]  w-full px-[1.5rem] border-t-[.1rem] border-gray-400" v-for="drop in drop_list">
                         <button @click="drop.on = !drop.on" class="cursor-pointer  text-white flex items-start justify-between   w-full">
                             <label for="">{{ drop.type }}</label>
                             <ion-icon name="arrow-dropdown"></ion-icon>
