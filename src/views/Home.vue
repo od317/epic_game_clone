@@ -413,7 +413,7 @@ let remove_wish = (game)=>{
                       <div @click=" header_list_num !== game.num-1 ? click_change_pos(game.num-1) : router_push_header(game.name)" :class="` group relative flex items-center h-1/5  w-full ${game.last !== true ? 'mb-2':''} hover:cursor-pointer 
                        rounded-lg`" v-for="game in games" :key="game">
                         
-                        <div :class="`   relative flex items-center  w-full h-full ${game.last !== true ? '':''} hover:cursor-pointer md:px-1 lg:px-[0] lg:p-1`">
+                        <div :class="`   relative flex items-center  w-full h-full ${game.last !== true ? '':''} hover:cursor-pointer md:px-1 lg:pl-[1] lg:p-1`">
                          
                           <img :src="game.srcm" :class="` rounded-md z-10 
                             lg:h-full lg:w-[2.5rem]
