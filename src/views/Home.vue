@@ -213,13 +213,38 @@ let footer_cont1 = [{
       start_a.value=false   
   },10);
  
+  let scale_on = ref(false)
 
   let click_change_pos = (place)=>{
-    clearInterval(s)
-    header_list_num.value = place
-    slider_img.value[0] =  games.value[header_list_num.value].src
-    slider_img.value[1] =  place+1 <=5 ? games.value[header_list_num.value+1].src : games.value[0].src
-    s = setInterval(()=>{
+
+      if(slide_on.value)
+        return
+    
+      
+       scale_on.value = true
+
+       let sc = setTimeout(()=>{
+          scale_on.value = false
+       },300)
+
+       clearInterval(s)
+       header_list_num.value =  place-1
+    
+       slider_img.value[1] =  header_list_num.value+1 <=5 ? games.value[header_list_num.value+1].src : games.value[0].src
+
+       header_list_num.value === 5 ? header_list_num.value=0 : header_list_num.value+=1
+       slide_on.value = true
+       trans_slide.value=false
+       start.value=false
+       const myTimeout = setTimeout(()=>{
+        slider_img.value[0] = slider_img.value[1]
+        slider_img.value[1] = header_list_num.value+1<=5 ? games.value[header_list_num.value+1].src:games.value[0].src
+        slide_on.value=false 
+        trans_slide.value=true         
+      },499);
+       
+
+  s = setInterval(()=>{
        header_list_num.value === 5 ? header_list_num.value=0 : header_list_num.value+=1
        slide_on.value = true
        trans_slide.value=false
@@ -232,6 +257,7 @@ let footer_cont1 = [{
        
       },499);
   },9000)
+
   }
 
 
@@ -415,6 +441,7 @@ let remove_wish = (game)=>{
                         <div :class="`   relative flex items-center  w-full h-full ${game.last !== true ? '':''} hover:cursor-pointer md:px-1 lg:pl-[1] lg:p-1`">
                          
                           <img :src="game.srcm" :class="` rounded-md z-10 
+                            transition-all duration-200 ${header_list_num+1 ===game.num && scale_on ? ' scale-110':''} 
                             lg:h-full lg:w-[2.5rem]
                             md:h-[75%] md:w-[30%]`" alt="">  
                           <div class=" lg:ml-5 md:ml-1  grid content-center w-full ">
