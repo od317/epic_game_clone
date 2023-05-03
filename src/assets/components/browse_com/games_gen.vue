@@ -69,6 +69,7 @@ const props = defineProps({
      </div>
      
   </div>
+
  <div class="lg:w-[78%] md:w-[90%] justify-center  overflow-x-hidden ">
      
      <div  class="flex w-[300%]   flex-row">
@@ -88,9 +89,9 @@ const props = defineProps({
                    <router-link :to="'games/'+game.set" class="group w-1/4  h-fit ml-4 first:ml-0 px-[1rem] pt-[2rem] pb-[1rem] mr-2 relative bg-dark2 flex flex-col rounded-md"  v-for="game in genl">
                  
                     <div class="flex justify-between ">
-                    <img :src="game.imgs[1]" alt=""  :class="`  w-[40%] h-[8rem]   rounded-lg`">
-                    <img :src="game.imgs[0]" alt=""  :class="` translate-x-[60%]  absolute w-[40%] h-[8rem]   rounded-lg`">
-                    <img :src="game.imgs[2]" alt=""  :class="`  w-[40%] h-[8rem]  rounded-lg`">
+                    <div :style="`background-image: url(${game.imgs[1]});`"  :class="` bg-cover bg-center w-[40%] h-[8rem]   rounded-lg`"></div>
+                    <div :style="`background-image: url(${game.imgs[0]});`" alt=""  :class="`  bg-cover bg-center translate-x-[60%]  absolute w-[40%] h-[8rem]   rounded-lg`"></div>
+                    <div :style="`background-image: url(${game.imgs[2]});`" alt=""  :class="`  bg-cover bg-center  w-[40%] h-[8rem]  rounded-lg`"></div>
 
                    </div>       
                    <div class="text-center text-white text-xl mt-[1rem]">{{ game.type }}</div>                 
@@ -105,6 +106,7 @@ const props = defineProps({
  </div>
 
  </div>
+ 
 </div>
 
 

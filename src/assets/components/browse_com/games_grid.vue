@@ -572,7 +572,7 @@ let remove_wish = (game)=>{
 
 
 
-       <div class=" hidden md:flex w-full justify-center mb-[4rem] md:pt-[2rem]">
+       <div class=" hidden lg:flex w-full justify-center  mb-[4rem] md:pt-[2rem]">
            <div class="md:grid lg:w-[78%] md:row-start-1 lg:row-end-1 lg:px-[0rem] md:w-[90%]  md:grid-cols-4">
 
                        
@@ -600,72 +600,66 @@ let remove_wish = (game)=>{
                          <label class="text-[1rem] mt-[.5rem] text-gray-400" for="">Unfortunately I could not find any results matching your search.</label>
                         </div>
 
-                <div v-else class="grid lg:grid-cols-4 md:grid-cols-3 gap-x-[1rem]">
-
-                        <div  @Click="route_push_game(game.name)" v-for="game in view_grid" class="  w-full py-[1rem]  ">
-                                      
-                                   <div class="w-[100%]  group rounded-md relative cursor-pointer">
-                                      
-                                    <div  class="bg-gray-400 absolute rounded-md w-[100%] h-[100%] opacity-0 group-hover:opacity-20 transition-all duration-200 cursor-pointer"></div>
-                                 
-                                    
-                                    <div class="absolute flex w-full justify-end items-start p-3 cursor-pointer"> 
-                            
-                            <div v-if="!game.inw"  class=" 
-                             relative rounded-full z-30 text-2xl 
-                             opacity-0 group-hover:opacity-100  transition-all duration-100 
-                             after_wish">
-                                 <button @click.stop.prevent class="group relative " @click="add_wish(game)">
-                                   <ion-icon  :class="` ${game.ro ? ' rotate-[360deg] transition-all duration-1000':''} bg-white   text-black rounded-full z-30 `" name="add-circle">
-                                   </ion-icon>
-                           
-
-                                 </button>
-                                 
-                                 </div>
+                <div v-else class="grid lg:grid-cols-4 md:grid-cols-3 gap-y-[2%] gap-x-[1rem]">
 
 
 
-                                 <div v-if="game.inw"  class=" 
-                             relative rounded-full z-30 text-2xl 
-                             opacity-0 group-hover:opacity-100  transition-all duration-100 
-                             after_wish2">
-                                 <button @click.stop.prevent class="  group " @click="remove_wish(game)">
-                                   <ion-icon :class="`${game.ro ? ' rotate-[-360deg] transition-all duration-1000':''} bg-white  text-black  rounded-full z-30` " name="checkmark-circle">
-                                   </ion-icon>
-                           
-                                 </button>
-                                 
-                                 </div>
-
-
-                             </div>
-
-
-                                    <img  :src="game.logoimg" class="w-[100%]  h-[16rem] rounded-md" alt="">
-                                     
-
-                                     
-
-                                   </div>
-                                     <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-2'}`">
-                                        <label for="" class="w-full text-sm text-gray-600">Base game </label>
-                                            <label for="" class="w-full text-lg text-white">{{ game.name }} </label>
-                                            <div class="flex w-full mt-2 items-center">
-                                                <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
-                                                <label v-if="game.dis" for="" class="text-gray-500 text-[.8rem] mr-2 line-through">${{ game.oldprice }}</label>
-                                                <label v-if="game.price>0" for="" class="text-white text-[.8rem]">${{ game.price }}</label>
-                                                <label v-else for="" class="text-white text-[.8rem]">Free</label>
-                                            </div>
-
-
-
-
-
-                                    </div>
-
-
-                        </div>
+                        <div  class="w-full flex flex-col  relative"  v-for="game in view_grid" for="">
+                                        
+                                        <div :style="`background-image: url(${game.logoimg});`" class="w-full group cursor-pointer pb-[150%]  bg-cover bg-center  relative">
+                                                        
+                                              <div class="absolute flex h-full w-full justify-end items-start p-3"> 
+                                                
+                                                                    <div v-if="!game.inw"  class=" 
+                                                                      relative rounded-full z-30 text-2xl 
+                                                                      opacity-0 group-hover:opacity-100  transition-all duration-100 
+                                                                      after_wish">
+                                                                          <button class="group relative " @click="add_wish(game)">
+                                                                            <ion-icon  :class="` ${game.ro ? ' rotate-[360deg] transition-all duration-1000':''} bg-white   text-black rounded-full z-30 `" name="add-circle">
+                                                                            </ion-icon>
+                                                                    
+        
+                                                                          </button>
+                                                                          
+                                                                          </div>
+        
+        
+        
+                                                                          <div v-if="game.inw"  class=" 
+                                                                      relative rounded-full z-30 text-2xl 
+                                                                      opacity-0 group-hover:opacity-100  transition-all duration-100 
+                                                                      after_wish">
+                                                                          <button class="  group " @click="remove_wish(game)">
+                                                                            <ion-icon :class="`${game.ro ? ' rotate-[-360deg] transition-all duration-1000':''} bg-white  text-black  rounded-full z-30` " name="checkmark-circle">
+                                                                            </ion-icon>
+                                                                    
+                                                                          </button>
+                                                                          
+                                                                          </div>
+        
+        
+                                              </div>
+        
+                                              <Router-link class=" absolute w-full h-full bg-gray-300 bg-opacity-[0%] group-hover:bg-opacity-[10%] transition-all duration-150"   :to="`game/`+game.name">
+                                              </Router-link>
+        
+                                        </div>
+        
+        
+                                        <div class="flex flex-col text-white">
+                                             <label for="" class="w-full text-sm text-gray-600">Base game </label>
+                                             <label for="" class="w-full  text-white line-clamp-2">{{ game.name }} </label>
+                                              <div class="flex flex-wrap w-full mt-2 items-center">
+                                                  <label v-if="game.dis" for="" class="text-white text-[70%]  bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
+                                                  <label v-if="game.oldprice" for="" class="text-gray-500 mr-2 line-through">${{ game.oldprice }}</label>
+                                                  <label v-if="game.price!=='free'"  for="" class="text-white">${{ game.price }}</label>
+                                                  <label v-else for="" class="text-white">{{ game.price }}</label>
+                                              </div>                                
+                                        </div>
+        
+        
+        
+                         </div>
 
                 </div>
 
@@ -768,7 +762,7 @@ let remove_wish = (game)=>{
        </div>
 
        
-       <div :class="`${george? '':'hidden'} text-white absolute pt-[1.5rem] z-[100] flex flex-col items-center inset-0 md:hidden  w-screen h-[150%] min-h-screen  bg-dark1  `">
+       <div :class="`${george? '':'hidden'} text-white absolute pt-[1.5rem] z-[100] flex flex-col items-center inset-0 lg:hidden  w-screen h-[150%] min-h-screen  bg-dark1  `">
                 
             <div class="w-full mb-[.8rem] px-[1.5rem]">
                 <label for="">Filters</label>
@@ -815,7 +809,7 @@ let remove_wish = (game)=>{
 
       </div>
 
-       <div v-if="!george" class="md:hidden flex flex-col px-[1.5rem] mt-[4rem]">
+       <div v-if="!george" class="lg:hidden flex flex-col px-[2%] mt-[20%]">
 
 
             <div class="flex flex-row justify-between items-center">
@@ -847,34 +841,65 @@ let remove_wish = (game)=>{
 
 
 
-            <div class="flex justify-between flex-wrap">
+            <div class="flex justify-between mt-[5%] flex-wrap">
 
-                <div @Click="route_push_game(game.name)" v-for="game in view_grid" class=" group  py-[1rem] w-[48%] h-[100%] ">
-                                      
-                                      <div class="w-[100%]  rounded-md relative">
-                                         
-                                       <div class="bg-gray-400 absolute rounded-md w-[100%] h-[100%] opacity-0 group-hover:opacity-20 transition-all duration-200 cursor-pointer"></div>
-                                        <img :src="game.logoimg" class="w-[100%] h-[16rem] rounded-md" alt="">
+                <div   class="w-[48%] md:w-[22%] mb-[5%] flex flex-col  relative"  v-for="game in view_grid" for="">
                                         
-                                      </div>
-                                        <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-[.2rem]'}`">
-                                           <label for="" class="w-full text-sm text-gray-600">Base game </label>
-                                               <label for="" class="w-full text-[1rem] text-white">{{ game.name }} </label>
-                                               <div class="flex w-full mt-2 items-center">
-                                                   <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-[.3rem]">{{game.dis}}</label>
-                                                   <label v-if="game.oldprice" for="" class="text-gray-500 mr-[.2rem] line-through">${{ game.oldprice }}</label>
-                                                   <label v-if="game.price !=='free'" for="" class="text-white">${{ game.price }}</label>
-                                                   <label v-else for="" class="text-white">${{ game.price }}</label>
-
-                                               </div>
-   
-   
-   
-   
-                                       </div>
-   
-   
-                           </div>
+                                        <div :style="`background-image: url(${game.logoimg});`" class="w-full bg-neutral-700  group cursor-pointer pb-[150%]  bg-cover bg-center  relative">
+                                            
+                                            
+                                              <div class="absolute flex h-full w-full justify-end items-start p-3"> 
+                                                
+                                                                    <div v-if="!game.inw"  class=" 
+                                                                      relative rounded-full z-30 text-2xl 
+                                                                      opacity-0 group-hover:opacity-100  transition-all duration-100 
+                                                                      after_wish">
+                                                                          <button class="group relative " @click="add_wish(game)">
+                                                                            <ion-icon  :class="` ${game.ro ? ' rotate-[360deg] transition-all duration-1000':''} bg-white   text-black rounded-full z-30 `" name="add-circle">
+                                                                            </ion-icon>
+                                                                    
+        
+                                                                          </button>
+                                                                          
+                                                                          </div>
+        
+        
+        
+                                                                          <div v-if="game.inw"  class=" 
+                                                                      relative rounded-full z-30 text-2xl 
+                                                                      opacity-0 group-hover:opacity-100  transition-all duration-100 
+                                                                      after_wish">
+                                                                          <button class="  group " @click="remove_wish(game)">
+                                                                            <ion-icon :class="`${game.ro ? ' rotate-[-360deg] transition-all duration-1000':''} bg-white  text-black  rounded-full z-30` " name="checkmark-circle">
+                                                                            </ion-icon>
+                                                                    
+                                                                          </button>
+                                                                          
+                                                                          </div>
+        
+        
+                                              </div>
+        
+                                              <Router-link class=" absolute w-full h-full bg-gray-300 bg-opacity-[0%] group-hover:bg-opacity-[10%] transition-all duration-150"   :to="`game/`+game.name">
+                                              </Router-link>
+        
+                                        </div>
+        
+        
+                                        <div class="flex flex-col text-white">
+                                             <label for="" class="w-full text-sm text-gray-600">Base game </label>
+                                             <label for="" class="w-full  text-white line-clamp-2">{{ game.name }} </label>
+                                              <div class="flex flex-wrap w-full mt-2 items-center">
+                                                  <label v-if="game.dis" for="" class="text-white text-[70%]  bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
+                                                  <label v-if="game.oldprice" for="" class="text-gray-500 mr-2 line-through">${{ game.oldprice }}</label>
+                                                  <label v-if="game.price!=='free'"  for="" class="text-white">${{ game.price }}</label>
+                                                  <label v-else for="" class="text-white">{{ game.price }}</label>
+                                              </div>                                
+                                        </div>
+        
+        
+        
+                         </div>
 
             </div>
 
