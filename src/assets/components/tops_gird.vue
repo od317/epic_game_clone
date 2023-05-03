@@ -86,15 +86,15 @@ let remove_wish = (game)=>{
  
                      <div  v-for="game_list in games_grid" :class="`px-[1rem] ${game_list.last? '':'border-r border-1px border-dark2'}`">
                             
-                             <div :class="`flex items-center mb-1`">
-                               <div class="flex-grow text-[1rem] pl-[.5rem]">{{ game_list.title }}</div>
-                               <router-Link :to="'/collection/'+game_list.title"  class="border text-[.9rem] mb-[.5rem] px-[1rem] py-[.3rem] rounded-sm hover:bg-gray-500 hover:bg-opacity-50 transition-all duration-150">view more</router-link>
+                             <div :class="`flex items-center h-[10%] mb-1`">
+                               <div class="flex-grow text-[1rem]   pl-[.5rem]">{{ game_list.title }}</div>
+                               <router-Link :to="'/collection/'+game_list.title"  class="border text-[.9rem] mb-[.5rem] px-[1rem] py-[.3rem] rounded-sm hover:bg-gray-500 whitespace-nowrap hover:bg-opacity-50 transition-all duration-150">view more</router-link>
                              </div>
                             
                             <div class="grid grid-cols-1 grid-rows-5">
 
                                   <div  @click="router_push_game(game.name)" v-for="game in game_list.games" class=" group flex items-top rounded-2xl  px-[1rem] py-[.1rem] hover:bg-dark2 cursor-pointer transition-all duration-200">
-                                            <div  class="w-[20%] h-[5rem] p-1 relative ">
+                                            <div  class="w-[25%] h-[5rem] p-1 relative ">
                                                 <div class="absolute flex justify-end   py-1  w-[80%]">
                                                         <div v-if="!game.inw"  class=" 
                               relative rounded-full z-30 text-xl 
@@ -123,14 +123,14 @@ let remove_wish = (game)=>{
                                   
                                   </div>          
                                 </div>
-                                                <img class=" w-full h-full  rounded-[5px]" :src="game.logoimg" alt="">
+                                                <div class=" w-full h-full  rounded-[5px] bg-cover bg-center"  :style="`background-image: url(${game.logoimg});`"  alt=""></div>
                                             </div>
                                             <div :class='`flex flex-col  justify-evenly w-[80%]  h-[5.2rem] ml-[1rem]`'> 
-                                                            <div for="" class="text-white ">{{ game.name }}</div>
+                                                            <div for="" class="text-white text-[80%] line-clamp-2">{{ game.name }}</div>
                                                             <div for="" :class="`${game.date? '':'hidden'} text-gray-400`">{{ game.date }}</div>
                                                     <div for="" :class="`text-white text-[13px]  ${game.date? 'mt-[.5rem]':'flex items-center  '}  pb-1`">
-                                                          <label for="" :class="`${game.dis?'':'hidden'} bg-blue1 text-sm py-1 px-3 text-[12px] rounded-md self-end `">{{ game.dis }}</label>
-                                                          <label for="" :class="`${game.oldprice?'':'hidden'} py-1 ml-1 line-through text-gray-500 self-end`">${{ game.oldprice }}</label> 
+                                                          <label for="" :class="`${game.dis?'':'hidden'} bg-blue1 text-sm py-[2%] px-3 text-[12px] rounded-md self-end `">{{ game.dis }}</label>
+                                                          <label for="" :class="`${game.oldprice?'':'hidden'} py-[2%] ml-1 line-through text-gray-500 self-end`">${{ game.oldprice }}</label> 
                                                           <label v-if="game.price!=='free'" for="" :class="`self-end py-1 ml-1`">${{ game.price }}</label> 
                                                           <label v-else for="" :class="`self-end py-1 ml-1`">{{ game.price }}</label> 
                           

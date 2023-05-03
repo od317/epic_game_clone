@@ -29,7 +29,7 @@ const props = defineProps({
                         </label>
 
 
-                        <router-link @click="page= 'browse'" class="hidden md:inline-block text-black bg-white w-[40%] mt-[3rem] p-[1rem] rounded-lg" to="/browse">
+                        <router-link @click="page= 'browse'" class="hidden md:inline-block text-black bg-white  mt-[3rem] p-[1rem] rounded-lg" to="/browse">
                           <button  class="w-[100%]">Browse All</button>
                         </router-link>
                         

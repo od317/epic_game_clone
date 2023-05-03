@@ -303,7 +303,6 @@ let remove_wish = (game)=>{
      
 
 
-
 </script>
 
 <template>
@@ -344,9 +343,9 @@ let remove_wish = (game)=>{
                                                 relative  
                                                 h-full rounded-xl w-[99%] overflow-hidden`">
                                                     
-                                                      <img :src="`${ slider_img[0] }`" class="w-full  rounded-xl
+                                                      <div :style="`background-image: url(${slider_img[0]});`"  class="w-full bg-cover bg-center  rounded-xl
                                                        lg:h-[26rem]
-                                                       md:h-[25rem]" alt="">
+                                                       md:h-[25rem]" alt=""></div>
                                                       <div class="absolute opacity-40 bg-black h-full rounded-xl   text-white bottom-0 
                                                       left-0 right-0">
                                                       </div>
@@ -376,9 +375,9 @@ let remove_wish = (game)=>{
 
                                             <div  :class="`${ slide_on === true ? 'translate-x-[-100%] transition-all duration-500':''} relative  h-full rounded-xl w-[99%] overflow-hidden`">
                                                       
-                                              <img :src="`${ slider_img[1] }`" class="w-full  rounded-xl
-                                               lg:h-[26rem]
-                                               md:h-[25rem]" alt="">
+                                              <div :style="`background-image: url(${slider_img[1]});`"  class="w-full bg-cover bg-center  rounded-xl
+                                                       lg:h-[26rem]
+                                                       md:h-[25rem]" alt=""></div>
                                                         <div class="absolute opacity-40 bg-black h-full rounded-xl   text-white bottom-0 left-0 right-0">
                                                         </div>
                                                         <div class="absolute   text-white bottom-0 left-0 right-0 w-[60%] p-5 text-[90%]">

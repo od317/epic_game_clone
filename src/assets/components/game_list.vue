@@ -122,11 +122,10 @@ let remove_wish = (game)=>{
 
 <flic :games="gamelist" :type="type"/>
 
-<div  class="hidden md:flex flex-col  w-full h-fit items-center mt-[6rem] mb-[4.5rem]">
+<div  class="hidden md:flex flex-col    items-center mt-[6rem] mb-[4.5rem]">
   
-     <div class="flex justify-between w-[78%] px-2 mb-4 
-       lg:w-[78%]
-       md:w-[100%]
+     <div class="flex justify-between w-[80%] px-2 mb-4 
+
      ">
 
      <router-link v-if="type!='mp' && type!='free'" class="flex flex-row items-center cursor-pointer group " :to="`games/`+type"> 
@@ -147,27 +146,27 @@ let remove_wish = (game)=>{
         </div>
         
      </div>
-    <div class="w-[78%]
-       overflow-x-hidden
-       lg:w-[78%]
-       md:w-[100%]">
+
+    <div class="
+       overflow-hidden
+       w-[80%]">
         
         <div class="flex   flex-row w-[300%]">
                 
 
 
                 
-                  <div v-for="gl in gamelist" :class="`flex  justify-between w-full  h-fit translate-x-[-${slide_perecent== 100 ? '100':(slide_perecent== 200 ? '200':(slide_perecent== 300 ? '300':'0'))}%] transition-all duration-500`">
+                  <div v-for="gl in gamelist" :class="`flex  justify-between w-full over   translate-x-[-${slide_perecent== 100 ? '100':(slide_perecent== 200 ? '200':(slide_perecent== 300 ? '300':'0'))}%] transition-all duration-500`">
             
                       
-                      <div class="group  ml-2 mr-2 relative w-1/6 lg:w-1/5
+                      <div class=" 
                       "  v-for="game in gl">
                             
 
                         
 
 
-                        <div class="absolute flex w-full justify-end items-start p-3"> 
+                      <div class="absolute flex w-full justify-end items-start p-3"> 
                             
                              <div v-if="!game.inw"  class=" 
                               relative rounded-full z-30 text-2xl 
@@ -197,34 +196,40 @@ let remove_wish = (game)=>{
                                   </div>
 
 
-                              </div>
-                              
-
-                              <router-link :to="`game/`+game.name"> 
-                           
-                                <div class=" cursor-pointer rounded-md absolute flex items-start justify-end lg:h-[17rem] md:h-[60%] p-3  w-full bg-gray-200 opacity-0 hover:opacity-10 transition-all duration-200">
-                              </div>
+                      </div>
+        
+                      <div   class=" flex flex-col bg-cover bg-center  w-full">
                       
-                              <img :src="game.logoimg" alt=""  :class="`${ game.last ? 'w-0 h-0':'w-full lg:h-[17rem] md:h-[60%]'} rounded-md`">
-                              </router-link>
-                   
-                      <div :class="`${game.last ? 'hidden':'flex flex-col w-full mt-2'}`">
-                       <label for="" class="w-full text-sm text-gray-600">Base game </label>
-                        <label for="" class="w-full text-xl text-white">{{ game.name }} </label>
-                        <div class="flex w-full mt-2 items-center">
-                          <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
-                          <label v-if="game.oldprice" for="" class="text-gray-500 mr-2 line-through">${{ game.oldprice }}</label>
-                          <label v-if="game.price!=='free'"  for="" class="text-white">${{ game.price }}</label>
-                          <label v-else for="" class="text-white">{{ game.price }}</label>
-
-
+                        <div class="pb-[150%] relative">  
+                          <router-link :style="`background-image: url(${game.logoimg});`" class=" absolute h-full w-full bg-cover bg-center" :to="`game/`+game.name"> 
+                              
+                                    <div class=" cursor-pointer rounded-md absolute flex items-start justify-end h-full p-3  w-full bg-gray-200 opacity-0 hover:opacity-10 transition-all duration-200">
+                                  </div>
+                          
+                                  <div    :class="`  h-full w-full bg-center bg-cover  rounded-md`"></div>
+                                
+                          </router-link>
                         </div>
+
+                        <div>
+                              <div :class="`  flex flex-col w-full mt-2 `">
+                          <label for="" class="w-full text-sm text-gray-600">Base game </label>
+                            <label for="" class="w-full text-xl text-white">{{ game.name }} </label>
+                            <div class="flex w-full mt-2 items-center">
+                              <label v-if="game.dis" for="" class="text-white text-[.7rem] bg-blue1 rounded-md p-1 px-2 mr-3">{{game.dis}}</label>
+                              <label v-if="game.oldprice" for="" class="text-gray-500 mr-2 line-through">${{ game.oldprice }}</label>
+                              <label v-if="game.price!=='free'"  for="" class="text-white">${{ game.price }}</label>
+                              <label v-else for="" class="text-white">{{ game.price }}</label>
+
+
+                            </div>
+                          </div>
+                    </div>
+
                       </div>
-                      <div :class="`${game.last? 'w-full h-full':'hidden '} relative flex justify-center items-center`">
-                        <img :src="game.game_list_img"  alt="">
-                       <button :class="`${game.last? 'bg-blue1 text-white p-2 text-xl rounded-lg absolute z-10':''}`">see more</button>
-                       <div class="absolute h-full w-full bg-black opacity-50"></div>
-                      </div>
+  
+
+                      
                       </div>
 
                   </div>

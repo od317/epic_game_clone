@@ -2,16 +2,19 @@
     <Carousel class=" pt-[1rem] pl-[.3rem] md:hidden mb-[2rem] " :items-to-show="1.2" >
      
         <slide @click="router_push_header(game.name)" class="  h-full overflow-hidden rounded-[1rem]" v-for="game in games" :key="game">
-         <div :class="`h-[26rem] w-[90%]   rounded-[1rem]
-                       flex  items-end text-white `">
-                    <div class="absolute opacity-30 w-full bg-black h-full rounded-[1rem]   text-white  z-30">
+         <div :class="` pb-[110%] w-[90%]   rounded-[1rem]
+                        text-white `">
+                    <div class="absolute  opacity-30 w-full bg-black h-full rounded-[1rem]   text-white  z-30">
                     </div>
-                     <img class=" absolute  h-full w-full rounded-[1rem]" :src="game.logoimg" alt="">
-                        <div class="flex flex-col  z-40">
-                                <label class="text-[.7rem] text-start pl-[1rem] font-bold" for="">Now on epic</label>
-                                <label class="text-start w-[90%] pl-[1rem] mt-[.4rem] text-[.9rem] font-bold mb-[1rem]" for="">Break the cycle. Fight to survive as this 
+                     <div class=" absolute  h-full w-full rounded-[1rem] bg-cover bg-center" :style="`background-image: url(${game.logoimg});`"  ></div>
+                        <div class="flex flex-col h-full justify-end absolute  z-40">
+                                <label class=" text-start pl-[1rem] text-[100%] mb-[3%] font-bold" for="">Now on epic</label>
+                                <label class="text-start w-[90%] text-[110%] pl-[1rem] mt-[.4rem]   mb-[3%]" for="">Break the cycle. Fight to survive as this 
                                 award-winning third-person shooter brings Selene's story to PC.</label>
-                                <label class="text-start w-[90%] pl-[1rem] mb-[1rem] text-[.8rem] font-bold " for="">Starting at 59.99$</label>
+                                <label class="text-start w-[90%] flex flex-col pl-[1rem] mb-[1rem] text-[.8rem] font-bold " for="">
+                                  <label for="">Starting at</label> 
+                                  <label class="text-[150%] font-bold" for="">59.99$</label>  
+                                </label>
                        </div>
         </div>
         </slide>

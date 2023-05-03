@@ -12,8 +12,8 @@
         <slide class="  h-full overflow-hidden" v-for="game in games" :key="game">
          <div :class="` w-[90%]  mb-[1rem]
                        flex flex-col center text-white  p-[.5rem]`">
-                    <router-link :to="`game/`+game.name"> 
-                     <img class="  w-full h-[19rem] rounded-md" :src="game.logoimg" alt="">
+                    <router-link class=" relative pb-[130%]" :to="`game/`+game.name"> 
+                     <img class=" absolute  w-full h-full rounded-md" :src="game.logoimg" alt="">
                     </router-link>
                      <div class="flex flex-col  z-40">
                                     <div :class="`flex flex-col items-start text-start w-full mt-2`">

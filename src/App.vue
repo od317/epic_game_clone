@@ -19,9 +19,11 @@ window.scrollTo({
      <nav_search/>
        
      
-     <div class=" h-fit font-ss bg-dark1   "> 
-     <router-view></router-view>
-
+     <div class=" h-fit  font-ss bg-dark1   ">
+   
+          <div class="min-h-screen">       
+               <router-view></router-view>
+          </div>
      
 
      <div class="md:hidden bg-dark2 flex text-white flex-col px-[1.5rem]">
