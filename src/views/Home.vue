@@ -16,7 +16,7 @@
  let router = useRouter(); 
 
  /* for slider and sidebar  */
-let game_tops_names = ['dishonored2','farcry6','heart','fortnite','Hogwarts legacy','distiny 2']
+let game_tops_names = ['dishonored2','farcry6','heart','fortnite','Hogwarts legacy','destiny 2']
 let games = ref([])
 
 for(let i =1;i<=6;i++){
@@ -70,7 +70,7 @@ let game_an1 = [
       img:'https://cdn2.unrealengine.com/en-egs-destiny-2-season-20-breaker-2560x1440-7abe8178294c.jpg?h=270&quality=medium&resize=1&w=480',
       label:'Destiny 2’s latest Season is here with all new story missions, activities, and rewards.',
       down_text:'$14.99',
-      dst:"distiny 2"
+      dst:"destiny 2"
     },
 ]
 
@@ -347,41 +347,35 @@ let remove_wish = (game)=>{
 <!-- slider and side --> 
 
 <!-- lg screen-->
-<div class="md:flex w-full   justify-center mt-2 hidden
-            lg:h-[26rem]
-            md:h-[30%]">
+<div class="md:flex w-full realtive  justify-center mt-2 hidden">
 
 <div class="grid grid-cols-1 grid-rows-6 grid-flow-col gap-4 lg:w-[78%] lg:p-[0] px-[1rem]
 ">
 
 
   
-  <div class="text-white row-span-5 grid  grid-cols-5">
+  <div class="text-white row-span-6 grid  grid-cols-5">
                
-                 <div class=" group col-span-4   relative rounded-xl w-[99%] overflow-hidden 
-                    lg:h-[26rem]
-                    md:h-fit">
+                 <div class=" group col-span-4   relative rounded-xl w-[99%] overflow-hidden ">
                                       
                                       <div class="flex   w-[200%]
                                       ">
 
                                                <div :class="`${ slide_on === true ? 'translate-x-[-100%] transition-all duration-500':''} 
-                                                relative  
+                                                relative lg:pb-[27%] pb-[30%] 
                                                 h-full rounded-xl w-[99%] overflow-hidden`">
                                                     
-                                                      <div :style="`background-image: url(${slider_img[0]});`"  class="w-full bg-cover bg-center  rounded-xl
-                                                       lg:h-[26rem]
-                                                       md:h-[25rem]" alt=""></div>
+                                                      <div :style="`background-image: url(${slider_img[0]});`"  class=" bg-cover bg-center absolute w-full h-full  rounded-xl" alt=""></div>
                                                       <div class="absolute opacity-40 bg-black h-full rounded-xl   text-white bottom-0 
                                                       left-0 right-0">
                                                       </div>
 
                                                       <div class="absolute   text-white bottom-0 left-0 right-0 w-[60%] p-5 text-[90%]">
-                                                              <h2 :class="`  ${ trans_slide ? 'translate-x-0 opacity-[100%] duration-300':'translate-x-[10%]  duration-0 opacity-[0%]'}  
+                                                              <h2 :class="` relative pb-[16%]  mb-[2%] ${ trans_slide ? 'translate-x-0 opacity-[100%] duration-300':'translate-x-[10%]  duration-0 opacity-[0%]'}  
                                                               transition-all `">
-                                                                <img :src="`${games[header_list_num].slide_img}`" alt="" class="w-[70%] md:w-[50%]">
+                                                                <img :src="`${games[header_list_num].slide_img}`" alt="" class="w-[70%] h-full md:w-[50%] absolute">
                                                           </h2>
-                                                          <img :src="`${games[header_list_num].slide_img}`" alt="" :class="`  ${!start? 'w-0':'w-[70%] h-[30%] translate-x-[10%] translate-y-[-20%]'}  `">
+                                                          <img :src="`${games[header_list_num].slide_img}`" alt="" :class="`   ${!start? 'w-0':'w-[70%] h-[30%]  translate-x-[10%] translate-y-[-20%]'}  `">
                                                             <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. Deleniti, quisquam! Recusandae ea acc
                                                             etur commodi. Id nobis ducimus vel aliqua
                                                             m neque! Cum autem dicta vitae.</p>
@@ -399,11 +393,9 @@ let remove_wish = (game)=>{
                                             
 
 
-                                            <div  :class="`${ slide_on === true ? 'translate-x-[-100%] transition-all duration-500':''} relative  h-full rounded-xl w-[99%] overflow-hidden`">
+                                            <div  :class="`${ slide_on === true ? 'translate-x-[-100%] transition-all duration-500':''} relative pb-[30%] lg:pb-[27%]  h-full rounded-xl w-[99%] overflow-hidden`">
                                                       
-                                              <div :style="`background-image: url(${slider_img[1]});`"  class="w-full bg-cover bg-center  rounded-xl
-                                                       lg:h-[26rem]
-                                                       md:h-[25rem]" alt=""></div>
+                                              <div :style="`background-image: url(${slider_img[1]});`"  class="w-full h-full absolute bg-cover bg-center  rounded-xl " alt=""></div>
                                                         <div class="absolute opacity-40 bg-black h-full rounded-xl   text-white bottom-0 left-0 right-0">
                                                         </div>
                                                         <div class="absolute   text-white bottom-0 left-0 right-0 w-[60%] p-5 text-[90%]">
@@ -428,11 +420,8 @@ let remove_wish = (game)=>{
                   </div>
 
 
-
-                    <div class=" pl-4 flex flex-col justify-between
-                    lg:h-[26rem]
-                    md:h-[25rem]
-                    ">
+                  <div class=" relative ">
+                    <div class=" lg:absolute pl-4 h-full w-full flex flex-col justify-between">
 
 
                       <div @click=" header_list_num !== game.num-1 ? click_change_pos(game.num-1) : router_push_header(game.name)" :class="` group relative flex items-center h-1/5  w-full ${game.last !== true ? 'mb-2':''} hover:cursor-pointer 
@@ -442,7 +431,7 @@ let remove_wish = (game)=>{
                          
                           <img :src="game.srcm" :class="` rounded-md z-10 
                             transition-all duration-200 ${header_list_num+1 ===game.num && scale_on ? ' scale-110':''} 
-                            lg:h-full lg:w-[2.5rem]
+                            lg:h-full lg:w-[20%]
                             md:h-[75%] md:w-[30%]`" alt="">  
                           <div class=" lg:ml-5 md:ml-1  grid content-center w-full ">
                             <p class="text-white lg:text-[1rem] md:text-[.7rem] z-10">{{ game.name }}</p>
@@ -461,6 +450,7 @@ let remove_wish = (game)=>{
                         </div>
 
 
+                    </div>
                     </div>
   </div>
 

@@ -48,23 +48,20 @@ window.scrollTo({
 
                <label class="text-gray-400 mt-[.2rem]" for="">Resourese</label>
 
-               <div class="flex flex-row w-full justify-between">
+               <div class="flex flex-row w-full ">
 
 
-                    <div class="w-[40%]">
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
+                    <div class=" mr-[5%] flex flex-col">
+                         <button>lorem</button>
+                         <button>lorem</button>
+                         <button>lorem</button>
 
                     </div>
 
-                    <div class="w-[40%]">
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
+                    <div class="flex flex-col">
+                         <button>lorem</button>
+                         <button>lorem</button>
+                         <button>lorem</button>
                     </div>
 
 
@@ -76,17 +73,17 @@ window.scrollTo({
                  <div class="flex flex-row w-full  mb-[2rem]">
 
 
-                    <div class="w-[40%]">
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
+                    <div class=" mr-[5%] flex flex-col">
+                         <button>lorem</button>
+                         <button>lorem</button>
+                         <button>lorem</button>
 
                     </div>
 
-                    <div class="w-[40%]">
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
+                    <div class="flex flex-col">
+                         <button>lorem</button>
+                         <button>lorem</button>
+                         <button>lorem</button>
                     </div>
 
 
@@ -96,17 +93,11 @@ window.scrollTo({
              </div>
 
              <label class="text-[.7rem] mb-[2rem]" for="">
-               © 2023, Epic Games, Inc. 
-               All rights reserved. Epic, Epic Games, 
-               the Epic Games logo, Fortnite, the Fortnite logo, 
-               Unreal, Unreal Engine, the Unreal Engine logo, Unreal Tournament, 
-               and the Unreal Tournament logo are trademarks or registered trademarks of Epic Games, 
-               Inc. in the United States of America and elsewhere.
-                Other brands or product names are the trademarks of their respective owners. 
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aspernatur tempore expedita omnis enim? Velit maiores molestiae magnam vero corrupti tenetur maxime eligendi nostrum! Molestiae itaque voluptas dolores totam? Dolore.
              </label>
 
-             <div class="w-full flex items-center justify-center text-center mb-[2rem]" for="">
-               <label class="w-[50%] text-[1rem] flex flex-col items-center justify-center" for="">
+             <div class="w-full flex items-center   text-center mb-[2rem]" for="">
+               <label class=" text-[1rem] flex flex-col items-start justify-center" for="">
                     <button>Terms of service</button>
                     <button>Terms of service</button>
                     <button>Terms of service</button>
@@ -153,20 +144,26 @@ window.scrollTo({
                <div class="flex flex-row w-full ">
 
 
-                    <div class="w-[10%] mr-[2rem]">
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
+                    <div class=" mr-[5%] items-start flex flex-col">
+                         <button>lorem</button>
+                         <button>lorem</button>
+                         <button>lorem</button>
 
                     </div>
 
-                    <div class="w-[10%] mr">
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
+                    <div class=" mr-[5%] items-start flex flex-col">
+                         <button>lorem</button>
+                         <button>lorem</button>
+                         <button>lorem</button>
+
+                    </div>
+
+                    <div class=" items-start flex flex-col">
+                         <button>lorem</button>
+                         <button>lorem</button>
+                         <button>lorem</button>
+                         <button>lorem</button>
+
                     </div>
 
 
@@ -177,20 +174,20 @@ window.scrollTo({
 
                  <div class="flex flex-row w-full  mb-[2rem]">
 
-
-                    <div class="w-[10%] mr-[2rem]">
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
+                    <div class=" mr-[5%] items-start flex flex-col">
+                         <button>lorem</button>
+                         <button>lorem</button>
+                         <button>lorem</button>
 
                     </div>
 
-                    <div class="w-[10%]">
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                         <button>support a creator</button>
-                    </div>
+                    <div class=" items-start flex flex-col">
+                         <button>lorem</button>
+                         <button>lorem</button>
+                         <button>lorem</button>
+                         <button>lorem</button>
 
+                    </div>
 
                </div>
 
@@ -198,13 +195,8 @@ window.scrollTo({
              </div>
 
              <label class="text-[.7rem] w-[50%] mb-[2rem]" for="">
-               © 2023, Epic Games, Inc. 
-               All rights reserved. Epic, Epic Games, 
-               the Epic Games logo, Fortnite, the Fortnite logo, 
-               Unreal, Unreal Engine, the Unreal Engine logo, Unreal Tournament, 
-               and the Unreal Tournament logo are trademarks or registered trademarks of Epic Games, 
-               Inc. in the United States of America and elsewhere.
-                Other brands or product names are the trademarks of their respective owners. 
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum quis voluptatem explicabo iusto fugit nulla ab deserunt quod quas doloremque animi ex asperiores hic rem neque error, laboriosam quam magni.
              </label>
 
              <div class="w-full flex items-center  text-center mb-[2rem]" for="">
