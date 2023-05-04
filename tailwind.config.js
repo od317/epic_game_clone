@@ -16,6 +16,38 @@ module.exports = {
       'ss': ['"Kumbh Sans","sans"'],
     },
     extend: { 
+
+      animation: {
+        's1':'s1 .29s  ease-out ',
+        's2':'s2 .29s  ease-out',
+    },
+      keyframes: {
+       's1':{
+        '0%': {
+          'transform':'translateX(0%)',
+          'opacity':'100',
+          'animation-timing-function':'cubic-bezier(0.8, 0, 1, 1)'
+        },
+        '100%': {
+          'transform':'translateX(-10%)',
+          'opacity':'0',
+          'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
+        },
+      },
+      's2':{
+        '0%': {
+          'transform':'translateX(-80%)',
+          'opacity':'0',
+          'animation-timing-function':'cubic-bezier(0.8, 0, 1, 1)'
+        },
+        '100%': {
+          'transform':'translateX(-100%)',
+          'opacity':'100',
+           'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
+        },
+      },
+    },
+
       gridTemplateRows: {
       // Simple 8 row grid
       '8': 'repeat(8, minmax(0, 1fr))',

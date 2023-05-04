@@ -241,7 +241,7 @@ let footer_cont1 = [{
         slider_img.value[1] = header_list_num.value+1<=5 ? games.value[header_list_num.value+1].src:games.value[0].src
         slide_on.value=false 
         trans_slide.value=true         
-      },499);
+      },300);
        
 
   s = setInterval(()=>{
@@ -255,7 +255,7 @@ let footer_cont1 = [{
         slide_on.value=false 
         trans_slide.value=true         
        
-      },499);
+      },300);
   },9000)
 
   }
@@ -361,7 +361,7 @@ let remove_wish = (game)=>{
                                       <div class="flex   w-[200%]
                                       ">
 
-                                               <div :class="`${ slide_on === true ? 'translate-x-[-100%]  transition-all duration-500':''} 
+                                               <div :class="`${ slide_on === true ? ' animate-s1 ':''} 
                                                 relative lg:pb-[27%] pb-[30%] 
                                                 h-full rounded-xl w-[99%] overflow-hidden`">
                                                   
@@ -403,7 +403,7 @@ let remove_wish = (game)=>{
                                             
 
 
-                                            <div  :class="`${ slide_on === true ? 'translate-x-[-100%] transition-all duration-500':''} relative pb-[30%] lg:pb-[27%]  h-full rounded-xl w-[99%] overflow-hidden`">
+                                            <div  :class="`${ slide_on === true ? 'animate-s2':''} relative pb-[30%] lg:pb-[27%]  h-full rounded-xl w-[99%] overflow-hidden`">
                                                       
                                               <div :style="`background-image: url(${slider_img[1]});`"  class="w-full h-full absolute bg-cover bg-center  rounded-xl " alt=""></div>
                                                         <div class="absolute opacity-40 bg-black h-full rounded-xl   text-white bottom-0 left-0 right-0">
