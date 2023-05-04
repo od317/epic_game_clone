@@ -361,16 +361,20 @@ let remove_wish = (game)=>{
                                       <div class="flex   w-[200%]
                                       ">
 
-                                               <div :class="`${ slide_on === true ? 'translate-x-[-100%] transition-all duration-500':''} 
+                                               <div :class="`${ slide_on === true ? 'translate-x-[-100%]  transition-all duration-500':''} 
                                                 relative lg:pb-[27%] pb-[30%] 
                                                 h-full rounded-xl w-[99%] overflow-hidden`">
-                                                    
+                                                  
+                                                  <RouterLink class="" :to="`/game/${games[header_list_num].name}`">
+
                                                       <div :style="`background-image: url(${slider_img[0]});`"  class=" bg-cover bg-center absolute w-full h-full  rounded-xl" alt=""></div>
                                                       <div class="absolute opacity-40 bg-black h-full rounded-xl   text-white bottom-0 
                                                       left-0 right-0">
                                                       </div>
-
+                                                  </RouterLink>
                                                       <div class="absolute   text-white bottom-0 left-0 right-0 w-[60%] p-5 text-[90%]">
+                                                        <RouterLink class="" :to="`/game/${games[header_list_num].name}`">
+
                                                               <h2 :class="` relative pb-[16%]  mb-[2%] ${ trans_slide ? 'translate-x-0 opacity-[100%] duration-300':'translate-x-[10%]  duration-0 opacity-[0%]'}  
                                                               transition-all `">
                                                                 <img :src="`${games[header_list_num].slide_img}`" alt="" :class="`w-[70%] ${ games[header_list_num].slide_img === 'https://images2.imgbox.com/6a/7b/m0IMuhnX_o.png' ? 'scale-[250%]':''}  h-full md:w-[50%] absolute`">
@@ -379,14 +383,17 @@ let remove_wish = (game)=>{
                                                             <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. Deleniti, quisquam! Recusandae ea acc
                                                             etur commodi. Id nobis ducimus vel aliqua
                                                             m neque! Cum autem dicta vitae.</p>
+                                                          
+                                                          </RouterLink>
                                                             <div>
-                                                              <p class="mt-5 mb-3">m neque! Cum autem dicta vitae.</p>
-                                                              <button @click="view_more_top_push(games[header_list_num].name)" class="bg-white text-lg text-black p-3 md:p-2 w-[40%] mr-5 rounded-lg hover:bg-gray-400 transition-all duration-200">view</button>
+                                                              <p class="mt-5 mb-3">m neque! Cum autem dicta vitae.</p>                                                        
+                                                              <RouterLink class="hover:text-black" :to="`/game/${games[header_list_num].name}`">
+                                                                 <button  class="bg-white text-lg text-black p-3 md:p-2 w-[40%] mr-5 rounded-lg hover:bg-gray-400 transition-all duration-200">view</button>
+                                                              </RouterLink>
                                                               <button @click="add_wish(games[header_list_num])" v-if="!games[header_list_num].inw" class="text-lg white p-3 md:p-[.4rem] w-[40%] text-center hover:bg-black hover:bg-opacity-50  transition-all duration-200 rounded-lg"><div class="text-[.8rem]  flex items-center opacity-100"><ion-icon :class="`${games[header_list_num].ro ? ' rotate-[360deg] transition-all duration-1000':''} mr-[.5rem]`" name="add-circle-outline" class="translate-y-[20%] "></ion-icon>add to wishlist</div></button>
                                                               <button @click="remove_wish(games[header_list_num])" v-else class="text-lg white p-3 md:p-[.4rem] w-[40%] text-center hover:bg-black hover:bg-opacity-50  transition-all duration-200 rounded-lg"><div class="text-[.8rem]  flex items-center opacity-100"><ion-icon :class="`${games[header_list_num].ro ? ' rotate-[360deg] transition-all duration-1000':''} mr-[.5rem]`" name="checkmark-circle" class="translate-y-[20%] "></ion-icon>remove from wishlist</div></button>
                                                             </div>
                                                     </div>
-
                                             </div>
 
 
