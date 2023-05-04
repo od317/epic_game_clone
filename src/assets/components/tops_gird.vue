@@ -123,9 +123,9 @@ let remove_wish = (game)=>{
                                   
                                   </div>          
                                 </div>
-                                                <div class=" w-full h-full  rounded-[5px] bg-cover bg-center"  :style="`background-image: url(${game.logoimg});`"  alt=""></div>
+                                                <div class=" w-[80%] h-full  rounded-[5px] bg-cover bg-center"  :style="`background-image: url(${game.logoimg});`"  alt=""></div>
                                             </div>
-                                            <div :class='`flex flex-col  justify-evenly w-[80%]  h-[5.2rem] ml-[1rem]`'> 
+                                            <div :class='`flex flex-col  justify-evenly w-[80%]  h-[5.2rem] ml-[1%]`'> 
                                                             <div for="" class="text-white text-[80%] line-clamp-2">{{ game.name }}</div>
                                                             <div for="" :class="`${game.date? '':'hidden'} text-gray-400`">{{ game.date }}</div>
                                                     <div for="" :class="`text-white text-[13px]  ${game.date? 'mt-[.5rem]':'flex items-center  '}  pb-1`">
