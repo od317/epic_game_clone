@@ -186,7 +186,7 @@
 </div>
 
 <div :class="`text-white md:hidden  h-screen    w-[100%] absolute   flex flex-row 
-                     transiton-all duration-200  ${!offcanv? 'translate-x-[-101%]':''} z-[100]`">
+                     transiton-all duration-200  ${!offcanv? 'translate-x-[-101%] ':''} z-[110]`">
 
 
 
@@ -219,7 +219,7 @@
 
                 <div @click="change_canv" class="w-[30%] h-full"></div>
 
-              </div>
+ </div>
 
 
 </div>
@@ -276,7 +276,7 @@
 
 
   <!--small screen -->
-  <div :class="`text-white lg:hidden md:pb-[1.5rem]   static  items-center  w-[100%]  ${ !offcanv ? 'z-[50]':'z-[40]'} bg-dark1   `">
+  <div :class="`text-white lg:hidden md:pb-[1.5rem] h-[10%]   static  items-center  w-[100%]  ${ !offcanv ? 'z-[50]':'z-[40]'} bg-dark1   `">
         
 
             <div class="text-white px-[6%] md:pt-[2rem] md:pb-0 py-[2rem]   flex  justify-between items-center  w-[100%] bg-dark1  ">
