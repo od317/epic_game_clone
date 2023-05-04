@@ -379,7 +379,10 @@ let remove_wish = (game)=>{
                                                               transition-all `">
                                                                 <img :src="`${games[header_list_num].slide_img}`" alt="" :class="`w-[70%] ${ games[header_list_num].slide_img === 'https://images2.imgbox.com/6a/7b/m0IMuhnX_o.png' ? 'scale-[250%]':''}  h-full md:w-[50%] absolute`">
                                                           </h2>
-                                                          <img :src="`${games[header_list_num].slide_img}`" alt="" :class="`   ${!start? 'w-0':'w-[70%] h-[30%]  translate-x-[10%] translate-y-[-20%]'}  `">
+                                                          <h2 v-if="start" :class="` relative pb-[16%]  mb-[2%]   
+                                                              transition-all `">
+                                                                <img :src="`${games[header_list_num].slide_img}`" alt="" :class="`w-[70%] ${ games[header_list_num].slide_img === 'https://images2.imgbox.com/6a/7b/m0IMuhnX_o.png' ? 'scale-[250%]':''}  h-full md:w-[50%] absolute`">
+                                                          </h2>
                                                             <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. Deleniti, quisquam! Recusandae ea acc
                                                             etur commodi. Id nobis ducimus vel aliqua
                                                             m neque! Cum autem dicta vitae.</p>

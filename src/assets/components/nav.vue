@@ -185,24 +185,22 @@
     </div>
 </div>
 
-
-
-
-</div>
-
-
-<div @click="change_canv" :class="`text-white md:hidden  h-full z-[80] pb-[3.7rem]  w-[100%] absolute   flex flex-row 
-                     bg-dark1 opacity-0  ${!offcanv? 'hidden':'opacity-60'}`">
-
-
-</div>
-
-<div :class="`text-white md:hidden  h-screen z-50   w-[100%] absolute   flex flex-row 
+<div :class="`text-white md:hidden  h-screen    w-[100%] absolute   flex flex-row 
                      transiton-all duration-200  ${!offcanv? 'translate-x-[-101%]':''} z-[100]`">
 
+
+
                     <div class="bg-dark2 flex flex-col justify-between
-                     transiton-all duration-200 pb-[20%]  text-white w-[70%]  h-full z-[100] "> 
-                     <div class=" flex grow flex-col ">
+                     transiton-all duration-200   text-white w-[70%]  h-full z-[100] "> 
+                   
+                     <div class=" flex flex-grow flex-col ">
+                      
+                      <div class="  pl-8 pt-[1rem]  flex">     
+
+
+
+    </div>
+
                           <button class="text-start pl-[1rem] mb-[1rem] py-[.5rem] border-b-[.1rem] border-gray-400">Store</button>
                           <button class="text-start pl-[1rem] mb-[1rem] py-[.5rem] border-b-[.1rem] border-gray-400">Support</button> 
                           <button class="text-start pl-[1rem] mb-[1rem] py-[.5rem] border-b-[.1rem] border-gray-400">unrealengine</button> 
@@ -224,6 +222,18 @@
               </div>
 
 
+</div>
+
+
+<div @click="change_canv" :class="`text-white md:hidden  h-full z-[80] pb-[3.7rem]  w-[100%] absolute   flex flex-row 
+                     bg-dark1 opacity-0  ${!offcanv? 'hidden':'opacity-60'}`">
+
+
+</div>
+
+
+
+
 
 
 <!-- search-bar --> 
@@ -239,8 +249,8 @@
           
           <div v-if=" search_res.length >0 " class="flex flex-col absolute translate-y-[2.1rem] w-[50%] rounded-sm p-[1rem] bg-dark2">
             <div @click="res_game_push(game_res.name)" class="flex items-center group flex-row mb-[1rem] cursor-pointer" v-for=" game_res of search_res">
-               <img class="w-[2rem] h-[3rem] mr-[1rem]" :src="game_res.logoimg" alt="">
-               <label class="text-center group-hover:border-b-[.1rem]" for="">{{game_res.name}}</label>
+               <img class="w-[2rem] h-[3rem] mr-[1rem] cursor-pointer" :src="game_res.logoimg" alt="">
+               <label class="text-center group-hover:border-b-[.1rem] cursor-pointer" for="">{{game_res.name}}</label>
             </div>
 
           <router-link class="group" @click="view_more()" :to="'browse?q='+search_input">
