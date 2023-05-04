@@ -445,13 +445,13 @@ let remove_wish = (game)=>{
                             </div>
                             
                         </div>
-                        <div class="absolute  bg-black h-full  rounded-md  bottom-0 left-0 right-0 opacity-0 
+                        <div class="absolute  bg-black  h-full  rounded-md  bottom-0 left-0 right-0 opacity-0 
                            w-full group-hover:opacity-40 z-0 
                           transition-width duration-300 ">
                         </div>
-                        <div :class="`absolute  opacity-40 bg-gray-600 h-full rounded-md  bottom-0 left-0 right-0
+                        <div :class="`absolute  opacity-50 bg-neutral-700 h-full rounded-md  bottom-0 left-0 right-0
                           ${header_list_num+1 ===game.num  ? 'w-full duration-1000':'w-0 duration-0'}   transition-width  `"></div>
-                          <div :class="`absolute  opacity-40 bg-gray-100 h-full rounded-md  bottom-0 left-0 right-0 
+                          <div :class="`absolute  opacity-50  bg-neutral-500 h-full rounded-md  bottom-0 left-0 right-0 
                           ${header_list_num+1 ===game.num && !start_a  ? 'w-full duration-[9000ms]':'w-0 duration-0'}  ease-linear transition-width   `"></div>
                           
                         </div>
