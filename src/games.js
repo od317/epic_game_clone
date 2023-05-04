@@ -2332,7 +2332,7 @@ let games_list =[
     },
     {
         name:'Red Dead Redemption 2',
-        logoimg:'https://cdn1.epicgames.com/epic/offer/RDR2PC1227_Epic Games_860x1148-860x1148-b4c2210ee0c3c3b843a8de399bfe7f5c.jpg?h=480&quality=medium&resize=1&w=360',
+        logoimg:'https://static.wikia.nocookie.net/060dd1ea-79eb-445f-917a-de8d242b6e49/scale-to-width/755',
         img:'https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fheather%2Fhome%2FEGS_RockstarGames_RedDeadRedemption2_IC1-625x625-38ae1bca6b89370d01ac3ed3a17daf7dd004f9f5.png?h=270&quality=medium&resize=1&w=480',
         ach_img:'https://cdn1.epicgames.com/b30b6d1b4dfd4dcc93b5490be5e094e5/offer/RDR2476298253_Epic_Games_Wishlist_RDR2_2560x1440_V01-2560x1440-2a9ebe1f7ee202102555be202d5632ec.jpg?h=270&quality=medium&resize=1&w=480',
         src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
@@ -4625,7 +4625,7 @@ let games_list =[
     },
     {
         name:'Assassins Creed® Valhalla',
-        logoimg:'https://cdn1.epicgames.com/400347196e674de89c23cc2a7f2121db/offer/AC KINGDOM PREORDER_STANDARD EDITION_EPIC_Key_Art_Portrait_640x854-640x854-288120c5573756cb988b6c1968cebd86.png?h=480&quality=medium&resize=1&w=360',
+        logoimg:'https://w0.peakpx.com/wallpaper/177/591/HD-wallpaper-ac-valhalla-eivor-thumbnail.jpg',
         img:'https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fassassins-creed-valhalla%2Fhome%2FAC-KINGDOM-PREORDER_STANDARD-EDITION_EPIC_Game_Logo_whiteblue_1000x375-1000x375-baa332e9500ef71697f4a31924488fe309c4784d.png?h=270&quality=medium&resize=1&w=480',
         ach_img:'https://cdn1.epicgames.com/400347196e674de89c23cc2a7f2121db/offer/AC KINGDOM PREORDER_STANDARD EDITION_EPIC_Key_Art_Wide_3840x2160-3840x2160-485fe17203671386c71bde8110886c7d.jpg?h=270&quality=medium&resize=1&w=480',
         src:"https://wallup.net/wp-content/uploads/2017/11/22/391484-Dishonored-dishonored_2-video_games-Emily_Kaldwin.jpg",
