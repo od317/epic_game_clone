@@ -207,7 +207,7 @@ let footer_cont1 = [{
         slide_on.value=false 
         trans_slide.value=true         
        
-      },499);
+      },310);
   },9000)
   const myTimeout = setTimeout(()=>{
       start_a.value=false   
@@ -225,7 +225,7 @@ let footer_cont1 = [{
 
        let sc = setTimeout(()=>{
           scale_on.value = false
-       },300)
+       },310)
 
        clearInterval(s)
        header_list_num.value =  place-1
@@ -241,7 +241,7 @@ let footer_cont1 = [{
         slider_img.value[1] = header_list_num.value+1<=5 ? games.value[header_list_num.value+1].src:games.value[0].src
         slide_on.value=false 
         trans_slide.value=true         
-      },300);
+      },310);
        
 
   s = setInterval(()=>{
@@ -255,7 +255,7 @@ let footer_cont1 = [{
         slide_on.value=false 
         trans_slide.value=true         
        
-      },300);
+      },310);
   },9000)
 
   }

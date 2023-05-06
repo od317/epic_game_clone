@@ -18,8 +18,8 @@ module.exports = {
     extend: { 
 
       animation: {
-        's1':'s1 .29s  ease-out ',
-        's2':'s2 .29s  ease-out',
+        's1':'s1 .3s  ease-out ',
+        's2':'s2 .3s  ease-out',
     },
       keyframes: {
        's1':{
